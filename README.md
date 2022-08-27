@@ -1,11 +1,12 @@
-# Nome do Meu Projeto
+# Fenrir Pet House
 
 Projeto Final do Curso Técnico Integrado de Desenvolvimento de Sistemas - Colégio Pedro II - Campus Duque de Caxias
 
 **Integrantes:**
- - Fulano
- - Beltrano
- - Ciclano
+ - Thiago Silva de Oliveira
+ - Pedro Henrique da Silva Teixeira Campos
+ - Lara Cristina Silva Barbosa
+ - Raphael Menezes Costa Ormonde 
 
  ## Descrição do Projeto
 
