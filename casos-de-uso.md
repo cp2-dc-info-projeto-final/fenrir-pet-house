@@ -3,7 +3,7 @@
 ## Lista dos Casos de Uso
 
  - [CDU 01](#CDU-01): Login
- - [CDU 02](#CDU-02): Morbi fringilla dolor at mattis vestibulum.
+ - [CDU 02](#CDU-02): Cadatro de Usuário
  - [CDU 03](#CDU-03): Duis nec orci quis velit faucibus hendrerit tempus vel libero.
 
 
