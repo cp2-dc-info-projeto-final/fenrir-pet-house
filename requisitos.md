@@ -4,7 +4,7 @@
 
 ### RF 01
 
-O site terá um sistema de login e cadastro para usuário, funcionários e administradores.
+O site terá um sistema de cadastro para usuário, funcionários e administradores.
 
 ### RF 02
 
@@ -12,7 +12,7 @@ O site terá um sistema de agendamento.
 
 ### RF 03
 
-O site terá um sistema de Pacote.
+O site terá um sistema de Cadastramento de Pacotes de Serviços.
 
 ### RF 04
 
@@ -24,6 +24,7 @@ O site disponibilizará os horários disponíveis para cada serviço.
 
 ### RF 06
 
+O site terá um sistema de login para usuário, funcionários e administradores.
 
 
 ## Requisitos Não-Funcionais
