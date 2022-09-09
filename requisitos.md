@@ -65,6 +65,6 @@ Existirá um menu de ajuda para o usuário.
 
 No canto superior esquerdo terá o logo do site.
 
-## RNF 10
+### RNF 10
 
 O sistema será programado por meio de JavaScript, PHP, CSS e Html.
