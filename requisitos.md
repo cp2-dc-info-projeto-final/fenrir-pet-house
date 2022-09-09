@@ -21,7 +21,6 @@ O usuário pode alterar ou cancelar o Agendamento.
 ### RF 05
 
 O site disponibilizará os horários disponíveis para cada serviço.
-Pacote Tchutchucão (24hrs por dia), Pacote Tchutchucada (8:00 - 20:00), Pacote Tchutchuquinho (10:00 - 18:00).
 
 ### RF 06
 
