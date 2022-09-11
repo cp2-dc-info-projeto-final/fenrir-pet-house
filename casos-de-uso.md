@@ -6,7 +6,7 @@
  - [CDU 02](#CDU-02): Cadastro de Usuário
  - [CDU 03](#CDU-03): Reserva de Horário
  - [CDU 04](#CDU-04): Cadastro de Cachorro
- - [CDU 05](#CDU-05): Administrador libera um horário
+ - [CDU 05](#CDU-05): Administrador apaga uma reserva
  - [CDU 06](#CDU-06): Cliente consulta uma reserva
  - [CDU 07](#CDU-07): Cliente altera uma reserva
  - [CDU 08](#CDU-08): Cliente cancela uma reserva
@@ -195,7 +195,7 @@ Usuário cadastra seu cachorro para fazer uma futura reserva
 
 ### CDU 05
 
-Administrador libera um horário previamente ocupado
+Administrador apaga uma reserva previamente ocupada
 
 **Fluxo principal**
 
