@@ -15,7 +15,7 @@
 
  - Administrador
  - Funcionário
- - Usuário comum
+ - Usuário
 
 ## Diagrama de Casos de Uso
 
