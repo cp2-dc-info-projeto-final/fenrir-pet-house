@@ -3,13 +3,13 @@
 ## Lista dos Casos de Uso
 
  - [CDU 01](#CDU-01): Login
- - [CDU 02](#CDU-02): Cadatro de Usuário
+ - [CDU 02](#CDU-02): Cadastro de Usuário
  - [CDU 03](#CDU-03): Reserva de Horário
  - [CDU 04](#CDU-04): Cadastro de Cachorro
  - [CDU 05](#CDU-05): Administrador libera um horário
  - [CDU 06](#CDU-06): Cliente consulta uma reserva
- - [CDU 07](#CDU-07): Cliente altera a reserva
- - [CDU 08](#CDU-08): Cliente cancela a reserva
+ - [CDU 07](#CDU-07): Cliente altera uma reserva
+ - [CDU 08](#CDU-08): Cliente cancela uma reserva
  - 
 ## Lista dos Atores
 
