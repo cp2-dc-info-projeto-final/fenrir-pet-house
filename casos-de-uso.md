@@ -19,7 +19,8 @@
 
 ## Diagrama de Casos de Uso
 
-![Diagrama de Casos de Uso](diagrama-exemplo.png)
+![Diagrama de casos de uso drawio (1)](https://user-images.githubusercontent.com/111150888/189552799-ea4e0040-bfa8-454b-9794-c20d20d5e56b.png)
+
 
 ## Descrição dos Casos de Uso
 
