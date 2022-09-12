@@ -26,6 +26,17 @@ O site disponibilizará os horários disponíveis para cada serviço.
 
 O site terá um sistema de login para usuário, funcionários e administradores.
 
+### RF 07
+
+O Administrador pode alterar ou cancelar o Agendamento.
+
+### RF 08
+
+O Funcionário pode alterar ou cancelar o Agendamento.
+
+### RF 08
+
+Existirá um sistema de Cadastro para Cães.
 
 ## Requisitos Não-Funcionais
 
