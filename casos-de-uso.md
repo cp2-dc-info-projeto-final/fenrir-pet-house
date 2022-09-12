@@ -6,10 +6,11 @@
  - [CDU 02](#CDU-02): Cadastro de Usuário
  - [CDU 03](#CDU-03): Reserva de Horário
  - [CDU 04](#CDU-04): Cadastro de Cachorro
- - [CDU 05](#CDU-05): Administrador apaga uma reserva
- - [CDU 06](#CDU-06): Cliente consulta uma reserva
- - [CDU 07](#CDU-07): Cliente altera uma reserva
- - [CDU 08](#CDU-08): Cliente cancela uma reserva
+ - [CDU 05](#CDU-05): Deleção de reserva por Admin
+ - [CDU 06](#CDU-06): Consulta de Reserva do Cliente
+ - [CDU 07](#CDU-07): Alteração de Reserva do Cliente
+ - [CDU 08](#CDU-08): Cancelamento de Reserva do Cliente
+ - [CDU 09](#CDU-09): Deleção de Reserva por Funcionário
  
 ## Lista dos Atores
 
@@ -302,3 +303,29 @@ Cliente cancela uma reserva
 5. Usuário pressiona botão "Sim"
 6. A reserva é apagada no banco de dados
 7. A página é atualizada e a reserva selecionada é apagada.
+
+### CDU 09
+
+Funcionário apaga a reserva de um cliente
+
+**Fluxo principal**
+
+1. No menu principal, o funcionário pressiona o botão "Gerenciar Reservas"
+2. Funcionário é redirecionado a uma página com os quartos e horários em que o hotel funciona: os quartos com horários disponíveis coloridos em verde e os quartos sem horários disponíveis coloridos em vermelho
+3. Funcionário seleciona um quarto colorido em vermelho
+4. Funcionário visualiza os horários ocupados e quais usuários os ocuparam
+5. Funcionário pressiona o botão em forma de X para apagar uma reserva de horário previamente feita 
+6. Um pop-up aparece com a mensagem "Tem certeza que deseja apagar essa reserva?"
+7. Funcionário pressiona o botão "Sim" no pop-up
+8. A página atualiza, com o horário escolhido não mais reservado
+
+**Fluxo Alternativo A**
+
+1. No menu principal, o funcionário pressiona o botão "Gerenciar Reservas"
+2. Funcionário é redirecionado a uma página com os quartos e horários em que o hotel funciona, onde os quartos com horários disponíveis coloridos em verde e os quartos sem horários disponíveis coloridos em vermelho
+3. Funcionário seleciona um quarto colorido em vermelho
+4. Funcionário visualiza os horários ocupados e quais usuários os ocuparam
+5. Funcionário pressiona o botão em forma de X para apagar uma reserva de horário previamente feita 
+6. Um pop-up aparece com a mensagem "Tem certeza que deseja apagar essa reserva?"
+7. Funcionário pressiona o botão "Não" no pop-up
+8. O pop-up fecha com o horário escolhido inalterado
