@@ -20,7 +20,8 @@
 
 ## Diagrama de Casos de Uso
 
-![Diagrama de casos de uso drawio (1)](https://user-images.githubusercontent.com/111150888/189552799-ea4e0040-bfa8-454b-9794-c20d20d5e56b.png)
+![Diagrama de casos de uso drawio (3)](https://user-images.githubusercontent.com/111150888/189783420-4d6ea62f-05aa-42d5-9fa8-c7eb1ca70c6f.png)
+
 
 
 ## Descrição dos Casos de Uso
