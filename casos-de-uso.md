@@ -167,7 +167,7 @@ Usuário cadastra seu cachorro para fazer uma futura reserva
 1. No menu principal, usuário pressiona o botão "Registrar Cachorro" 
 2. O usuário preenche o campo "Nome do Dog" com um texto com menos de 3 caracteres e sem caracteres especiais 
 3. O programa verifica se o texto possui 3 caracteres ou mais e não possui caracteres especiais 
-4. O programa retorna a mensagem "Nome inválido".
+4. O programa retorna a mensagem "Nome inválido"
 
 **Fluxo Alternativo B**
 
