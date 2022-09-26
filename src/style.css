@@ -1,51 +1,188 @@
-* {
-    margin: 0;
-    padding: 0;
-  }
-  
-  a {
-    color: #fff;
+body {
+    background-color: #6480FF;
+    color: #FFFF00;
+    font-family: Verdana, 'Stoke';
+    font-size: 16px;
+}
+nav {
+    margin: 2px;
+    border-top: 2px; border-bottom: 2px;
+    padding-top: 4px; padding-bottom: 4px;
+    text-align: center;
+    font-weight: bold;
+    border-top-color: #FFFF00;
+    border-bottom-color: #FFFF00;
+    border-style: solid;
+    border-left-color: #6480FF;
+    border-right-color: #6480FF;
+}
+header {
+    width: 100%; height: 100px; 
+}
+.endereco {
+    font-size: 12px;
+    line-height: 140%;
+    float: right;
+    font-style: oblique;
+    font-family: 'Stoke', Verdana;
+}
+.imglogo {
+    float: left;
+    margin-bottom: 4px;
+    padding-bottom: 4px;
+}
+.fonte {
+    font-family: 'Stoke';
+}
+.botao {
+    font-size: 14px;
+    margin-top: 0px; margin-bottom: 0px;
+    margin-left: 4px; margin-right: 4px;
+    padding-top: 5px; padding-bottom: 5px;
+    padding-left: 4px; padding-right: 4px;
+    background-color: #FFEE66; width: 100px;
+    display: inline-block;
+}
+.apres {
+    font-size: 18px;
+    text-align: center;
+    line-height: 140%;
+}
+
+a:link {
     text-decoration: none;
-    transition: 0.3s;
-  }
-  
-  a:hover {
-    opacity: 0.7;
-  }
-  
-  .logo {
+    color: #0000DD;
+}
+a:visited {
+    color: #0000DD;
+}
+a:hover {
+    color: #DD00DD;
+}
+.listaLentes{
+    color: #3040BB;
+    background-color: #EEDD99;
+    padding: 10px 10px 10px 50px;
+    margin: 30px 10px 10px 10px;
+    border: 2px solid #000055;
+    line-height: 200%;
+    list-style-type: upper-roman;
+}
+p {
+    text-indent: 50px;
+}
+ul {
+    font-family: 'Stoke';
+    color: #3040BB;
+    line-height: 200%;
+    list-style-type: upper-roman;
+}
+.tabOculos {
+    border-style: solid;
+    background-color: #EEDD99;
+    color: #000066;
+    border: 96%;
+    text-align: center;
+    margin: 0 auto;
+    font-family: 'Stoke';
+}
+td,th {
+    border: 3px;
+    border-style: solid;
+    color: #000055;
+    padding: 6px 12px 6px 12px;
+}
+.title {
+    color: #FFFF22;
+    border-color: #000055;
+    background-color: #447799;
     font-size: 24px;
-    text-transform: uppercase;
-    letter-spacing: 4px;
-  }
-  
-  nav {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    font-family: system-ui, -apple-system, Helvetica, Arial, sans-serif;
-    background: #23232e;
-    height: 11vh;
-  }
-  
-  main {
-    background: url("bg.jpg") no-repeat center center;
-    background-size: cover;
-    height: 92vh;
-  }
-  
-  .nav-list {
-    list-style: none;
-    display: flex;
-  }
-  
-  .nav-list li {
-    letter-spacing: 3px;
-    margin-left: 32px;
-  }
-  
-  .mobile-menu {
-    display: none;
-    cursor: pointer;
-  }
-  
+    text-align: center;
+    font-weight: bold;
+}
+.linTH {
+    color: #FFFFFF;
+    background-color: #777777;
+    vertical-align: center;
+    text-align: center;
+}
+.colTH {
+    color: #FFFFFF;
+    background-color: #999999;
+}
+.imgCel {
+    text-align: center;
+}
+.geral {
+    width: 580px;
+    color: #880000;
+    background-color: #EEDD99;
+    padding: 6px 6px 15px 6px;
+    text-align: left;
+    margin: 10px auto;
+    border: 2px solid #000055;
+}
+.listaCompras {
+    width: 230px; height: 230px;
+    float: right;
+    margin-top: 8px;
+    margin-left: 10px;
+}
+.botoes {
+    text-align: right;
+    margin: 20px 10px 0px 10px;
+}
+.fsEsq {
+    float: left;
+    display: inline;
+    margin: 0px;
+}
+.fsDir {
+    float: right;
+    display: inline;
+    margin: 0px;
+}
+.inpGrande {
+    width: 440px;
+}
+.inpMedio {
+    width: 80px;
+}
+.impNCC{
+    width: 130px;
+}
+.impTelefone{
+    width: 90px;
+}
+.impEnder{
+    width: 200px;
+    height: 60px;
+}
+.numDD {
+    width: 30px;
+}
+.numQD {
+    width: 50px;
+}
+.divLinha{
+    width: 550px;
+    margin-bottom: 6px;
+}
+.colPri{
+    float: left;
+    display: block;
+    width: 90px;
+}
+.colPriCompras {
+    float: left;
+    display: block;
+    width: 86px;
+}
+.colPriPag {
+    float: left;
+    display: block;
+    width: 250px;
+}
+.left{
+    float: left;
+}
