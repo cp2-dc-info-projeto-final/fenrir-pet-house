@@ -14,6 +14,7 @@
         $email = $_POST["email"];
         $data_nasc = $_POST["data_nasc"];
         $senha = $_POST["senha"];
+        $csenha = $_POST["csenha"];
         $cpf= $_POST["cpf"];
 
         $erro = 0;
@@ -38,6 +39,12 @@
             echo "Por favor, preencha a senha<br>";
             $erro = 1;
         }
+        
+        if(empty($csenha)){
+            echo "Por favor, confirme a senha.<br>";
+            $erro = 1;
+        }
+
 
         if(empty($cpf)){
             echo "Por favor, preencha o cpf<br>";

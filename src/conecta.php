@@ -12,12 +12,12 @@
             
 
             if($tipousuario == "cliente"){
-                echo "<a href='cliente.html'>Clique Aqui! cliente </a>"; 
+                header ("Location: clientelogin.html"); 
             }
             elseif($tipousuario == "funcionario"){
-                echo "<a href='funcionario.html'>Clique Aqui! funcionario </a>";
+                header ("Location: clientelogin.html");
             }
             elseif($tipousuario == "admin" ){
-                echo "<a href='admin.html'>Clique Aqui! adm </a>";
+                header ("Location: clientelogin.html");
             }
         }

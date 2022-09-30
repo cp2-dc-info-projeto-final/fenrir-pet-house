@@ -5,11 +5,13 @@
     </head>
     <body>
         <h1>Cadastro de Cliente</h1>
+        <p><a href = "clientelogin.html">LOGIN</a></p>
         <form action="cliente.php" method="POST"> 
             <input type="hidden" name="operacao" value="inserir">
             <p>Nome: <input type="text" name="nome"></p>
             <p>E-mail: <input type="text" name="email"></p>
             <p>Senha: <input type="text" name="senha"></p>
+            <p>Confirme a senha: <input type="password" name="csenha"></p>
             <p>Data de Nascimento: <input type="date" name="data_nasc"></p>
 
             <p><input type="submit" value="Enviar"></p> 
