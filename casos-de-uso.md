@@ -27,9 +27,11 @@
 ## Descrição dos Casos de Uso
 
 ### CDU 01
-![Diagrama de CDU-01](Csos_2.png)
 
 Usuário, funcionário e administrador fazem login.
+![Diagrama de CDU-01](Csos_2.png)
+![Diagrama de CDU-01](CASOS-USO-ALTERNATIVO-1_1.png)
+
 
 **Fluxo Principal**
 
@@ -57,6 +59,9 @@ Usuário, funcionário e administrador fazem login.
 ### CDU 02
 
 Usuário se cadastra no site
+
+![Diagrama de CDU-02](Csos_4.png)
+![Diagrama de CDU-02](CASOS-USO-ALTERNATIVO-1_2.png)
 
 **Fluxo Principal**
 
@@ -107,6 +112,9 @@ Usuário se cadastra no site
 
 Usuário reserva um horário para levar seu cachorro ao hotel
 
+![Diagrama de CDU-03](Csos_6.png)
+![Diagrama de CDU-03](CASOS-USO-ALTERNATIVO-1_3.png)
+
 **Fluxo Principal**
 
 1. Usuário pressiona o botão "Reservar"
@@ -147,6 +155,9 @@ Usuário reserva um horário para levar seu cachorro ao hotel
 ### CDU 04
 
 Usuário cadastra seu cachorro para fazer uma futura reserva
+
+![Diagrama de CDU-04](Csos_7.png)
+![Diagrama de CDU-04](CASOS-USO-ALTERNATIVO-1_4.png)
 
 **Fluxo Principal**
 
@@ -201,6 +212,9 @@ Usuário cadastra seu cachorro para fazer uma futura reserva
 
 Administrador apaga uma reserva previamente ocupada
 
+![Diagrama de CDU-05](Csos_8.png)
+![Diagrama de CDU-05](CASOS-USO-ALTERNATIVO-1_5.png)
+
 **Fluxo principal**
 
 1. No menu principal, o administrador pressiona o botão "Gerenciar Reservas"
@@ -227,6 +241,9 @@ Administrador apaga uma reserva previamente ocupada
 
 Cliente consulta os horários reservados
 
+![Diagrama de CDU-06](Csos_7.png)
+![Diagrama de CDU-06](CASOS-USO-ALTERNATIVO-1_6.png)
+
 **Fluxo principal**
 
 1. No menu principal, usuário pressiona botão "Reservas"
@@ -235,6 +252,9 @@ Cliente consulta os horários reservados
 ### CDU 07
 
 Cliente altera a reserva
+
+![Diagrama de CDU-03](Csos_9.png)
+![Diagrama de CDU-07](CASOS-USO-ALTERNATIVO-1_7.png)
 
 **Fluxo principal**
 
@@ -298,6 +318,9 @@ Cliente altera a reserva
 
 Cliente cancela uma reserva
 
+![Diagrama de CDU-08](Csos_8.png)
+![Diagrama de CDU-08](CASOS-USO-ALTERNATIVO-1_8.png)
+
 1. No menu principal, usuário pressiona botão "Reservas"
 2. Usuário é redirecionado a uma listagem com as informações de quartos e horários reservados por ele, e os cachorros selecionados
 3. Usuário pressiona o botão "X" ao lado da reserva que deseja apagar
@@ -309,6 +332,9 @@ Cliente cancela uma reserva
 ### CDU 09
 
 Funcionário apaga a reserva de um cliente
+
+![Diagrama de CDU-09](Csos_8.png)
+![Diagrama de CDU-09](CASOS-USO-ALTERNATIVO-1_9.png)
 
 **Fluxo principal**
 
