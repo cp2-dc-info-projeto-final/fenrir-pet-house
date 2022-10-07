@@ -1,4 +1,3 @@
-
 <?php
     session_start();
     if(isset($_SESSION["email"])){
@@ -7,32 +6,32 @@
     if(isset($_SESSION["senha"])){
         $senha = $_SESSION["senha"];
     }
-    if(empty($email) or empty($senha)){
-        echo "Login não concluído.";
-        echo"<p><a href='loginfenrir.html'>Página de Login</a></p>";
+    if(empty($email) OR empty($senha)){
+        echo "Você não fez o login!";
+        echo "<p><a href='loginfenrir.html'>Página de login</a></p>";
         exit;
     }
     else{
-        include "conectauser.inc";
+        include "conecta_mysql.inc";
         $sql = "SELECT * FROM cliente WHERE email = '$email';";
         $res = mysqli_query($mysqli, $sql);
 
-        //teste se não encontrou email no banco de dados
+        // testa se não encontrou o e-mail no banco de dados
         if(mysqli_num_rows($res) != 1){
             unset($_SESSION["email"]);
             unset($_SESSION["senha"]);
-            echo "Login não concluído.";
-            echo"<p><a href='loginfenrir.html'>Página de Login</a></p>";
-        exit;
+            echo "Você não fez o login!";
+            echo "<p><a href='login.html'>Página de login</a></p>";
+            exit;
         }
         else{
             $cliente = mysqli_fetch_array($res);
-            //teste se a senha está errada
-            if($senha != $cliente["senha"]){
+            // testa se a senha está errada
+            if(!hash_equals($senha, $cliente['senha'])){
                 unset($_SESSION["email"]);
                 unset($_SESSION["senha"]);
-                echo "Login não concluído.";
-                echo"<p><a href='loginfenrir.html'>Página de Login</a></p>";
+                echo "Você não fez o login!";
+                echo "<p><a href='loginfenrir.html'>Página de login</a></p>";
                 exit;
             }
         }

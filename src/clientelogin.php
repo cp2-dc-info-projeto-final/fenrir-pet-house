@@ -26,7 +26,7 @@
             $_SESSION["email"] = $email;
             $_SESSION["senha"] = $senha;
             // direciona para a página inicial
-            header("Location: index.php");
+            header("Location: indexlogcliente.php");
         }
     }
 ?>

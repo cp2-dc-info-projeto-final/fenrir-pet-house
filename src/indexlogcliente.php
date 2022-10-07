@@ -22,13 +22,14 @@
           <li><a href="https://ead.cp2.g12.br/login/index.php">Sobre nós</a></li>
           <li><a href="https://ead.cp2.g12.br/login/index.php">Hospedagem</a></li>
           <li><a href="duvidas.php">Dúvidas</a></li>
-          <li><a href="loginfenrir.html">Login</a></li>
+          <li><a href="account.html">Conta</a></li>
+          <li><a href="logout.html">Logout</a></li>
         </ul>
         <footer>
           <br>
           <h3></h3>
     
-          <h3>KKKKKKKKKKKKKKK</h3>
+          <h3>AAAAAAAAAAAAAAA</h3>
           <style>
             h3{font-style: italic; color:#860a72;}
             </style>
