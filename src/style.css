@@ -29,6 +29,16 @@
     height: 18vh;
   }
   
+  .botao {
+    font-size: 14px;
+    margin-top: 0px; margin-bottom: 0px;
+    margin-left: 4px; margin-right: 4px;
+    padding-top: 5px; padding-bottom: 5px;
+    padding-left: 4px; padding-right: 4px;
+    background-color: #FFEE66; width: 100px;
+    display: inline-block;
+}
+
   .nav-list {
     list-style: none;
     display: flex;
@@ -45,6 +55,7 @@
   .btn-wrap{
     position:relative;
     text-align: center;
+    background-color: #860a72;
 
 }
 .btn-wrap button{
