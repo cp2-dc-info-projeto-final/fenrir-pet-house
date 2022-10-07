@@ -27,7 +27,7 @@
 ## Descrição dos Casos de Uso
 
 ### CDU 01
-![Csos_2.png]
+![Diagrama de CDU-01](Csos_2.png)
 
 Usuário, funcionário e administrador fazem login.
 
