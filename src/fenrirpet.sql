@@ -110,3 +110,13 @@ DROP USER IF EXISTS 'estudante'@'localhost';
 CREATE USER 'fenrir'@'localhost' IDENTIFIED BY '123'; 
 GRANT ALL PRIVILEGES ON fenrirpet.* TO 'fenrir'@'localhost';
 
+-- 
+-- Estrutura da tabela `cachorro`
+--
+
+CREATE TABLE `cachorro` (
+  `cod_cachorro` int(11) NOT NULL,
+  `nome` varchar(220) NOT NULL,
+  `idade` varchar(50) NOT NULL,
+  `raça` varchar(220) NOT NULL,
+)
