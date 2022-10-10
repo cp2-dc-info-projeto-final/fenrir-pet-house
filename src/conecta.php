@@ -15,9 +15,7 @@
                 header ("Location: clientelogin.html"); 
             }
             elseif($tipousuario == "funcionario"){
-                header ("Location: clientelogin.html");
-            }
-            elseif($tipousuario == "admin" ){
-                header ("Location: clientelogin.html");
+                header ("Location: funcionariologin.html");
             }
         }
+          
