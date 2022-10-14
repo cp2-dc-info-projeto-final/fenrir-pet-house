@@ -22,11 +22,9 @@
           <div class="line3"></div>
         </div>
         <ul class="nav-list">
-          <li><a href="sobrelog.html">Sobre nós</a></li>
-          <li><a href="hospedagem.html">Hospedagem</a></li>
-          <li><a href="duvidaslog.html">Dúvidas</a></li>
-          <li><a href="account.html">Conta</a></li>
-          <li><a href="logout.php">Logout</a></li>
+          <li><a href="funcreserva">Reservas</a></li>
+          <li><a href="funcaccount.html">Conta</a></li>
+          <li><a href="funclogout.php">Logout</a></li>
           
         </ul>
         </footer>    

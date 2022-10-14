@@ -15,7 +15,7 @@
                 header ("Location: clientelogin.html"); 
             }
             elseif($tipousuario == "funcionario"){
-                header ("Location: funcionariologin.html");
+                header ("Location: C:\Program Files (x86)\EasyPHP-Devserver-17\eds-www\tccfenrir\fenrir-pet-house\src\funcionario\funcionariologin.html");
             }
         }
           

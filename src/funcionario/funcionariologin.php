@@ -24,9 +24,9 @@
             // abre a sessão e registra as variáveis do login
             session_start();
             $_SESSION["email"] = $email;
-            $_SESSION["senha"] = $senha;
+            $_SESSION["IsAdmin"] = $isadmin;
             // direciona para a página inicial
-            header("Location: index.php");
+            header("Location: indexlogfuncionario.php");
         }
     }
 ?>
