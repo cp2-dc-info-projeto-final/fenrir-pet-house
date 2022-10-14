@@ -1,3 +1,4 @@
+<? include "autentica.php"; ?>
 <!DOCTYPE html>
 <html lang="pt-br">
   <head>
@@ -13,18 +14,17 @@
 
       <header class="nav">
       <nav>
-        <a href="teste tcc.html"><img style="margin-left:25px; margin-top:10px; margin-bottom:10px; " src="logo.png" alt="Image" height="100"></a>
-        <a class="logo" href="teste tcc.html">Fenrir Pet House</a>
+        <a href="indexlogcliente.php"><img style="margin-left:25px; margin-top:10px; margin-bottom:10px; " src="logo.png" alt="Image" height="100"></a>
+        <a class="logo" href="indexlogcliente.php">Fenrir Pet House</a>
         <div class="mobile-menu">
           <div class="line1"></div>
           <div class="line2"></div>
           <div class="line3"></div>
         </div>
         <ul class="nav-list">
-          <li><a href="sobre.html">Sobre nós</a></li>
-          <li><a href="hospedagem.html">Hospedagem</a></li>
-          <li><a href="duvidas.html">Dúvidas</a></li>
-          <li><a href="loginfenrir.html">Login</a></li>
+          <li><a href="funcreserva">Reservas</a></li>
+          <li><a href="funcaccount.html">Conta</a></li>
+          <li><a href="index.php">Logout</a></li>
           
         </ul>
         </footer>    
@@ -33,16 +33,11 @@
 
     <body background="capa dogs.png" class="background">
     </body>
+    
 
-    <div class="fenrir-login">
-        <h1>Conta</h1>
-        <p><a href = "editclientesenha.html" style="color:rgb(166, 180, 180);">Editar senha</a></p>
-        <form action="clientelogin.php" method="POST" class="form-container"></form>
-
-    </div>
 
    <!-- Site footer -->
-   <footer class="site-footer">
+   <footer class="site-footer" style="margin-top: 55%;">
 
         <div class="col-xs-6 col-md-3">
           <h6>Contatos:</h6>
@@ -56,9 +51,6 @@
 
         <div class="col-xs-6 col-md-3">
           
-
-        </div>
-      </div>
       <hr>
     </div>
     <div class="container">
@@ -72,6 +64,3 @@
 
   </body>
 </html>
-
-
-

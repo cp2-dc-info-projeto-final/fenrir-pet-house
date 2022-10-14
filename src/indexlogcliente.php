@@ -26,7 +26,7 @@
           <li><a href="hospedagem.html">Hospedagem</a></li>
           <li><a href="duvidaslog.html">Dúvidas</a></li>
           <li><a href="account.html">Conta</a></li>
-          <li><a href="logout.php">Logout</a></li>
+          <li><a href="index.php">Logout</a></li>
           
         </ul>
         </footer>    
