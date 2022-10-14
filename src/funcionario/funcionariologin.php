@@ -15,6 +15,7 @@
     }
     else{
         $func = mysqli_fetch_array($res);
+        $isadmin = $func["IsAdmin"];
         // testa se a senha está errada
         if($senha != $func["senha"]){
             echo "Senha e/ou Email inválido(s)!";
