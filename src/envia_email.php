@@ -1,12 +1,12 @@
 <?php
+use PHPMailer\PHPMailer\Exception;
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\SMTP;
-use PHPMailer\PHPMailer\Exception;
 
 // Inclui os arquivos da biblioteca PHPMailer necessários para o envio de e-mail
-require 'C:/Program Files (x86)/EasyPHP-Devserver-17/eds-www/lp3/PHPMailer/src/Exception.php';
-require 'C:/Program Files (x86)/EasyPHP-Devserver-17/eds-www/lp3/PHPMailer/src/PHPMailer.php';
-require 'C:/Program Files (x86)/EasyPHP-Devserver-17/eds-www/lp3/PHPMailer/src/SMTP.php';
+require __DIR__'/PHPMailer/src/Exception.php';
+require __DIR__'/PHPMailer/src/PHPMailer.php';
+require __DIR__'/PHPMailer/src/SMTP.php';
 
 function envia_email($para, $assunto, $mensagem){
 
