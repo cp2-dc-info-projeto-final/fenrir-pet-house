@@ -1,10 +1,12 @@
-<?php include "conectauser.inc"; ?>
+<?php include "conectauser.inc";
+include "exemplo_email.php" ?>
 <html>
     <head>
         <title>Dados Cadastrados</title>
         <meta charset="UTF-8">
     </head>
     <body>
+    <meta charset="UTF-8">  
         <h1>Dados Cadastrados</h1>
 <?php
     $operacao = $_POST["operacao"];
@@ -47,11 +49,14 @@
             $sql = "INSERT INTO cliente (nome,email,data_nasc, senha)";
             $sql .= "VALUES ('$nome','$email','$data_nasc', '$senha');";  
             mysqli_query($mysqli,$sql);
+            envia_email($email, "Confirmação de Cadastro", "Uma conta foi criada na hospedaria canina Fenrir Pet House usando esse email. Caso você não tenha feito essa conta, contate-nos imediatamente.");
 
             echo "Nome: $nome <br>";
             echo "E-mail: $email <br>";
             echo "Data de nascimento: $data_nasc <br>";
             echo "<a href='loginfenrir.html'>Voltar para o início</a>";
+            
+            
         }
     }
     else if($operacao == "exibir"){
