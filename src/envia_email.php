@@ -23,6 +23,7 @@ function envia_email($para, $assunto, $mensagem){
         $mail->Password   = 'akbksaacignqsyzv';                     //senha SMTP
         $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;            //Habilita a encriptação implícita TLS
         $mail->Port       = 587;                                    //Porta TCP de conexão; use 587 se você tiver configurado `SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS`
+        $mail->CharSet = 'UTF-8';                                   //Força o Charset latino
 
         //Remetente e Destinatários
         $mail->setFrom('fenrirpethouse@gmail.com', 'Fenrir Pet House');  // Adiciona o remetente

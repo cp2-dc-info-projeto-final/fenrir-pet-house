@@ -1,5 +1,6 @@
-CREATE USER 'admin'@'localhost' IDENTIFIED BY 'admin'; 
-GRANT ALL PRIVILEGES ON fenrir.* TO 'admin'@'localhost';
+DROP USER IF EXISTS 'fenrir'@'localhost';
+CREATE USER 'fenrir'@'localhost' IDENTIFIED BY '123'; 
+GRANT ALL PRIVILEGES ON fenrir.* TO 'fenrir'@'localhost';
 
 CREATE TABLE administrador ( 
     cod_admin int NOT NULL AUTO_INCREMENT, 

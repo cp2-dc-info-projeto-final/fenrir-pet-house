@@ -1,5 +1,6 @@
 <?php include "conectauser.inc";
-include "exemplo_email.php" ?>
+include "editclientesenha.html";
+include "cliente.html"; ?>
 <html>
     <head>
         <title>Dados Cadastrados</title>
@@ -7,7 +8,6 @@ include "exemplo_email.php" ?>
     </head>
     <body>
     <meta charset="UTF-8">  
-        <h1>Dados Cadastrados</h1>
 <?php
     $operacao = $_POST["operacao"];
 
@@ -23,43 +23,49 @@ include "exemplo_email.php" ?>
         if(empty($nome) or strstr($nome, ' ') == false){
             echo "Por favor, preencha o nome completo.<br>";
             $erro = 1;
+            
         }
 
         if(strlen($email) < 10 or strstr($email, '@') == false){
             echo "Por favor, preencha o e-mail corretamente.<br>";
-            $erro = 1;
+            $erro = 1;            
         }
 
         if(empty($data_nasc)){
             echo "Por favor, preencha a data.<br>";
-            $erro = 1;
+            $erro = 1;           
         }
         
         if(empty($csenha)){
             echo "Por favor, confirme a senha.<br>";
             $erro = 1;
+           
         }
 
         if(empty($senha)){
             echo "Por favor, preencha a senha<br>";
-            $erro = 1;
+            $erro = 1;            
         }
 
         if($erro == 0){
+            include "envia_email.php";
             $sql = "INSERT INTO cliente (nome,email,data_nasc, senha)";
             $sql .= "VALUES ('$nome','$email','$data_nasc', '$senha');";  
             mysqli_query($mysqli,$sql);
             envia_email($email, "Confirmação de Cadastro", "Uma conta foi criada na hospedaria canina Fenrir Pet House usando esse email. Caso você não tenha feito essa conta, contate-nos imediatamente.");
-
+            
+            echo "/- Dados Cadastrados -/ <br>";
             echo "Nome: $nome <br>";
             echo "E-mail: $email <br>";
             echo "Data de nascimento: $data_nasc <br>";
+            echo "E-mail de confirmação de cadastro enviado!<br>";
             echo "<a href='loginfenrir.html'>Voltar para o início</a>";
+
             
             
         }
     }
-    else if($operacao == "exibir"){
+    if($operacao == "exibir"){
         $sql = "SELECT * FROM cliente;"; 
         $res = mysqli_query($mysqli,$sql);
         $linhas = mysqli_num_rows($res);
@@ -71,6 +77,46 @@ include "exemplo_email.php" ?>
             echo "---------------------<br>";
         }
         echo "<a href='cliente.html'>Voltar para o início</a>";
+    }
+
+
+    if($operacao == "editsenha"){
+        $senhaantiga = $_POST["senhaantiga"];
+        $senhanova = $_POST["senhanova"];
+        $csenhanova = $_POST["csenhanova"];
+
+            $erro = 0;
+
+            if(empty($senhaantiga)){
+                echo "Por favor, preencha a senha antiga.<br>";
+                $erro = 1;
+            }
+
+            if($senhaantiga){
+                echo "Por favor, preencha o e-mail corretamente.<br>";
+                $erro = 1;
+            }
+
+            if(empty($senhanova)){
+                echo "Por favor, preencha a nova senha.<br>";
+               $erro = 1;
+            }
+
+            if(empty($csenhanova)){
+                echo "Por favor, confirme a nova senha.<br>";
+             $erro = 1;
+            }
+
+            if($erro == 0){
+                $sql = "SELECT * FROM cliente WHERE email = '$email';";
+                $sql = "UPDATE cliente SET senha = '$novasenha';";
+                mysqli_query($mysqli,$sql);
+
+                include "envia_email.php";
+                envia_email($email, "Confirmação de Cadastro", "A senha da sua conta foi alterada. Caso você não tenha alterado, nos informe imediatamente.");
+                echo "Senha atualizada com sucesso!<br>";
+                echo "<a href='form_extra.html'>Voltar para o início</a>"; 
+            }
     }
 
 ?>
