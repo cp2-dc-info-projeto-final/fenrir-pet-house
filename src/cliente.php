@@ -44,7 +44,9 @@
         if(empty($senha)){
             echo "Por favor, preencha a senha<br>";
             $erro = 1;            
-    
+            
+        }
+        
         if($erro == 0){
             include "envia_email.php";
             $sql = "INSERT INTO cliente (nome,email,data_nasc, senha)";
@@ -63,6 +65,7 @@
             
         }
     }
+
     if($operacao == "exibir"){
         $sql = "SELECT * FROM cliente;"; 
         $res = mysqli_query($mysqli,$sql);
