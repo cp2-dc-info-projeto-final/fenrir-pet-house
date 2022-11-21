@@ -156,4 +156,4 @@ ALTER TABLE `serviço`
 
 DROP USER IF EXISTS 'fenrir'@'localhost';
 CREATE USER 'fenrir'@'localhost' IDENTIFIED BY '123'; 
-GRANT ALL PRIVILEGES ON fenrir.* TO 'fenrir'@'localhost';
+GRANT ALL PRIVILEGES ON fenrirpet.* TO 'fenrir'@'localhost';
