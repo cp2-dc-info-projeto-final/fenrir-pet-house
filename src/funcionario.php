@@ -63,6 +63,7 @@
             echo "CPF : $cpf <br>";
             echo "<a href='funcionario.html'>Voltar para o início</a>";
         }
+        if($senha =)
     }
 
 ?>
