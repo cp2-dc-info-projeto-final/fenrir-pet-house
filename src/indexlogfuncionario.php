@@ -14,15 +14,15 @@
 
       <header class="nav">
       <nav>
-        <a href="indexlogcliente.php"><img style="margin-left:25px; margin-top:10px; margin-bottom:10px; " src="logo.png" alt="Image" height="100"></a>
-        <a class="logo" href="indexlogcliente.php">Fenrir Pet House</a>
+        <a href="indexlogfuncionario.php"><img style="margin-left:25px; margin-top:10px; margin-bottom:10px; " src="logo.png" alt="Image" height="100"></a>
+        <a class="logo" href="indexlogfuncionario.php">Fenrir Pet House</a>
         <div class="mobile-menu">
           <div class="line1"></div>
           <div class="line2"></div>
           <div class="line3"></div>
         </div>
         <ul class="nav-list">
-          <li><a href="funcreserva">Reservas</a></li>
+          <li><a href="funcreserva.html">Reservas</a></li>
           <li><a href="funcaccount.html">Conta</a></li>
           <li><a href="index.php">Logout</a></li>
           
@@ -42,10 +42,10 @@
         <div class="col-xs-6 col-md-3">
           <h6>Contatos:</h6>
           <ul class="footer-links">
-            <li><a href="">WhatsApp</a></li>
-            <li><a href="">Facebook</a></li>
-            <li><a href="">twitter</a></li>
-            <li><a href="">Instagram</a></li>
+            <li><a href="https://web.whatsapp.com/">WhatsApp</a></li>
+            <li><a href="https://www.facebook.com/">Facebook</a></li>
+            <li><a href="https://twitter.com/">Twitter</a></li>
+            <li><a href="https://www.instagram.com/">Instagram</a></li>
           </ul>
         </div>
 
