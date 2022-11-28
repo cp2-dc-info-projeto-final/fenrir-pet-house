@@ -10,6 +10,7 @@
 
     //testa se não encontrou o e-mail
     if(mysqli_num_rows($res) != 1){
+        header("Location: funcionariologininc.html");
         echo "Senha e/ou Email inválido(s)!";
         echo "<p><a href='funcionariologin.html'>Página de login</a></p>";
     }
@@ -18,6 +19,7 @@
         $isadmin = $func["IsAdmin"];
         // testa se a senha está errada
         if($senha != $func["senha"]){
+            header("Location: funcionariologininc.html");
             echo "Senha e/ou Email inválido(s)!";
             echo "<p><a href='funcionariologin.html'>Página de login</a></p>";
         }

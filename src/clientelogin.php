@@ -10,6 +10,7 @@
 
     //testa se não encontrou o e-mail
     if(mysqli_num_rows($res) != 1){
+        header("Location: clientelogininc.html");
         echo "Senha e/ou Email inválido(s)!";
         echo "<p><a href='clientelogin.html'>Página de login</a></p>";
     }
@@ -17,6 +18,7 @@
         $cliente = mysqli_fetch_array($res);
         // testa se a senha está errada
         if($senha != $cliente["senha"]){
+            header("Location: clientelogininc.html");
             echo "Senha e/ou Email inválido(s)!";
             echo "<p><a href='clientelogin.html'>Página de login</a></p>";
         }

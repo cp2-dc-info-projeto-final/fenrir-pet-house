@@ -34,7 +34,7 @@ if($operacao == "editsenha"){
             if($erro == 0){
                 $sql = "UPDATE cliente SET senha = '$senhanova' WHERE email = '$email';";
                 mysqli_query($mysqli,$sql);
-
+                header("Location: clientealtera.html");
                 // include "envia_email.php";
                 //envia_email($email, "Confirmação de Cadastro", "A senha da sua conta foi alterada. Caso você não tenha alterado, nos informe imediatamente.");
                 echo "Senha atualizada com sucesso!<br>";

@@ -1,3 +1,5 @@
+CREATE DATABASE fenrir;
+
 DROP USER IF EXISTS 'fenrir'@'localhost';
 CREATE USER 'fenrir'@'localhost' IDENTIFIED BY '123'; 
 GRANT ALL PRIVILEGES ON fenrir.* TO 'fenrir'@'localhost';
