@@ -11,6 +11,7 @@
  - [CDU 07](#CDU-07): Alteração de Reserva do Cliente
  - [CDU 08](#CDU-08): Cancelamento de Reserva do Cliente
  - [CDU 09](#CDU-09): Deleção de Reserva por Funcionário
+ - [CDU 10](#CDU-10): Recuperação de senha por funcionário e cliente 
  
 ## Lista dos Atores
 
@@ -357,3 +358,33 @@ Funcionário apaga a reserva de um cliente
 6. Um pop-up aparece com a mensagem "Tem certeza que deseja apagar essa reserva?"
 7. Funcionário pressiona o botão "Não" no pop-up
 8. O pop-up fecha com o horário escolhido inalterado
+
+###CDU 10 
+
+Funcionário e cliente recuperaram a senha.
+
+**Fluxo Principal**
+
+1. O usuário seleciona a opção "Recuperar a senha "
+2. O sistema retornará a um Pop-up com um formulário que solicitará o e-mail de recuperação.
+3. O usuário digita o email de recuperação e seleciona "receber código de confirmação".
+4. O sistema recebe os dados e retorna o código de confirmação para o e-mail do usuário".
+5. O sistema retornará um Pop-up que solicitará o código de confirmação.
+6. O usuário digita o código certo e clica em "confirmar".
+
+**Fluxo Alternativo A**
+
+1. O usuário seleciona a opção "Recuperar a senha "
+2. O sistema retornará a um Pop-up com um formulário que solicitará o e-mail de recuperação.
+3. O usuário digita o email incorretamente e seleciona "receber código de confirmação".
+4. O sistema retorna a mensagem "e-mail de recuperação incorreto".
+
+**Fluxo Alternativo B**
+
+1. O usuário seleciona a opção "Recuperar a senha "
+2. O sistema retornará a um Pop-up com um formulário que solicitará o e-mail de recuperação.
+3. O usuário digita o email de recuperação e seleciona "receber código de confirmação".
+4. O sistema recebe os dados e retorna o código de confirmação para o e-mail do usuário".
+5. O sistema retornará um Pop-up que solicitará o código de confirmação.
+6. O usuário digita o código incorretamente e clica em "confirmar".
+7. O sistema retorna a mensagem "código de confirmação incorreto".
