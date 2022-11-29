@@ -359,7 +359,7 @@ Funcionário apaga a reserva de um cliente
 7. Funcionário pressiona o botão "Não" no pop-up
 8. O pop-up fecha com o horário escolhido inalterado
 
-###CDU 10 
+### CDU 10 
 
 Funcionário e cliente recuperaram a senha.
 
