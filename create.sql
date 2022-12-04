@@ -95,9 +95,47 @@ INSERT INTO `func` (`cod_func`, `nome`, `email`, `data_nasc`, `senha`, `cpf`, `I
 
 CREATE TABLE `serviço` (
   `idServico` int(11) NOT NULL,
-  `Nome` varchar(220) NOT NULL,
-  `Descricao` varchar(220) NOT NULL
+  `hora_disp` int(11) NOT NULL,
+  `agenda_tstamp` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  `agenda_status` int(11) DEFAULT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+
+--
+-- Extraindo dados da tabela `serviço`
+--
+
+INSERT INTO `serviço` (`idServico`, `hora_disp`, `agenda_tstamp`, `agenda_status`) VALUES
+(1, 1, '2022-02-24 15:30:00', NULL),
+(2, 1, '2022-02-15 16:30:00', NULL),
+(3, 1, '2022-02-15 17:30:00', NULL),
+(4, 2, '2022-02-16 15:30:00', NULL),
+(5, 2, '2022-02-16 16:30:00', NULL),
+(6, 0, '2022-02-25 15:30:00', NULL);
+
+--
+-- Indexes for dumped tables
+--
+
+--
+-- Indexes for table `serviço`
+--
+ALTER TABLE `serviço`
+  ADD PRIMARY KEY (`idServico`);
+
+--
+-- AUTO_INCREMENT for dumped tables
+--
+
+--
+-- AUTO_INCREMENT for table `serviço`
+--
+ALTER TABLE `serviço`
+  MODIFY `idServico` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
+
 
 --
 -- Indexes for dumped tables
@@ -134,6 +172,7 @@ ALTER TABLE `serviço`
 --
 -- AUTO_INCREMENT for table `cachorro`
 --
+
 ALTER TABLE `cachorro`
   MODIFY `cod_cachorro` int(11) NOT NULL AUTO_INCREMENT;
 --
