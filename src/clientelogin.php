@@ -26,9 +26,7 @@
                     // direciona para a página inicial
                     header("Location: indexlogcliente.php");
                 } else {
-                    echo "Nao logado";
-                    echo "<a href='loginfenrir.html'>Voltar para o login.</a>";
-                    mysqli_error();
+                    header("Location: clientelogininc.html");
 
             }
             }

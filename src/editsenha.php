@@ -9,37 +9,48 @@ if(isset($_SESSION["email"])){
 
 $operacao = $_POST["operacao"];
 
-if($operacao == "editsenha"){
-        $senhaantiga = $_POST["senhaantiga"];
-        $senhanova = $_POST["senhanova"];
-        $csenhanova = $_POST["csenhanova"];
+    if($operacao == "editsenha"){
 
-            $erro = 0;
+		//pega info de editclientesenha.html
+        $email = $_POST['email'];
+		$senhaantiga = $_POST['senhaantiga'];
+		$senhanova = $_POST['senhanova'];
+		$csenhanova = $_POST['csenhanova'];
+  
+		//pega info "senha" do sql
+        $sql = "SELECT senha FROM cliente WHERE email = '$email' ";
+        $query = $mysqli->query($sql);
+		$row = $query->fetch_assoc();
 
-            if(empty($senhaantiga)){
-                echo "Por favor, preencha a senha antiga.<br>";
-                $erro = 1;
-            }
-
-            if(empty($senhanova)){
-                echo "Por favor, preencha a nova senha.<br>";
-               $erro = 1;
-            }
-
-            if(empty($csenhanova)){
-                echo "Por favor, confirme a nova senha.<br>";
-             $erro = 1;
-            }
-
-            if($erro == 0){
-                $sql = "UPDATE cliente SET senha = '$senhanova' WHERE email = '$email';";
-                mysqli_query($mysqli,$sql);
-                header("Location: clientealtera.html");
-                // include "envia_email.php";
-                //envia_email($email, "Confirmação de Cadastro", "A senha da sua conta foi alterada. Caso você não tenha alterado, nos informe imediatamente.");
-                echo "Senha atualizada com sucesso!<br>";
-                echo "<a href='form_extra.html'>Voltar para o início</a>"; 
-            }
+		//checa senha antiga
+		if(password_verify($senhaantiga, $row['senha'])){
+			//checa senha nova e confirmação de senha nova
+			if($senhanova == $csenhanova){
+				//#cripto nessa senha
+				$hash = password_hash($senhanova, PASSWORD_DEFAULT);
+ 
+				//update na senha no sql
+				$sql = "UPDATE cliente SET senha = '$hash' WHERE email = '$email' ";
+				if(mysqli_query($mysqli, $sql)){
+                    include "envia_email.php";
+                    envia_email($email, "Alteração de Senha", "Sua senha foi alterada no site da hotelaria canina Fenrir Pet Shop. Sua nova senha é:<br><br><strong>$senhanova</strong><br><br>Esperamos que você tenha uma ótima experiência em nosso site.");
+                    header('location: indexlogcliente.php');
+                }
+            //erros
+				else{
+					echo "Erro no sql";
+				}
+			}
+			else{
+				echo "As senhas não são iguais";
+			}
+		}
+		else{
+			echo "Senha antiga incorreta";
+		}
+	}
+    if (empty($email)){
+        echo "Preencha o email corretamente";
     }
-
+ 
 ?>
