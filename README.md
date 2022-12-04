@@ -25,4 +25,4 @@ O site traz a proposta de uma Hotelaria para cães. Ele busca direcionar o usuá
 
 **Modelagem do Banco de Dados**
 
-![Diagrama de Banco de Dados](diagrama-bd.png)
+![Diagrama de Banco de Dados](/diagramas/diagrama-bd.png)
