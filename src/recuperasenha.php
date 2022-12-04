@@ -4,8 +4,9 @@ include "genpass.php";
 
 $email = $_POST["email"];
 $senha = gerar_senha(10, true, true, true, false);
+$hash = password_hash($senha, PASSWORD_DEFAULT);
 
-$sql = "UPDATE cliente SET senha = '$senha' WHERE email = '$email' ";
+$sql = "UPDATE cliente SET senha = '$hash' WHERE email = '$email' ";
 mysqli_query($mysqli,$sql);
 mysqli_close($mysqli);
 

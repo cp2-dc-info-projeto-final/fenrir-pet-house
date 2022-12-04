@@ -17,17 +17,23 @@
     else{
         $cliente = mysqli_fetch_array($res);
         // testa se a senha está errada
-        if($senha != $cliente["senha"]){
-            header("Location: clientelogininc.html");
-            echo "Senha e/ou Email inválido(s)!";
-            echo "<p><a href='clientelogin.html'>Página de login</a></p>";
+        $query = "SELECT senha FROM cliente WHERE email = '$email' ";
+        if(mysqli_query($mysqli, $query)){
+                if(password_verify($senha, $cliente["senha"])){
+                    // abre a sessão e registra as variáveis do login
+                    session_start();
+                    $_SESSION["email"] = $email;
+                    // direciona para a página inicial
+                    header("Location: indexlogcliente.php");
+                } else {
+                    echo "Nao logado";
+                    echo "<a href='loginfenrir.html'>Voltar para o login.</a>";
+                    mysqli_error();
+
+            }
+            }
         }
-        else{
-            // abre a sessão e registra as variáveis do login
-            session_start();
-            $_SESSION["email"] = $email;
-            // direciona para a página inicial
-            header("Location: indexlogcliente.php");
-        }
-    }
+    
+    
+    mysqli_close($mysqli);
 ?>

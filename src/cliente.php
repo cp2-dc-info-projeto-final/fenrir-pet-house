@@ -49,17 +49,23 @@
         
         if($erro == 0){
             include "envia_email.php";
+            $hash = password_hash($senha, PASSWORD_DEFAULT);
             $sql = "INSERT INTO cliente (nome,email,data_nasc, senha)";
-            $sql .= "VALUES ('$nome','$email','$data_nasc', '$senha');";  
+            $sql .= "VALUES ('$nome','$email','$data_nasc', '$hash');"; 
+
             mysqli_query($mysqli,$sql);
             envia_email($email, "Confirmação de Cadastro", "Parabéns $nome, sua conta foi criada na hospedaria canina Fenrir Pet House usando esse email. Esperamos que você e seu au-migo desfrutem de nossos serviços! Caso você não tenha feito essa conta, contate-nos imediatamente.");
-            
-            echo "/- Dados Cadastrados -/ <br>";
+        ?>
+        <body>
+            <strong>Dados Cadastrados:</strong>
+        </body>
+        <?php
             echo "Nome: $nome <br>";
             echo "E-mail: $email <br>";
             echo "Data de nascimento: $data_nasc <br>";
             echo "E-mail de confirmação de cadastro enviado! Verifique sua caixa de entrada, ou caso não tenha recebido email, verifique a caixa de spam.<br>";
-            echo "<a href='loginfenrir.html'>Voltar para o login.</a>";
+            echo "<a href='loginfenrir.html'>Voltar para o login.</a>";                    
+            
 
             
             

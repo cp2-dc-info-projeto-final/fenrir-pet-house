@@ -45,7 +45,7 @@ CREATE TABLE `cachorro` (
 CREATE TABLE `cliente` (
   `cod_cliente` int(11) NOT NULL,
   `nome` varchar(220) NOT NULL,
-  `senha` varchar(220) NOT NULL,
+  `senha` varchar(255) NOT NULL,
   `email` varchar(220) NOT NULL,
   `data_nasc` varchar(10) NOT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
@@ -72,7 +72,7 @@ CREATE TABLE `func` (
   `nome` varchar(220) NOT NULL,
   `email` varchar(220) NOT NULL,
   `data_nasc` varchar(10) NOT NULL,
-  `senha` varchar(220) NOT NULL,
+  `senha` varchar(255) NOT NULL,
   `cpf` varchar(11) NOT NULL,
   `IsAdmin` tinyint(1) NOT NULL DEFAULT '0'
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
