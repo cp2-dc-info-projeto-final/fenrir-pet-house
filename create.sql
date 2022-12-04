@@ -3,11 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: 07-Out-2022 às 22:55
+-- Generation Time: 04-Dez-2022 às 15:51
 -- Versão do servidor: 5.7.17
 -- PHP Version: 5.6.30
-
-CREATE DATABASE fenrirpet;
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -60,7 +58,7 @@ INSERT INTO `cliente` (`cod_cliente`, `nome`, `senha`, `email`, `data_nasc`) VAL
 (1, 'Ra Ra', 'senha', 'ra@gmail.com', '2005-03-29'),
 (2, 'Ra Ra2', 'senha2', 'ra2@gmail.com', '2005-03-29'),
 (3, 'e e', 'senha3', 'e@gmail.com', '1222-12-12'),
-(4, 'teste teste', 'teste', 'teste@gmail.com', '1111-11-11'),
+(4, 'teste teste', '123123123', 'teste@gmail.com', '1111-11-11'),
 (5, 'raa raa', 'aaaaa', 'aa@aaa.com', '2122-01-29');
 
 -- --------------------------------------------------------
@@ -96,46 +94,30 @@ INSERT INTO `func` (`cod_func`, `nome`, `email`, `data_nasc`, `senha`, `cpf`, `I
 CREATE TABLE `serviço` (
   `idServico` int(11) NOT NULL,
   `hora_disp` int(11) NOT NULL,
-  `agenda_tstamp` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
-  `agenda_status` int(11) DEFAULT NULL
+  `agenda_tstamp` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  `descricao` varchar(50) NOT NULL,
+  `agenda_status` tinyint(1) NOT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
 --
 -- Extraindo dados da tabela `serviço`
 --
 
-INSERT INTO `serviço` (`idServico`, `hora_disp`, `agenda_tstamp`, `agenda_status`) VALUES
-(1, 1, '2022-02-24 15:30:00', NULL),
-(2, 1, '2022-02-15 16:30:00', NULL),
-(3, 1, '2022-02-15 17:30:00', NULL),
-(4, 2, '2022-02-16 15:30:00', NULL),
-(5, 2, '2022-02-16 16:30:00', NULL),
-(6, 0, '2022-02-25 15:30:00', NULL);
-
---
--- Indexes for dumped tables
---
-
---
--- Indexes for table `serviço`
---
-ALTER TABLE `serviço`
-  ADD PRIMARY KEY (`idServico`);
-
---
--- AUTO_INCREMENT for dumped tables
---
-
---
--- AUTO_INCREMENT for table `serviço`
---
-ALTER TABLE `serviço`
-  MODIFY `idServico` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
-
-/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
-/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
-/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
-
+INSERT INTO `serviço` (`idServico`, `hora_disp`, `agenda_tstamp`, `descricao`, `agenda_status`) VALUES
+(6, 1, '2022-12-23 12:00:00', '.', 0),
+(5, 1, '2022-12-22 12:00:00', '.', 0),
+(4, 1, '2022-12-21 12:00:00', '.', 0),
+(3, 1, '2022-12-20 12:00:00', '.', 0),
+(2, 1, '2022-12-19 12:00:00', '.', 0),
+(1, 1, '2022-12-18 12:00:00', '.', 0),
+(7, 1, '2022-12-24 12:00:00', '.', 0),
+(8, 1, '2022-12-18 20:00:00', '.', 0),
+(9, 1, '2022-12-19 20:00:00', '.', 0),
+(10, 1, '2022-12-20 20:00:00', '.', 0),
+(11, 1, '2022-12-21 20:00:00', '.', 0),
+(12, 1, '2022-12-22 20:00:00', '.', 0),
+(13, 1, '2022-12-23 20:00:00', '.', 0),
+(14, 1, '2022-12-24 20:00:00', '.', 0);
 
 --
 -- Indexes for dumped tables
@@ -172,14 +154,13 @@ ALTER TABLE `serviço`
 --
 -- AUTO_INCREMENT for table `cachorro`
 --
-
 ALTER TABLE `cachorro`
   MODIFY `cod_cachorro` int(11) NOT NULL AUTO_INCREMENT;
 --
 -- AUTO_INCREMENT for table `cliente`
 --
 ALTER TABLE `cliente`
-  MODIFY `cod_cliente` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `cod_cliente` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 --
 -- AUTO_INCREMENT for table `func`
 --
@@ -189,7 +170,7 @@ ALTER TABLE `func`
 -- AUTO_INCREMENT for table `serviço`
 --
 ALTER TABLE `serviço`
-  MODIFY `idServico` int(11) NOT NULL AUTO_INCREMENT;COMMIT;
+  MODIFY `idServico` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
