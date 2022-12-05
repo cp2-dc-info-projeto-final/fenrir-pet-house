@@ -36,13 +36,12 @@
     </body>
 
     <div class="fenrir-login">
-        <h1>Editar a senha</h1>
-        <form action="editclientesenha.php" method="POST" class="form-container">
-          <input type="hidden" name="operacao" value="editsenha">
-          <p>Email: <input type="text" placeholder="insira seu Email" name="email"></p>
-          <p>Antiga senha:: <input type="password" placeholder="Insira a antiga senha" name="senhaantiga"></p>
-          <p>Senha: <input type="password" placeholder="insira Senha" name="senhanova"></p>
-          <p>Confirme a senha: <input type="password" placeholder="confirme Senha" name="csenhanova"></p>
+        <h1>Editar o email</h1>
+        <form action="editclienteemail.php" method="POST" class="form-container">
+          <input type="hidden" name="operacao" value="editemail">
+          <p>Email atual: <input type="text" placeholder="insira seu email atual" name="emailantigo"></p>
+          <p>Novo email: <input type="text" placeholder="Insira seu novo email" name="emailnovo"></p>
+          <p>Digite sua senha: <input type="password" placeholder="insira Senha" name="senha"></p>
           <p><input type="submit" value="Enviar" class="btn"></p>    
         </form>
 
