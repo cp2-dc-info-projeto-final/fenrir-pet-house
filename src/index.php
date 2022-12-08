@@ -33,8 +33,8 @@
 
     <body background="capa dogs.png" class="background">
     </body>
-    
 
+  
 
    <!-- Site footer -->
    <footer class="site-footer" style="margin-top: 53%;">
