@@ -13,7 +13,7 @@
     }
     else{
         include "conecta_mysql.inc";
-        $sql = "SELECT * FROM cliente WHERE email = '$email';";
+        $sql = "SELECT * FROM func WHERE email = '$email';";
         $res = mysqli_query($mysqli, $sql);
 
         // testa se não encontrou o e-mail no banco de dados
@@ -25,9 +25,9 @@
             exit;
         }
         else{
-            $cliente = mysqli_fetch_array($res);
+            $func = mysqli_fetch_array($res);
             // testa se a senha está errada
-            if(!hash_equals($senha, $cliente['senha'])){
+            if(!hash_equals($senha, $func['senha'])){
                 unset($_SESSION["email"]);
                 unset($_SESSION["senha"]);
                 echo "Você não fez o login!";

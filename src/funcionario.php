@@ -18,6 +18,9 @@
         $cpf= $_POST["cpf"];
 
         $erro = 0;
+        $admin = 0;
+
+    
 
         if(empty($nome) or strstr($nome, ' ') == false){
             echo "Por favor, preencha o nome completo.<br>";
@@ -52,9 +55,18 @@
         }
 
         if($erro == 0){
+            include "envia_email.php";
+            $hash = password_hash($senha, PASSWORD_DEFAULT);
             $sql = "INSERT INTO func (nome,email,data_nasc,senha,cpf)";
             $sql .= "VALUES ('$nome','$email','$data_nasc', '$senha', '$cpf');";  
+            
             mysqli_query($mysqli,$sql);
+            envia_email($email, "Confirmação de Cadastro", "Parabéns $nome, sua conta foi criada na hospedaria canina Fenrir Pet House usando esse email. Esperamos que você e seu au-migo desfrutem de nossos serviços! Caso você não tenha feito essa conta, contate-nos imediatamente.");
+        ?>
+        <body>
+            <strong>Dados Cadastrados:</strong>
+        </body>
+        <?php
 
             echo "Nome: $nome <br>";
             echo "E-mail: $email <br>";
