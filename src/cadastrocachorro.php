@@ -11,11 +11,17 @@ include "autentica.php"; ?>
     $operacao = $_POST["operacao"];
 
     if($operacao == "inserir"){
+        $email = $_POST["email"];
         $nome = $_POST["nome"]; 
         $raca = $_POST["raca"];
         $idade = $_POST["idade"];
 
         $erro = 0;
+
+        if(empty($email)){
+            echo "Por favor, preencha o email corretamente.<br>";
+            $erro = 1;
+        }
 
         if(empty($nome) or strstr($nome, ' ') == false){
             echo "Por favor, preencha o nome completo.<br>";
@@ -33,8 +39,8 @@ include "autentica.php"; ?>
         }
 
         if($erro == 0){
-            $sql = "INSERT INTO cachorro (nome, raça, idade)";
-            $sql .= "VALUES ('$nome','$raca','$idade');";  
+            $sql = "INSERT INTO cachorro (nome, raça, idade, email)";
+            $sql .= "VALUES ('$nome','$raca','$idade', '$email');";  
             mysqli_query($mysqli,$sql);
 
             echo "Nome: $nome <br>";

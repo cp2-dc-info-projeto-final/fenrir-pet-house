@@ -35,7 +35,8 @@ CREATE TABLE `cachorro` (
   `cod_cachorro` int(11) NOT NULL,
   `nome` varchar(220) NOT NULL,
   `idade` varchar(50) NOT NULL,
-  `raça` varchar(220) NOT NULL
+  `raça` varchar(220) NOT NULL,
+  `email` varchar(220) NOT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------

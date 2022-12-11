@@ -71,20 +71,8 @@
             
         }
     }
-
-    if($operacao == "exibir"){
-        $sql = "SELECT * FROM cliente;"; 
-        $res = mysqli_query($mysqli,$sql);
-        $linhas = mysqli_num_rows($res);
-        for($i = 0; $i < $linhas; $i++){
-            $cliente = mysqli_fetch_array($res);
-            echo "Nome: ".$cliente["nome"]."<br>";
-            echo "E-mail: ".$cliente["email"]."<br>";
-            echo "Data de nascimento: ".$cliente["data_nasc"]."<br>";          
-            echo "---------------------<br>";
-        }
         echo "<a href='cliente.html'>Voltar para o início</a>";
-    }
+    
 
 
 ?>
