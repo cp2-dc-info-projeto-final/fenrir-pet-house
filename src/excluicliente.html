@@ -36,15 +36,18 @@
     </body>
 
     <div class="fenrir-login">
-        <h1>Conta</h1>
-        <p><a href = "editclientesenha.html" style="color:rgb(166, 180, 180);">Editar senha</a></p>
-        <p><a href = "exibirdados.html" style="color:rgb(166, 180, 180);">Mostrar dados</a></p>
-        <p><a href = "editclienteemail.html" style="color:rgb(166, 180, 180);">Editar email</a></p>
-        <p><a href = "excluicliente.html" style="color:rgb(180, 50, 50);">Exclui conta</a></p>
+        <form action="editsenha.php" method="POST" class="form-container">
+          <input type="hidden" name="operacao" value="deletaconta">
+          <p>Digite seu Email: <input type="password" placeholder="Insira a antiga senha" name="email"></p>
+          <p>Digite sua Senha: <input type="password" placeholder="insira Senha" name="senha"></p>
+          <p><input type="submit" value="Excluir" class="btn"></p>    
+        </form>
+
     </div>
 
+
    <!-- Site footer -->
-   <footer class="site-footer">
+   <footer class="site-footer" style="margin-top: 25%;">
 
         <div class="col-xs-6 col-md-3">
           <h6>Contatos:</h6>
@@ -74,6 +77,3 @@
 
   </body>
 </html>
-
-
-
