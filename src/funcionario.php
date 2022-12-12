@@ -58,10 +58,10 @@
             include "envia_email.php";
             $hash = password_hash($senha, PASSWORD_DEFAULT);
             $sql = "INSERT INTO func (nome,email,data_nasc,senha,cpf)";
-            $sql .= "VALUES ('$nome','$email','$data_nasc', '$senha', '$cpf');";  
+            $sql .= "VALUES ('$nome','$email','$data_nasc', '$hash', '$cpf');";  
             
             mysqli_query($mysqli,$sql);
-            envia_email($email, "Confirmação de Cadastro", "Parabéns $nome, sua conta foi criada na hospedaria canina Fenrir Pet House usando esse email. Esperamos que você e seu au-migo desfrutem de nossos serviços! Caso você não tenha feito essa conta, contate-nos imediatamente.");
+            envia_email($email, "Confirmação de Cadastro", "$nome, sua conta foi criada na hospedaria canina Fenrir Pet House. Esperamos que você dê seu melhor e desfrute do seu novo trabalho! Caso você não tenha feito essa conta, ignore essa mensagem.");
         ?>
         <body>
             <strong>Dados Cadastrados:</strong>
