@@ -58,12 +58,7 @@ CREATE TABLE `cliente` (
 --
 
 INSERT INTO `cliente` (`cod_cliente`, `nome`, `senha`, `email`, `data_nasc`) VALUES
-(1, 'Ra Ra', 'senha', 'ra@gmail.com', '2005-03-29'),
-(2, 'Ra Ra2', 'senha2', 'ra2@gmail.com', '2005-03-29'),
-(3, 'e e', 'senha3', 'e@gmail.com', '1222-12-12'),
-(4, 'teste teste', '123123123', 'teste@gmail.com', '1111-11-11'),
-(5, 'raa raa', 'aaaaa', 'aa@aaa.com', '2122-01-29');
-
+('1','Thiago Silva','testeteste','thiagosilvade06@gmail.com','03/09/2005');
 -- --------------------------------------------------------
 
 --
@@ -85,8 +80,7 @@ CREATE TABLE `func` (
 --
 
 INSERT INTO `func` (`cod_func`, `nome`, `email`, `data_nasc`, `senha`, `cpf`, `IsAdmin`) VALUES
-(1, 'teste 2', 'teste2@aaaaaaaaa', '2222-02-22', 'teste2', '12345678910', 0),
-(5, 'aaaaaa aaaaa', 'aaaa@aaa.com', '1222-12-12', 'aaaaaaaaa', '12345678910', 0);
+('1', 'Fenrir', 'fenrirpethouse@gmail.com', '01/01/2000', 'audmin', '00000000000', '1');
 
 -- --------------------------------------------------------
 
