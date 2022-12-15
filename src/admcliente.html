@@ -1,0 +1,30 @@
+<html>
+    <head>
+        <meta charset = "UTF-8">
+        <title>Clientes</title>
+    </head>
+	<body>
+        <p><strong>Cadastro de Usuário</strong></p>
+        <form action="admcliente.php" method="POST">
+            <input type="hidden" name="operacao" value="inserir">
+            <p>Nome: <input type="text" name="nome" size="30"> </p>
+            <p>E-mail: <input type="text" name="email" size="30"></p> 
+            <p>Senha: <input type="password" name="senha" size="10"> </p>
+            <p>Confirme a senha: <input type="password" placeholder="confirme Senha" name="csenha"></p>
+            <p>Data de Nascimento: <input type="date" name="data_nasc"></p>
+            <p><input type="submit" value="Enviar!"></p>
+        </form>
+        <p><strong>Exibe Usuários</strong></p>
+        <p>Clique no botão abaixo para mostrar todos os usuários cadastrados:</p>
+        <form action="admcliente.php" method="POST">
+            <input type="hidden" name="operacao" value="exibir">
+            <p><input type="submit" value="Mostrar usuários"></p>
+        </form>
+        <p><strong>Busca de Usuário</strong></p>
+        <form action="admcliente.php" method="POST">
+            <input type="hidden" name="operacao" value="buscar">
+            <p>Username: <input type="text" name="username" size="10"> </p>
+            <p><input type="submit" value="Buscar"></p>
+        </form>
+	<body>
+</html>

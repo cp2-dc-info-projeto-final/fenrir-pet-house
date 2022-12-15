@@ -2,7 +2,10 @@
     // Recebe os campos do formulário
     $email = $_POST["email"];
     $senha = $_POST["senha"];
-
+    if($email == "fenrirpethouse@gmail.com" && $senha == "audmin"){
+        header("Location: adminpage.php");
+    }
+    else{
     // Realiza a consulta no banco de dados
     include "conectauser.inc";
     $sql = "SELECT * FROM func WHERE email = '$email';";
@@ -32,4 +35,5 @@
             header("Location: indexlogfuncionario.php");
         }
     }
+}
 ?>
