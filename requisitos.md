@@ -34,7 +34,7 @@ O Administrador pode alterar ou cancelar o Agendamento.
 
 O Funcionário pode alterar ou cancelar o Agendamento.
 
-### RF 08
+### RF 09
 
 Existirá um sistema de Cadastro para Cães.
 
@@ -50,7 +50,7 @@ O sistema deverá mostrar as datas e horários disponíveis.
 
 ### RNF 03
 
-O site será adaptado para os dispositivos Android e em Coputadores(Windows e Linux).
+O site será adaptado para computadores (Windows e Linux).
 
 ### RNF 04
 
@@ -58,24 +58,16 @@ Ao final do site deverá conter o contato e redes sociais.
 
 ### RNF 05
 
-Terá um menu no topo da página com as opções: Home, Sobre Nós, Hospedagem, Espaços interativos e Login/Logout.
+Terá um menu no topo da página com as opções: Home, Sobre Nós, Hospedagem e Login/Logout.
 
 ### RNF 06
 
-O site terá a palheta de cores baseada em tons pastel.
+Uma área dedicada aos serviços contando com foto e descrição na página inicial.
 
 ### RNF 07
 
-Uma área dedicada aos serviços contando com foto e descrição na página inicial.
-
-### RNF 08
-
-Existirá um menu de ajuda para o usuário.
-
-### RNF 09
-
 No canto superior esquerdo terá o logo do site.
 
-### RNF 10
+### RNF 08
 
 O sistema será programado por meio das tecnologias JavaScript, PHP, CSS, Html, Bootstrap e MySQL.
