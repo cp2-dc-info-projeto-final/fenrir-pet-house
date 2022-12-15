@@ -2,16 +2,21 @@
 
 ## Lista dos Casos de Uso
 
- - [CDU 01](#CDU-01): Login
- - [CDU 02](#CDU-02): Cadastro de Usuário
- - [CDU 03](#CDU-03): Reserva de Horário
- - [CDU 04](#CDU-04): Cadastro de Cachorro
- - [CDU 05](#CDU-05): Deleção de reserva por Admin
- - [CDU 06](#CDU-06): Consulta de Reserva do Cliente
- - [CDU 07](#CDU-07): Alteração de Reserva do Cliente
- - [CDU 08](#CDU-08): Cancelamento de Reserva do Cliente
- - [CDU 09](#CDU-09): Recuperação de senha por funcionário e cliente 
- 
+ - [CDU 01](#CDU-01): Fazer Login
+ - [CDU 02](#CDU-02): Fazer Logout
+ - [CDU 03](#CDU-03): Cadastro de cliente*
+ - [CDU 04](#CDU-04): Cadastro de Funcionário*
+ - [CDU 05](#CDU-05): Reserva de Horário
+ - [CDU 06](#CDU-06): Cadastro de Cachorro
+ - [CDU 07](#CDU-07): Visualizar Reserva de cliente
+ - [CDU 08](#CDU-08): Deleção de reserva por Administrador e Funcionário
+ - [CDU 09](#CDU-09): Consulta de Reserva do Cliente
+ - [CDU 10](#CDU-10): Alteração de Reserva do Cliente
+ - [CDU 11](#CDU-11): Cancelamento de Reserva do Cliente
+ - [CDU 12](#CDU-12): Recuperação de senha por funcionário e cliente
+ - [CDU 13](#CDU-13): Cadastro de cliente*
+ - [CDU 14](#CDU-14): Visualizar pacotes*
+  
 ## Lista dos Atores
 
  - Administrador
@@ -21,7 +26,6 @@
 ## Diagrama de Casos de Uso
 
 ![Diagrama de casos de uso drawio (3)](https://user-images.githubusercontent.com/111150888/189783420-4d6ea62f-05aa-42d5-9fa8-c7eb1ca70c6f.png)
-
 
 
 ## Descrição dos Casos de Uso
@@ -35,26 +39,41 @@ Usuário, funcionário e administrador fazem login.
 
 **Fluxo Principal**
 
-1. Usuário insere o email corretamente
-2. Usuário insere a senha corretamente
-3. Usuário pressiona o botão "Entrar"
-4. Usuário é redirecionado ao menu principal.
+1. Usuário pressiona o botão Login.
+2. Um Pop-up aparece com a mensagem "O que você é para nós?".
+3. Usuário seleciona uma das opções: cliente, funcionário ou administrador.
+4. Usuário pressiona o botão "Enviar".
+5. Um Pop-up aparece com os campos a serem preenchidos.
+6. Usuário insere o email corretamente.
+7. Usuário insere a senha corretamente.
+8. Usuário pressiona o botão "Enviar".
+9. Usuário é redirecionado ao menu principal.
 
 **Fluxo Alternativo A**
 
-1. Usuário insere o email incorretamente
-2. Usuário insere a senha corretamente
-3. Usuário pressiona o botão "Entrar"
-4. Um pop-up aparece com a mensagem "Senha e/ou Email incorreto(s)"
-5. A página atualiza com os campos de email e senha em branco.
+1. Usuário pressiona o botão Login.
+2. Um Pop-up aparece com a mensagem "O que você é para nós?".
+3. Usuário seleciona uma das opções: cliente, funcionário ou administrador.
+4. Usuário pressiona o botão "Enviar".
+5. Um Pop-up aparece com os campos a serem preenchidos.
+6. Usuário insere o email incorretamente.
+7. Usuário insere a senha corretamente.
+8. Usuário pressiona o botão "Enviar".
+9. A página atualiza com os campos de e-mail e senha em branco.
+10. Um pop-up aparece com a mensagem "Senha e/ou Email inválido(s)!"
 
 **Fluxo Alternativo B**
 
-1. Usuário insere o email corretamente
-2. Usuário insere a senha incorretamente
-3. Usuário pressiona o botão "Entrar"
-4. Um pop-up aparece com a mensagem "Senha e/ou Email incorreto(s)"
-5. A página atualiza com os campos de email e senha em branco.
+1. Usuário pressiona o botão Login.
+2. Um Pop-up aparece com a mensagem "O que você é para nós?".
+3. Usuário seleciona uma das opções: cliente, funcionário ou administrador.
+4. Usuário pressiona o botão "Enviar".
+5. Um Pop-up aparece com os campos a serem preenchidos.
+6. Usuário insere o email corretamente.
+7. Usuário insere a senha incorretamente.
+8. Usuário pressiona o botão "Enviar".
+9. A página atualiza com os campos de e-mail e senha em branco.
+10. Um pop-up aparece com a mensagem "Senha e/ou Email inválido(s)!"
 
 ### CDU 02
 
