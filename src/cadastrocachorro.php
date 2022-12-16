@@ -1,5 +1,5 @@
 <?php include "conectauser.inc";
-include "autentica.php"; ?>
+ ?>
 <html>
     <head>
         <title>Dados Cadastrados</title>
@@ -23,7 +23,7 @@ include "autentica.php"; ?>
             $erro = 1;
         }
 
-        if(empty($nome) or strstr($nome, ' ') == false){
+        if(empty($nome) or strstr($nome, ' ') == true){
             echo "Por favor, preencha o nome completo.<br>";
             $erro = 1;
         }
@@ -38,15 +38,17 @@ include "autentica.php"; ?>
             $erro = 1;
         }
 
-        if($erro == 0){
-            $sql = "INSERT INTO cachorro (nome, raça, idade, email)";
-            $sql .= "VALUES ('$nome','$raca','$idade', '$email');";  
+        else{
+            $sql = "INSERT INTO cachorro (nome, idade, raca, email)";
+            $sql .= "VALUES ('$nome', '$idade', '$raca', '$email');";  
             mysqli_query($mysqli,$sql);
 
             echo "Nome: $nome <br>";
             echo "Raça: $raca <br>";
             echo "Idade: $idade <br>";
-            echo "<a href='indexlogcliente.html'>Voltar para o início</a>";
+            echo "<a href='indexlogcliente.php'>Voltar para o início</a>";
+            echo mysqli_error($mysqli);
+            mysqli_close($mysqli);
         }
     }
     
@@ -54,4 +56,3 @@ include "autentica.php"; ?>
 ?>
     </body>
 </html>
-<?php mysqli_close($mysqli); ?>
