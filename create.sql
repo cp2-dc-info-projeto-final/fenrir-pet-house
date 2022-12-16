@@ -39,7 +39,7 @@ CREATE TABLE `cachorro` (
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
 INSERT INTO `cachorro` (`cod_cachorro`, `nome`, `idade`, `raca`, `email`) VALUES
-('1', 'Fenrir', ''5000 anos'', 'Lobo Gigante', 'fenrirpethouse@gmail.com');
+('1', 'Fenrir', '5000 anos', 'Lobo Gigante', 'fenrirpethouse@gmail.com');
 
 -- --------------------------------------------------------
 
@@ -143,7 +143,7 @@ ALTER TABLE `func`
 --
 -- Indexes for table `serviço`
 --
-ALTER TABLE `serviço`
+ALTER TABLE `servico`
   ADD PRIMARY KEY (`idServico`);
 
 --
@@ -168,7 +168,7 @@ ALTER TABLE `func`
 --
 -- AUTO_INCREMENT for table `serviço`
 --
-ALTER TABLE `serviço`
+ALTER TABLE `servico`
   MODIFY `idServico` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
