@@ -6,16 +6,17 @@
  - [CDU 02](#CDU-02): Fazer Logout
  - [CDU 03](#CDU-03): Cadastro de cliente*
  - [CDU 04](#CDU-04): Cadastro de Funcionário*
- - [CDU 05](#CDU-05): Reserva de Horário
- - [CDU 06](#CDU-06): Cadastro de Cachorro
- - [CDU 07](#CDU-07): Visualizar Reserva de cliente
- - [CDU 08](#CDU-08): Deleção de reserva por Administrador e Funcionário
- - [CDU 09](#CDU-09): Consulta de Reserva do Cliente
- - [CDU 10](#CDU-10): Alteração de Reserva do Cliente
- - [CDU 11](#CDU-11): Cancelamento de Reserva do Cliente
+ - [CDU 05](#CDU-05): Reserva de Horário @
+ - [CDU 06](#CDU-06): Cadastro de Cachorro *
+ - [CDU 07](#CDU-07): Visualizar Reserva de cliente @
+ - [CDU 08](#CDU-08): Deleção de reserva por Administrador e Funcionário @ 
+ - [CDU 09](#CDU-09): Consulta de Reserva do Cliente @
+ - [CDU 10](#CDU-10): Alteração de Reserva do Cliente @
+ - [CDU 11](#CDU-11): Cancelamento de Reserva do Cliente @
  - [CDU 12](#CDU-12): Recuperação de senha por funcionário e cliente
  - [CDU 13](#CDU-13): Cadastro de cliente*
  - [CDU 14](#CDU-14): Visualizar pacotes*
+ - [CDU 15](#CDU-15): Administrador altera Usuários*
   
 ## Lista dos Atores
 
@@ -32,7 +33,7 @@
 
 ### CDU 01
 
-Usuário, funcionário e administrador fazem login.
+Cliente, funcionário e administrador fazem login.
 ![Diagrama de CDU-01](Csos_2.png)
 ![Diagrama de CDU-01](CASOS-USO-ALTERNATIVO-1_1.png)
 
@@ -77,6 +78,15 @@ Usuário, funcionário e administrador fazem login.
 
 ### CDU 02
 
+Usuário faz logout
+
+**Fluxo Principal**
+
+1. Usuário pressiona o botão "Logout".
+2. O programa desconecta a conta.
+
+### CDU 02
+
 Usuário se cadastra no site
 
 ![Diagrama de CDU-02](Csos_4.png)
@@ -84,48 +94,35 @@ Usuário se cadastra no site
 
 **Fluxo Principal**
 
-1. Usuário pressiona o botão "Registrar-se"
-2. O usuário preenche o campo "E-mail" com um e-mail não presente no banco de dados do programa
-3. O programa verifica a presença do e-mail no banco de dados
-4. O programa retorna a mensagem "E-mail disponível"
-5. Usuário preenche o campo "Senha" com um texto com pelo menos 8 caracteres e símbolos especiais presentes no charset "UTF-8"
-6. O programa verifica se a senha possui pelo menos 8 caracteres e não possui símbolos especiais inválidos
-7. O programa retorna a mensagem "Senha válida"
-8. Usuário preenche o campo "Nome" com seu nome completo
-9. Usuário preenche o campo "Data de Nascimento" com sua data de nascimento na formatação DD/MM/YY
-10. Usuário pressiona botão "Registrar"
-11. As informações inseridas pelo usuário são enviadas ao banco de dados
-12. Usuário é redirecionado à página de login.
+1. Usuário pressiona a mensagem "Ainda não tem conta?".
+2. Um Pop-up aparece com o formulário de cadastro a ser preenchido".
+3. O usuário preenche o campo "E-mail" com um e-mail não presente no banco de dados do programa.
+4. O programa verifica a presença do e-mail no banco de dados.
+5. Usuário preenche o campo "Senha".
+6. Usuário preenche o campo "Nome" com seu nome completo.
+7. Usuário preenche o campo "Data de Nascimento" com sua data de nascimento na formatação DD/MM/YY
+8. Usuário pressiona botão "Enviar"
+9. As informações inseridas pelo usuário são enviadas ao banco de dados
+10. Usuário é redirecionado à página de login.
 
 **Fluxo Alternativo A**
 
-1. Usuário pressiona o botão "Registrar-se"
-2. O usuário preenche o campo "E-mail" com um e-mail presente no banco de dados do programa
-3. O programa verifica a presença do e-mail no banco de dados
-4. O programa retorna a mensagem "E-mail já em uso"
-5. A página é atualizada com o campo "E-mail" em branco.
+1. Usuário pressiona a mensagem "Ainda não tem conta?".
+2. Um Pop-up aparece com o formulário de cadastro a ser preenchido".
+3. O usuário preenche o campo "E-mail" com um e-mail presente no banco de dados do programa.
+4. O programa verifica a presença do e-mail no banco de dados.
+5. A página é atualizada com os campos em branco.
 
 **Fluxo Alternativo B**
 
-1. Usuário pressiona o botão "Registrar-se"
-2. O usuário preenche o campo "E-mail" com um e-mail não presente no banco de dados do programa
-3. O programa verifica a presença do e-mail no banco de dados
-4. O programa retorna a mensagem "E-mail disponível"
-5. Usuário preenche o campo "Senha" com um texto com menos de 8 caracteres
-6. O programa verifica se a senha possui pelo menos 8 caracteres e não possui símbolos especiais inválidos
-7. O programa retorna a mensagem "Senha inválida"
-8. A página é atualizada com o campo "Senha" em branco.
-
-**Fluxo Alternativo C**
-
-1. Usuário pressiona o botão "Registrar-se"
-2. O usuário preenche o campo "E-mail" com um e-mail não presente no banco de dados do programa
-3. O programa verifica a presença do e-mail no banco de dados
-4. O programa retorna a mensagem "E-mail disponível"
-5. Usuário preenche o campo "Senha" com um texto com menos de 8 caracteres e com símbolos especiais não presentes no charset "UTF-8"
-6. O programa verifica se a senha possui pelo menos 8 caracteres e não possui símbolos especiais inválidos
-7. O programa retorna a mensagem "Senha inválida"
-8. A página é atualizada com o campo "Senha" em branco.
+1. Usuário pressiona a mensagem "Ainda não tem conta?".
+2. Um Pop-up aparece com o formulário de cadastro a ser preenchido".
+3. O usuário preenche o campo "E-mail" com um e-mail não presente no banco de dados do programa.
+4. O programa verifica a presença do e-mail no banco de dados.
+5. Usuário preenche o campo "Senha".
+6. Usuário preenche o campo "Nome" com seu nome incompleto.
+7. O programa verifica a presença de mais de um nome.
+8. A página é atualizada com os campos em branco.
 
 ### CDU 03
 
@@ -180,7 +177,7 @@ Usuário cadastra seu cachorro para fazer uma futura reserva
 
 **Fluxo Principal**
 
-1. No menu principal, usuário pressiona o botão "Registrar Cachorro"
+1. No menu principal, usuário pressiona o botão "Hospedagem".
 2. O usuário preenche o campo "Nome do Dog" com um texto de pelo menos 3 caracteres e sem caracteres especiais
 3. O programa verifica se o texto possui 3 caracteres ou mais e não possui caracteres especiais
 4. O programa retorna a mensagem "Nome válido"
@@ -229,7 +226,7 @@ Usuário cadastra seu cachorro para fazer uma futura reserva
 
 ### CDU 05
 
-Administrado e Funcionário apagam uma reserva previamente ocupada
+Administrador e Funcionário apagam uma reserva previamente ocupada
 
 ![Diagrama de CDU-05](Csos_8.png)
 ![Diagrama de CDU-05](CASOS-USO-ALTERNATIVO-1_5.png)
