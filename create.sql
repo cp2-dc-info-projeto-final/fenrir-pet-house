@@ -31,13 +31,15 @@ SET time_zone = "+00:00";
 --
 
 CREATE TABLE `cachorro` (
-  `cod_cliente` int(11) NOT NULL,
   `cod_cachorro` int(11) NOT NULL,
   `nome` varchar(220) NOT NULL,
   `idade` varchar(50) NOT NULL,
-  `raça` varchar(220) NOT NULL,
+  `raca` varchar(220) NOT NULL,
   `email` varchar(220) NOT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+
+INSERT INTO `cachorro` (`cod_cachorro`, `nome`, `idade`, `raca`, `email`) VALUES
+('1', 'Fenrir', ''5000 anos'', 'Lobo Gigante', 'fenrirpethouse@gmail.com');
 
 -- --------------------------------------------------------
 
@@ -88,7 +90,7 @@ INSERT INTO `func` (`cod_func`, `nome`, `email`, `data_nasc`, `senha`, `cpf`, `I
 -- Estrutura da tabela `serviço`
 --
 
-CREATE TABLE `serviço` (
+CREATE TABLE `servico` (
   `idServico` int(11) NOT NULL,
   `hora_disp` int(11) NOT NULL,
   `agenda_tstamp` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
@@ -100,7 +102,7 @@ CREATE TABLE `serviço` (
 -- Extraindo dados da tabela `serviço`
 --
 
-INSERT INTO `serviço` (`idServico`, `hora_disp`, `agenda_tstamp`, `descricao`, `agenda_status`) VALUES
+INSERT INTO `servico` (`idServico`, `hora_disp`, `agenda_tstamp`, `descricao`, `agenda_status`) VALUES
 (6, 1, '2022-12-23 12:00:00', '.', 0),
 (5, 1, '2022-12-22 12:00:00', '.', 0),
 (4, 1, '2022-12-21 12:00:00', '.', 0),
