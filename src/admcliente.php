@@ -49,7 +49,7 @@
         
     }
     elseif($operacao == "exibir"){
-        $sql = "SELECT * FROM clientes;";
+        $sql = "SELECT * FROM cliente;";
         $res = mysqli_query($mysqli,$sql);
         $linhas = mysqli_num_rows($res);
         for($i=0; $i < $linhas; $i++){
