@@ -94,7 +94,7 @@ CREATE TABLE `servico` (
   `idServico` int(11) NOT NULL,
   `hora_disp` int(11) NOT NULL,
   `agenda_tstamp` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
-  `descricao` varchar(50) NOT NULL,
+  `descricao` varchar(225) NOT NULL,
   `agenda_status` tinyint(1) NOT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
