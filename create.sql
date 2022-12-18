@@ -93,7 +93,7 @@ INSERT INTO `func` (`cod_func`, `nome`, `email`, `data_nasc`, `senha`, `cpf`, `I
 CREATE TABLE `servico` (
   `idServico` int(11) NOT NULL,
   `hora_disp` int(11) NOT NULL,
-  `agenda_tstamp` date NOT NULL DEFAULT,
+  `agenda_tstamp` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP,
   `descricao` varchar(225) NOT NULL,
   `agenda_status` tinyint(1) NOT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
