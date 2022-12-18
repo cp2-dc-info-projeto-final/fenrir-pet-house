@@ -10,7 +10,8 @@ for($i = 0; $i < $linhas; $i++){
     echo "Horário: ".$servico["agenda_tstamp"]."<br>";
     echo "Reservas Disponíveis nesse Horário: ".$servico["hora_disp"]."<br>";
     echo "ID do Serviço: ".$servico["idServico"]."<br>";   
-    echo "<a href='agendar.php?id=".$servico['idServico'].">Agendar<br></a>";
+    echo "<a href='agendar.php?idservico=".$servico["idServico"]."'>
+        Agendar</a><br>";
     echo "---------------------<br>";
 }
 mysqli_close($mysqli);
