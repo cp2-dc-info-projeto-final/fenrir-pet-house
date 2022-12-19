@@ -132,6 +132,12 @@ nav {
 
 }
 
+.fenrir-login a {
+
+  color: rgb(0, 25, 107);
+
+}
+
 .form-container {
   max-width: 300px;
   padding: 10px;
