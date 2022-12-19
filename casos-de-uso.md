@@ -6,7 +6,7 @@
  - [CDU 02](#CDU-02): Fazer Logout ok
  - [CDU 03](#CDU-03): Cadastro de cliente ok
  - [CDU 04](#CDU-04): Reserva de Horário @
- - [CDU 06](#CDU-05): Cadastro de Cachorro *
+ - [CDU 06](#CDU-05): Cadastro de Cachorro ok
  - [CDU 07](#CDU-06): Visualizar Reserva de cliente @
  - [CDU 08](#CDU-07): Deleção de reserva por Administrador e Funcionário @ 
  - [CDU 09](#CDU-08): Consulta de Reserva do Cliente @
@@ -130,24 +130,21 @@ Usuário reserva um horário para levar seu cachorro ao hotel.
 
 **Fluxo Principal**
 
-1. Usuário pressiona o botão "Reservar"
-2. Usuário é redirecionado a um calendário onde escolhe os dias que pretende reservar
-3. O programa verifica os dias selecionados
-4. O programa retorna os quartos da hotelaria, onde os quartos com horários disponíveis coloridos em verde e os quartos sem horários disponíveis coloridos em vermelho
-5. Usuário seleciona um dos quartos com horários disponíveis no dia selecionado
-6. O programa retorna os horários disponíveis no quarto selecionado
-7. Usuário seleciona um dos horários disponíveis
-8. Usuário seleciona um dos cachorros cadastrados por ele para a reserva
-9. Usuário seleciona os serviços para o cachorro
-10. Usuário pressiona o botão "Confirmar Reserva" 
-11. Um pop-up aparece com a mensagem "Tem certeza que deseja confirmar a reserva?"
-12. Usuário pressiona o botão "Sim"
-13. Usuário é redirecionado ao menu principal
-14. Um pop-up aparece com a mensagem "Reserva confirmada com sucesso.".
+1. No menu principal, usuário pressiona o botão "Reservas".
+2. O programa retorna tres pop-ups com os pacotes disponíveis e contendo abaixo os formulários do cadastro do cachorro.
+3. O usuário se já tiver seu cachorro cadastrado escolhe um pacote desejado.
+4. O usuário é redirecionado a os horários e datas disponíveis onde escolhe os dias em que pretende reservar.
+5. O programa verifica os dias e os horários selecionados.
+10. O usuário seleciona um dos cachorros cadastrados por ele para a reserva.
+12. O usuário pressiona o botão "Confirmar Reserva" 
+13. Um pop-up aparece com a mensagem "Tem certeza que deseja confirmar a reserva?"
+14. Usuário pressiona o botão "Sim"
+15. Usuário é redirecionado ao menu principal
+16. Um pop-up aparece com a mensagem "Reserva confirmada com sucesso.".
 
 **Fluxo Alternativo A**
 
-1. Usuário pressiona o botão "Reservar"
+1. Usuário pressiona o botão "Reservas"
 2. Usuário é redirecionado a um calendário onde escolhe os dias que pretende reservar
 3. O programa verifica os dias selecionados
 4. O programa retorna os quartos da hotelaria: os quartos com horários disponíveis coloridos em verde e os quartos sem horários disponíveis coloridos em vermelho
@@ -156,7 +153,7 @@ Usuário reserva um horário para levar seu cachorro ao hotel.
 
 **Fluxo Alternativo B**
 
-1. Usuário pressiona o botão "Reservar"
+1. Usuário pressiona o botão "Reservas"
 2. Usuário é redirecionado a um calendário onde escolhe os dias que pretende reservar
 3. O programa verifica os dias selecionados
 4. O programa retorna os quartos da hotelaria: os quartos com horários disponíveis coloridos em verde e os quartos sem horários disponíveis coloridos em vermelho
@@ -194,38 +191,39 @@ Usuário cadastra seu cachorro para fazer uma futura reserva
 
 1. No menu principal, usuário pressiona o botão "Reservas". 
 2. O usuário preenche o campo "Digite seu email" com um texto com caracteres especiais. 
-3. O programa verifica se o texto possui 4 caracteres ou mais e não possui caracteres especiais. 
-4. O programa retorna a mensagem "Raça inválida." 
+3. O programa verifica se o texto possui 3 caracteres ou mais e se possui caracteres especiais. 
+4. O programa verifica se o email já esta registrado no banco de dados, caso sim o programa imprime uma mensagem. 
+5. O programa retorna a mensagem "Email inválida." 
 
-**Fluxo Alternativo A**
+**Fluxo Alternativo B**
 
 1. No menu principal, usuário pressiona o botão "Reservas". 
 2. O usuário preenche o campo "Nome" com um texto com menos de 3 caracteres e sem caracteres especiais. 
 3. O programa verifica se o texto possui 3 caracteres ou mais e não possui caracteres especiais. 
 4. O programa retorna a mensagem "Nome inválido"
 
-**Fluxo Alternativo B**
+**Fluxo Alternativo C**
 
 1. No menu principal, usuário pressiona o botão "Reservas". 
 2. O usuário preenche o campo "Raça" com um texto com pelo menos 4 caracteres com caracteres especiais. 
 3. O programa verifica se o texto possui 4 caracteres ou mais e não possui caracteres especiais. 
 4. O programa retorna a mensagem "Raça inválida." 
 
-**Fluxo Alternativo C**
+**Fluxo Alternativo D**
 
 1. No menu principal, usuário pressiona o botão "Reservas". 
 2. O usuário preenche o campo "Idade" com um texto com caracteres especiais. 
 3. O programa verifica se o texto possui 4 caracteres ou mais e não possui caracteres especiais. 
 4. O programa retorna a mensagem "Raça inválida." 
 
-**Fluxo Alternativo D**
+**Fluxo Alternativo E**
 
-1. No menu principal, usuário pressiona o botão "Registrar Cachorro" 
+1. No menu principal, usuário pressiona o botão "Reservas" 
 2. O usuário preenche o campo "Nome" com um texto com pelo menos 3 caracteres e sem caracteres especiais 
 3. O programa verifica se o texto possui 3 caracteres ou mais e não possui caracteres especiais 
 4. O programa retorna a mensagem "Nome válido" 
-5. Usuário preenche o campo "Raça do Dog" com um texto com menos de 4 caracteres e sem caracteres especiais 
-6. O programa verifica se o texto possui 4 caracteres ou mais e não possui caracteres especiais 
+5. Usuário preenche o campo "Raça" com um texto com menos de 4 caracteres e com caracteres especiais 
+6. O programa verifica se o texto possui 4 caracteres ou mais e se não possui caracteres especiais 
 7. O programa retorna a mensagem "Raça" 
 
 
