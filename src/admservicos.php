@@ -51,7 +51,7 @@ if($operacao == "exibir"){
         echo "---------------------<br>";
         mysqli_error($mysqli);
     }
-    echo "<a href='indexlogfuncionario.php'>Voltar para o início</a>";
+    echo "<a href='adminpage.php'>Voltar para o início</a>";
 }
 
 mysqli_close($mysqli);
