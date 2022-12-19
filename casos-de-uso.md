@@ -2,18 +2,18 @@
 
 ## Lista dos Casos de Uso
 
- - [CDU 01](#CDU-01): Fazer Login ok
- - [CDU 02](#CDU-02): Fazer Logout ok
- - [CDU 03](#CDU-03): Cadastro de cliente ok
- - [CDU 04](#CDU-04): Reserva de Horário @
- - [CDU 06](#CDU-05): Cadastro de Cachorro ok
- - [CDU 07](#CDU-06): Visualizar Reserva de cliente @
- - [CDU 08](#CDU-07): Deleção de reserva por Administrador e Funcionário @ 
- - [CDU 09](#CDU-08): Consulta de Reserva do Cliente @
- - [CDU 10](#CDU-09): Recuperação de senha por funcionário e cliente
- - [CDU 11](#CDU-10): Cadastro de cliente*
- - [CDU 12](#CDU-11): Visualizar pacotes*
- - [CDU 13](#CDU-12): Administrador altera Usuários*
+ - [CDU 01](#CDU-01): Fazer Login ✅
+ - [CDU 02](#CDU-02): Fazer Logout ✅
+ - [CDU 03](#CDU-03): Cadastro de cliente ✅
+ - [CDU 04](#CDU-04): Reserva de Horário ✅
+ - [CDU 05](#CDU-05): Cadastro de Cachorro ✅
+ - [CDU 06](#CDU-06): Deleção de reserva por Administrador e Funcionário * 
+ - [CDU 07](#CDU-07): Consulta do Cliente nos horários reservados *
+ - [CDU 08](#CDU-08): Cliente altera a Reserva ✅
+ - [CDU 09](#CDU-09): Cliente cancela uma Reserva✅
+ - [CDU 10](#CDU-10): Recuperação de senha por funcionário e cliente✅
+ - [CDU 11](#CDU-11): Visualizar pacotes✅
+ - [CDU 12](#CDU-12): Administrador altera Usuários*
   
 ## Lista dos Atores
 
@@ -132,35 +132,33 @@ Usuário reserva um horário para levar seu cachorro ao hotel.
 
 1. No menu principal, usuário pressiona o botão "Reservas".
 2. O programa retorna tres pop-ups com os pacotes disponíveis e contendo abaixo os formulários do cadastro do cachorro.
-3. O usuário se já tiver seu cachorro cadastrado escolhe um pacote desejado.
-4. O usuário é redirecionado a os horários e datas disponíveis onde escolhe os dias em que pretende reservar.
+3. Se o usuário já tiver seu cachorro cadastrado ele deve escolher o pacote desejado.
+4. O usuário é redirecionado a os horários e datas disponíveis onde ele escolhe os dias em que pretende reservar.
 5. O programa verifica os dias e os horários selecionados.
-10. O usuário seleciona um dos cachorros cadastrados por ele para a reserva.
-12. O usuário pressiona o botão "Confirmar Reserva" 
-13. Um pop-up aparece com a mensagem "Tem certeza que deseja confirmar a reserva?"
-14. Usuário pressiona o botão "Sim"
-15. Usuário é redirecionado ao menu principal
-16. Um pop-up aparece com a mensagem "Reserva confirmada com sucesso.".
+6. O usuário seleciona um dos cachorros cadastrados por ele para a reserva.
+7. O usuário pressiona o botão "Confirmar Reserva" 
+8. Um pop-up aparece com a mensagem "Tem certeza que deseja confirmar a reserva?"
+9. Usuário pressiona o botão "Sim"
+10. Usuário é redirecionado ao menu principal
+11. Um pop-up aparece com a mensagem "Reserva confirmada com sucesso.".
 
 **Fluxo Alternativo A**
 
-1. Usuário pressiona o botão "Reservas"
-2. Usuário é redirecionado a um calendário onde escolhe os dias que pretende reservar
-3. O programa verifica os dias selecionados
-4. O programa retorna os quartos da hotelaria: os quartos com horários disponíveis coloridos em verde e os quartos sem horários disponíveis coloridos em vermelho
-5. Usuário seleciona um dos quartos sem horários disponíveis no dia selecionado
+1. Usuário pressiona o botão "Reservas".
+2. Usuário é redirecionado a um calendário onde escolhe os dias que pretende reservar.
+3. O programa verifica os dias selecionados.
+5. O usuário seleciona uma das datas sem horários disponíveis.
 6. Um pop-up aparece com a mensagem "Esse quarto não está disponível".
 
 **Fluxo Alternativo B**
 
-1. Usuário pressiona o botão "Reservas"
-2. Usuário é redirecionado a um calendário onde escolhe os dias que pretende reservar
-3. O programa verifica os dias selecionados
-4. O programa retorna os quartos da hotelaria: os quartos com horários disponíveis coloridos em verde e os quartos sem horários disponíveis coloridos em vermelho
-5. Usuário seleciona um dos quartos com horários disponíveis no dia selecionado
-6. O programa retorna os horários disponíveis no quarto selecionado
-7. Usuário seleciona um dos horários indisponíveis
-8. Um pop-up aparece com a mensagem "Esse horário não está disponível"
+1. Usuário pressiona o botão "Reservas".
+2. Usuário é redirecionado a um calendário onde escolhe os dias que pretende reservar.
+3. O programa verifica os dias selecionados.
+5. Usuário seleciona um dos dias com horários disponíveis.
+6. O programa retorna os horários disponíveis e indisponíveis.
+7. O usuário seleciona um dos horários indisponíveis.
+8. Um pop-up aparece com a mensagem "Esse horário não está disponível".
 
 ### CDU 05
 
@@ -193,7 +191,7 @@ Usuário cadastra seu cachorro para fazer uma futura reserva
 2. O usuário preenche o campo "Digite seu email" com um texto com caracteres especiais. 
 3. O programa verifica se o texto possui 3 caracteres ou mais e se possui caracteres especiais. 
 4. O programa verifica se o email já esta registrado no banco de dados, caso sim o programa imprime uma mensagem. 
-5. O programa retorna a mensagem "Email inválida." 
+5. O programa retorna a mensagem "Email inválido." 
 
 **Fluxo Alternativo B**
 
@@ -205,7 +203,7 @@ Usuário cadastra seu cachorro para fazer uma futura reserva
 **Fluxo Alternativo C**
 
 1. No menu principal, usuário pressiona o botão "Reservas". 
-2. O usuário preenche o campo "Raça" com um texto com pelo menos 4 caracteres com caracteres especiais. 
+2. O usuário preenche o campo "Raça" com um texto com menos de 4 e caracteres com caracteres especiais. 
 3. O programa verifica se o texto possui 4 caracteres ou mais e não possui caracteres especiais. 
 4. O programa retorna a mensagem "Raça inválida." 
 
@@ -213,21 +211,11 @@ Usuário cadastra seu cachorro para fazer uma futura reserva
 
 1. No menu principal, usuário pressiona o botão "Reservas". 
 2. O usuário preenche o campo "Idade" com um texto com caracteres especiais. 
-3. O programa verifica se o texto possui 4 caracteres ou mais e não possui caracteres especiais. 
+3. O programa verifica se o conteúdo é em formato de numeral, caso nao o programa imprime uma mensagem. 
 4. O programa retorna a mensagem "Raça inválida." 
 
-**Fluxo Alternativo E**
 
-1. No menu principal, usuário pressiona o botão "Reservas" 
-2. O usuário preenche o campo "Nome" com um texto com pelo menos 3 caracteres e sem caracteres especiais 
-3. O programa verifica se o texto possui 3 caracteres ou mais e não possui caracteres especiais 
-4. O programa retorna a mensagem "Nome válido" 
-5. Usuário preenche o campo "Raça" com um texto com menos de 4 caracteres e com caracteres especiais 
-6. O programa verifica se o texto possui 4 caracteres ou mais e se não possui caracteres especiais 
-7. O programa retorna a mensagem "Raça" 
-
-
-### CDU 05
+### CDU 06
 
 Administrador e Funcionário apagam uma reserva previamente ocupada
 
@@ -256,7 +244,8 @@ Administrador e Funcionário apagam uma reserva previamente ocupada
 7. Administrador pressiona o botão "Não" no pop-up
 8. O pop-up fecha com o horário escolhido inalterado
 
-### CDU 06
+
+### CDU 07
 
 Cliente consulta os horários reservados
 
@@ -268,7 +257,7 @@ Cliente consulta os horários reservados
 1. No menu principal, usuário pressiona botão "Reservas"
 2. Usuário é redirecionado a uma listagem com as informações de quartos e horários reservados por ele, e os cachorros selecionados
 
-### CDU 07
+### CDU 08
 
 Cliente altera a reserva
 
@@ -277,78 +266,85 @@ Cliente altera a reserva
 
 **Fluxo principal**
 
-1. No menu principal, usuário pressiona botão "Reservas"
-2. Usuário é redirecionado a uma listagem com as informações do(s) quarto(s) e horário(s) reservado(s) por ele para seu(s) respectivo(s) cachorro(s)
-3. Usuário pressiona o botão "Alterar" ao lado da reserva que deseja alterar
+1. No menu principal, usuário pressiona botão "Reservas".
+2. Usuário é redirecionado a uma listagem com as informações do(s) horário(s) reservado(s) por ele para seu(s) respectivo(s) cachorro(s).
+3. Usuário pressiona o botão "Alterar" ao lado da reserva que deseja alterar.
 4. Um pop-up aparece com a mensagem "Tem certeza que deseja alterar essa reserva?"
-5. Usuário pressiona botão "Sim"
-6. Usuário é redirecionado a um calendário onde escolhe para qual dia deseja alterar a reserva
-7. O programa verifica os dias selecionados
-8. O programa retorna os quartos da hotelaria: os quartos com horários disponíveis coloridos em verde e os quartos sem horários disponíveis coloridos em vermelho
-9. Usuário seleciona um dos quartos com horários disponíveis no dia selecionado
-10. O programa retorna os horários disponíveis no quarto selecionado
-11. Usuário seleciona um dos horários disponíveis
-12. Usuário seleciona um dos cachorros cadastrados por ele para a reserva
-13. Usuário seleciona os serviços para o cachorro
-14. Usuário pressiona o botão "Confirmar Reserva"
-15. Um pop-up aparece com a mensagem "Tem certeza que deseja confirmar a reserva?"
-16. Usuário pressiona o botão "Sim"
-17. Usuário é redirecionado ao menu principal
-18. Um pop-up aparece com a mensagem "Reserva alterada com sucesso.".
+5. Usuário pressiona botão "Sim".
+6. Usuário é redirecionado a um calendário onde escolhe para qual dia deseja alterar a reserva.
+7. O programa verifica os dia(s) selecionado(s).
+9. O programa retorna com os horários disponíveis.
+10. O usuário seleciona um dos horários disponíveis.
+11. O usuário seleciona um dos cachorros cadastrados por ele para a reserva.
+12. O usuário seleciona os pacotes para o cachorro.
+13. O usuário pressiona o botão "Confirmar Reserva".
+14. Um pop-up aparece com a mensagem "Tem certeza que deseja confirmar a reserva?".
+15. Usuário pressiona o botão "Sim".
+16. Usuário é redirecionado ao menu principal.
+17. Um pop-up aparece com a mensagem "Reserva alterada com sucesso.".
 
 **Fluxo alternativo A**
 
-1. No menu principal, usuário pressiona botão "Reservas"
-2. Usuário é redirecionado a uma listagem com as informações do(s) quarto(s) e horário(s) reservado(s) por ele para seu(s) respectivo(s) cachorro(s)
-3. Usuário pressiona o botão "Alterar" ao lado da reserva que deseja alterar
-4. Um pop-up aparece com a mensagem "Tem certeza que deseja alterar essa reserva?"
-5. Usuário pressiona botão "Não"
+1. No menu principal, usuário pressiona botão "Reservas".
+2. Usuário é redirecionado a uma listagem com as informações do(s)e dia(s) horário(s) reservado(s) por ele para seu(s) respectivo(s) cachorro(s).
+3. Usuário pressiona o botão "Alterar" ao lado da reserva que deseja alterar.
+4. Um pop-up aparece com a mensagem "Tem certeza que deseja alterar essa reserva?".
+5. Usuário pressiona botão "Não".
 6. O pop-up fecha com a reserva escolhida inalterada.
 
 **Fluxo alternativo B**
 
 1. No menu principal, usuário pressiona botão "Reservas"
-2. Usuário é redirecionado a uma listagem com as informações do(s) quarto(s) e horário(s) reservado(s) por ele para seu(s) respectivo(s) cachorro(s)
+2. Usuário é redirecionado a uma listagem com as informações do(s)e dia(s) horário(s) reservado(s) por ele para seu(s) respectivo(s) cachorro(s).
 3. Usuário pressiona o botão "Alterar" ao lado da reserva que deseja alterar
 4. Um pop-up aparece com a mensagem "Tem certeza que deseja alterar essa reserva?"
 5. Usuário pressiona botão "Sim"
-6. Usuário é redirecionado a um calendário onde escolhe para qual dia deseja alterar a reserva
-7. O programa verifica os dias selecionados
-8. O programa retorna os quartos da hotelaria: os quartos com horários disponíveis coloridos em verde e os quartos sem horários disponíveis coloridos em vermelho
-9. Usuário seleciona um dos quartos sem horários disponíveis no dia selecionado
-10. Um pop-up aparece com a mensagem "Esse quarto não está disponível".
+6. Usuário é redirecionado a um calendário onde escolhe para qual dia deseja alterar a reserva.
+7. O programa verifica os dias com horário disponível e indisponível.
+9. O usuário seleciona um dos dias sem horários disponíveis.
+10. Um pop-up aparece com a mensagem "Esse dia não está disponível".
 
 **Fluxo alternativo C**
 
 1. No menu principal, usuário pressiona botão "Reservas"
-2. Usuário é redirecionado a uma listagem com as informações do(s) quarto(s) e horário(s) reservado(s) por ele para seu(s) respectivo(s) cachorro(s)
-3. Usuário pressiona o botão "Alterar" ao lado da reserva que deseja alterar
+2. Usuário é redirecionado a uma listagem com as informações do(s)e dia(s) horário(s) reservado(s) por ele para seu(s) respectivo(s) cachorro(s).
+3. Usuário pressiona o botão "Alterar" ao lado da reserva que deseja alterar.
 4. Um pop-up aparece com a mensagem "Tem certeza que deseja alterar essa reserva?"
-5. Usuário pressiona botão "Sim"
-6. Usuário é redirecionado a um calendário onde escolhe para qual dia deseja alterar a reserva
-7. O programa verifica os dias selecionados
-8. O programa retorna os quartos da hotelaria: os quartos com horários disponíveis coloridos em verde e os quartos sem horários disponíveis coloridos em vermelho
-9. Usuário seleciona um dos quartos com horários disponíveis no dia selecionado
-10. O programa retorna os horários disponíveis no quarto selecionado
-11. Usuário seleciona um dos horários indisponíveis
-12. Um pop-up aparece com a mensagem "Esse horário não está disponível"
+5. Usuário pressiona botão "Sim".
+6. Usuário é redirecionado a um calendário onde escolhe para qual dia deseja alterar a reserva.
+7. O programa verifica os dias com horário disponível e indisponível.
+11.O usuário seleciona um dos horários indisponíveis
+12. Um pop-up aparece com a mensagem "Esse horário não está disponível".
 
-### CDU 08
+### CDU 09
 
 Cliente cancela uma reserva
 
 ![Diagrama de CDU-08](Csos_8.png)
 ![Diagrama de CDU-08](CASOS-USO-ALTERNATIVO-1_8.png)
 
-1. No menu principal, usuário pressiona botão "Reservas"
-2. Usuário é redirecionado a uma listagem com as informações de quartos e horários reservados por ele, e os cachorros selecionados
-3. Usuário pressiona o botão "X" ao lado da reserva que deseja apagar
+**Fluxo Principal**
+
+1. No menu principal, usuário pressiona botão "Reservas".
+2.Usuário é redirecionado a uma listagem com as informações do(s)e dia(s) horário(s) reservado(s) por ele para seu(s) respectivo(s) cachorro(s).
+3. Usuário pressiona o botão "X" ao lado da reserva que deseja apagar.
 4. Um pop-up aparece com a mensagem "Tem certeza que deseja apagar essa reserva?"
-5. Usuário pressiona botão "Sim"
-6. A reserva é apagada no banco de dados
+5. Usuário pressiona botão "Sim".
+6. A reserva é apagada no banco de dados.
 7. A página é atualizada e a reserva selecionada é apagada.
 
-### CDU 09 
+**Fluxo Alternativo A**
+
+1. No menu principal, usuário pressiona botão "Reservas".
+2.Usuário é redirecionado a uma listagem com as informações do(s)e dia(s) horário(s) reservado(s) por ele para seu(s) respectivo(s) cachorro(s).
+3. Usuário pressiona o botão "X" ao lado da reserva que deseja apagar.
+4. Um pop-up aparece com a mensagem "Tem certeza que deseja apagar essa reserva?"
+5. Usuário pressiona botão "Não".
+6. A reserva continua inalterada no banco de dados.
+7. A página é atualizada e a reserva selecionada é mantida.
+
+
+### CDU 10 
 
 Funcionário e cliente recuperaram a senha.
 
@@ -377,3 +373,26 @@ Funcionário e cliente recuperaram a senha.
 5. O sistema retornará um Pop-up que solicitará o código de confirmação.
 6. O usuário digita o código incorretamente e clica em "confirmar".
 7. O sistema retorna a mensagem "código de confirmação incorreto".
+
+
+### CDU 11
+
+Usuário visualiza pacotes.
+
+**Fluxo Principal**
+
+1. O usuário pressiona o botão "Reservas".
+2. Os pacotes da hotelaria são exibidos automaticamente.
+3. O usuário deve preencher o cadastro do cachorro afim de escolher um pacote desejado.
+
+**Fluxo Alternativo A**
+
+1. O usuário pressiona o botão "Reservas".
+2. Os pacotes da hotelaria são exibidos automaticamente.
+3. O usuário não preenche o cadastro do cachorro.
+4. O sistema retorna com a não identificação do cachorro assim impossibilitando a seleção do pacote.
+
+### CDU 12
+
+
+
