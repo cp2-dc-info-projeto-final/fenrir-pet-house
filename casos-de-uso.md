@@ -14,8 +14,9 @@
  - [CDU 10](#CDU-10): Visualizar pacotes✅
  - [CDU 11](#CDU-11): Usuário visualiza seus dados✅
  - [CDU 12](#CDU-12): Usuário edita sua senha✅
- - [CDU 13](#CDU-13): Usuário edita seu email
+ - [CDU 13](#CDU-13): Usuário edita seu email✅
  - [CDU 14](#CDU-14): Usuário exclui sua conta
+ - [CDU 15](#CDU-15): Adminstrador edita a reserva
  - 
 
  - 
@@ -386,7 +387,7 @@ Cliente visualiza seus dados da conta.
 
 ### CDU 12
 
-Cliente muda sua senha.
+Cliente altera sua senha.
 
 **Fluxo Principal**
 
@@ -413,11 +414,11 @@ Cliente muda sua senha.
 9. O programa imprime o campo "Confirme a senha" afim do usuário preencher com a mesma nova senha que ele preencheu no campo acima.
 10.O usuário deve pressionar o botão "enviar" afim de ter o formulário concluído. 
 11. O programa não reconhce o email não cadastrado no banco de dados.
-12. O formulário não poderá ser concluídom com sucesso.
+12. O formulário não poderá ser concluído com sucesso.
 
 **Fluxo Alternativo B**
 
-1. O usário pressiona o botão "conta".
+1. O usuário pressiona o botão "conta".
 2. O programa retornará com um pop-up com os seguintes tópicos:Editar senha, Mostrar dados, Mostrar Reserva, Editar email e Excluir conta.
 3. O usuário deve pressionar o tópico "Editar senha".
 4. O programa irá imprimir um formulário com campos a serem preenchidos sobre a nova senha.
@@ -428,7 +429,7 @@ Cliente muda sua senha.
 9. O programa imprime o campo "Confirme a senha" afim do usuário preencher com a mesma nova senha que ele preencheu no campo acima.
 10. O usuário deve pressionar o botão "enviar" afim de ter o formulário concluído.
 11.O programa não reconhce a antiga senha e imprime uma mensagem escrito " Antiga senha incorreta".
-12. O formulário não poderá ser concluídom com sucesso.
+12. O formulário não poderá ser concluído com sucesso.
 
 **Fluxo Alternativo C**
 
@@ -444,6 +445,113 @@ Cliente muda sua senha.
 10. O usuário deve pressionar o botão "enviar" afim de ter o formulário concluído.
 11.O programa não reconhce a nova senha e imprime uma mensagem escrito " Antiga senha incorreta".
 12. O formulário não poderá ser concluídom com sucesso.
+13. O programa não reconhce a nova senha e imprime uma mensagem escrito " Antiga senha incorreta".
+12. O formulário não poderá ser concluído com sucesso.
+
+### CDU 13
+
+Usuário altera seu email
+
+**Fluxo Principal**
+
+1. O usário pressiona o botão "conta".
+2. O programa retornará com um pop-up com os seguintes tópicos:Editar senha, Mostrar dados, Mostrar Reserva, Editar email e Excluir conta.
+3. O usuário deve pressionar o tópico "Editar email".
+4. O programa irá imprimir um formulário com campos a serem preenchidos sobre um novo email.
+5. O programa imprime o campo "email atual" afim do usuário preencher com seu email já cadastrado.
+6. O programa imprime o campo "novo email" afim do usuário preencher com seu novo email.
+7. O programa imprime o campo "Digite sua Senha " afim do usuário preencher com sua senha já cadastrada.
+8. O usuário deve pressionar o botão "enviar" afim de ter o formulário concluído.
+
+**Fluxo Alternativo A**
+
+1. O usário pressiona o botão "conta".
+2. O programa retornará com um pop-up com os seguintes tópicos:Editar senha, Mostrar dados, Mostrar Reserva, Editar email e Excluir conta.
+3. O usuário deve pressionar o tópico "Editar email".
+4. O programa irá imprimir um formulário com campos a serem preenchidos sobre um novo email.
+5. O programa imprime o campo "email atual" afim do usuário preencher com seu email já cadastrado.
+6. O usuário o preenche o campo com o email antigo errado.
+7. O programa imprime o campo "novo email" afim do usuário preencher com seu novo email.
+8. O programa imprime o campo "Digite sua Senha " afim do usuário preencher com sua senha já cadastrada.
+9. O usuário deve pressionar o botão "enviar" afim de ter o formulário concluído.
+10.O programa não reconhce o antigo email e imprime uma mensagem escrito " Email antigo incorreto".
+11. O formulário não poderá ser concluído com sucesso. 
+
+**Fluxo Alternativo B**
+
+1. O usário pressiona o botão "conta".
+2. O programa retornará com um pop-up com os seguintes tópicos:Editar senha, Mostrar dados, Mostrar Reserva, Editar email e Excluir conta.
+3. O usuário deve pressionar o tópico "Editar email".
+4. O programa irá imprimir um formulário com campos a serem preenchidos sobre um novo email.
+5. O programa imprime o campo "email atual" afim do usuário preencher com seu email já cadastrado.
+6. O programa imprime o campo "novo email" afim do usuário preencher com seu novo email.
+7. O programa imprime o campo "Digite sua Senha " afim do usuário preencher com sua senha já cadastrada.
+8. O usuário preenche o campo "Digite a senha" com uma senha não cadastrada no campo de dados.
+9. O usuário deve pressionar o botão "enviar" afim de ter o formulário concluído.
+10.O programa não reconhce a antiga senha e imprime uma mensagem escrito " Senha antiga incorreta".
+11. O formulário não poderá ser concluído com sucesso.  
+
+### CDU 14
+
+Usuário deseja deletar a conta
+
+**Fluxo Principal**
+
+1. O usário pressiona o botão "conta".
+2. O programa retornará com um pop-up com os seguintes tópicos:Editar senha, Mostrar dados, Mostrar Reserva, Editar email e Excluir conta.
+3. O usuário deve pressionar o tópico "Excluir conta".
+4. O programa irá imprimir um formulário com campos a serem preenchidos sobre a exclusão da conta.
+5. O programa imprime o campo "Digite seu email" afim do usuário preencher com seu email já cadastrado.
+6. O programa imprime o campo "Digite sua Senha " afim do usuário preencher com sua senha já cadastrada.
+7. O usuário deve pressionar o botão "excluir" afim de ter o formulário concluído e a conta excluída.
+8. Já com a conta excluída o usuário retorna para o menu principal.
+
+**Fluxo Alternativo A**
+
+1. O usário pressiona o botão "conta".
+2. O programa retornará com um pop-up com os seguintes tópicos:Editar senha, Mostrar dados, Mostrar Reserva, Editar email e Excluir conta.
+3. O usuário deve pressionar o tópico "Excluir conta".
+4. O programa irá imprimir um formulário com campos a serem preenchidos sobre a exclusão da conta.
+5. O programa imprime o campo "Digite seu email" afim do usuário preencher com seu email já cadastrado.
+6. O usuário preenche o campo "Digite seu email" com um email errado.
+7. O programa imprime o campo "Digite sua Senha " afim do usuário preencher com sua senha já cadastrada.
+8. O usuário deve pressionar o botão "excluir" afim de ter o formulário concluído e a conta excluída.
+9.O programa não reconhce o email e imprime uma mensagem escrito " Email incorreto".
+11. O formulário não poderá ser concluído com sucesso e nem a conta excluída.
+
+**Fluxo Alternativo B** 
+
+1. O usário pressiona o botão "conta".
+2. O programa retornará com um pop-up com os seguintes tópicos:Editar senha, Mostrar dados, Mostrar Reserva, Editar email e Excluir conta.
+3. O usuário deve pressionar o tópico "Excluir conta".
+4. O programa irá imprimir um formulário com campos a serem preenchidos sobre a exclusão da conta.
+5. O programa imprime o campo "Digite seu email" afim do usuário preencher com seu email já cadastrado.
+7. O programa imprime o campo "Digite sua Senha " afim do usuário preencher com sua senha já cadastrada.
+8. O usuário preenche o campo "Digite sua Senha" com a senha errada.
+9. O usuário deve pressionar o botão "excluir" afim de ter o formulário concluído e a conta excluída.
+10.O programa não reconhce o email e imprime uma mensagem escrito "Senha incorreta".
+11. O formulário não poderá ser concluído com sucesso e nem a conta excluída.
+
+### CDU 15
+
+Administrador pode editar a reserva
+
+**Fluxo Principal**
+
+1. O administrador pressiona o botão
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
