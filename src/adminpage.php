@@ -20,7 +20,7 @@
           <div class="line3"></div>
         </div>
         <ul class="nav-list">
-          <li><a href="">nada</a></li>
+          <li><a href="logout.php">Logout</a></li>
           
         </ul>
         </footer>    
@@ -33,7 +33,7 @@
     <div class="fenrir-login">
         <h1>Conta</h1>
         <p><a href = "admcliente.html" style="color:rgb(166, 180, 180);">Clientes</a></p>
-        <p><a href = "admfunc.php" style="color:rgb(166, 180, 180);">Funcionários</a></p>
+        <p><a href = "admfunc.html" style="color:rgb(166, 180, 180);">Funcionários</a></p>
         <p><a href = "admservicos.html" style="color:rgb(166, 180, 180);">Serviços</a></p>
     </div>
     

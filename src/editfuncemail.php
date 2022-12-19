@@ -30,7 +30,7 @@ $operacao = $_POST["operacao"];
                     include "envia_email.php";
                     envia_email($emailantigo, "Alteração de Email", "Seu email foi alterada no site da hotelaria canina Fenrir Pet Shop. O novo email para login da conta antes vinculada nesse email é:<br><br><strong>$emailnovo</strong><br><br> Esperamos que você continue seu ótimo trabalho.");
                     envia_email($emailnovo, "Alteração de Email", "Seu email foi alterada no site da hotelaria canina Fenrir Pet Shop. Esperamos que você continue o seu ótimo trabalho.");
-                    header('location: indexlogcliente.php');
+                    header('location: indexlogfuncionario.php');
                 }
             //erros
             else{

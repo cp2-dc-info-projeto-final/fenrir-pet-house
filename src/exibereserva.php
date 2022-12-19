@@ -1,3 +1,6 @@
+<?php include "conectauser.inc";
+session_start() 
+?>
 <!DOCTYPE html>
 <html lang="pt-br">
   <head>
@@ -35,13 +38,21 @@
     <body background="capa dogs.png" class="background">
     </body>
 
-    <div class="fenrir-login">
-        <h1>Conta</h1>
-        <p><a href = "editclientesenha.html" style="color:rgb(166, 180, 180);">Editar senha</a></p>
-        <p><a href = "exibirdados.html" style="color:rgb(166, 180, 180);">Mostrar dados</a></p>
-        <p><a href = "editclienteemail.html" style="color:rgb(166, 180, 180);">Editar email</a></p>
-        <p><a href = "exibereserva.php" style="color:rgb(166,180,180);">Exibir reservas</a></p>
-        <p><a href = "excluicliente.html" style="color:rgb(180, 50, 50);">Exclui conta</a></p>
+        <div class="fenrir-login">
+        <?php
+        $sql = "SELECT * FROM servico WHERE descricao like '%{$_SESSION['email']}%';"; 
+        $res = mysqli_query($mysqli,$sql);
+        $linhas = mysqli_num_rows($res);
+        for($i = 0; $i < $linhas; $i++){
+            $servico = mysqli_fetch_array($res);
+            echo "-<br>";
+            echo "Horário: ".$servico["agenda_tstamp"]."<br>";
+            echo "Descrição do Serviço: ".$servico["descricao"]."<br>";
+            echo "ID do Serviço: ".$servico["idServico"]."<br>";   
+            echo "-<br>";
+            mysqli_error($mysqli);
+        }
+        ?>
     </div>
 
    <!-- Site footer -->

@@ -18,22 +18,20 @@
         echo "<p><a href='funcionariologin.html'>Página de login</a></p>";
     }
     else{
-        $func = mysqli_fetch_array($res);
-        $isadmin = $func["IsAdmin"];
-        // testa se a senha está errada
-        if($senha != $func["senha"]){
-            header("Location: funcionariologininc.html");
-            echo "Senha e/ou Email inválido(s)!";
-            echo "<p><a href='funcionariologin.html'>Página de login</a></p>";
-        }
-        else{
-            // abre a sessão e registra as variáveis do login
-            session_start();
-            $_SESSION["email"] = $email;
-            $_SESSION["IsAdmin"] = $isadmin;
-            // direciona para a página inicial
-            header("Location: indexlogfuncionario.php");
+        $func    = mysqli_fetch_array($res);
+        $query = "SELECT senha FROM func WHERE email = '$email' ";
+        if(mysqli_query($mysqli, $query)){
+                if(password_verify($senha, $func["senha"])){
+                    // abre a sessão e registra as variáveis do login
+                    session_start();
+                    $_SESSION["email"] = $email;
+                    $_SESSION["IsAdmin"] = $isadmin;
+                                // direciona para a página inicial
+                                header("Location: indexlogfuncionario.php");
+           
         }
     }
 }
+}
+mysqli_close($mysqli);
 ?>

@@ -6,10 +6,16 @@
         $senha = $_POST["senha"];
         $nome = $_POST["nome"];
         $email = $_POST["email"];
-        $csenha = ["csenha"];
-        $cpf = ["cpf"]
-        $data_nasc = ["data_nasc"];
+        $csenha = $_POST["csenha"];
+        $data_nasc = $_POST["data_nasc"];
         $erro = 0;
+
+        var_dump($senha);
+        var_dump($nome);
+        var_dump($email);
+        var_dump($csenha);
+        var_dump($data_nasc);   
+        
 
         if(empty($nome) or strstr($nome, ' ') == false){
             echo "Por favor, preencha o nome completo.<br>";
@@ -33,11 +39,6 @@
            
         }
 
-        if(empty($cpf)){
-            echo "Por favor, preencha o cpf<br>";
-            $erro = 1;
-        }
-
         if(empty($senha)){
             echo "Por favor, preencha a senha<br>";
             $erro = 1;            
@@ -50,7 +51,8 @@
             $sql .= "VALUES ('$nome','$hash','$email','$data_nasc');"; 
 
             mysqli_query($mysqli,$sql);
-            envia_email($email, "Confirmação de Cadastro", "Parabéns $nome, sua conta foi criada na hospedaria canina Fenrir Pet House usando esse email. Esperamos que você e seu au-migo desfrutem de nossos serviços! Caso você não tenha feito essa conta, contate-nos imediatamente.");
+            envia_email($email, "Confirmação de Cadastro", "Parabéns $nome, sua conta foi criada na hospedaria canina Fenrir Pet House usando esse email! Caso você não tenha feito essa conta, contate-nos imediatamente.");
+            echo "<a href='adminpage.php'>Voltar para o login.</a>";
         }
         
     }
