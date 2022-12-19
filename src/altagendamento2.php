@@ -3,7 +3,7 @@ session_start();
 
 include "conectauser.inc";
 $email = $_GET['email'];
-$sql = "SELECT descricao FROM servico WHERE idServico = ''";
+$sql = "SELECT descricao FROM servico WHERE idServico = '{$_SESSION['idservico']}'";
 mysqli_query($mysqli,$sql);
 $descnova = $_POST['desc'];
 $sql2 = "UPDATE servico SET descricao = '$descnova' WHERE idServico = '{$_SESSION['idservico']}' ";
