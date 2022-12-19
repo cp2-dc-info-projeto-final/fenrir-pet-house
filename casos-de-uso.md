@@ -4,16 +4,21 @@
 
  - [CDU 01](#CDU-01): Fazer Login ✅
  - [CDU 02](#CDU-02): Fazer Logout ✅
- - [CDU 03](#CDU-03): Cadastro de cliente ✅
+ - [CDU 03](#CDU-03): Cadastro de usuário ✅
  - [CDU 04](#CDU-04): Reserva de Horário ✅
  - [CDU 05](#CDU-05): Cadastro de Cachorro ✅
- - [CDU 06](#CDU-06): Deleção de reserva por Administrador e Funcionário * 
- - [CDU 07](#CDU-07): Consulta do Cliente nos horários reservados *
- - [CDU 08](#CDU-08): Cliente altera a Reserva ✅
- - [CDU 09](#CDU-09): Cliente cancela uma Reserva✅
- - [CDU 10](#CDU-10): Recuperação de senha por funcionário e cliente✅
- - [CDU 11](#CDU-11): Visualizar pacotes✅
- - [CDU 12](#CDU-12): Administrador altera Usuários*
+ - [CDU 06](#CDU-06): Consulta do usuário nos horários reservados✅ 
+ - [CDU 07](#CDU-07): Cliente altera a Reserva ✅
+ - [CDU 08](#CDU-08): Cliente cancela uma Reserva✅
+ - [CDU 09](#CDU-09): Recuperação de senha por funcionário e cliente✅
+ - [CDU 10](#CDU-10): Visualizar pacotes✅
+ - [CDU 11](#CDU-11): Usuário visualiza seus dados✅
+ - [CDU 12](#CDU-12): Usuário edita sua senha✅
+ - [CDU 13](#CDU-13): Usuário edita seu email
+ - [CDU 14](#CDU-14): Usuário exclui sua conta
+ - 
+
+ - 
   
 ## Lista dos Atores
 
@@ -215,37 +220,8 @@ Usuário cadastra seu cachorro para fazer uma futura reserva
 4. O programa retorna a mensagem "Raça inválida." 
 
 
+
 ### CDU 06
-
-Administrador e Funcionário apagam uma reserva previamente ocupada
-
-![Diagrama de CDU-05](Csos_8.png)
-![Diagrama de CDU-05](CASOS-USO-ALTERNATIVO-1_5.png)
-
-**Fluxo principal**
-
-1. No menu principal, o administrador pressiona o botão "Gerenciar Reservas"
-2. Administrador é redirecionado a uma página com os quartos e horários em que o hotel funciona: os quartos com horários disponíveis coloridos em verde e os quartos sem horários disponíveis coloridos em vermelho
-3. Administrador seleciona um quarto colorido em vermelho
-4. Administrador visualiza os horários ocupados e quais usuários os ocuparam
-5. Administrador pressiona o botão em forma de X para apagar uma reserva de horário previamente feita 
-6. Um pop-up aparece com a mensagem "Tem certeza que deseja apagar essa reserva?"
-7. Administrador pressiona o botão "Sim" no pop-up
-8. A página atualiza, com o horário escolhido não mais reservado
-
-**Fluxo Alternativo A**
-
-1. No menu principal, o administrador pressiona o botão "Gerenciar Reservas"
-2. Administrador é redirecionado a uma página com os quartos e horários em que o hotel funciona, onde os quartos com horários disponíveis coloridos em verde e os quartos sem horários disponíveis coloridos em vermelho
-3. Administrador seleciona um quarto colorido em vermelho
-4. Administrador visualiza os horários ocupados e quais usuários os ocuparam
-5. Administrador pressiona o botão em forma de X para apagar uma reserva de horário previamente feita 
-6. Um pop-up aparece com a mensagem "Tem certeza que deseja apagar essa reserva?"
-7. Administrador pressiona o botão "Não" no pop-up
-8. O pop-up fecha com o horário escolhido inalterado
-
-
-### CDU 07
 
 Cliente consulta os horários reservados
 
@@ -254,10 +230,13 @@ Cliente consulta os horários reservados
 
 **Fluxo principal**
 
-1. No menu principal, usuário pressiona botão "Reservas"
-2. Usuário é redirecionado a uma listagem com as informações de quartos e horários reservados por ele, e os cachorros selecionados
+1. O usário pressiona o botão "conta".
+2. O programa retornará com um pop-up com os seguintes tópicos:Editar senha, Mostrar dados, Mostrar Reserva, Editar email e Excluir conta.
+3. O usuário deve pressionar o tópico "Mostrar Reservas".
+4. O programa irá imprimir uma mensagem com os dados referentes a reserva feita naquela conta. 
 
-### CDU 08
+
+### CDU 07
 
 Cliente altera a reserva
 
@@ -316,7 +295,7 @@ Cliente altera a reserva
 11.O usuário seleciona um dos horários indisponíveis
 12. Um pop-up aparece com a mensagem "Esse horário não está disponível".
 
-### CDU 09
+### CDU 08
 
 Cliente cancela uma reserva
 
@@ -344,7 +323,7 @@ Cliente cancela uma reserva
 7. A página é atualizada e a reserva selecionada é mantida.
 
 
-### CDU 10 
+### CDU 09 
 
 Funcionário e cliente recuperaram a senha.
 
@@ -375,7 +354,7 @@ Funcionário e cliente recuperaram a senha.
 7. O sistema retorna a mensagem "código de confirmação incorreto".
 
 
-### CDU 11
+### CDU 10
 
 Usuário visualiza pacotes.
 
@@ -392,7 +371,81 @@ Usuário visualiza pacotes.
 3. O usuário não preenche o cadastro do cachorro.
 4. O sistema retorna com a não identificação do cachorro assim impossibilitando a seleção do pacote.
 
+
+### CDU 11
+
+Cliente visualiza seus dados da conta.
+
+**Fluxo Principal**
+
+1. O usário pressiona o botão "conta".
+2. O programa retornará com um pop-up com os seguintes tópicos:Editar senha, Mostrar dados, Mostrar Reserva, Editar email e Excluir conta.
+3. O usuário deve pressionar o tópico "Mostrar Dados".
+4. O programa irá imprimir uma mensagem com os dados referentes aos dados do usuário. 
+
+
 ### CDU 12
+
+Cliente muda sua senha.
+
+**Fluxo Principal**
+
+1. O usário pressiona o botão "conta".
+2. O programa retornará com um pop-up com os seguintes tópicos:Editar senha, Mostrar dados, Mostrar Reserva, Editar email e Excluir conta.
+3. O usuário deve pressionar o tópico "Editar senha".
+4. O programa irá imprimir um formulário com campos a serem preenchidos sobre a nova senha.
+5. O programa imprime o campo "email" afim do usuário preencher com seu email já cadastrado.
+6. O programa imprime o campo "Antiga senha" afim do usuário preencher com sua antiga senha já cadastrada.
+7. O programa imprime o campo "Senha " afim do usuário preencher uma nova senha não cadastrada.
+8. O programa imprime o campo "Confirme a senha" afim do usuário preencher com a mesma nova senha que ele preencheu no campo acima.
+9. O usuário deve pressionar o botão "enviar" afim de ter o formulário concluído.
+
+**Fluxo Alternativo A**
+
+1. O usário pressiona o botão "conta".
+2. O programa retornará com um pop-up com os seguintes tópicos:Editar senha, Mostrar dados, Mostrar Reserva, Editar email e Excluir conta.
+3. O usuário deve pressionar o tópico "Editar senha".
+4. O programa irá imprimir um formulário com campos a serem preenchidos sobre a nova senha.
+5. O programa imprime o campo "email".
+6. O usuário preenche com um email  não cadastrado.
+7. O programa imprime o campo "Antiga senha" afim do usuário preencher com sua antiga senha já cadastrada.
+8. O programa imprime o campo "Senha " afim do usuário preencher uma nova senha não cadastrada.
+9. O programa imprime o campo "Confirme a senha" afim do usuário preencher com a mesma nova senha que ele preencheu no campo acima.
+10.O usuário deve pressionar o botão "enviar" afim de ter o formulário concluído. 
+11. O programa não reconhce o email não cadastrado no banco de dados.
+12. O formulário não poderá ser concluídom com sucesso.
+
+**Fluxo Alternativo B**
+
+1. O usário pressiona o botão "conta".
+2. O programa retornará com um pop-up com os seguintes tópicos:Editar senha, Mostrar dados, Mostrar Reserva, Editar email e Excluir conta.
+3. O usuário deve pressionar o tópico "Editar senha".
+4. O programa irá imprimir um formulário com campos a serem preenchidos sobre a nova senha.
+5. O programa imprime o campo "email" afim do usuário preencher com seu email já cadastrado.
+6. O programa imprime o campo "Antiga senha" afim do usuário preencher com sua antiga senha já cadastrada.
+7. O usuário preenche o campo " Antiga senha" com a senha digitada errada.
+8. O programa imprime o campo "Senha " afim do usuário preencher uma nova senha não cadastrada.
+9. O programa imprime o campo "Confirme a senha" afim do usuário preencher com a mesma nova senha que ele preencheu no campo acima.
+10. O usuário deve pressionar o botão "enviar" afim de ter o formulário concluído.
+11.O programa não reconhce a antiga senha e imprime uma mensagem escrito " Antiga senha incorreta".
+12. O formulário não poderá ser concluídom com sucesso.
+
+**Fluxo Alternativo C**
+
+1. O usário pressiona o botão "conta".
+2. O programa retornará com um pop-up com os seguintes tópicos:Editar senha, Mostrar dados, Mostrar Reserva, Editar email e Excluir conta.
+3. O usuário deve pressionar o tópico "Editar senha".
+4. O programa irá imprimir um formulário com campos a serem preenchidos sobre a nova senha.
+5. O programa imprime o campo "email" afim do usuário preencher com seu email já cadastrado.
+6. O programa imprime o campo "Antiga senha" afim do usuário preencher com sua antiga senha já cadastrada.
+7. O programa imprime o campo "Senha " afim do usuário preencher uma nova senha não cadastrada.
+8. O programa imprime o campo "Confirme a senha" afim do usuário preencher com a mesma nova senha que ele preencheu no campo acima.
+9. O usuário erra ao digitar a senha novamente no campo "Confirme a senha".
+10. O usuário deve pressionar o botão "enviar" afim de ter o formulário concluído.
+11.O programa não reconhce a nova senha e imprime uma mensagem escrito " Antiga senha incorreta".
+12. O formulário não poderá ser concluídom com sucesso.
+
+
 
 
 
