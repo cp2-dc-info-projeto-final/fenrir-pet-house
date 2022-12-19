@@ -2,21 +2,18 @@
 
 ## Lista dos Casos de Uso
 
- - [CDU 01](#CDU-01): Fazer Login
- - [CDU 02](#CDU-02): Fazer Logout
- - [CDU 03](#CDU-03): Cadastro de cliente*
- - [CDU 04](#CDU-04): Cadastro de Funcionário*
- - [CDU 05](#CDU-05): Reserva de Horário @
- - [CDU 06](#CDU-06): Cadastro de Cachorro *
- - [CDU 07](#CDU-07): Visualizar Reserva de cliente @
- - [CDU 08](#CDU-08): Deleção de reserva por Administrador e Funcionário @ 
- - [CDU 09](#CDU-09): Consulta de Reserva do Cliente @
- - [CDU 10](#CDU-10): Alteração de Reserva do Cliente @
- - [CDU 11](#CDU-11): Cancelamento de Reserva do Cliente @
- - [CDU 12](#CDU-12): Recuperação de senha por funcionário e cliente
- - [CDU 13](#CDU-13): Cadastro de cliente*
- - [CDU 14](#CDU-14): Visualizar pacotes*
- - [CDU 15](#CDU-15): Administrador altera Usuários*
+ - [CDU 01](#CDU-01): Fazer Login ok
+ - [CDU 02](#CDU-02): Fazer Logout ok
+ - [CDU 03](#CDU-03): Cadastro de cliente ok
+ - [CDU 04](#CDU-04): Reserva de Horário @
+ - [CDU 06](#CDU-05): Cadastro de Cachorro *
+ - [CDU 07](#CDU-06): Visualizar Reserva de cliente @
+ - [CDU 08](#CDU-07): Deleção de reserva por Administrador e Funcionário @ 
+ - [CDU 09](#CDU-08): Consulta de Reserva do Cliente @
+ - [CDU 10](#CDU-09): Recuperação de senha por funcionário e cliente
+ - [CDU 11](#CDU-10): Cadastro de cliente*
+ - [CDU 12](#CDU-11): Visualizar pacotes*
+ - [CDU 13](#CDU-12): Administrador altera Usuários*
   
 ## Lista dos Atores
 
@@ -61,7 +58,7 @@ Cliente, funcionário e administrador fazem login.
 7. Usuário insere a senha corretamente.
 8. Usuário pressiona o botão "Enviar".
 9. A página atualiza com os campos de e-mail e senha em branco.
-10. Um pop-up aparece com a mensagem "Senha e/ou Email inválido(s)!"
+10. Um pop-up aparece com a mensagem "Senha e/ou Email inválido(s)!".
 
 **Fluxo Alternativo B**
 
@@ -85,7 +82,7 @@ Usuário faz logout
 1. Usuário pressiona o botão "Logout".
 2. O programa desconecta a conta.
 
-### CDU 02
+### CDU 03
 
 Usuário se cadastra no site
 
@@ -103,7 +100,7 @@ Usuário se cadastra no site
 7. Usuário preenche o campo "Data de Nascimento" com sua data de nascimento na formatação DD/MM/YY
 8. Usuário pressiona botão "Enviar"
 9. As informações inseridas pelo usuário são enviadas ao banco de dados
-10. Usuário é redirecionado à página de login.
+10. Usuário é redirecionado à página de login. 
 
 **Fluxo Alternativo A**
 
@@ -124,9 +121,9 @@ Usuário se cadastra no site
 7. O programa verifica a presença de mais de um nome.
 8. A página é atualizada com os campos em branco.
 
-### CDU 03
+### CDU 04
 
-Usuário reserva um horário para levar seu cachorro ao hotel
+Usuário reserva um horário para levar seu cachorro ao hotel.
 
 ![Diagrama de CDU-03](Csos_6.png)
 ![Diagrama de CDU-03](CASOS-USO-ALTERNATIVO-1_3.png)
@@ -168,7 +165,7 @@ Usuário reserva um horário para levar seu cachorro ao hotel
 7. Usuário seleciona um dos horários indisponíveis
 8. Um pop-up aparece com a mensagem "Esse horário não está disponível"
 
-### CDU 04
+### CDU 05
 
 Usuário cadastra seu cachorro para fazer uma futura reserva
 
@@ -177,52 +174,60 @@ Usuário cadastra seu cachorro para fazer uma futura reserva
 
 **Fluxo Principal**
 
-1. No menu principal, usuário pressiona o botão "Hospedagem".
-2. O usuário preenche o campo "Nome do Dog" com um texto de pelo menos 3 caracteres e sem caracteres especiais
-3. O programa verifica se o texto possui 3 caracteres ou mais e não possui caracteres especiais
-4. O programa retorna a mensagem "Nome válido"
-5. Usuário preenche o campo "Raça do Dog" com um texto com pelo menos 4 caracteres e sem caracteres especiais
-6. O programa verifica se o texto possui 4 caracteres ou mais e não possui caracteres especiais
-7. O programa retorna a mensagem "Raça válida"
-8. Usuário preenche o campo "Idade do Dog" com um numeral
-9. O programa verifica se o texto só possui numerais 
-10. Usuário pressiona botão "Registrar"
-11. As informações inseridas pelo usuário são enviadas ao banco de dados
-12. Usuário é redirecionado ao menu principal.
+1. No menu principal, usuário pressiona o botão "Reservas".
+2. O programa retorna tres pop-ups com os pacotes disponíveis e contendo abaixo os formulários do cadastro do cachorro.
+3. O usuário preenche o campo "Digite seu email" com um texto de pelo menos 3 caracteres e com caracteres especiais.
+4. O programa verifica se o texto possui 3 caracteres ou mais e se possui caracteres especiais. 
+5. O usuário preenche o campo "Nome" com um texto de pelo menos 3 caracteres e sem caracteres especiais.
+6. O programa verifica se o texto possui 3 caracteres ou mais e não possui caracteres especiais.
+7. O programa retorna a mensagem "Nome válido".
+8. Usuário preenche o campo "Raça" com um texto com pelo menos 4 caracteres e sem caracteres especiais.
+9. O programa verifica se o texto possui 4 caracteres ou mais e não possui caracteres especiais.
+10. O programa retorna a mensagem "Raça válida".
+11. Usuário preenche o campo "Idade" com um numeral.
+12. O programa verifica se o texto só possui numerais. 
+13. Usuário pressiona botão "Enviar".
+14. As informações inseridas pelo usuário são enviadas ao banco de dados.
+15. Usuário é redirecionado ao menu principal.
 
 **Fluxo Alternativo A**
 
-1. No menu principal, usuário pressiona o botão "Registrar Cachorro" 
-2. O usuário preenche o campo "Nome do Dog" com um texto com menos de 3 caracteres e sem caracteres especiais 
-3. O programa verifica se o texto possui 3 caracteres ou mais e não possui caracteres especiais 
+1. No menu principal, usuário pressiona o botão "Reservas". 
+2. O usuário preenche o campo "Digite seu email" com um texto com caracteres especiais. 
+3. O programa verifica se o texto possui 4 caracteres ou mais e não possui caracteres especiais. 
+4. O programa retorna a mensagem "Raça inválida." 
+
+**Fluxo Alternativo A**
+
+1. No menu principal, usuário pressiona o botão "Reservas". 
+2. O usuário preenche o campo "Nome" com um texto com menos de 3 caracteres e sem caracteres especiais. 
+3. O programa verifica se o texto possui 3 caracteres ou mais e não possui caracteres especiais. 
 4. O programa retorna a mensagem "Nome inválido"
 
 **Fluxo Alternativo B**
 
-1. No menu principal, usuário pressiona o botão "Registrar Cachorro" 
-2. O usuário preenche o campo "Nome do Dog" com um texto com pelo menos 3 caracteres com caracteres especiais 
-3. O programa verifica se o texto possui 3 caracteres ou mais e não possui caracteres especiais 
-4. O programa retorna a mensagem "Nome inválido" 
+1. No menu principal, usuário pressiona o botão "Reservas". 
+2. O usuário preenche o campo "Raça" com um texto com pelo menos 4 caracteres com caracteres especiais. 
+3. O programa verifica se o texto possui 4 caracteres ou mais e não possui caracteres especiais. 
+4. O programa retorna a mensagem "Raça inválida." 
 
 **Fluxo Alternativo C**
 
-1. No menu principal, usuário pressiona o botão "Registrar Cachorro" 
-2. O usuário preenche o campo "Nome do Dog" com um texto com pelo menos 3 caracteres e sem caracteres especiais 
-3. O programa verifica se o texto possui 3 caracteres ou mais e não possui caracteres especiais 
-4. O programa retorna a mensagem "Nome válido" 
-5. Usuário preenche o campo "Raça do Dog" com um texto com menos de 4 caracteres e sem caracteres especiais 
-6. O programa verifica se o texto possui 4 caracteres ou mais e não possui caracteres especiais 
-7. O programa retorna a mensagem "Raça inválida" 
+1. No menu principal, usuário pressiona o botão "Reservas". 
+2. O usuário preenche o campo "Idade" com um texto com caracteres especiais. 
+3. O programa verifica se o texto possui 4 caracteres ou mais e não possui caracteres especiais. 
+4. O programa retorna a mensagem "Raça inválida." 
 
 **Fluxo Alternativo D**
 
 1. No menu principal, usuário pressiona o botão "Registrar Cachorro" 
-2. O usuário preenche o campo "Nome do Dog" com um texto com pelo menos 3 caracteres e sem caracteres especiais 
+2. O usuário preenche o campo "Nome" com um texto com pelo menos 3 caracteres e sem caracteres especiais 
 3. O programa verifica se o texto possui 3 caracteres ou mais e não possui caracteres especiais 
 4. O programa retorna a mensagem "Nome válido" 
-5. Usuário preenche o campo "Raça do Dog" com um texto com pelo menos 4 caracteres com caracteres especiais 
+5. Usuário preenche o campo "Raça do Dog" com um texto com menos de 4 caracteres e sem caracteres especiais 
 6. O programa verifica se o texto possui 4 caracteres ou mais e não possui caracteres especiais 
-7. O programa retorna a mensagem "Raça inválida"
+7. O programa retorna a mensagem "Raça" 
+
 
 ### CDU 05
 
