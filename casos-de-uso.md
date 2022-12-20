@@ -29,7 +29,7 @@
 
 ## Diagrama de Casos de Uso
 
-![Diagrama de casos de uso drawio (3)](https://user-images.githubusercontent.com/111150888/189783420-4d6ea62f-05aa-42d5-9fa8-c7eb1ca70c6f.png)
+![Diagrama de casos de uso](/diagramas/diagrama-cdu.png)
 
 
 ## Descrição dos Casos de Uso
