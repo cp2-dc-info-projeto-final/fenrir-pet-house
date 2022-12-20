@@ -9,7 +9,7 @@
  - [CDU 05](#CDU-05): Cadastro de Cachorro 
  - [CDU 06](#CDU-06): Consulta do usuário nos horários reservados ✔️
  - [CDU 07](#CDU-07): Recuperação de senha por cliente
- - [CDU 8](#CDU-08): Visualizar pacotes
+ - [CDU 08](#CDU-08): Visualizar pacotes
  - [CDU 09](#CDU-09): Usuário visualiza seus dados
  - [CDU 10](#CDU-10): Usuário edita sua senha ✔️ 
  - [CDU 11](#CDU-11):Usuário edita seu email
@@ -246,7 +246,7 @@ Funcionário e cliente recuperaram a senha.
 4. O sistema envia uma senha provisória que deve ser usada para login".
 5. O usuário é redirecionado à página de login.
 
-### CDU 8
+### CDU 08
 
 Usuário visualiza pacotes.
 
@@ -264,7 +264,7 @@ Usuário visualiza pacotes.
 4. O sistema retorna com a não identificação do cachorro assim impossibilitando a seleção do pacote.
 
 
-### CDU 9
+### CDU 09
 
 Cliente visualiza seus dados da conta.
 
