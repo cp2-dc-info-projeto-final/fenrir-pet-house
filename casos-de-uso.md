@@ -236,126 +236,19 @@ Cliente consulta os horários reservados
 3. O usuário deve pressionar o tópico "Mostrar Reservas".
 4. O programa irá imprimir uma mensagem com os dados referentes a reserva feita naquela conta. 
 
-
-### CDU 07
-
-Cliente altera a reserva
-
-![Diagrama de CDU-03](Csos_9.png)
-![Diagrama de CDU-07](CASOS-USO-ALTERNATIVO-1_7.png)
-
-**Fluxo principal**
-
-1. No menu principal, usuário pressiona botão "Reservas".
-2. Usuário é redirecionado a uma listagem com as informações do(s) horário(s) reservado(s) por ele para seu(s) respectivo(s) cachorro(s).
-3. Usuário pressiona o botão "Alterar" ao lado da reserva que deseja alterar.
-4. Um pop-up aparece com a mensagem "Tem certeza que deseja alterar essa reserva?"
-5. Usuário pressiona botão "Sim".
-6. Usuário é redirecionado a um calendário onde escolhe para qual dia deseja alterar a reserva.
-7. O programa verifica os dia(s) selecionado(s).
-9. O programa retorna com os horários disponíveis.
-10. O usuário seleciona um dos horários disponíveis.
-11. O usuário seleciona um dos cachorros cadastrados por ele para a reserva.
-12. O usuário seleciona os pacotes para o cachorro.
-13. O usuário pressiona o botão "Confirmar Reserva".
-14. Um pop-up aparece com a mensagem "Tem certeza que deseja confirmar a reserva?".
-15. Usuário pressiona o botão "Sim".
-16. Usuário é redirecionado ao menu principal.
-17. Um pop-up aparece com a mensagem "Reserva alterada com sucesso.".
-
-**Fluxo alternativo A**
-
-1. No menu principal, usuário pressiona botão "Reservas".
-2. Usuário é redirecionado a uma listagem com as informações do(s)e dia(s) horário(s) reservado(s) por ele para seu(s) respectivo(s) cachorro(s).
-3. Usuário pressiona o botão "Alterar" ao lado da reserva que deseja alterar.
-4. Um pop-up aparece com a mensagem "Tem certeza que deseja alterar essa reserva?".
-5. Usuário pressiona botão "Não".
-6. O pop-up fecha com a reserva escolhida inalterada.
-
-**Fluxo alternativo B**
-
-1. No menu principal, usuário pressiona botão "Reservas"
-2. Usuário é redirecionado a uma listagem com as informações do(s)e dia(s) horário(s) reservado(s) por ele para seu(s) respectivo(s) cachorro(s).
-3. Usuário pressiona o botão "Alterar" ao lado da reserva que deseja alterar
-4. Um pop-up aparece com a mensagem "Tem certeza que deseja alterar essa reserva?"
-5. Usuário pressiona botão "Sim"
-6. Usuário é redirecionado a um calendário onde escolhe para qual dia deseja alterar a reserva.
-7. O programa verifica os dias com horário disponível e indisponível.
-9. O usuário seleciona um dos dias sem horários disponíveis.
-10. Um pop-up aparece com a mensagem "Esse dia não está disponível".
-
-**Fluxo alternativo C**
-
-1. No menu principal, usuário pressiona botão "Reservas"
-2. Usuário é redirecionado a uma listagem com as informações do(s)e dia(s) horário(s) reservado(s) por ele para seu(s) respectivo(s) cachorro(s).
-3. Usuário pressiona o botão "Alterar" ao lado da reserva que deseja alterar.
-4. Um pop-up aparece com a mensagem "Tem certeza que deseja alterar essa reserva?"
-5. Usuário pressiona botão "Sim".
-6. Usuário é redirecionado a um calendário onde escolhe para qual dia deseja alterar a reserva.
-7. O programa verifica os dias com horário disponível e indisponível.
-11.O usuário seleciona um dos horários indisponíveis
-12. Um pop-up aparece com a mensagem "Esse horário não está disponível".
-
-### CDU 08
-
-Cliente cancela uma reserva
-
-![Diagrama de CDU-08](Csos_8.png)
-![Diagrama de CDU-08](CASOS-USO-ALTERNATIVO-1_8.png)
-
-**Fluxo Principal**
-
-1. No menu principal, usuário pressiona botão "Reservas".
-2.Usuário é redirecionado a uma listagem com as informações do(s)e dia(s) horário(s) reservado(s) por ele para seu(s) respectivo(s) cachorro(s).
-3. Usuário pressiona o botão "X" ao lado da reserva que deseja apagar.
-4. Um pop-up aparece com a mensagem "Tem certeza que deseja apagar essa reserva?"
-5. Usuário pressiona botão "Sim".
-6. A reserva é apagada no banco de dados.
-7. A página é atualizada e a reserva selecionada é apagada.
-
-**Fluxo Alternativo A**
-
-1. No menu principal, usuário pressiona botão "Reservas".
-2.Usuário é redirecionado a uma listagem com as informações do(s)e dia(s) horário(s) reservado(s) por ele para seu(s) respectivo(s) cachorro(s).
-3. Usuário pressiona o botão "X" ao lado da reserva que deseja apagar.
-4. Um pop-up aparece com a mensagem "Tem certeza que deseja apagar essa reserva?"
-5. Usuário pressiona botão "Não".
-6. A reserva continua inalterada no banco de dados.
-7. A página é atualizada e a reserva selecionada é mantida.
-
-
-### CDU 09 
+### CDU 07 
 
 Funcionário e cliente recuperaram a senha.
 
 **Fluxo Principal**
 
 1. O usuário seleciona a opção "Recuperar a senha "
-2. O sistema retornará a um Pop-up com um formulário que solicitará o e-mail de recuperação.
-3. O usuário digita o email de recuperação e seleciona "receber código de confirmação".
-4. O sistema recebe os dados e retorna o código de confirmação para o e-mail do usuário".
-5. O sistema retornará um Pop-up que solicitará o código de confirmação.
-6. O usuário digita o código certo e clica em "confirmar".
+2. O sistema requisita um email de recuperaçao.
+3. O usuário digita o email de recuperação e seleciona "Recuperar".
+4. O sistema envia uma senha provisória que deve ser usada para login".
+5. O usuário é redirecionado à página de login.
 
-**Fluxo Alternativo A**
-
-1. O usuário seleciona a opção "Recuperar a senha "
-2. O sistema retornará a um Pop-up com um formulário que solicitará o e-mail de recuperação.
-3. O usuário digita o email incorretamente e seleciona "receber código de confirmação".
-4. O sistema retorna a mensagem "e-mail de recuperação incorreto".
-
-**Fluxo Alternativo B**
-
-1. O usuário seleciona a opção "Recuperar a senha "
-2. O sistema retornará a um Pop-up com um formulário que solicitará o e-mail de recuperação.
-3. O usuário digita o email de recuperação e seleciona "receber código de confirmação".
-4. O sistema recebe os dados e retorna o código de confirmação para o e-mail do usuário".
-5. O sistema retornará um Pop-up que solicitará o código de confirmação.
-6. O usuário digita o código incorretamente e clica em "confirmar".
-7. O sistema retorna a mensagem "código de confirmação incorreto".
-
-
-### CDU 10
+### CDU 8
 
 Usuário visualiza pacotes.
 
@@ -373,7 +266,7 @@ Usuário visualiza pacotes.
 4. O sistema retorna com a não identificação do cachorro assim impossibilitando a seleção do pacote.
 
 
-### CDU 11
+### CDU 9
 
 Cliente visualiza seus dados da conta.
 
@@ -385,7 +278,7 @@ Cliente visualiza seus dados da conta.
 4. O programa irá imprimir uma mensagem com os dados referentes aos dados do usuário. 
 
 
-### CDU 12
+### CDU 10
 
 Cliente altera sua senha.
 
@@ -491,7 +384,7 @@ Usuário altera seu email
 10.O programa não reconhce a antiga senha e imprime uma mensagem escrito " Senha antiga incorreta".
 11. O formulário não poderá ser concluído com sucesso.  
 
-### CDU 14
+### CDU 12
 
 Usuário deseja deletar a conta
 
@@ -532,7 +425,7 @@ Usuário deseja deletar a conta
 10.O programa não reconhce o email e imprime uma mensagem escrito "Senha incorreta".
 11. O formulário não poderá ser concluído com sucesso e nem a conta excluída.
 
-### CDU 15
+### CDU 13
 
 Administrador pode editar a reserva
 
