@@ -11,7 +11,7 @@
  - [CDU 07](#CDU-07): Cliente altera a Reserva 
  - [CDU 08](#CDU-08): Cliente cancela uma Reserva
  - [CDU 09](#CDU-09): Recuperação de senha por funcionário e cliente
- - [CDU 10](#CDU-10): Visualizar pacotes
+ - [CDU 10](#CDU-10): Visualizar pacotes  ✔️
  - [CDU 11](#CDU-11): Usuário visualiza seus dados
  - [CDU 12](#CDU-12): Usuário edita sua senha ✔️ 
  - [CDU 13](#CDU-13): Usuário edita seu email
