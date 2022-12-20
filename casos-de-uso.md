@@ -5,7 +5,7 @@
  - [CDU 01](#CDU-01): Fazer Login ✔️ 
  - [CDU 02](#CDU-02): Fazer Logout ✔️ 
  - [CDU 03](#CDU-03): Cadastro de usuário ✔️ 
- - [CDU 04](#CDU-04): Reserva de Horário 
+ - [CDU 04](#CDU-04): Reserva de Horário ✔️
  - [CDU 05](#CDU-05): Cadastro de Cachorro 
  - [CDU 06](#CDU-06): Consulta do usuário nos horários reservados ✔️
  - [CDU 07](#CDU-07): Cliente altera a Reserva 
