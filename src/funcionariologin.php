@@ -2,10 +2,8 @@
     // Recebe os campos do formulário
     $email = $_POST["email"];
     $senha = $_POST["senha"];
-    if($email == "fenrirpethouse@gmail.com" && $senha == "audmin"){
-        header("Location: adminpage.php");
-    }
-    else{
+
+
     // Realiza a consulta no banco de dados
     include "conectauser.inc";
     $sql = "SELECT * FROM func WHERE email = '$email';";
@@ -20,6 +18,7 @@
     else{
         $func    = mysqli_fetch_array($res);
         $query = "SELECT senha FROM func WHERE email = '$email' ";
+        $isadmin = "SELECT isAdmin FROM func WHERE email = '$email' ";
         if(mysqli_query($mysqli, $query)){
                 if(password_verify($senha, $func["senha"])){
                     // abre a sessão e registra as variáveis do login
@@ -27,11 +26,18 @@
                     $_SESSION["email"] = $email;
                     $_SESSION["IsAdmin"] = $isadmin;
                                 // direciona para a página inicial
+                                if($isadmin = 1){
+                                header("Location: adminpage.php");
+                                }
+
+                                if($isadmin == 0){
                                 header("Location: indexlogfuncionario.php");
-           
+                                }
         }
     }
 }
-}
+
 mysqli_close($mysqli);
 ?>
+
+

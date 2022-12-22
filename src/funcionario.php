@@ -1,11 +1,5 @@
 <?php include "conectauser.inc"; ?>
-<html>
-    <head>
-        <title>Dados Cadastrados</title>
-        <meta charset="UTF-8">
-    </head>
-    <body>
-        <h1>Dados Cadastrados</h1>
+
 <?php
     $operacao = $_POST["operacao"];
 
@@ -18,8 +12,8 @@
         $cpf= $_POST["cpf"];
 
         $erro = 0;
-        $admin = 0;
 
+        
     
 
         if(empty($nome) or strstr($nome, ' ') == false){
@@ -60,24 +54,13 @@
             $sql = "INSERT INTO func (nome,email,data_nasc,senha,cpf)";
             $sql .= "VALUES ('$nome','$email','$data_nasc', '$hash', '$cpf');";  
             
-            mysqli_query($mysqli,$sql);
+            if(!mysqli_query($mysqli,$sql)){
+                echo mysqli_error($mysqli);
+            }
             envia_email($email, "Confirmação de Cadastro", "$nome, sua conta foi criada na hospedaria canina Fenrir Pet House. Esperamos que você dê seu melhor e desfrute do seu novo trabalho! Caso você não tenha feito essa conta, ignore essa mensagem.");
-        ?>
-        <body>
-            <strong>Dados Cadastrados:</strong>
-        </body>
-        <?php
-
-            echo "Nome: $nome <br>";
-            echo "E-mail: $email <br>";
-            echo "Data de nascimento: $data_nasc <br>";
-            echo "Senha : $senha <br>";
-            echo "CPF : $cpf <br>";
-            echo "<a href='funcionario.html'>Voltar para o início</a>";
+            header ("Location: index.php");
         }
     }
 
 ?>
-    </body>
-</html>
 <?php mysqli_close($mysqli); ?>
