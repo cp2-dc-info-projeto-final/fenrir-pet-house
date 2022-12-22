@@ -46,6 +46,10 @@
             $erro = 1;            
             
         }
+        if(($senha == $csenha) == false){
+            echo "Confirme a senha correta.<br>";
+            $erro = 1;
+        }
         
         if($erro == 0){
             include "envia_email.php";
