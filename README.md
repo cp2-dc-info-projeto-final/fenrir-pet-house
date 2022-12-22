@@ -21,7 +21,7 @@ O site traz a proposta de uma Hotelaria para cães. Ele busca direcionar o usuá
 
 **Diagrama de Classes**
 
-![Diagrama de Classes](diagrama-exemplo.png)
+![Diagrama de Classes](/diagramas/diagrama-classe.png)
 
 **Modelagem do Banco de Dados**
 

@@ -59,8 +59,6 @@ CREATE TABLE `cliente` (
 -- Extraindo dados da tabela `cliente`
 --
 
-INSERT INTO `cliente` (`cod_cliente`, `nome`, `senha`, `email`, `data_nasc`) VALUES
-('1','Thiago Silva','testeteste','thiagosilvade06@gmail.com','03/09/2005');
 -- --------------------------------------------------------
 
 --
