@@ -71,6 +71,7 @@ CREATE TABLE `func` (
   `email` varchar(220) NOT NULL,
   `data_nasc` varchar(10) NOT NULL,
   `senha` varchar(255) NOT NULL,
+  `cpf` varchar(11) NOT NULL,
   `IsAdmin` tinyint(1) NOT NULL DEFAULT '0'
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 

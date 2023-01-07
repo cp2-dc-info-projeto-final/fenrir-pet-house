@@ -34,7 +34,8 @@ $linhas = mysqli_num_rows($res);
         </div>
         <ul class="nav-list">
           <li><a href="sobrelog.html">Sobre nós</a></li>
-          <li><a href="hospedagem.html">Hospedagem</a></li>
+          <li><a href="pacoteslog.html">Pacotes</a></li>
+          <li><a href="reserva.html">Reserva</a></li>
           <li><a href="duvidaslog.html">Dúvidas</a></li>
           <li><a href="account.html">Conta</a></li>
           <li><a href="logout.php">Logout</a></li>

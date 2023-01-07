@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Fenrir Pet House</title>
+    <title>Hospedagem</title>
     <link rel="stylesheet" href="style.css" />
   </head>
 
@@ -24,7 +24,7 @@
           <li><a href="sobrelog.html">Sobre nós</a></li>
           <li><a href="pacoteslog.html">Pacotes</a></li>
           <li><a href="reserva.html">Reserva</a></li>
-          <li><a href="duvidaslog.html">Dúvidas</a></li>
+          <li><a href="duvidas.html">Dúvidas</a></li>
           <li><a href="account.html">Conta</a></li>
           <li><a href="logout.php">Logout</a></li>
           
@@ -36,17 +36,48 @@
     <body background="capa dogs.png" class="background">
     </body>
 
-    <div class="fenrir-login">
-        <h1>Editar o email</h1>
-        <form action="editclienteemail.php" method="POST" class="form-container">
-          <input type="hidden" name="operacao" value="editemail">
-          <p>Email atual: <input type="text" placeholder="insira seu email atual" name="emailantigo"></p>
-          <p>Novo email: <input type="text" placeholder="Insira seu novo email" name="emailnovo"></p>
-          <p>Digite sua senha: <input type="password" placeholder="insira Senha" name="senha"></p>
-          <p><input type="submit" value="Enviar" class="btn"></p>    
-        </form>
+    
+    <ul class="nav-list">
+        <div class="fenrir-hospedagens">
+            <form action="cadastrocachorro.php" method="POST" class="form-container">
+                <input type="hidden" name="operacao" value="inserir">
+                <h1> 🎁 Pacote Tchutchuquito</h1>
+                <p style="text-align:left;"><br>🎁 Pacote Tchutchuquito (R$90)<br>
+                    - Um dia e uma noite.<br>
+                    -Acesso as áreas da praia e o parquinho.<br>
+                    -1 banho por semana.
+                </p>
+            </form>
+        </div>
 
-    </div>
+        <div class="fenrir-hospedagens">
+            <form action="cadastrocachorro.php" method="POST" class="form-container">
+                <input type="hidden" name="operacao" value="inserir">
+                <h1> 🎁 Pacote Tchutchuco</h1>
+                <p style="text-align:left;"><br>🎁 Pacote tchutchuco (R$130)<br>
+                    - Dois dias e duas noites.<br>
+                    -Acesso as áreas da praia, parquinho e a Arena de Sabão.<br>
+                    -1 banho por semana.<br>
+                    -1 tosa a cada dois meses
+                </p>
+            </form>
+        </div>
+
+        <div class="fenrir-hospedagens">
+            <form action="cadastrocachorro.php" method="POST" class="form-container">
+                <input type="hidden" name="operacao" value="inserir">
+                <h1> 🎁 Pacote Tchutchucão</h1>
+                <p style="text-align:left;"><br>🎁 Pacote tchutchucão(R$190)<br>
+                    -Três dias e três noites.<br>
+                    -Acesso a todas as áreas da hospedagem.<br>
+                    -1 banho por semana.<br>
+                    -1 tosa todo mês.<br>
+                    -Festinha no AUniversário do dog.
+                </p>
+            </form>
+        </div>
+    </ul>
+    
 
 
    <!-- Site footer -->
