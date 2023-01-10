@@ -52,7 +52,7 @@ $id = $_GET["idservico"];
 
 
    <!-- Site footer -->
-   <footer class="site-footer" style="margin-top: 25%;">
+   <footer class="site-footer" style="margin-top: 33%;">
 
         <div class="col-xs-6 col-md-3">
           <h6>Contatos:</h6>

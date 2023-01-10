@@ -40,6 +40,7 @@ session_start()
     </body>
 
         <div class="fenrir-login">
+        <h1>Reserva(s) feita(s):</h1>
         <?php
         $sql = "SELECT * FROM servico WHERE descricao like '%{$_SESSION['email']}%';"; 
         $res = mysqli_query($mysqli,$sql);
