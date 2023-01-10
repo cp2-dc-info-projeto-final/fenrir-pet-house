@@ -90,9 +90,11 @@ INSERT INTO `func` (`cod_func`, `nome`, `email`, `data_nasc`, `senha`, `cpf`, `I
 
 CREATE TABLE `servico` (
   `idServico` int(11) NOT NULL,
-  `hora_disp` int(11) NOT NULL,
   `agenda_tstamp` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  `servico` varchar(225) NOT NULL,
+  `cachorro` varchar(225) NOT NULL,
   `descricao` varchar(225) NOT NULL,
+  `cliente` varchar(225) NOT NULL,
   `agenda_status` tinyint(1) NOT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
@@ -100,21 +102,14 @@ CREATE TABLE `servico` (
 -- Extraindo dados da tabela `serviço`
 --
 
-INSERT INTO `servico` (`idServico`, `hora_disp`, `agenda_tstamp`, `descricao`, `agenda_status`) VALUES
-(6, 1, '2022-12-23 12:00:00', '.', 0),
-(5, 1, '2022-12-22 12:00:00', '.', 0),
-(4, 1, '2022-12-21 12:00:00', '.', 0),
-(3, 1, '2022-12-20 12:00:00', '.', 0),
-(2, 1, '2022-12-19 12:00:00', '.', 0),
-(1, 1, '2022-12-18 12:00:00', '.', 0),
-(7, 1, '2022-12-24 12:00:00', '.', 0),
-(8, 1, '2022-12-18 20:00:00', '.', 0),
-(9, 1, '2022-12-19 20:00:00', '.', 0),
-(10, 1, '2022-12-20 20:00:00', '.', 0),
-(11, 1, '2022-12-21 20:00:00', '.', 0),
-(12, 1, '2022-12-22 20:00:00', '.', 0),
-(13, 1, '2022-12-23 20:00:00', '.', 0),
-(14, 1, '2022-12-24 20:00:00', '.', 0);
+INSERT INTO `servico` (`idServico`, `agenda_tstamp`, `servico`, `cachorro`, `descricao`, `cliente`, `agenda_status`) VALUES
+(6,'2022-12-23 12:00:00', '.', '.', '.', '.', 0),
+(5,'2022-12-22 12:00:00', '.', '.', '.', '.', 0),
+(4,'2022-12-21 12:00:00', '.', '.', '.', '.', 0),
+(3,'2022-12-20 12:00:00', '.', '.', '.', '.', 0),
+(2,'2022-12-19 12:00:00', '.', '.', '.', '.', 0),
+(1,'2022-12-18 12:00:00', '.', '.', '.', '.', 0),
+(7,'2022-12-24 12:00:00', '.', '.', '.', '.', 0);
 
 --
 -- Indexes for dumped tables

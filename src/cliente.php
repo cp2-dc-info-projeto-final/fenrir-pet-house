@@ -91,7 +91,7 @@
 
                     mysqli_query($mysqli,$sql);
                     envia_email($email, "Confirmação de Cadastro", "Parabéns $nome, sua conta foi criada na hospedaria canina Fenrir Pet House usando esse email. Esperamos que você e seu au-migo desfrutem de nossos serviços! Caso você não tenha feito essa conta, contate-nos imediatamente.");
-                    header ("Location: account.html");
+                    header ("Location: loginfenrir.html");
 
                 }
             }

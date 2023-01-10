@@ -1,4 +1,6 @@
+
 <?php
+
     // Recebe os campos do formulário
     $email = $_POST["email"];
     $senha = $_POST["senha"];
@@ -23,18 +25,21 @@
                 if(password_verify($senha, $func["senha"])){
                     // abre a sessão e registra as variáveis do login
                     session_start();
-                    $_SESSION["email"] = $email;
-                    $_SESSION["IsAdmin"] = $isadmin;
+                    $_SESSION["email"] = "$email";
+                    $_SESSION["IsAdmin"] = "$isadmin";
                                 // direciona para a página inicial
-                                if($isadmin = 1){
+                                if($isadmin == 1){
                                 header("Location: adminpage.php");
                                 }
 
                                 if($isadmin == 0){
                                 header("Location: indexlogfuncionario.php");
                                 }
+                }
+            else{
+                header("Location: funcionariologininc.html");
+            }
         }
-    }
 }
 
 mysqli_close($mysqli);

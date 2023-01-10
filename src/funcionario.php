@@ -51,8 +51,8 @@
         if($erro == 0){
             include "envia_email.php";
             $hash = password_hash($senha, PASSWORD_DEFAULT);
-            $sql = "INSERT INTO func (nome,email,data_nasc,senha,cpf)";
-            $sql .= "VALUES ('$nome','$email','$data_nasc', '$hash', '$cpf');";  
+            $sql = "INSERT INTO func (nome,email,data_nasc,senha,cpf,isAdmin)";
+            $sql .= "VALUES ('$nome','$email','$data_nasc', '$hash', '$cpf', 0);";  
             
             if(!mysqli_query($mysqli,$sql)){
                 echo mysqli_error($mysqli);
