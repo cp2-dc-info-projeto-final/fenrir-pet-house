@@ -22,7 +22,7 @@
                 if(password_verify($senha, $cliente["senha"])){
                     // abre a sessão e registra as variáveis do login
                     session_start();
-                    $_SESSION["email"] = $email;
+                    $_SESSION["email"] = "$email";
                     // direciona para a página inicial
                     header("Location: indexlogcliente.php");
                 } else {
