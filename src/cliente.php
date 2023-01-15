@@ -51,6 +51,8 @@
 
                 $erro = 0;
 
+                
+
                 if(empty($nome) or strstr($nome, ' ') == false){
                     echo "Por favor, preencha o nome completo.<br>";
                     $erro = 1;
@@ -84,15 +86,21 @@
                 }
                 
                 if($erro == 0){
-                    include "envia_email.php";
-                    $hash = password_hash($senha, PASSWORD_DEFAULT);
-                    $sql = "INSERT INTO cliente (nome,email,data_nasc, senha)";
-                    $sql .= "VALUES ('$nome','$email','$data_nasc', '$hash');"; 
+                    $sql = "SELECT email FROM cliente WHERE email = '$email'";
+                    $result = mysqli_query($mysqli, $sql);
+                    $num_rows = mysqli_num_rows($result);
+                    if ($num_rows > 0) {
+                      echo "E-mail já cadastrado";
+                    } else {
+                      include "envia_email.php";
+                      $hash = password_hash($senha, PASSWORD_DEFAULT);
+                      $sql = "INSERT INTO cliente (nome,email,data_nasc, senha)";
+                      $sql .= "VALUES ('$nome','$email','$data_nasc', '$hash');"; 
 
-                    mysqli_query($mysqli,$sql);
-                    envia_email($email, "Confirmação de Cadastro", "Parabéns $nome, sua conta foi criada na hospedaria canina Fenrir Pet House usando esse email. Esperamos que você e seu au-migo desfrutem de nossos serviços! Caso você não tenha feito essa conta, contate-nos imediatamente.");
-                    header ("Location: loginfenrir.html");
-
+                      mysqli_query($mysqli,$sql);
+                      envia_email($email, "Confirmação de Cadastro", "Parabéns $nome, sua conta foi criada na hospedaria canina Fenrir Pet House usando esse email. Esperamos que você e seu au-migo desfrutem de nossos serviços! Caso você não tenha feito essa conta, contate-nos imediatamente.");
+                      header ("Location: loginfenrir.html");
+                    }
                 }
             }
             ?> <br>
