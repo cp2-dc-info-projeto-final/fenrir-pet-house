@@ -37,7 +37,7 @@
 
 
    <!-- Site footer -->
-   <footer class="site-footer" style="margin-top: 55%;">
+   <footer class="site-footer" style="margin-top: 50%;">
 
         <div class="col-xs-6 col-md-3">
           <h6>Contatos:</h6>
