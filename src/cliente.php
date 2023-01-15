@@ -67,14 +67,14 @@
                     $erro = 1;           
                 }
                 
-                if(empty($csenha)){
-                    echo "Por favor, confirme a senha.<br>";
+                if(empty($senha)){
+                    echo "Por favor, preencha a senha.<br>";
                     $erro = 1;
                 
                 }
 
-                if(empty($senha)){
-                    echo "Por favor, preencha a senha<br>";
+                if(empty($csenha)){
+                    echo "Por favor, confirme a senha<br>";
                     $erro = 1;            
                     
                 }
