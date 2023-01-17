@@ -83,11 +83,11 @@
 						}
 					}
 					else{
-						echo "Senha antiga incorreta";
+						echo "Preencha a senha antiga corretamente<br>";
 					}
 				}
 				if (empty($email)){
-					echo "Preencha o email corretamente";
+					echo "Preencha o email corretamente <br>";
 				}
 			
 			?>
