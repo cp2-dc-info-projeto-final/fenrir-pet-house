@@ -59,7 +59,7 @@
                     $erro = 1;
                 }
 
-<<<<<<< HEAD
+
                 if(strlen($email) < 10 or strstr($email, '@') == false){
                     echo "Preencha o e-mail corretamente.<br>";
                     $erro = 1;
@@ -103,7 +103,7 @@
                     envia_email($email, "Confirmação de Cadastro", "$nome, sua conta foi criada na hospedaria canina Fenrir Pet House. Esperamos que você dê seu melhor e desfrute do seu novo trabalho! Caso você não tenha feito essa conta, ignore essa mensagem.");
                     header ("Location: funcaccount.html");
                 }
-=======
+
         if($erro == 0){
             include "envia_email.php";
             $hash = password_hash($senha, PASSWORD_DEFAULT);
@@ -112,8 +112,10 @@
             
             if(!mysqli_query($mysqli,$sql)){
                 echo mysqli_error($mysqli);
->>>>>>> fddc2ac5aa7eadc07e2dacc42a3dea53eeeeeeea
+
             }
+        }
+      }
 
         ?>
         <?php mysqli_close($mysqli); ?>

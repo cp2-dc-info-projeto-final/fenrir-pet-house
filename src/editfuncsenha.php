@@ -15,19 +15,16 @@
 
       <header class="nav">
       <nav>
-        <a href="indexlogcliente.php"><img style="margin-left:25px; margin-top:10px; margin-bottom:10px; " src="logo.png" alt="Image" height="100"></a>
-        <a class="logo" href="indexlogcliente.php">Fenrir Pet House</a>
+        <a href="indexlogfuncionario.php"><img style="margin-left:25px; margin-top:10px; margin-bottom:10px; " src="logo.png" alt="Image" height="100"></a>
+        <a class="logo" href="indexlogfuncionario.php">Fenrir Pet House</a>
         <div class="mobile-menu">
           <div class="line1"></div>
           <div class="line2"></div>
           <div class="line3"></div>
         </div>
         <ul class="nav-list">
-          <li><a href="sobrelog.html">Sobre nós</a></li>
-          <li><a href="pacoteslog.html">Pacotes</a></li>
-          <li><a href="reserva.html">Reserva</a></li>
-          <li><a href="duvidaslog.html">Dúvidas</a></li>
-          <li><a href="account.html">Conta</a></li>
+          <li><a href="funcreserva.html">Reserva</a></li>
+          <li><a href="funcaccount.html">Conta</a></li>
           <li><a href="logout.php">Logout</a></li>
           
         </ul>
@@ -40,7 +37,7 @@
 
     <div class="fenrir-login">
         <h1>Editar a senha</h1>
-        <form action="editclientesenha.php" method="POST" class="form-container">
+        <form action="editfuncsenha.php" method="POST" class="form-container">
           <input type="hidden" name="operacao" value="editsenha">
 		  <p style="color:color:rgb(65, 65, 65);">
 		  
@@ -77,13 +74,17 @@
 							if(mysqli_query($mysqli, $sql)){
 								include "envia_email.php";
 								envia_email($email, "Alteração de Senha", "Sua senha foi alterada no site da hotelaria canina Fenrir Pet Shop. Sua nova senha é:<br><br><strong>$senhanova</strong><br><br>Esperamos que você tenha uma ótima experiência em nosso site.");
-								header('location: indexlogfuncionario.php');
+								echo "Senha alterada com sucesso!";
 							}
-						//erros
-							else{
+              
+              else{
 								echo "Erro no sql.<br>";
 							}
-						}
+            }
+						//erros
+
+            $erro = 0;
+
 						if(($senhanova == $csenhanova) == false){
 							echo "Confirme a senha correta.<br>";
 							$erro = 1;

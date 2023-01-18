@@ -73,17 +73,22 @@
 								envia_email($email, "Alteração de Senha", "Sua senha foi alterada no site da hotelaria canina Fenrir Pet Shop. Sua nova senha é:<br><br><strong>$senhanova</strong><br><br>Esperamos que você tenha uma ótima experiência em nosso site.");
 								echo "Senha alterada com sucesso!";
 							}
-						//erros
-							else{
+
+              else{
 								echo "Erro no sql";
 							}
 						}
-						else{
-							echo "As senhas não são iguais";
+						//erros
+
+            $erro = 0;
+
+            if(($senhanova == $csenhanova) == false){
+							echo "Confirme a senha correta.<br>";
+							$erro = 1;
 						}
 					}
 					else{
-						echo "Preencha a senha antiga corretamente<br>";
+						echo "Senha antiga corretamente<br>";
 					}
 				}
 				if (empty($email)){
