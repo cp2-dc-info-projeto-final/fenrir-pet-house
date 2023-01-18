@@ -1,6 +1,14 @@
 <?php
 include "conectauser.inc";
 $id = $_GET["idservico"];
+$email = $_POST["email"];
+session_start();
+$_SESSION["email"] = $email;
+
+
+$sql = "SELECT nome FROM cachorro WHERE email = '$email' ;";
+$res = mysqli_query($mysqli,$sql);
+$linhas = mysqli_num_rows($res);
 ?>
 <!DOCTYPE html>
 <html lang="pt-br">
@@ -41,18 +49,34 @@ $id = $_GET["idservico"];
     </body>
 
     <div class="fenrir-login">
-        <form action= "agendar2.php?idservico=<?=$id?>" method="POST" class="form-container">
+        <form action="agendarfinal.php?idservico=<?=$id?>" method="POST" class="form-container">
           <input type="hidden" name="operacao" value="agendamento">
-          <?php echo "ID do Serviço: $id<br>"; ?>
-          <p>Digite seu Email: <input type="text" placeholder="Insira seu Email" name="email"></p>
-          <p><input type="submit" value="Continuar" class="btn"></p>    
+          <p>Seu email: <?= $email ?></p><br>
+          <p>Escolha o seu plano:<br>
+            <input type="radio" id="t1" name="plano" value="Tchutchuquito">
+            <label for="plano tchutchuquito">Tchutchuquito</label><br>
+            <input type="radio" id="t2" name="plano" value="Tchutchuco">
+            <label for="plano tchutchuco">Tchutchuco</label><br>
+            <input type="radio" id="t3" name="plano" value="Tchutchucão">
+            <label for="plano tchutchucão">Tchutchucão</label></p><br>
+          <p>Selecione seu au-migo:<br>
+            <?php
+                for($i = 0; $i < $linhas; $i++){
+                    $a = ($i + 1);
+                    $cachorro = mysqli_fetch_array($res);
+                    $nome = $cachorro["nome"];
+                    echo "<input type='radio' name='cachorro' value='$nome'>
+                    <label for='cachorro $a'>$nome</label><br>";
+                }
+            ?>
+          <p><input type="submit" value="Concluir Agendamento" class="btn"></p>    
         </form>
 
     </div>
 
 
    <!-- Site footer -->
-   <footer class="site-footer" style="margin-top: 33%;">
+   <footer class="site-footer" style="margin-top: 25%;">
 
         <div class="col-xs-6 col-md-3">
           <h6>Contatos:</h6>
