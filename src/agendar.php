@@ -1,12 +1,9 @@
 <?php
 include "conectauser.inc";
 $id = $_GET["idservico"];
-$email = $_POST["email"];
 session_start();
-$_SESSION["email"] = $email;
 
-
-$sql = "SELECT nome FROM cachorro WHERE email = '$email' ;";
+$sql = "SELECT nome FROM cachorro WHERE email_dono = '{$_SESSION["email"]}' ;";
 $res = mysqli_query($mysqli,$sql);
 $linhas = mysqli_num_rows($res);
 ?>
@@ -51,7 +48,6 @@ $linhas = mysqli_num_rows($res);
     <div class="fenrir-login">
         <form action="agendarfinal.php?idservico=<?=$id?>" method="POST" class="form-container">
           <input type="hidden" name="operacao" value="agendamento">
-          <p>Seu email: <?= $email ?></p><br>
           <p>Escolha o seu plano:<br>
             <input type="radio" id="t1" name="plano" value="Tchutchuquito">
             <label for="plano tchutchuquito">Tchutchuquito</label><br>

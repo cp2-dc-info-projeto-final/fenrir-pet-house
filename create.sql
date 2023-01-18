@@ -35,10 +35,10 @@ CREATE TABLE `cachorro` (
   `nome` varchar(220) NOT NULL,
   `idade` varchar(50) NOT NULL,
   `raca` varchar(220) NOT NULL,
-  `email` varchar(220) NOT NULL
+  `email_dono` varchar(220) NOT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
-INSERT INTO `cachorro` (`cod_cachorro`, `nome`, `idade`, `raca`, `email`) VALUES
+INSERT INTO `cachorro` (`cod_cachorro`, `nome`, `idade`, `raca`, `email_dono`) VALUES
 ('1', 'Fenrir', '5000 anos', 'Lobo Gigante', 'fenrirpethouse@gmail.com');
 
 -- --------------------------------------------------------
@@ -93,7 +93,6 @@ CREATE TABLE `servico` (
   `agenda_tstamp` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP,
   `plano` varchar(225) NOT NULL,
   `cachorro` varchar(225) NOT NULL,
-  `descricao` varchar(225) NOT NULL,
   `cliente` varchar(225) NOT NULL,
   `agenda_status` tinyint(1) NOT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
@@ -102,14 +101,14 @@ CREATE TABLE `servico` (
 -- Extraindo dados da tabela `serviço`
 --
 
-INSERT INTO `servico` (`idServico`, `agenda_tstamp`, `servico`, `cachorro`, `descricao`, `cliente`, `agenda_status`) VALUES
-(6,'2022-12-23 12:00:00', '.', '.', '.', '.', 0),
-(5,'2022-12-22 12:00:00', '.', '.', '.', '.', 0),
-(4,'2022-12-21 12:00:00', '.', '.', '.', '.', 0),
-(3,'2022-12-20 12:00:00', '.', '.', '.', '.', 0),
-(2,'2022-12-19 12:00:00', '.', '.', '.', '.', 0),
-(1,'2022-12-18 12:00:00', '.', '.', '.', '.', 0),
-(7,'2022-12-24 12:00:00', '.', '.', '.', '.', 0);
+INSERT INTO `servico` (`idServico`, `agenda_tstamp`, `servico`, `cachorro`, `cliente`, `agenda_status`) VALUES
+(6,'2022-12-23 12:00:00', '.', '.', '.', 0),
+(5,'2022-12-22 12:00:00', '.', '.', '.', 0),
+(4,'2022-12-21 12:00:00', '.', '.', '.', 0),
+(3,'2022-12-20 12:00:00', '.', '.', '.', 0),
+(2,'2022-12-19 12:00:00', '.', '.', '.', 0),
+(1,'2022-12-18 12:00:00', '.', '.', '.', 0),
+(7,'2022-12-24 12:00:00', '.', '.', '.', 0);
 
 --
 -- Indexes for dumped tables

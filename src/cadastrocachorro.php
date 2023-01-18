@@ -1,4 +1,5 @@
-<?php include "conectauser.inc";?>
+<?php include "conectauser.inc";
+session_start();?>
 
 <!DOCTYPE html>
 <html lang="pt-br">
@@ -48,7 +49,6 @@
                 $operacao = $_POST["operacao"];
 
                 if($operacao == "inserir"){
-                    $email = $_POST["email"];
                     $nome = $_POST["nome"]; 
                     $raca = $_POST["raca"];
                     $idade = $_POST["idade"];
@@ -76,8 +76,8 @@
                     }
 
                     else{
-                        $sql = "INSERT INTO cachorro (nome, idade, raca, email)";
-                        $sql .= "VALUES ('$nome', '$idade', '$raca', '$email');";  
+                        $sql = "INSERT INTO cachorro (nome, idade, raca, email_dono)";
+                        $sql .= "VALUES ('$nome', '$idade', '$raca', '{$_SESSION["email"]}');";  
                         mysqli_query($mysqli,$sql);
                         header ("Location: agendamento.php");
 
