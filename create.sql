@@ -91,7 +91,7 @@ INSERT INTO `func` (`cod_func`, `nome`, `email`, `data_nasc`, `senha`, `cpf`, `I
 CREATE TABLE `servico` (
   `idServico` int(11) NOT NULL,
   `agenda_tstamp` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP,
-  `servico` varchar(225) NOT NULL,
+  `plano` varchar(225) NOT NULL,
   `cachorro` varchar(225) NOT NULL,
   `descricao` varchar(225) NOT NULL,
   `cliente` varchar(225) NOT NULL,

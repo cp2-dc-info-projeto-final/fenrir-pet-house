@@ -6,6 +6,11 @@ $cachorro = $_POST['cachorro'];
 $plano = $_POST['plano'];
 session_start();
 
+$sql0 = "SELECT nome FROM cachorro WHERE email = '$email' ;";
+$res = mysqli_query($mysqli,$sql0);
+$linhas = mysqli_num_rows($res);
+$cliente= mysqli_fetch_array($res);
+
 $erro = 0;
 
     if(empty($cachorro)){
@@ -18,11 +23,20 @@ $erro = 0;
         $erro = 1;
     }
 
-$sql = "UPDATE servico SET descricao = '$plano {$_SESSION['email']} $cachorro' WHERE idServico='$id'";
+$sql = "UPDATE servico SET plano = '$plano' WHERE idServico='$id'";
 mysqli_query($mysqli,$sql);
 
 $sql2 = "UPDATE servico SET agenda_status = 1 WHERE idServico='$id'";
 mysqli_query($mysqli,$sql2);
+
+$sq3 = "UPDATE servico SET cachorro = '$cachorro' ";
+mysqli_query($mysqli,$sql3);
+
+$sq4 = "UPDATE servico SET cliente = '{$cliente['nome']}' WHERE email ='{$_SESSION['email']}' ";
+mysqli_query($mysqli,$sql4);
+
+$sq5 = "UPDATE servico SET descricao = '{$_SESSION['email']}' WHERE idServico='$id'";
+mysqli_query($mysqli,$sql5);
 
 envia_email($_SESSION['email'], "Confirmação de Agendamento","Um agendamento de serviço foi feito na hospedaria canina Fenrir Pet House. Esperamos que você e seu aumigo tenham uma ótima experiência.");
 echo mysqli_error($mysqli);
