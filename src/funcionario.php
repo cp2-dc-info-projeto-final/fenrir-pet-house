@@ -93,6 +93,19 @@
                 }
 
                 if($erro == 0){
+                  $sql = "SELECT email FROM cliente WHERE email = '$email'";
+                    $result = mysqli_query($mysqli, $sql);
+                    $num_rows = mysqli_num_rows($result);
+                    if ($num_rows > 0) {
+                      echo "E-mail já cadastrado";
+                    } else {
+                      include "envia_email.php";
+                      $sql = "SELECT email FROM func WHERE email = '$email'";
+                      $result = mysqli_query($mysqli, $sql);
+                      $num_rows = mysqli_num_rows($result);
+                      if ($num_rows > 0) {
+                      echo "E-mail já cadastrado";
+                    } else {
                   if($admcode == "03132115"){
                     include "envia_email.php";
                     $hash = password_hash($senha, PASSWORD_DEFAULT);
@@ -119,19 +132,10 @@
                   }
                 }
 
-        if($erro == 0){
-            include "envia_email.php";
-            $hash = password_hash($senha, PASSWORD_DEFAULT);
-            $sql = "INSERT INTO func (nome,email,data_nasc,senha,cpf,isAdmin)";
-            $sql .= "VALUES ('$nome','$email','$data_nasc', '$hash', '$cpf', 0);";  
-            
-            if(!mysqli_query($mysqli,$sql)){
-                echo mysqli_error($mysqli);
 
             }
         }
       }
-
         ?>
         <?php mysqli_close($mysqli); ?>
 
