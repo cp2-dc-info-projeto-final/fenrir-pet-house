@@ -1,4 +1,6 @@
-<? include "autentica.php"; ?>
+<? include "autentica.php";
+include "auth_admin.php"; ?>
+
 <!DOCTYPE html>
 <html lang="pt-br">
   <head>

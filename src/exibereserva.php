@@ -49,7 +49,9 @@ session_start()
             $servico = mysqli_fetch_array($res);
             echo "-<br>";
             echo "Horário: ".$servico["agenda_tstamp"]."<br>";
-            echo "Descrição do Serviço: ".$servico["descricao"]."<br>";
+            echo "Plano Agendado: ".$servico["plano"]."<br>";
+            echo "Cachorro Agendado: ".$servico["cachorro"]."<br>";
+            echo "Email de Contato do Dono: ".$servico["descricao"]."<br>";
             echo "ID do Serviço: ".$servico["idServico"]."<br>";   
             echo "-<br>";
             mysqli_error($mysqli);
