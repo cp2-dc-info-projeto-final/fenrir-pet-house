@@ -55,6 +55,9 @@ CREATE TABLE `cliente` (
   `data_nasc` varchar(10) NOT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
+ALTER TABLE `cliente` ADD PRIMARY KEY(`cod_cliente`);
+ALTER TABLE `cliente` CHANGE `cod_cliente` `cod_cliente` INT(11) NOT NULL AUTO_INCREMENT;
+
 --
 -- Extraindo dados da tabela `cliente`
 --
@@ -74,6 +77,9 @@ CREATE TABLE `func` (
   `cpf` varchar(11) NOT NULL,
   `IsAdmin` tinyint(1) NOT NULL DEFAULT '0'
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+
+ALTER TABLE `func` ADD PRIMARY KEY(`cod_func`);
+ALTER TABLE `func` CHANGE `cod_func` `cod_func` INT(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- Extraindo dados da tabela `func`
