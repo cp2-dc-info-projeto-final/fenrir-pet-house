@@ -1,4 +1,5 @@
-<?php include "conectauser.inc"; ?>
+<?php include "conectauser.inc";
+ ?>
 
 <!DOCTYPE html>
 <html lang="pt-br">
