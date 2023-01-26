@@ -90,7 +90,7 @@
                     $result = mysqli_query($mysqli, $sql);
                     $num_rows = mysqli_num_rows($result);
                     if ($num_rows > 0) {
-                      echo "E-mail já cadastrado";
+                      echo "E-mail já cadastrado<br>";
                     } else {
                       include "envia_email.php";
                       $hash = password_hash($senha, PASSWORD_DEFAULT);

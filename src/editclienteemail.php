@@ -40,6 +40,7 @@
 
     <div class="fenrir-login">
         <h1>Editar o email</h1>
+        <p>OBS: Após confirmar você será redirecionado a página de login já com o email alterado!</P>
         <form action="editclienteemail.php" method="POST" class="form-container">
           <input type="hidden" name="operacao" value="editemail">
 		  	<?php
@@ -53,12 +54,11 @@
 			if($operacao == "editemail"){
 
 				//pega info de editclienteemail.html
-				$emailantigo = $_POST['emailantigo'];
 				$emailnovo = $_POST['emailnovo'];
 				$senha = $_POST['senha'];
 		
 				//pega info "senha" do sql
-				$sql = "SELECT senha FROM cliente WHERE email = '$emailantigo' ";
+				$sql = "SELECT senha FROM cliente WHERE email = '{$_SESSION["email"]}' ";
 				$query = $mysqli->query($sql);
 				$row = $query->fetch_assoc();
 
@@ -66,12 +66,12 @@
 				if(password_verify($senha, $row['senha'])){
 
 					//update no email no sql
-						$sql = "UPDATE cliente SET email = '$emailnovo' WHERE email = '$emailantigo' ";
+						$sql = "UPDATE cliente SET email = '$emailnovo' WHERE email = '{$_SESSION["email"]}' ";
 						if(mysqli_query($mysqli, $sql)){
 							include "envia_email.php";
-							envia_email($emailantigo, "Alteração de Email", "Seu email foi alterada no site da hotelaria canina Fenrir Pet Shop. O novo email para login da conta antes vinculada nesse email é:<br><br><strong>$emailnovo</strong><br><br> Esperamos que você continue tendo uma ótima experiência em nosso site.");
+							envia_email($_SESSION["email"], "Alteração de Email", "Seu email foi alterada no site da hotelaria canina Fenrir Pet Shop. O novo email para login da conta antes vinculada nesse email é:<br><br><strong>$emailnovo</strong><br><br> Esperamos que você continue tendo uma ótima experiência em nosso site.");
 							envia_email($emailnovo, "Alteração de Email", "Seu email foi alterada no site da hotelaria canina Fenrir Pet Shop. Esperamos que você tenha uma ótima experiência em nosso site.");
-							echo "E-mail alterado com sucesso!";
+							header("Location: loginfenrir.html");
 						}
 					//erros
 					else{
@@ -79,13 +79,11 @@
 					}
 				}
 				else{
-					echo "Email/senha atual incorreto(a)! ";
+					echo "Senha incorreta!<br><br>";
 				}
 			}
 
 		?>
-
-          <p><br>Email atual: <input type="text" placeholder="insira seu email atual" name="emailantigo"></p>
           <p>Novo email: <input type="text" placeholder="Insira seu novo email" name="emailnovo"></p>
           <p>Digite sua senha: <input type="password" placeholder="insira Senha" name="senha"></p>
           <p><input type="submit" value="Enviar" class="btn"></p>    

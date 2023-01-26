@@ -42,16 +42,17 @@ session_start()
         <div class="fenrir-login">
         <h1>Reserva(s) feita(s):</h1>
         <?php
-        $sql = "SELECT * FROM servico WHERE descricao like '%{$_SESSION['email']}%';"; 
+        $sql = "SELECT * FROM servico WHERE cliente like '%{$_SESSION['email']}%';"; 
         $res = mysqli_query($mysqli,$sql);
         $linhas = mysqli_num_rows($res);
         for($i = 0; $i < $linhas; $i++){
             $servico = mysqli_fetch_array($res);
-            echo "-<br>";
+            echo "<br>";
+            echo "Cachorro: ".$servico["cachorro"]."<br>";
             echo "Horário: ".$servico["agenda_tstamp"]."<br>";
-            echo "Descrição do Serviço: ".$servico["descricao"]."<br>";
+            echo "Descrição do Serviço: Pacote ".$servico["plano"]."<br>";
             echo "ID do Serviço: ".$servico["idServico"]."<br>";   
-            echo "-<br>";
+            echo "----";
             mysqli_error($mysqli);
         }
         ?>

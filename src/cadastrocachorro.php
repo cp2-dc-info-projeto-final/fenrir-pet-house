@@ -94,8 +94,7 @@ session_start();?>
             ?></p>
                   <form action="cadastrocachorro.php" method="POST" class="form-container">
                    <input type="hidden" name="operacao" value="inserir">
-                   <p><br>Digite seu Email: <input type="text" placeholder="Insira Email" name="email"></p>
-                   <p>Nome: <input type="text" placeholder="Insira Nome" name="nome"></p>
+                   <p><br>Nome: <input type="text" placeholder="Insira Nome" name="nome"></p>
                    <p>Raça: <input type="text" placeholder="Insira Raça" name="raca"></p>
                    <p>Idade: <input type="text" placeholder="insira Idade" name="idade"></p>
                    <p><input type="submit" value="Enviar" class="btn"></p>

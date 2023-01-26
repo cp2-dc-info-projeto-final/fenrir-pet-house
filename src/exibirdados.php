@@ -32,21 +32,37 @@
         </nav>
       </header>
         <div class="fenrir-login">
-            <h1>Dados:</h1>
+            <h1>Seus dados</h1>
             <form action="exibirdados.php" method="POST" class="form-container">
             <?php
                 include "conectauser.inc";
+                session_start();
 
-                $email = $_POST['email'];
+                $_SESSION["email"];
 
-                $sql = "SELECT * FROM cliente WHERE email = '$email';"; 
+                $sql = "SELECT * FROM cliente WHERE email = '{$_SESSION["email"]}';"; 
                 $res = mysqli_query($mysqli,$sql);
                 $linhas = mysqli_num_rows($res);
                 for($i = 0; $i < $linhas; $i++){
                     $cliente = mysqli_fetch_array($res);
+                    echo "<strong>Dados pessoais:</strong><br>";
                     echo "Nome: ".$cliente["nome"]."<br>";
                     echo "E-mail: ".$cliente["email"]."<br>";
-                    echo "Data de nascimento: ".$cliente["data_nasc"]."<br>";          
+                    echo "Data de nascimento: ".$cliente["data_nasc"]."<br><br>";          
+                }
+                
+
+                $_SESSION["email"];
+
+                $sql = "SELECT * FROM cachorro WHERE email_dono = '{$_SESSION["email"]}';"; 
+                $res = mysqli_query($mysqli,$sql);
+                $linhas = mysqli_num_rows($res);
+                for($i = 0; $i < $linhas; $i++){
+                    $cliente = mysqli_fetch_array($res);
+                    echo "<strong>Dados do cachorro:</strong><br>";
+                    echo "Nome: ".$cliente["nome"]."<br>";
+                    echo "Raça: ".$cliente["raca"]."<br>";
+                    echo "Idade: ".$cliente["idade"]."<br><br>";          
                 }
             ?>
 

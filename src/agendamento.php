@@ -42,6 +42,7 @@ include "conectauser.inc";
     <div class="fenrir-login">
         <form action= "agendar2.php?idservico=<?=$id?>" method="POST" class="form-container">
           <input type="hidden" name="operacao" value="agendamento">
+          <h1>Reservas disponíveis:<br><br></h1>
           <?php
 
             $sql = "SELECT * FROM servico WHERE agenda_status = 0 ;"; 

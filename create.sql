@@ -101,7 +101,7 @@ CREATE TABLE `servico` (
 -- Extraindo dados da tabela `serviço`
 --
 
-INSERT INTO `servico` (`idServico`, `agenda_tstamp`, `servico`, `cachorro`, `cliente`, `agenda_status`) VALUES
+INSERT INTO `servico` (`idServico`, `agenda_tstamp`, `plano`, `cachorro`, `cliente`, `agenda_status`) VALUES
 (6,'2022-12-23 12:00:00', '.', '.', '.', 0),
 (5,'2022-12-22 12:00:00', '.', '.', '.', 0),
 (4,'2022-12-21 12:00:00', '.', '.', '.', 0),

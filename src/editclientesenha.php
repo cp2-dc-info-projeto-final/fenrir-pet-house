@@ -1,4 +1,5 @@
-<?php include "conectauser.inc"; ?>
+<?php include "conectauser.inc"; 
+session_start()?>
 
 <!DOCTYPE html>
 <html lang="pt-br">
@@ -49,13 +50,12 @@
 			if($operacao == "editsenha"){
 
 					//pega info de editclientesenha.html
-					$email = $_POST['email'];
 					$senhaantiga = $_POST['senhaantiga'];
 					$senhanova = $_POST['senhanova'];
 					$csenhanova = $_POST['csenhanova'];
 			
 					//pega info "senha" do sql
-					$sql = "SELECT senha FROM cliente WHERE email = '$email' ";
+					$sql = "SELECT senha FROM cliente WHERE email = '{$_SESSION["email"]}' ";
 					$query = $mysqli->query($sql);
 					$row = $query->fetch_assoc();
 
@@ -67,10 +67,10 @@
 							$hash = password_hash($senhanova, PASSWORD_DEFAULT);
 			
 							//update na senha no sql
-							$sql = "UPDATE cliente SET senha = '$hash' WHERE email = '$email' ";
+							$sql = "UPDATE cliente SET senha = '$hash' WHERE email = '{$_SESSION["email"]}' ";
 							if(mysqli_query($mysqli, $sql)){
 								include "envia_email.php";
-								envia_email($email, "Alteração de Senha", "Sua senha foi alterada no site da hotelaria canina Fenrir Pet Shop. Sua nova senha é:<br><br><strong>$senhanova</strong><br><br>Esperamos que você tenha uma ótima experiência em nosso site.");
+								envia_email($_SESSION["email"], "Alteração de Senha", "Sua senha foi alterada no site da hotelaria canina Fenrir Pet Shop. Sua nova senha é:<br><br><strong>$senhanova</strong><br><br>Esperamos que você tenha uma ótima experiência em nosso site.");
 								echo "Senha alterada com sucesso!";
 							}
 
@@ -88,17 +88,16 @@
 						}
 					}
 					else{
-						echo "Senha antiga corretamente<br>";
+						echo "Senha antiga incorreta<br>";
 					}
 				}
-				if (empty($email)){
+				if (empty($_SESSION["email"])){
 					echo "Preencha o email corretamente <br>";
 				}
 			
 			?>
 			</p>
 			<br>
-          <p>Email: <input type="text" placeholder="insira seu Email" name="email"></p>
           <p>Antiga senha:: <input type="password" placeholder="Insira a antiga senha" name="senhaantiga"></p>
           <p>Nova Senha: <input type="password" placeholder="insira Senha" name="senhanova"></p>
           <p>Confirme a senha: <input type="password" placeholder="confirme Senha" name="csenhanova"></p>
