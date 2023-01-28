@@ -63,8 +63,25 @@
 				$query = $mysqli->query($sql);
 				$row = $query->fetch_assoc();
 
+        
+        $sql = "SELECT email FROM cliente WHERE email = '$email'";
+        $result = mysqli_query($mysqli, $sql);
+        $num_rows = mysqli_num_rows($result);
+        if ($num_rows > 0) {
+          echo "E-mail já cadastrado<br>";
+        } else {
+          $sql = "SELECT email FROM func WHERE email = '$email'";
+          $result = mysqli_query($mysqli, $sql);
+          $num_rows = mysqli_num_rows($result);
+          if ($num_rows > 0) {
+          echo "E-mail já cadastrado";
+        } else {
+
 				//checa senha
 				if(password_verify($senha, $row['senha'])){
+
+          
+
 
 					//update no email no sql
 						$sql = "UPDATE cliente SET email = '$emailnovo' WHERE email = '{$_SESSION["email"]}' ";
@@ -83,6 +100,9 @@
 					echo "Senha incorreta!<br><br>";
 				}
 			}
+    }
+  }
+  
 
 		?>
           <p>Novo email: <input type="text" placeholder="Insira seu novo email" name="emailnovo"></p>

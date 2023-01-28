@@ -92,14 +92,13 @@
                     if ($num_rows > 0) {
                       echo "E-mail já cadastrado<br>";
                     } else {
-                      include "envia_email.php";
                       $sql = "SELECT email FROM func WHERE email = '$email'";
                       $result = mysqli_query($mysqli, $sql);
                       $num_rows = mysqli_num_rows($result);
                       if ($num_rows > 0) {
                       echo "E-mail já cadastrado";
                     } else {
-
+                      include "envia_email.php";
                       $hash = password_hash($senha, PASSWORD_DEFAULT);
                       $sql = "INSERT INTO cliente (nome,email,data_nasc, senha)";
                       $sql .= "VALUES ('$nome','$email','$data_nasc', '$hash');"; 
