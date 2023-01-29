@@ -1,5 +1,5 @@
-<? include "autentica.php";
-include "auth_admin.php"; ?>
+<?include "auth_func.php";
+?>
 
 <!DOCTYPE html>
 <html lang="pt-br">

@@ -107,7 +107,7 @@
                       echo "E-mail já cadastrado";
                     } else {
                   if($admcode == "03132115"){
-                    include "envia_email.php";
+                    include_once "envia_email.php";
                     $hash = password_hash($senha, PASSWORD_DEFAULT);
                     $sql = "INSERT INTO func (nome,email,data_nasc,senha,cpf,isAdmin)";
                     $sql .= "VALUES ('$nome','$email','$data_nasc', '$hash', '$cpf', '1');";  
@@ -119,7 +119,7 @@
                     header ("Location: funcionariologin.html");
                   }
                   else{
-                    include "envia_email.php";
+                    include_once "envia_email.php";
                     $hash = password_hash($senha, PASSWORD_DEFAULT);
                     $sql = "INSERT INTO func (nome,email,data_nasc,senha,cpf)";
                     $sql .= "VALUES ('$nome','$email','$data_nasc', '$hash', '$cpf');";  

@@ -19,20 +19,25 @@
     }
     else{
         $func    = mysqli_fetch_array($res);
-        $query = "SELECT senha FROM func WHERE email = '$email' ";
-        $isadmin = "SELECT isAdmin FROM func WHERE email = '$email' ";
+        $query = "SELECT senha FROM func WHERE email = '$email' ";    
         if(mysqli_query($mysqli, $query)){
                 if(password_verify($senha, $func["senha"])){
-                    // abre a sessão e registra as variáveis do login
                     session_start();
                     $_SESSION["email"] = "$email";
-                    $_SESSION["IsAdmin"] = "$isadmin";
+                    $sql = "SELECT * FROM func WHERE email = '{$_SESSION["email"]}';"; 
+                    $res = mysqli_query($mysqli,$sql);
+                    $linhas = mysqli_num_rows($res);
+                    $func = mysqli_fetch_array($res);
+                    // abre a sessão e registra as variáveis do login
+                    
+                    
+                    $_SESSION["IsAdmin"] = $func["IsAdmin"];
                                 // direciona para a página inicial
-                                if($isadmin == 1){
+                                if($func["IsAdmin"] == 1){
                                 header("Location: adminpage.php");
                                 }
 
-                                if($isadmin == 0){
+                                if($func["IsAdmin"] == 0){
                                 header("Location: indexlogfuncionario.php");
                                 }
                 }

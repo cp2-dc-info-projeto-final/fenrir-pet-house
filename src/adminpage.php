@@ -1,5 +1,4 @@
-<?php include "autenticafunc.php";
-include "auth_admin.php"; ?>
+<?php include "auth_admin.php";?>
 <html lang="pt-br">
   <head>
     <meta charset="UTF-8" />
