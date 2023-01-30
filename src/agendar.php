@@ -49,7 +49,7 @@ $linhas = mysqli_num_rows($res);
         <form action="agendarfinal.php?idservico=<?=$id?>" method="POST" class="form-container">
           <input type="hidden" name="operacao" value="agendamento">
           <p>Escolha o seu plano:<br>
-            <input type="radio" id="t1" name="plano" value="Tchutchuquito">
+            <input type="radio" id="t1" name="plano" value="Tchutchuquito" checked>
             <label for="plano tchutchuquito">Tchutchuquito</label><br>
             <input type="radio" id="t2" name="plano" value="Tchutchuco">
             <label for="plano tchutchuco">Tchutchuco</label><br>
@@ -61,7 +61,7 @@ $linhas = mysqli_num_rows($res);
                     $a = ($i + 1);
                     $cachorro = mysqli_fetch_array($res);
                     $nome = $cachorro["nome"];
-                    echo "<input type='radio' name='cachorro' value='$nome'>
+                    echo "<input type='radio' name='cachorro' value='$nome' required>
                     <label for='cachorro $a'>$nome</label><br>";
                 }
             ?>
