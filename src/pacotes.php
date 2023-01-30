@@ -22,7 +22,7 @@
         </div>
         <ul class="nav-list">
           <li><a href="sobre.html">Sobre nós</a></li>
-          <li><a href="pacotes.html">Pacotes</a></li>
+          <li><a href="pacotes.php">Pacotes</a></li>
           <li><a href="duvidas.html">Dúvidas</a></li>
           <li><a href="loginfenrir.html">Login</a></li>
           
@@ -39,7 +39,7 @@
         <div class="fenrir-hospedagens">
             <form action="cadastrocachorro.php" method="POST" class="form-container">
                 <input type="hidden" name="operacao" value="inserir">
-                <h1> 🎁 Pacote Tchutchuquito</h1>
+                <h1>🎁 Pacote Tchutchuquito</h1>
                 <p style="text-align:left;"><br>
                   🎁 Pacote Tchutchuquito (R$90)<br>
                     - Um dia e uma noite.<br>

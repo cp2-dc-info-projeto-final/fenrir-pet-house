@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<?php include "conectauser.inc" ?>
 <html lang="pt-br">
   <head>
     <meta charset="UTF-8" />
@@ -22,7 +23,7 @@
         </div>
         <ul class="nav-list">
           <li><a href="sobrelog.html">Sobre nós</a></li>
-          <li><a href="pacoteslog.html">Pacotes</a></li>
+          <li><a href="pacoteslog.php">Pacotes</a></li>
           <li><a href="reserva.html">Reserva</a></li>
           <li><a href="duvidas.html">Dúvidas</a></li>
           <li><a href="account.html">Conta</a></li>
@@ -41,11 +42,89 @@
         <div class="fenrir-hospedagens">
             <form action="cadastrocachorro.php" method="POST" class="form-container">
                 <input type="hidden" name="operacao" value="inserir">
-                <h1> 🎁 Pacote Tchutchuquito</h1>
-                <p style="text-align:left;"><br>🎁 Pacote Tchutchuquito (R$90)<br>
-                    - Um dia e uma noite.<br>
-                    -Acesso as áreas da praia e o parquinho.<br>
-                    -1 banho por semana.
+
+                <!-- Pacote 1 -->
+
+                <!-- Nome -->
+
+                <h1>
+                <?php
+                $idpacote = 1;
+                $sql = "SELECT nome FROM pacotes WHERE idpacote = '$idpacote';"; 
+                $res = mysqli_query($mysqli,$sql);
+
+                if (!$res) {
+                  printf("Error: %s\n", mysqli_error($mysqli));
+                  exit();
+                }
+
+                $row = mysqli_fetch_assoc($res);
+                echo "🎁 ".$row['nome'];
+                ?>
+
+                </h1>
+
+                <!-- Valor -->
+
+                <p style="text-align:left;"><br><?php
+                $idpacote = 1;
+                $sql = "SELECT valor FROM pacotes WHERE idpacote = '$idpacote';"; 
+                $res = mysqli_query($mysqli,$sql);
+
+                if (!$res) {
+                  printf("Error: %s\n", mysqli_error($mysqli));
+                  exit();
+                }
+
+                $row = mysqli_fetch_assoc($res);
+                echo "🎁 ".$row['valor'];
+                
+                ?><br>
+       
+                <!-- Tempo -->
+
+                <?php
+                $idpacote = 1;
+                $sql = "SELECT tempo FROM pacotes WHERE idpacote = '$idpacote';"; 
+                $res = mysqli_query($mysqli,$sql);
+
+                if (!$res) {
+                  printf("Error: %s\n", mysqli_error($mysqli));
+                  exit();
+                }
+
+                $row = mysqli_fetch_assoc($res);
+                echo $row['tempo'];
+                
+                ?><br>
+
+                <!-- Areas -->
+                <?php
+                $idpacote = 1;
+                $sql = "SELECT areas FROM pacotes WHERE idpacote = '$idpacote';"; 
+                $res = mysqli_query($mysqli,$sql);
+
+                if (!$res) {
+                  printf("Error: %s\n", mysqli_error($mysqli));
+                  exit();
+                }
+
+                $row = mysqli_fetch_assoc($res);
+                echo $row['areas'];
+                
+                ?><br>
+
+                <!-- Banho -->
+
+                -1 banho por semana.<br>
+
+                <!-- Tosa -->
+
+                a<br>
+
+                <!-- Festa -->
+
+                a<br>
                 </p>
             </form>
         </div>
