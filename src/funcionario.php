@@ -93,7 +93,7 @@
                 }
 
                 if($erro == 0){
-                  $sql = "SELECT email FROM cliente WHERE email = '$email'";
+                  $sql = "SELECT email FROM func WHERE email = '$email'";
                     $result = mysqli_query($mysqli, $sql);
                     $num_rows = mysqli_num_rows($result);
                     if ($num_rows > 0) {
@@ -135,19 +135,15 @@
 
             }
         }
+        if ($erro == 1){
+          echo '<script type="text/javascript">';
+          echo 'alert("Erro no cadastro! Revise suas credenciais e tente novamente.");';
+          echo 'window.location.href = "funcionario.html";';
+          echo '</script>';
+        }
       }
         ?>
         <?php mysqli_close($mysqli); ?>
-
-        <br><p>Nome: <input type="text" placeholder="Insira Nome" name="nome"></p>
-            <p>E-mail: <input type="text" placeholder="insira E-mail" name="email"></p>
-            <p>Senha: <input type="password" placeholder="Insira Senha" name="senha"></p>
-            <p>Confirme a senha: <input type="password" placeholder="Confirme a senha" name="csenha"></p>
-            <p>CPF: <input type="text" placeholder="Insira CPF" name="cpf"></p>
-            <p>Data de Nascimento: <input type="date" name="data_nasc"></p>
-            <p><input type="submit" value="Enviar" class="btn"></p>    
-        </form>
-
     </div>
 
    <!-- Site footer -->
