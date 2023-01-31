@@ -23,7 +23,7 @@
         </div>
         <ul class="nav-list">
           <li><a href="sobre.html">Sobre nós</a></li>
-          <li><a href="pacotes.html">Pacotes</a></li>
+          <li><a href="pacotes.php">Pacotes</a></li>
           <li><a href="duvidas.html">Dúvidas</a></li>
           <li><a href="loginfenrir.html">Login</a></li>
           

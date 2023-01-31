@@ -25,7 +25,7 @@ session_start();?>
         </div>
         <ul class="nav-list">
           <li><a href="sobrelog.html">Sobre nós</a></li>
-          <li><a href="pacoteslog.html">Pacotes</a></li>
+          <li><a href="pacoteslog.php">Pacotes</a></li>
           <li><a href="reserva.html">Reserva</a></li>
           <li><a href="duvidaslog.html">Dúvidas</a></li>
           <li><a href="account.html">Conta</a></li>
