@@ -1,5 +1,5 @@
-<?php include "auth_admin.php";?>
 <html lang="pt-br">
+    
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -32,17 +32,43 @@
     </body>
 
     <div class="fenrir-login">
-        <h1>Conta</h1>
-        <p><a href = "admcliente.html" style="color:rgb(166, 180, 180);">Clientes</a></p>
-        <p><a href = "admfunc.html" style="color:rgb(166, 180, 180);">Funcionários</a></p>
-        <p><a href = "admservicos.html" style="color:rgb(166, 180, 180);">Serviços</a></p>
-        <p><a href = "admpacotes.php" style="color:rgb(166, 180, 180);">Pacotes</a></p>
-
+        <h1>Pacotes</h1>
+        <?php include "conectauser.inc";
+        $sql = "SELECT * FROM pacotes ;"; 
+        $res = mysqli_query($mysqli,$sql);
+        $linhas = mysqli_num_rows($res);
+        for($i = 0; $i < $linhas; $i++){
+            $pacotes = mysqli_fetch_array($res);
+            echo "Nome:".$pacotes["nome"]."<br><br>";
+            echo "Valor:".$pacotes["valor"]."<br><br>";
+            echo "Tempo:".$pacotes["tempo"]."<br><br>";
+            if(($pacotes["areas"]== NULL) == FALSE){
+            echo "Áreas:".$pacotes["areas"]."<br><br>";
+            }
+            if(($pacotes["banho"]== NULL) == FALSE){
+            echo "Banho:".$pacotes["banho"]."<br><br>"; 
+            }
+            if(($pacotes["tosa"]== NULL) == FALSE){
+            echo "Tosa:".$pacotes["tosa"]."<br><br>";
+            }
+            if(($pacotes["festa"]== NULL) == FALSE){
+            echo "Festa:".$pacotes["festa"]."<br><br>";  
+            }
+            echo "---------------------<br>";
+     }
+        mysqli_close($mysqli);
+        
+        
+        
+        
+        
+        
+        ?>
+        
     </div>
-    
 
    <!-- Site footer -->
-   <footer class="site-footer" style="margin-top: 5%;">
+   <footer class="site-footer">
 
         <div class="col-xs-6 col-md-3">
           <h6>Contatos:</h6>
