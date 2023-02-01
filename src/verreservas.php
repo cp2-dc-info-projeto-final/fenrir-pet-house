@@ -39,10 +39,22 @@ include "conectauser.inc";
 
     <div class="fenrir-login">
       <h1>Bem Vindo Funcionário! </h1><br><br>
-       <h2>
-        <p><a href = "verreservas.php" style="color:rgb(126, 140, 140);">Ver Reservas</a></p>
-</h2>
-<br><br>
+       <?php
+       include "conectauser.inc";
+       $sql = "SELECT * FROM servico WHERE agenda_status = 1 ;"; 
+       $res = mysqli_query($mysqli,$sql);
+       $linhas = mysqli_num_rows($res);
+       for($i = 0; $i < $linhas; $i++){
+           $servico = mysqli_fetch_array($res);
+           echo "Cliente:".$servico["cliente"]."<br>";
+           echo "Horário: ".$servico["agenda_tstamp"]."<br>";
+
+           echo "ID do Serviço: ".$servico["idServico"]."<br>";   
+           echo "---------------------<br>";
+    }
+       mysqli_close($mysqli);
+       
+       ?>
     </div>
     
 
