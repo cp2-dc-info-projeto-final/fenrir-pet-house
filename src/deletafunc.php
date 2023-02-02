@@ -1,7 +1,6 @@
 <?php include "auth_admin.php"?>
 <?php
   $cod_func = $_GET['cod_func'];
-  session_start();
   $_SESSION['cod_func'] = $cod_func;
 ?>
 
@@ -49,7 +48,7 @@
           <h3>Deseja exluir essa conta?<br></h3>
           <?php
           include "conectauser.inc";
-          $sql = "SELECT * FROM func where isadmin = 0 ;";
+          $sql = "SELECT * FROM func WHERE cod_func = '{$_SESSION["cod_func"]}' ";
                     $res = mysqli_query($mysqli,$sql);
                     $linhas = mysqli_num_rows($res);
                     for($i=0; $i < $linhas; $i++){

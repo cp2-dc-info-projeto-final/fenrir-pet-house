@@ -39,10 +39,10 @@
 
     <div class="fenrir-login">
         <h1>Conta</h1>
-        <p><a href = "editadmsenha.html" style="color:rgb(166, 180, 180);">Editar senha</a></p>
+        <p><a href = "editadmsenh.php" style="color:rgb(166, 180, 180);">Editar senha</a></p>
         <p><a href = "exibiradm.php" style="color:rgb(166, 180, 180);">Exibir dados</a></p>
-        <p><a href = "editadmemail.html" style="color:rgb(166, 180, 180);">Editar email</a></p>
-        <p><a href = "excluiradm.html" style="color:rgb(180, 50, 50);"><br>Excluir conta</a></p>
+        <p><a href = "editadmemai.php" style="color:rgb(166, 180, 180);">Editar email</a></p>
+        <p><a href = "excluirad.php" style="color:rgb(180, 50, 50);"><br>Excluir conta</a></p>
 
     </div>
 

@@ -1,7 +1,6 @@
 <?php include "auth_admin.php"?>
 <?php
   $cod_func = $_GET['cod_func'];
-  session_start();
   $_SESSION['cod_func'] = $cod_func;
 ?>
 
@@ -50,7 +49,7 @@
 
                 include "conectauser.inc";
             
-                    $sql = "SELECT * FROM cliente;";
+                    $sql = "SELECT * FROM func;";
                     $res = mysqli_query($mysqli,$sql);
                     $linhas = mysqli_num_rows($res);
                     for($i=0; $i < $linhas; $i++){

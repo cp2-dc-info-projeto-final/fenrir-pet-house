@@ -1,9 +1,8 @@
 <?php include "auth_admin.php"?>
 <?php
   include "conectauser.inc";
-  session_start();
   
-      $sql = "SELECT * FROM cliente;";
+      $sql = "SELECT * FROM cliente cod_cliente = '{$_SESSION["cod_cliente"]}'";
       $res = mysqli_query($mysqli,$sql);
       $linhas = mysqli_num_rows($res);
       for($i=0; $i < $linhas; $i++){
@@ -84,7 +83,7 @@
                     if(mysqli_query($mysqli, $sql2)){
                         include "envia_email.php";
                         envia_email( $cliente["email"], "Sentiremos sua Falta!", "Um administrador excluiu sua conta do site da hotelaria canina Fenrir Pet House. Esperamos que você e seu au-migo tenha tido a melhor experiência.");
-                        header('location: admcliente.html');
+                        header('location: admclient.php');
                     }
                 }
             echo "<br>Senha incorreta!";

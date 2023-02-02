@@ -1,7 +1,6 @@
 <?php include "auth_admin.php"?>
 <?php
   $idservico=$_GET['idservico'];
-  session_start();
   $_SESSION['idservico'] = $idservico;
 ?>
 <!DOCTYPE html>

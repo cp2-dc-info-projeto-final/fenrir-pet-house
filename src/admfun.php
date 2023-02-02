@@ -23,7 +23,7 @@
         </div>
         <ul class="nav-list">
 
-        <li><a href="admclient.php">Clientes</a></li>
+          <li><a href="admclient.php">Clientes</a></li>
           <li><a href="admfun.php">Funcionários</a></li>
           <li><a href="admservico.php">Reservas</a></li>
           <li><a href="admconta.php">Conta</a></li>
@@ -39,7 +39,7 @@
 
     <div class="fenrir-login">
       <h1>Funcionário:</h1>
-        <form action="admcadastrafunc.html" method="POST" class="form-container">
+        <form action="admcadastrafun.php" method="POST" class="form-container">
             <input type="hidden" name="operacao" value="inserir">
             <p><input type="submit" value="Cadastrar Funcionário" class="btn"></p>
 

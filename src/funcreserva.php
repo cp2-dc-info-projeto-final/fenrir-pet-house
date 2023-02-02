@@ -23,7 +23,7 @@
           <div class="line3"></div>
         </div>
         <ul class="nav-list">
-          <li><a href="funcreserva.html">Reservas</a></li>
+          <li><a href="funcreserva.php">Reservas</a></li>
           <li><a href="funcaccount.html">Conta</a></li>
           <li><a href="logout.php">Logout</a></li>
           
@@ -36,31 +36,53 @@
     </body>
 
     <div class="fenrir-login">
-      <form action= "agendar2.php?idservico=<?=$id?>" method="POST" class="form-container">
-        <input type="hidden" name="operacao" value="agendamento">
-        <h1>Reservas Agendadas:<br><br></h1>
-        <?php
+      <h1>Reservas Agendadas:<br></h1>
+      <form action="admservicos.php" method="POST" class="form-container">
+      <?php
 
-          $sql = "SELECT * FROM servico WHERE agenda_status = 1 ;"; 
+      include "conectauser.inc";
+
+          $sql = "SELECT * FROM servico WHERE agenda_status = 1"; 
           $res = mysqli_query($mysqli,$sql);
           $linhas = mysqli_num_rows($res);
           for($i = 0; $i < $linhas; $i++){
               $servico = mysqli_fetch_array($res);
-              echo "<br>";
-              echo "<strong>Horário:</strong> ".$servico["agenda_tstamp"]."<br>";
-              echo "<strong>Plano Agendado:</strong> ".$servico["plano"]."<br>";
-              echo "<strong>Cachorro Agendado:</strong> ".$servico["cachorro"]."<br>";
-              echo "<strong>Email de Contato do Dono:</strong> ".$servico["cliente"]."<br>";
-              echo "<strong>ID do Serviço:</strong> ".$servico["idServico"]."<br>";   
-              echo "-----<br>";
+              echo "<br><strong>Horário: </strong>".$servico["agenda_tstamp"]."<br>";
+              echo "<strong>Plano: </strong>".$servico["plano"]."<br>";
+              echo "<strong>Cachorro: </strong>".$servico["cachorro"]."<br>";
+              echo "<strong>Email do dono: </strong>".$servico["cliente"]."<br>";
+              echo "<strong>ID do Serviço: </strong>".$servico["idServico"]."<br>";   
+              echo "---------------------<br>";
               mysqli_error($mysqli);
           }
-          mysqli_close($mysqli);
+      
+
         ?>
+         <h1>Reservas não agendadas:<br></h1>
 
-      </form>
+      <form action="admservicos.php" method="POST" class="form-container">
+      <?php
+      include "conectauser.inc";
 
-  </div>
+          $sql = "SELECT * FROM servico WHERE agenda_status = 0"; 
+          $res = mysqli_query($mysqli,$sql);
+          $linhas = mysqli_num_rows($res);
+          for($i = 0; $i < $linhas; $i++){
+              $servico = mysqli_fetch_array($res);
+              echo "<br><strong>Horário: </strong>".$servico["agenda_tstamp"]."<br>";
+              echo "<strong>Plano: </strong>".$servico["plano"]."<br>";
+              echo "<strong>Cachorro: </strong>".$servico["cachorro"]."<br>";
+              echo "<strong>Email do dono: </strong>".$servico["cliente"]."<br>";
+              echo "<strong>ID do Serviço: </strong>".$servico["idServico"]."<br>";   
+              echo "<a href='altagendamento.php?idservico=".$servico["idServico"]."'><strong>Editar Reserva</strong></a><br>";
+              echo "<a href='deletaagenda.php?idservico=".$servico["idServico"]."'><strong>Excluir Reserva</strong></a><br>";
+              echo "---------------------<br>";
+              mysqli_error($mysqli);
+          }
+
+        ?>
+        </form>
+      </div>
     
 
 
