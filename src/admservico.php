@@ -39,7 +39,7 @@
 
     <div class="fenrir-login">
       <h1>Reservas:</h1>
-      <form action="cadastrarreserva.html" method="POST" class="form-container">
+      <form action="cadastrarreserv.php" method="POST" class="form-container">
           <input type="hidden" name="operacao" value="exibir">
           <p><input type="submit" value="Cadastrar Reserva" class="btn"></p>
       </form>

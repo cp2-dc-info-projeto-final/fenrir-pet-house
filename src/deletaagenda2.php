@@ -1,7 +1,6 @@
 <?php include "auth_admin.php"?>
 <?php
   include "conectauser.inc";
-  session_start();
 ?>
 
 <!DOCTYPE html>

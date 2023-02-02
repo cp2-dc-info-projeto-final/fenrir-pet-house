@@ -58,7 +58,6 @@
         <form action="admfunc2.php" method="POST" class="form-container">
         <?php
         include "conectauser.inc";
-        session_start();
         $operacao = $_POST["operacao"];
 
         if($operacao == "inserir"){

@@ -42,7 +42,6 @@
         <form action="altagendamento2.php" method="POST" class="form-container">
         <?php
             include "conectauser.inc";
-            session_start();
 
             $sql = "SELECT agenda_tstamp FROM servico WHERE idServico = '{$_SESSION['idservico']}'";
             mysqli_query($mysqli,$sql);

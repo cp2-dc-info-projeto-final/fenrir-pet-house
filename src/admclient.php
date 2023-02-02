@@ -39,7 +39,7 @@
 
     <div class="fenrir-login">
       <h1>Cliente:</h1>
-        <form action="admcadastracliente.html" method="POST" class="form-container">
+        <form action="admcadastraclient.php" method="POST" class="form-container">
             <input type="hidden" name="operacao" value="inserir">
             <p><input type="submit" value="Cadastrar cliente" class="btn"></p>
 

@@ -40,7 +40,7 @@
     </body>
 
     <div class="fenrir-login">
-      <h1>Reservas:<br></h1>
+      <h1>Reservas Agendadas:<br></h1>
       <form action="admservicos.php" method="POST" class="form-container">
       <?php
       $operacao = $_POST["operacao"];
@@ -48,7 +48,32 @@
 
       if($operacao == "exibir"){
 
-          $sql = "SELECT * FROM servico"; 
+          $sql = "SELECT * FROM servico WHERE agenda_status = 1"; 
+          $res = mysqli_query($mysqli,$sql);
+          $linhas = mysqli_num_rows($res);
+          for($i = 0; $i < $linhas; $i++){
+              $servico = mysqli_fetch_array($res);
+              echo "<br><strong>Horário: </strong>".$servico["agenda_tstamp"]."<br>";
+              echo "<strong>Plano: </strong>".$servico["plano"]."<br>";
+              echo "<strong>Cachorro: </strong>".$servico["cachorro"]."<br>";
+              echo "<strong>Email do dono: </strong>".$servico["cliente"]."<br>";
+              echo "<strong>ID do Serviço: </strong>".$servico["idServico"]."<br>";   
+              echo "---------------------<br>";
+              mysqli_error($mysqli);
+          }
+      }
+      
+
+        ?>
+         <h1>Reservas não agendadas:<br></h1>
+      <form action="admservicos.php" method="POST" class="form-container">
+      <?php
+      $operacao = $_POST["operacao"];
+      include "conectauser.inc";
+
+      if($operacao == "exibir"){
+
+          $sql = "SELECT * FROM servico WHERE agenda_status = 0"; 
           $res = mysqli_query($mysqli,$sql);
           $linhas = mysqli_num_rows($res);
           for($i = 0; $i < $linhas; $i++){
@@ -64,13 +89,14 @@
               mysqli_error($mysqli);
           }
       }
+      
 
         ?>
         </form>
       </div>
 
    <!-- Site footer -->
-   <footer class="site-footer" style="margin-top: 5%;">
+   <footer class="site-footer" style="margin-top: 10%;">
 
 <div class="col-xs-6 col-md-3">
       <h6>Contatos:</h6>

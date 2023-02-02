@@ -1,7 +1,6 @@
 <?php include "auth_admin.php"?>
 <?php
   $cod_cliente = $_GET['cod_cliente'];
-  session_start();
   $_SESSION['cod_cliente'] = $cod_cliente;
 ?>
 
@@ -49,7 +48,7 @@
           <h3>Deseja exluir essa conta?<br></h3>
           <?php
           include "conectauser.inc";
-          $sql = "SELECT * FROM cliente;";
+          $sql = "SELECT * FROM cliente WHERE cod_cliente = '{$_SESSION["cod_cliente"]}' ";
                     $res = mysqli_query($mysqli,$sql);
                     $linhas = mysqli_num_rows($res);
                     for($i=0; $i < $linhas; $i++){

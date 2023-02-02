@@ -23,11 +23,11 @@
         </div>
         <ul class="nav-list">
 
-            <li><a href="admcliente.html">Clientes</a></li>
-            <li><a href="admfunc.html">Funcionários</a></li>
-            <li><a href="admservicos.html">Reservas</a></li>
-            <li><a href="admconta.html">Conta</a></li>
-            <li><a href="logout.php">Logout</a></li>
+        <li><a href="admclient.php">Clientes</a></li>
+          <li><a href="admfun.php">Funcionários</a></li>
+          <li><a href="admservico.php">Reservas</a></li>
+          <li><a href="admconta.php">Conta</a></li>
+          <li><a href="logout.php">Logout</a></li>
           
         </ul>
         </nav>
@@ -69,7 +69,8 @@
                     $func = mysqli_fetch_array($res);
                     echo "<strong>Nome:</strong> ".$func["nome"]."<br>";
                     echo "<strong>Email:</strong> ".$func["email"]."<br>";
-                    echo "<a href='admcliente.php?cod_cliente=".$cliente["cod_cliente"]."'>Alterar usuário</a><br>";
+                    echo "<a href='admfunc.php?cod_func=".$func["cod_func"]."'>Editar usuário</a><br>";
+                    echo "<a href='deletafunc.php?cod_func=".$func["cod_func"]."'>Excluir usuário</a><br>";
                     echo "----------------------------<br>";
                 }
             }
