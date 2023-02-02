@@ -31,7 +31,7 @@ $linhas = mysqli_num_rows($res);
         </div>
         <ul class="nav-list">
           <li><a href="sobrelog.html">Sobre nós</a></li>
-          <li><a href="pacoteslog.html">Pacotes</a></li>
+          <li><a href="pacoteslog.php">Pacotes</a></li>
           <li><a href="reserva.html">Reserva</a></li>
           <li><a href="duvidaslog.html">Dúvidas</a></li>
           <li><a href="account.html">Conta</a></li>
@@ -48,8 +48,8 @@ $linhas = mysqli_num_rows($res);
     <div class="fenrir-login">
         <form action="agendarfinal.php?idservico=<?=$id?>" method="POST" class="form-container">
           <input type="hidden" name="operacao" value="agendamento">
-          <p><strong>Escolha o seu plano:</strong><br>
-            <input type="radio" id="t1" name="plano" value="Tchutchuquito">
+          <p>Escolha o seu plano:<br>
+            <input type="radio" id="t1" name="plano" value="Tchutchuquito" checked>
             <label for="plano tchutchuquito">Tchutchuquito</label><br>
             <input type="radio" id="t2" name="plano" value="Tchutchuco">
             <label for="plano tchutchuco">Tchutchuco</label><br>
@@ -61,7 +61,7 @@ $linhas = mysqli_num_rows($res);
                     $a = ($i + 1);
                     $cachorro = mysqli_fetch_array($res);
                     $nome = $cachorro["nome"];
-                    echo "<input type='radio' name='cachorro' value='$nome'>
+                    echo "<input type='radio' name='cachorro' value='$nome' required>
                     <label for='cachorro $a'>$nome</label><br>";
                 }
             ?>

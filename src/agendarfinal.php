@@ -6,6 +6,13 @@ $cachorro = $_POST['cachorro'];
 $plano = $_POST['plano'];
 session_start();
 
+if($cachorro == null){
+    header ("Location: agendarinc.php");
+}else{
+if($plano == null){
+    header ("Location: agendarinc.php");
+}else{
+
 
 $sql = "UPDATE servico SET plano = '$plano' WHERE idServico='$id' ";
 mysqli_query($mysqli,$sql);
@@ -23,5 +30,6 @@ envia_email($_SESSION['email'], "Confirmação de Agendamento","Um agendamento d
 echo mysqli_error($mysqli);
 mysqli_close($mysqli);
 header ("Location: exibereserva.php"); 
-
+}
+}
 ?>

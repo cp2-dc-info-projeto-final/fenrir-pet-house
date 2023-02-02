@@ -1,3 +1,7 @@
+<?include "auth_func.php";
+include "conectauser.inc";
+?>
+
 <!DOCTYPE html>
 <html lang="pt-br">
   <head>
@@ -13,20 +17,17 @@
 
       <header class="nav">
       <nav>
-        <a href="indexlogcliente.php"><img style="margin-left:25px; margin-top:10px; margin-bottom:10px; " src="logo.png" alt="Image" height="100"></a>
-        <a class="logo" href="indexlogcliente.php">Fenrir Pet House</a>
+        <a href="indexlogfuncionario.php"><img style="margin-left:25px; margin-top:10px; margin-bottom:10px; " src="logo.png" alt="Image" height="100"></a>
+        <a class="logo" href="indexlogfuncionario.php">Fenrir Pet House</a>
         <div class="mobile-menu">
           <div class="line1"></div>
           <div class="line2"></div>
           <div class="line3"></div>
         </div>
         <ul class="nav-list">
-          <li><a href="sobrelog.html">Sobre nós</a></li>
-          <li><a href="pacoteslog.php">Pacotes</a></li>
-          <li><a href="reserva.html">Reserva</a></li>
-          <li><a href="duvidaslog.html">Dúvidas</a></li>
-          <li><a href="account.html">Conta</a></li>
-          <li><a href="logout.php">Logout</a></li>
+          <li><a href="funcreserva.html">Reservas</a></li>
+          <li><a href="funcaccount.html">Conta</a></li>
+          <li><a href="index.php">Logout</a></li>
           
         </ul>
         </footer>    
@@ -37,20 +38,29 @@
     </body>
 
     <div class="fenrir-login">
-        <h1>Editar a senha</h1>
-        <form action="editclientesenha.php" method="POST" class="form-container">
-          <input type="hidden" name="operacao" value="editsenha">
-          <p>Antiga senha:: <input type="password" placeholder="Insira a antiga senha" name="senhaantiga"></p>
-          <p>Nova Senha: <input type="password" placeholder="insira Senha" name="senhanova"></p>
-          <p>Confirme a senha: <input type="password" placeholder="confirme Senha" name="csenhanova"></p>
-          <p><input type="submit" value="Enviar" class="btn"></p>    
-        </form>
+      <h1>Bem Vindo Funcionário! </h1><br><br>
+       <?php
+       include "conectauser.inc";
+       $sql = "SELECT * FROM servico WHERE agenda_status = 1 ;"; 
+       $res = mysqli_query($mysqli,$sql);
+       $linhas = mysqli_num_rows($res);
+       for($i = 0; $i < $linhas; $i++){
+           $servico = mysqli_fetch_array($res);
+           echo "Cliente:".$servico["cliente"]."<br>";
+           echo "Horário: ".$servico["agenda_tstamp"]."<br>";
 
+           echo "ID do Serviço: ".$servico["idServico"]."<br>";   
+           echo "---------------------<br>";
+    }
+       mysqli_close($mysqli);
+       
+       ?>
     </div>
+    
 
 
    <!-- Site footer -->
-   <footer class="site-footer" style="margin-top: 25%;">
+   <footer class="site-footer" style="margin-top: 50%;">
 
         <div class="col-xs-6 col-md-3">
           <h6>Contatos:</h6>
@@ -64,9 +74,6 @@
 
         <div class="col-xs-6 col-md-3">
           
-
-        </div>
-      </div>
       <hr>
     </div>
     <div class="container">

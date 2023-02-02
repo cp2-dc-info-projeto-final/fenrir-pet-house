@@ -22,7 +22,7 @@
         </div>
         <ul class="nav-list">
           <li><a href="sobre.html">Sobre nós</a></li>
-          <li><a href="pacotes.html">Pacotes</a></li>
+          <li><a href="pacotes.php">Pacotes</a></li>
           <li><a href="duvidas.html">Dúvidas</a></li>
           <li><a href="loginfenrir.html">Login</a></li>
           
@@ -93,7 +93,7 @@
                 }
 
                 if($erro == 0){
-                  $sql = "SELECT email FROM cliente WHERE email = '$email'";
+                  $sql = "SELECT email FROM func WHERE email = '$email'";
                     $result = mysqli_query($mysqli, $sql);
                     $num_rows = mysqli_num_rows($result);
                     if ($num_rows > 0) {
@@ -134,6 +134,12 @@
 
 
             }
+        }
+        if ($erro == 1){
+          echo '<script type="text/javascript">';
+          echo 'alert("Erro no cadastro! Revise suas credenciais e tente novamente.");';
+          echo 'window.location.href = "funcionario.html";';
+          echo '</script>';
         }
       }
         ?>

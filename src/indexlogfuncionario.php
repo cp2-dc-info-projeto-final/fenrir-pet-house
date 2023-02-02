@@ -1,4 +1,6 @@
-<? include "auth_func.php"; ?>
+<?include "auth_func.php";
+include "conectauser.inc";
+?>
 
 <!DOCTYPE html>
 <html lang="pt-br">
@@ -34,6 +36,14 @@
 
     <body background="capa dogs.png" class="background">
     </body>
+
+    <div class="fenrir-login">
+      <h1>Bem Vindo Funcionário! </h1><br><br>
+       <h2>
+        <p><a href = "verreservas.php" style="color:rgb(126, 140, 140);">Ver Reservas</a></p>
+</h2>
+<br><br>
+    </div>
     
 
 

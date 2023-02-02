@@ -22,7 +22,7 @@
         </div>
         <ul class="nav-list">
           <li><a href="sobre.html">Sobre nós</a></li>
-          <li><a href="pacotes.html">Pacotes</a></li>
+          <li><a href="pacotes.php">Pacotes</a></li>
           <li><a href="duvidas.html">Dúvidas</a></li>
           <li><a href="loginfenrir.html">Login</a></li>
           
@@ -92,14 +92,13 @@
                     if ($num_rows > 0) {
                       echo "E-mail já cadastrado<br>";
                     } else {
-                      include "envia_email.php";
                       $sql = "SELECT email FROM func WHERE email = '$email'";
                       $result = mysqli_query($mysqli, $sql);
                       $num_rows = mysqli_num_rows($result);
                       if ($num_rows > 0) {
                       echo "E-mail já cadastrado";
                     } else {
-
+                      include "envia_email.php";
                       $hash = password_hash($senha, PASSWORD_DEFAULT);
                       $sql = "INSERT INTO cliente (nome,email,data_nasc, senha)";
                       $sql .= "VALUES ('$nome','$email','$data_nasc', '$hash');"; 

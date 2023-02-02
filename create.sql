@@ -97,6 +97,7 @@ CREATE TABLE `servico` (
   `agenda_status` tinyint(1) NOT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
+
 --
 -- Extraindo dados da tabela `serviço`
 --
@@ -109,6 +110,31 @@ INSERT INTO `servico` (`idServico`, `agenda_tstamp`, `plano`, `cachorro`, `clien
 (2,'2022-12-19 12:00:00', '.', '.', '.', 0),
 (1,'2022-12-18 12:00:00', '.', '.', '.', 0),
 (7,'2022-12-24 12:00:00', '.', '.', '.', 0);
+
+
+
+CREATE TABLE `pacotes` (
+  `idpacote` int(255) NOT NULL,
+  `nome` varchar(255) NOT NULL,
+  `valor` varchar(255) NOT NULL,
+  `tempo` varchar(255) NOT NULL,
+  `areas` varchar(255) NOT NULL,
+  `banho` varchar(255) DEFAULT NULL,
+  `tosa` varchar(255) DEFAULT NULL,
+  `festa` varchar(255) DEFAULT NULL
+) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+
+ALTER TABLE `pacotes` ADD PRIMARY KEY(`idpacote`);
+ALTER TABLE `pacotes` CHANGE `idpacote` `idpacote` INT(255) NOT NULL AUTO_INCREMENT;
+
+--
+-- Extraindo dados da tabela `pacotes`
+--
+
+INSERT INTO `pacotes` (`idpacote`, `nome`, `valor`, `tempo`, `areas`, `banho`, `tosa`, `festa`) VALUES
+(1, 'Pacote Tchutchuquito', '- Pacote Tchutchuquito (R$90)', '- Um dia e uma noite.', '- Acesso as áreas da praia e o parquinho', '- 1 banho por semana.', NULL, NULL),
+(2, 'Pacote Tchutchuco', '- Pacote tchutchuco (R$130)', '- Dois dias e duas noites.', '- Acesso as áreas da praia, parquinho e a Arena de Sabão.', '- 1 banho por semana.', '- 1 tosa a cada dois meses', NULL),
+(3, 'Pacote Tchutchucão', '- Pacote tchutchucão (R$190)', '- Três dias e três noites.', '- Acesso a todas as áreas da hospedagem.', '- 1 banho por semana', '- 1 tosa todo mês.', '- Festinha no AUniversário do dog.');
 
 --
 -- Indexes for dumped tables
