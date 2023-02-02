@@ -1,3 +1,4 @@
+<?php include "auth_admin.php"?>
 <!DOCTYPE html>
 <html lang="pt-br">
   <head>
@@ -21,6 +22,11 @@
           <div class="line3"></div>
         </div>
         <ul class="nav-list">
+          
+          <li><a href="admclient.php">Clientes</a></li>
+          <li><a href="admfun.php">Funcionários</a></li>
+          <li><a href="admservico.php">Reservas</a></li>
+          <li><a href="admconta.php">Conta</a></li>
           <li><a href="logout.php">Logout</a></li>
           
         </ul>
@@ -32,18 +38,14 @@
     </body>
 
     <div class="fenrir-login">
-        <h1>Servicos</h1>
-        <p><strong>Exibe Servicos</strong></p>
-        <p>Clique no botão abaixo para mostrar todos os Servicos cadastrados:</p><br>
-        <form action="admservicos.php" method="POST">
+      <h1>Reservas:</h1>
+      <form action="cadastrarreserva.html" method="POST" class="form-container">
+          <input type="hidden" name="operacao" value="exibir">
+          <p><input type="submit" value="Cadastrar Reserva" class="btn"></p>
+      </form>
+        <form action="admservicos.php" method="POST" class="form-container">
             <input type="hidden" name="operacao" value="exibir">
-            <p><input type="submit" value="Mostrar Serviços"></p><br>
-        </form>
-        <p><strong>Busca de Serviço</strong></p>
-        <form action="admservicos.php" method="POST">
-            <input type="hidden" name="operacao" value="buscar">
-            <p>Nome: <input type="text" name="Nome" size="10"> </p><br>
-            <p><input type="submit" value="Buscar"></p>
+            <p><input type="submit" value="Reservas Agendadas" class="btn"></p><br>
         </form>
     </div>
 

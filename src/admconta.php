@@ -1,6 +1,4 @@
-<?php
-include "conectauser.inc";
-?>
+<?php include "auth_admin.php"?>
 <!DOCTYPE html>
 <html lang="pt-br">
   <head>
@@ -16,19 +14,19 @@ include "conectauser.inc";
 
       <header class="nav">
       <nav>
-        <a href="indexlogcliente.php"><img style="margin-left:25px; margin-top:10px; margin-bottom:10px; " src="logo.png" alt="Image" height="100"></a>
-        <a class="logo" href="indexlogcliente.php">Fenrir Pet House</a>
+        <a href="adminpage.php"><img style="margin-left:25px; margin-top:10px; margin-bottom:10px; " src="logo.png" alt="Image" height="100"></a>
+        <a class="logo" href="adminpage.php">Fenrir Pet House</a>
         <div class="mobile-menu">
           <div class="line1"></div>
           <div class="line2"></div>
           <div class="line3"></div>
         </div>
         <ul class="nav-list">
-          <li><a href="sobrelog.html">Sobre nós</a></li>
-          <li><a href="pacoteslog.php">Pacotes</a></li>
-          <li><a href="reserva.html">Reserva</a></li>
-          <li><a href="duvidaslog.html">Dúvidas</a></li>
-          <li><a href="account.html">Conta</a></li>
+
+          <li><a href="admclient.php">Clientes</a></li>
+          <li><a href="admfun.php">Funcionários</a></li>
+          <li><a href="admservico.php">Reservas</a></li>
+          <li><a href="admconta.php">Conta</a></li>
           <li><a href="logout.php">Logout</a></li>
           
         </ul>
@@ -40,33 +38,16 @@ include "conectauser.inc";
     </body>
 
     <div class="fenrir-login">
-        <form action= "agendar2.php?idservico=<?=$id?>" method="POST" class="form-container">
-          <input type="hidden" name="operacao" value="agendamento">
-          <h1>Reservas disponíveis:<br><br></h1>
-          <?php
-
-            $sql = "SELECT * FROM servico WHERE agenda_status = 0 ;"; 
-            $res = mysqli_query($mysqli,$sql);
-            $linhas = mysqli_num_rows($res);
-            for($i = 0; $i < $linhas; $i++){
-                $servico = mysqli_fetch_array($res);
-                echo "<strong>Horário: </strong>".$servico["agenda_tstamp"]."<br>";
-
-                echo "<strong>ID do Serviço: </strong>".$servico["idServico"]."<br>";   
-                echo "<a href='agendar.php?idservico=".$servico["idServico"]."'>
-                <strong>Reservar</strong></a><br>";
-                echo "---------------------<br>";
-            }
-            mysqli_close($mysqli);
-          ?>
-  
-        </form>
+        <h1>Conta</h1>
+        <p><a href = "editadmsenha.html" style="color:rgb(166, 180, 180);">Editar senha</a></p>
+        <p><a href = "exibiradm.php" style="color:rgb(166, 180, 180);">Exibir dados</a></p>
+        <p><a href = "editadmemail.html" style="color:rgb(166, 180, 180);">Editar email</a></p>
+        <p><a href = "excluiradm.html" style="color:rgb(180, 50, 50);"><br>Excluir conta</a></p>
 
     </div>
 
-
    <!-- Site footer -->
-   <footer class="site-footer" style="margin-top: 5%;">
+   <footer class="site-footer" style="margin-top: 45%;">
 
         <div class="col-xs-6 col-md-3">
           <h6>Contatos:</h6>

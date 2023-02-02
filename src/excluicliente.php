@@ -43,6 +43,7 @@ session_start();?>
         <form action="excluicliente.php" method="POST" class="form-container">
           <input type="hidden" name="operacao" value="deletaconta">
           <h3>Deseja exluir sua conta?</h3>
+          <p>OBS: Após confirmar você será redirecionado a página de login já com sua conta e dados excluídos!</P>
           <?php 
             $_SESSION["email"];
             $senha = $_POST["senha"];
@@ -63,7 +64,7 @@ session_start();?>
                         header('location: index.php');
                     }
                 }
-            echo "Senha incorreta!";
+            echo "<br>Senha incorreta!";
             ?>
           <p><Br>Digite sua Senha: <input type="password" placeholder="insira Senha" name="senha"></p>
           <p><input type="submit" value="Excluir" class="btn"></p>    

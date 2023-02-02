@@ -1,16 +1,12 @@
-
 <?php
 
     // Recebe os campos do formulário
     $email = $_POST["email"];
     $senha = $_POST["senha"];
-
-
     // Realiza a consulta no banco de dados
     include "conectauser.inc";
     $sql = "SELECT * FROM func WHERE email = '$email';";
     $res = mysqli_query($mysqli, $sql);
-
     //testa se não encontrou o e-mail
     if(mysqli_num_rows($res) != 1){
         header("Location: funcionariologininc.html");
@@ -29,8 +25,7 @@
                     $linhas = mysqli_num_rows($res);
                     $func = mysqli_fetch_array($res);
                     // abre a sessão e registra as variáveis do login
-                    
-                    
+
                     $_SESSION["IsAdmin"] = $func["IsAdmin"];
                                 // direciona para a página inicial
                                 if($func["IsAdmin"] == 1){
@@ -46,8 +41,5 @@
             }
         }
 }
-
 mysqli_close($mysqli);
 ?>
-
-

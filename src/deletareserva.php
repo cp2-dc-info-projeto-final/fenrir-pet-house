@@ -1,3 +1,7 @@
+<?php include "auth_admin.php"?>
+<?php include "conectauser.inc"; 
+session_start()?>
+
 <!DOCTYPE html>
 <html lang="pt-br">
   <head>
@@ -21,6 +25,11 @@
           <div class="line3"></div>
         </div>
         <ul class="nav-list">
+         
+          <li><a href="admclient.php">Clientes</a></li>
+          <li><a href="admfun.php">Funcionários</a></li>
+          <li><a href="admservico.php">Reservas</a></li>
+          <li><a href="admconta.php">Conta</a></li>
           <li><a href="logout.php">Logout</a></li>
           
         </ul>
@@ -32,29 +41,26 @@
     </body>
 
     <div class="fenrir-login">
-        <h1>Clientes</h1>
-        <p><strong>Cadastro de Cliente</strong></p>
-        <form action="admcliente.php" method="POST">
-            <input type="hidden" name="operacao" value="inserir">
-            <p>Nome: <input type="text" name="nome" size="30"> </p><br>
-            <p>E-mail: <input type="text" name="email" size="30"></p><br> 
-            <p>Senha: <input type="password" name="senha" size="10"> </p><br>
-            <p>Confirme a senha: <input type="password" placeholder="confirme Senha" name="csenha"></p><br>
-            <p>Data de Nascimento: <input type="date" name="data_nasc"></p><br>
-            <p><input type="submit" value="Enviar!"></p><br>
-        </form>
-        <p><strong>Exibe Clientes</strong></p>
-        <p>Clique no botão abaixo para mostrar todos os clientes cadastrados:</p><br>
-        <form action="admcliente.php" method="POST">
-            <input type="hidden" name="operacao" value="exibir">
-            <p><input type="submit" value="Mostrar clientes"></p><br>
-        </form>
-        <p><strong>Busca de Cliente</strong></p>
-        <form action="admcliente.php" method="POST">
+        <h1>Alterar Reserva:</h1>
+        <form action="altagendamento2.php" method="POST" class="form-container">
             <input type="hidden" name="operacao" value="buscar">
-            <p>Nome: <input type="text" name="nome" size="10"> </p><br>
-            <p><input type="submit" value="Buscar"></p>
+            <p><br><strong>Selecionar nova data e hora:</strong><input type="datetime-local"  name="agenda_tstamp"> </p><br>
+            <p><input type="submit" value="Alterar" class="btn"></p>
         </form>
+
+        <form action="deletareserva.php" method="POST" class="form-container">
+        
+        <?php 
+            //deleta conta
+            $sql2 ="DELETE FROM servico WHERE 'idServico = '{$_SESSION['idservico']}' ";
+                if(mysqli_query($mysqli, $sql2)){
+                
+                }
+        ?>
+            <input type="hidden" name="operacao" value="buscar">
+            <p><input type="submit" name="agenda_tstamp" value="Alterar" class="btn"></p>
+        </form>
+
     </div>
 
    <!-- Site footer -->
@@ -88,3 +94,5 @@
 
   </body>
 </html>
+
+<?php mysqli_close($mysqli); ?>

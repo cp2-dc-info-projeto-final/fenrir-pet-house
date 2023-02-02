@@ -30,20 +30,22 @@
       </header>
         <div class="fenrir-login">
             <h1>Dados:</h1>
-            <form action="exibirdados.php" method="POST" class="form-container">
+            <form action="exibirfunc.php" method="POST" class="form-container">
             <?php
                 include "conectauser.inc";
 
-                $email = $_POST['email'];
+                session_start();
+                $_SESSION["email"];
 
-                $sql = "SELECT * FROM func WHERE email = '$email';"; 
+                $sql = "SELECT * FROM func WHERE email = '{$_SESSION["email"]}';"; 
                 $res = mysqli_query($mysqli,$sql);
                 $linhas = mysqli_num_rows($res);
                 for($i = 0; $i < $linhas; $i++){
                     $func = mysqli_fetch_array($res);
-                    echo "Nome: ".$func["nome"]."<br>";
-                    echo "E-mail: ".$func["email"]."<br>";
-                    echo "Data de nascimento: ".$func["data_nasc"]."<br>";          
+                    echo "<strong>Nome: </strong>".$func["nome"]."<br>";
+                    echo "<strong>E-mail: </strong> ".$func["email"]."<br>";
+                    echo "<strong>Data de nascimento: </strong>".$func["data_nasc"]."<br>";
+                    echo "<strong>CPF: </strong>".$func["cpf"]."<br>";       
                 }
             ?>
 

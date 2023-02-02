@@ -1,3 +1,4 @@
+<?php include "auth_admin.php"?>
 <!DOCTYPE html>
 <html lang="pt-br">
   <head>
@@ -21,44 +22,35 @@
           <div class="line3"></div>
         </div>
         <ul class="nav-list">
+            
+          <li><a href="admclient.php">Clientes</a></li>
+          <li><a href="admfun.php">Funcionários</a></li>
+          <li><a href="admservico.php">Reservas</a></li>
+          <li><a href="admconta.php">Conta</a></li>
           <li><a href="logout.php">Logout</a></li>
           
         </ul>
         </footer>    
       </nav>
+      <div class="fenrir-login">
+        <form action="excluiradm.php" method="POST" class="form-container">
+          <input type="hidden" name="operacao" value="deletaconta">
+          <h3>Deseja excluir sua conta?</h3>
+          <p>OBS: Após confirmar você será redirecionado a página de login já com sua conta excluída assim como seus respectivos dados!</P>
+          <p><br>Digite sua Senha: <input type="password" placeholder="insira Senha" name="senha"></p>
+          <p><input type="submit" value="Excluir" class="btn"></p>    
+        </form>
+
+    </div>
     </header>
 
     <body background="capa dogs.png" class="background">
     </body>
+    
 
-    <div class="fenrir-login">
-        <h1>Funcionários</h1>
-        <p><strong>Cadastro de Funcionários</strong></p>
-        <form action="admfunc.php" method="POST">
-            <input type="hidden" name="operacao" value="inserir">
-            <p>Nome: <input type="text" name="nome" size="30"> </p><br>
-            <p>E-mail: <input type="text" name="email" size="30"></p><br> 
-            <p>Senha: <input type="password" placeholder="Insira Senha" name="senha"> </p><br>
-            <p>Confirme a senha: <input type="password" placeholder="confirme Senha" name="csenha"></p>
-            <p>Data de Nascimento: <input type="date" name="data_nasc"></p>
-            <p><input type="submit" value="Enviar!"></p><br>
-        </form>
-        <p><strong>Exibe Funcionários</strong></p>
-        <p>Clique no botão abaixo para mostrar todos os Funcionários cadastrados:</p><br>
-        <form action="admfunc.php" method="POST">
-            <input type="hidden" name="operacao" value="exibir">
-            <p><input type="submit" value="Mostrar Funcionários"></p><br>
-        </form>
-        <p><strong>Busca de Cliente</strong></p>
-        <form action="admfunc.php" method="POST">
-            <input type="hidden" name="operacao" value="buscar">
-            <p>Nome: <input type="text" name="nome" size="10"> </p><br>
-            <p><input type="submit" value="Buscar"></p>
-        </form>
-    </div>
 
    <!-- Site footer -->
-   <footer class="site-footer">
+   <footer class="site-footer" style="margin-top: 55%;">
 
         <div class="col-xs-6 col-md-3">
           <h6>Contatos:</h6>
@@ -72,9 +64,6 @@
 
         <div class="col-xs-6 col-md-3">
           
-
-        </div>
-      </div>
       <hr>
     </div>
     <div class="container">
