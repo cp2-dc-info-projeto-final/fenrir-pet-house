@@ -25,7 +25,7 @@
         </div>
         <ul class="nav-list">
           <li><a href="sobrelog.html">Sobre nós</a></li>
-          <li><a href="pacoteslog.html">Pacotes</a></li>
+          <li><a href="pacoteslog.php">Pacotes</a></li>
           <li><a href="reserva.html">Reserva</a></li>
           <li><a href="duvidaslog.html">Dúvidas</a></li>
           <li><a href="account.html">Conta</a></li>
@@ -64,16 +64,16 @@
 				$row = $query->fetch_assoc();
 
         
-        $sql = "SELECT email FROM cliente WHERE email = '$email'";
+        $sql = "SELECT email FROM cliente WHERE email = '$emailnovo'";
         $result = mysqli_query($mysqli, $sql);
         $num_rows = mysqli_num_rows($result);
-        if ($num_rows > 0) {
+        if (($num_rows == 0)== FALSE) {
           echo "E-mail já cadastrado<br>";
         } else {
-          $sql = "SELECT email FROM func WHERE email = '$email'";
+          $sql = "SELECT email FROM func WHERE email = '$emailnovo'";
           $result = mysqli_query($mysqli, $sql);
           $num_rows = mysqli_num_rows($result);
-          if ($num_rows > 0) {
+          if (($num_rows == 0)== FALSE) {
           echo "E-mail já cadastrado";
         } else {
 
@@ -100,8 +100,8 @@
 					echo "Senha incorreta!<br><br>";
 				}
 			}
+      }
     }
-  }
   
 
 		?>
