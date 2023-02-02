@@ -50,11 +50,11 @@ include "conectauser.inc";
             $linhas = mysqli_num_rows($res);
             for($i = 0; $i < $linhas; $i++){
                 $servico = mysqli_fetch_array($res);
-                echo "Horário: ".$servico["agenda_tstamp"]."<br>";
+                echo "<strong>Horário: </strong>".$servico["agenda_tstamp"]."<br>";
 
-                echo "ID do Serviço: ".$servico["idServico"]."<br>";   
+                echo "<strong>ID do Serviço: </strong>".$servico["idServico"]."<br>";   
                 echo "<a href='agendar.php?idservico=".$servico["idServico"]."'>
-                    Reserva</a><br>";
+                <strong>Reservar</strong></a><br>";
                 echo "---------------------<br>";
             }
             mysqli_close($mysqli);

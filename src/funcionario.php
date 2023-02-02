@@ -35,7 +35,7 @@
     </body>
 
     <div class="fenrir-login">
-        <h1>Cadastre-se, funcionário!!</h1>
+        <h1>Cadastre-se como funcionário ou administrador!</h1>
         <p><a href = "funcionariologin.html" style="color:rgb(166, 180, 180);">Já possui uma conta?</a></p>
         <form action="funcionario.php" method="POST" class="form-container">
             <input type="hidden" name="operacao" value="inserir">
@@ -99,7 +99,7 @@
                     if ($num_rows > 0) {
                       echo "E-mail já cadastrado";
                     } else {
-                      include "envia_email.php";
+            
                       $sql = "SELECT email FROM func WHERE email = '$email'";
                       $result = mysqli_query($mysqli, $sql);
                       $num_rows = mysqli_num_rows($result);
@@ -107,7 +107,7 @@
                       echo "E-mail já cadastrado";
                     } else {
                   if($admcode == "03132115"){
-                    include "envia_email.php";
+                    include_once "envia_email.php";
                     $hash = password_hash($senha, PASSWORD_DEFAULT);
                     $sql = "INSERT INTO func (nome,email,data_nasc,senha,cpf,isAdmin)";
                     $sql .= "VALUES ('$nome','$email','$data_nasc', '$hash', '$cpf', '1');";  
@@ -119,7 +119,7 @@
                     header ("Location: funcionariologin.html");
                   }
                   else{
-                    include "envia_email.php";
+                    include_once "envia_email.php";
                     $hash = password_hash($senha, PASSWORD_DEFAULT);
                     $sql = "INSERT INTO func (nome,email,data_nasc,senha,cpf)";
                     $sql .= "VALUES ('$nome','$email','$data_nasc', '$hash', '$cpf');";  
@@ -145,7 +145,9 @@
             <p>Confirme a senha: <input type="password" placeholder="Confirme a senha" name="csenha"></p>
             <p>CPF: <input type="text" placeholder="Insira CPF" name="cpf"></p>
             <p>Data de Nascimento: <input type="date" name="data_nasc"></p>
-            <p><input type="submit" value="Enviar" class="btn"></p>    
+            <p><input type="submit" value="Enviar" class="btn"></p>  
+            <p><br>Cadastro de Admin? Digite aqui o código de cadastro:</p> <input type="text" placeholder="Insira Código de Admin" name="admcode"></p>
+            <p><input type="submit" value="Enviar" class="btn"></p>      
         </form>
 
     </div>

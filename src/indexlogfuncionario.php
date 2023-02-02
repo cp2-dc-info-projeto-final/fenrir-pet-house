@@ -1,5 +1,4 @@
-<? include "autentica.php";
-include "auth_admin.php"; ?>
+<? include "auth_func.php"; ?>
 
 <!DOCTYPE html>
 <html lang="pt-br">
@@ -24,7 +23,7 @@ include "auth_admin.php"; ?>
           <div class="line3"></div>
         </div>
         <ul class="nav-list">
-          <li><a href="funcreserva.html">Reservas</a></li>
+          <li><a href="funcreserva.php">Reservas</a></li>
           <li><a href="funcaccount.html">Conta</a></li>
           <li><a href="index.php">Logout</a></li>
           

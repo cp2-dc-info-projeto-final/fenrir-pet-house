@@ -48,14 +48,14 @@ $linhas = mysqli_num_rows($res);
     <div class="fenrir-login">
         <form action="agendarfinal.php?idservico=<?=$id?>" method="POST" class="form-container">
           <input type="hidden" name="operacao" value="agendamento">
-          <p>Escolha o seu plano:<br>
+          <p><strong>Escolha o seu plano:</strong><br>
             <input type="radio" id="t1" name="plano" value="Tchutchuquito">
             <label for="plano tchutchuquito">Tchutchuquito</label><br>
             <input type="radio" id="t2" name="plano" value="Tchutchuco">
             <label for="plano tchutchuco">Tchutchuco</label><br>
             <input type="radio" id="t3" name="plano" value="Tchutchucão">
             <label for="plano tchutchucão">Tchutchucão</label></p><br>
-          <p>Selecione seu au-migo:<br>
+          <p><strong>Selecione seu au-migo:</strong><br>
             <?php
                 for($i = 0; $i < $linhas; $i++){
                     $a = ($i + 1);
@@ -72,7 +72,7 @@ $linhas = mysqli_num_rows($res);
 
 
    <!-- Site footer -->
-   <footer class="site-footer" style="margin-top: 25%;">
+   <footer class="site-footer" style="margin-top: 30%;">
 
         <div class="col-xs-6 col-md-3">
           <h6>Contatos:</h6>

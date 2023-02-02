@@ -1,4 +1,5 @@
 <?php include "auth_admin.php"?>
+<!DOCTYPE html>
 <html lang="pt-br">
   <head>
     <meta charset="UTF-8" />
@@ -21,13 +22,11 @@
           <div class="line3"></div>
         </div>
         <ul class="nav-list">
-
           <li><a href="admclient.php">Clientes</a></li>
           <li><a href="admfun.php">Funcionários</a></li>
           <li><a href="admservico.php">Reservas</a></li>
           <li><a href="admconta.php">Conta</a></li>
           <li><a href="logout.php">Logout</a></li>
-
         </ul>
         </footer>    
       </nav>
@@ -36,11 +35,67 @@
     <body background="capa dogs.png" class="background">
     </body>
 
-    
-    
+    <div class="fenrir-login">
+        <h1>Editar o email</h1>
+        <p>OBS: Após confirmar você será redirecionado a página de login já com o email alterado!</P>
+        <form action="editadmemail.php" method="POST" class="form-container">
+          <input type="hidden" name="operacao" value="editemail">
+
+<?php
+
+include "conectauser.inc";
+
+session_start();
+			if(isset($_SESSION["email"])){
+				$email = $_SESSION["email"];
+			}
+
+			$operacao = $_POST["operacao"];
+
+			if($operacao == "editemail"){
+
+				//pega info de editfuncemail.html
+				$emailnovo = $_POST['emailnovo'];
+				$senha = $_POST['senha'];
+		
+				//pega info "senha" do sql
+				$sql = "SELECT senha FROM func WHERE email = '{$_SESSION["email"]}' ";
+				$query = $mysqli->query($sql);
+				$row = $query->fetch_assoc();
+
+				//checa senha
+				if(password_verify($senha, $row['senha'])){
+
+					//update no email no sql
+						$sql = "UPDATE func SET email = '$emailnovo' WHERE email = '{$_SESSION["email"]}' ";
+						if(mysqli_query($mysqli, $sql)){
+							include "envia_email.php";
+							envia_email($_SESSION["email"], "Alteração de Email", "Seu email foi alterada no site da hotelaria canina Fenrir Pet Shop. O novo email para login da conta antes vinculada nesse email é:<br><br><strong>$emailnovo</strong><br><br> Esperamos que você continue tendo uma ótima experiência em nosso site.");
+							envia_email($emailnovo, "Alteração de Email", "Seu email foi alterada no site da hotelaria canina Fenrir Pet Shop. Esperamos que você tenha uma ótima experiência em nosso site.");
+							header("Location: loginfenrir.html");
+						}
+					//erros
+					else{
+						echo "Erro no sql";
+					}
+				}
+				else{
+					echo "Senha incorreta!<br><br>";
+				}
+			}
+
+?>
+
+          <p>Novo email: <input type="text" placeholder="Insira seu novo email" name="emailnovo"></p>
+          <p>Digite sua senha: <input type="password" placeholder="insira Senha" name="senha"></p>
+          <p><input type="submit" value="Enviar" class="btn"></p>    
+        </form>
+
+    </div>
+
 
    <!-- Site footer -->
-   <footer class="site-footer" style="margin-top: 55%;">
+   <footer class="site-footer" style="margin-top: 25%;">
 
         <div class="col-xs-6 col-md-3">
           <h6>Contatos:</h6>

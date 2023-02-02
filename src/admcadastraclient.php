@@ -1,4 +1,5 @@
 <?php include "auth_admin.php"?>
+<!DOCTYPE html>
 <html lang="pt-br">
   <head>
     <meta charset="UTF-8" />
@@ -27,7 +28,7 @@
           <li><a href="admservico.php">Reservas</a></li>
           <li><a href="admconta.php">Conta</a></li>
           <li><a href="logout.php">Logout</a></li>
-
+          
         </ul>
         </footer>    
       </nav>
@@ -36,13 +37,24 @@
     <body background="capa dogs.png" class="background">
     </body>
 
-    
-    
+    <div class="fenrir-login">
+        <h1>Cadastrar Cliente:</h1>
+        <form action="admcadastracliente.php" method="POST" class="form-container">
+            <input type="hidden" name="operacao" value="inserir">
+            <p>Nome: <input type="text" placeholder="Insira Nome" name="nome"></p>
+            <p>E-mail: <input type="text" placeholder="insira E-mail" name="email"></p>
+            <p>Senha: <input type="password" placeholder="Insira Senha" name="senha"></p>
+            <p>Confirme a senha: <input type="password" placeholder="Confirme a senha" name="csenha"></p>
+            <p>Data de Nascimento: <input type="date" name="data_nasc"></p><br>
+            <p><input type="submit" value="Enviar!" class="btn"></p><br>
+
+        </form>
+    </div>
 
    <!-- Site footer -->
-   <footer class="site-footer" style="margin-top: 55%;">
+   <footer class="site-footer" style="margin-top: 15%;">
 
-        <div class="col-xs-6 col-md-3">
+    <div class="col-xs-6 col-md-3">
           <h6>Contatos:</h6>
           <ul class="footer-links">
             <li><a href="https://web.whatsapp.com/">WhatsApp</a></li>
@@ -63,10 +75,10 @@
       <div class="row">
         <div class="col-md-8 col-sm-6 col-xs-12">
           <p class="copyright-text">
-       <a href="https://www.google.com/maps/dir//Rua+Newton+Fontoura+Reis+-+Recreio+dos+Bandeirantes+-+R.+Newton+Fontoura+Reis+-+Recreio+dos+Bandeirantes,+Rio+de+Janeiro+-+RJ,+22795-125/@-22.9209579,-43.4968904,11z/data=!4m8!4m7!1m0!1m5!1m1!1s0x9bc3aed259b4ad:0x6383c2f561261060!2m2!1d-43.4660456!2d-23.026394">Endereço: Rua Newton Fontoura Reis - Recreio dos Bandeirantes, Rio de Janeiro - RJ, 22795-125</a>.
+      <a href="https://www.google.com/maps/dir//Rua+Newton+Fontoura+Reis+-+Recreio+dos+Bandeirantes+-+R.+Newton+Fontoura+Reis+-+Recreio+dos+Bandeirantes,+Rio+de+Janeiro+-+RJ,+22795-125/@-22.9209579,-43.4968904,11z/data=!4m8!4m7!1m0!1m5!1m1!1s0x9bc3aed259b4ad:0x6383c2f561261060!2m2!1d-43.4660456!2d-23.026394">Endereço: Rua Newton Fontoura Reis - Recreio dos Bandeirantes, Rio de Janeiro - RJ, 22795-125</a>.
           </p>
     </div>
 </footer>
 
-  </body>
+</body>
 </html>

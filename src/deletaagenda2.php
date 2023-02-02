@@ -1,8 +1,7 @@
 <?php include "auth_admin.php"?>
 <?php
-  $cod_cliente = $_GET['cod_cliente'];
+  include "conectauser.inc";
   session_start();
-  $_SESSION['cod_cliente'] = $cod_cliente;
 ?>
 
 <!DOCTYPE html>
@@ -44,37 +43,36 @@
     </body>
 
     <div class="fenrir-login">
-        <h1>Editar Cliente:</h1>
-        <form action="admcliente2.php" method="POST" class="form-container">
+        <form action="deletauser2.php" method="POST" class="form-container">
+          <input type="hidden" name="operacao" value="deletaconta">
+          <h3>Deseja exluir essa conta?</h3>
             <?php
 
-                include "conectauser.inc";
-            
-                    $sql = "SELECT * FROM cliente;";
-                    $res = mysqli_query($mysqli,$sql);
-                    $linhas = mysqli_num_rows($res);
-                    for($i=0; $i < $linhas; $i++){
-                        $cliente = mysqli_fetch_array($res);
-                        $cliente["nome"];
-                        $cliente["email"];
-                        $cliente["cod_cliente"];
-                    }
-              
             ?>
+                    <?php 
+            $_SESSION["email"];
+            $senha = $_POST["senha"];
 
-            </form>
-        <form action="admcliente2.php" method="POST" class="form-container">
-            <input type="hidden" name="operacao" value="inserir">
-            <p>Editar Nome: <input type="text" placeholder="Insira Nome" name="nome"></p>
-            <p><input type="submit" value="Enviar!" class="btn"></p>
+
+            //pega info "senha" do sql
+            $sql = "SELECT senha FROM func WHERE email = '{$_SESSION["email"]}' ";
+            $query = $mysqli->query($sql);
+            $row = $query->fetch_assoc();
+
+            //checa senha
+            if(password_verify($senha, $row['senha'])){
+                //deleta conta
+                $sql2 ="DELETE FROM servico WHERE idServico = '{$_SESSION["idServico"]}' ";
+                    if(mysqli_query($mysqli, $sql2)){
+                        header('location: admservicos.html');
+                    }
+                }
+            echo "<br>Senha incorreta!";
+            ?>
+          <p><Br>Digite sua Senha para poder excluir: <input type="password" placeholder="insira Senha" name="senha"></p>
+          <p><input type="submit" value="Excluir" class="btn"></p>    
         </form>
 
-        <form action="admcliente2.php" method="POST" class="form-container">
-            <input type="hidden" name="operacao" value="inserir2">
-            <p>Editar E-mail: <input type="text" placeholder="insira E-mail" name="email"></p>
-            <p><input type="submit" value="Enviar!" class="btn"></p><br>
-
-        </form>
     </div>
 
    <!-- Site footer -->

@@ -1,3 +1,7 @@
+<?php include "auth_admin.php"?>
+<?php  include "conectauser.inc";
+session_start();?>
+
 <!DOCTYPE html>
 <html lang="pt-br">
   <head>
@@ -13,40 +17,65 @@
 
       <header class="nav">
       <nav>
-        <a href="indexlogfuncionario.php"><img style="margin-left:25px; margin-top:10px; margin-bottom:10px; " src="logo.png" alt="Image" height="100"></a>
-        <a class="logo" href="indexlogfuncionario.php">Fenrir Pet House</a>
+        <a href="adminpage.php"><img style="margin-left:25px; margin-top:10px; margin-bottom:10px; " src="logo.png" alt="Image" height="100"></a>
+        <a class="logo" href="adminpage.php">Fenrir Pet House</a>
         <div class="mobile-menu">
           <div class="line1"></div>
           <div class="line2"></div>
           <div class="line3"></div>
         </div>
         <ul class="nav-list">
-          <li><a href="funcreserva.html">Reservas</a></li>
-          <li><a href="funcaccount.html">Conta</a></li>
+            
+          <li><a href="admclient.php">Clientes</a></li>
+          <li><a href="admfun.php">Funcionários</a></li>
+          <li><a href="admservico.php">Reservas</a></li>
+          <li><a href="admconta.php">Conta</a></li>
           <li><a href="logout.php">Logout</a></li>
           
         </ul>
         </footer>    
       </nav>
-      <div class="fenrir-login">
-        <form action="excluirfunc.php" method="POST" class="form-container">
-          <input type="hidden" name="operacao" value="deletaconta">
-          <h3>Deseja excluir sua conta?</h3>
-          <p>OBS: Após confirmar você será redirecionado a página de login já com sua conta excluída assim como seus respectivos dados!</P>
-          <p><br>Digite sua Senha: <input type="password" placeholder="insira Senha" name="senha"></p>
-          <p><input type="submit" value="Excluir" class="btn"></p>    
-        </form>
-
-    </div>
     </header>
 
     <body background="capa dogs.png" class="background">
     </body>
-    
+
+    <div class="fenrir-login">
+        <form action="excluiradm.php" method="POST" class="form-container">
+          <input type="hidden" name="operacao" value="deletaconta">
+          <h3>Deseja exluir sua conta?</h3>
+          <p>OBS: Após confirmar você será redirecionado a página de login já com sua conta excluída assim como seus respectivos dados!</P>
+          <?php 
+            $_SESSION["email"];
+            $senha = $_POST["senha"];
+
+
+            //pega info "senha" do sql
+            $sql = "SELECT senha FROM func WHERE email = '{$_SESSION["email"]}' ";
+            $query = $mysqli->query($sql);
+            $row = $query->fetch_assoc();
+
+            //checa senha
+            if(password_verify($senha, $row['senha'])){
+                //deleta conta
+                $sql2 ="DELETE FROM func WHERE email = '{$_SESSION["email"]}' ";
+                    if(mysqli_query($mysqli, $sql2)){
+                        include "envia_email.php";
+                        envia_email($_SESSION["email"], "Sentiremos sua Falta!", "Sua conta foi excluída do site da hotelaria canina Fenrir Pet Shop. Esperamos que você e seu au-migo tiveram a melhor experiência.");
+                        header('location: index.php');
+                    }
+                }
+            echo "Senha incorreta!";
+            ?>
+          <p><Br>Digite sua Senha: <input type="password" placeholder="insira Senha" name="senha"></p>
+          <p><input type="submit" value="Excluir" class="btn"></p>    
+        </form>
+
+    </div>
 
 
    <!-- Site footer -->
-   <footer class="site-footer" style="margin-top: 55%;">
+   <footer class="site-footer" style="margin-top: 25%;">
 
         <div class="col-xs-6 col-md-3">
           <h6>Contatos:</h6>
@@ -60,6 +89,9 @@
 
         <div class="col-xs-6 col-md-3">
           
+
+        </div>
+      </div>
       <hr>
     </div>
     <div class="container">
@@ -73,3 +105,4 @@
 
   </body>
 </html>
+<?php mysqli_close($mysqli); ?>

@@ -1,9 +1,6 @@
 <?php include "auth_admin.php"?>
-<?php
-  $idservico=$_GET['idservico'];
-  session_start();
-  $_SESSION['idservico'] = $idservico;
-?>
+<?php include "conectauser.inc"; ?>
+
 <!DOCTYPE html>
 <html lang="pt-br">
   <head>
@@ -27,7 +24,7 @@
           <div class="line3"></div>
         </div>
         <ul class="nav-list">
-         
+          
           <li><a href="admclient.php">Clientes</a></li>
           <li><a href="admfun.php">Funcionários</a></li>
           <li><a href="admservico.php">Reservas</a></li>
@@ -43,12 +40,57 @@
     </body>
 
     <div class="fenrir-login">
-        <h1>Alterar Reserva:</h1>
-        <form action="altagendamento2.php" method="POST" class="form-container">
-            <input type="hidden" name="operacao" value="buscar">
-            <p><br><strong>Selecionar nova data e hora:</strong><input type="datetime-local"  name="agenda_tstamp"> </p><br>
-            <p><input type="submit" value="Alterar" class="btn"></p>
-        </form>
+      <h1>Criar Reserva:</h1>
+      <form action="cadastrarreserva.php" method="POST" class="form-container">
+      <?php
+            $operacao = $_POST["operacao"];
+
+            if($operacao == "inserir"){
+                $idservico = $_POST["idservico"]; 
+                $agenda_tstamp = $_POST["agenda_tstamp"];
+                $plano = !empty($plano) ? "'$plano'" : "NULL";
+                $cachorro = !empty($cachorro) ? "'$cachorro'" : "NULL";
+                $cliente = !empty($cliente) ? "'$cliente'" : "NULL";
+                $agenda_status = !empty($agenda_status) ? "'$agenda_status'" : "NULL";
+
+                $erro = 0;
+
+                if(empty($idservico)){
+                    echo "Por favor, preencha o ID corretamente.<br>";
+                    $erro = 1;
+                    
+                }
+
+                if(empty($agenda_tstamp)){
+                    echo "Por favor, preencha a data corretamente.<br>";
+                    $erro = 1;           
+                }
+                
+                if($erro == 0){
+                    $sql = "SELECT idservico FROM servico WHERE idservico = '$idservico'";
+                    $result = mysqli_query($mysqli, $sql);
+                    $num_rows = mysqli_num_rows($result);
+                    if ($num_rows > 0) {
+                      echo "ID já cadastrado<br>";
+                    } 
+                    else {
+
+                      $sql = "INSERT INTO servico (idservico,agenda_tstamp, plano, cachorro, cliente, agenda_status)";
+                      $sql .= "VALUES ('$idservico','$agenda_tstamp');";
+                      $sql .= "VALUES (NULL,'$plano','$cachorro','$cliente','$agenda_status');";
+                      mysqli_query($mysqli,$sql);
+                      echo "Reserva criada com sucesso<br><br>";
+                    }
+                }
+            }
+          
+            ?> <br>
+            </p>
+          <input type="hidden" name="operacao" value="inserir">
+          <p>ID da reserva: <input type="text" placeholder="ID" name="idservico"></p>
+          <p>Agenda: <input type="datetime-local" placeholder="Insira Email" name="agenda_tstamp"></p>
+          <p><input type="submit" value="Criar Reserva" class="btn"></p>
+      </form>
     </div>
 
    <!-- Site footer -->
@@ -82,3 +124,5 @@
 
   </body>
 </html>
+
+<?php mysqli_close($mysqli); ?>
