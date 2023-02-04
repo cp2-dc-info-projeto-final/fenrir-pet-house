@@ -6,6 +6,10 @@ session_start();
 $sql = "SELECT nome FROM cachorro WHERE email_dono = '{$_SESSION["email"]}' ;";
 $res = mysqli_query($mysqli,$sql);
 $linhas = mysqli_num_rows($res);
+
+$sql2 = "SELECT nome FROM pacotes WHERE idpacote >= 1;";
+$res2 = mysqli_query($mysqli,$sql2);
+$linhaplano = mysqli_num_rows($res2);
 ?>
 <!DOCTYPE html>
 <html lang="pt-br">
@@ -49,12 +53,15 @@ $linhas = mysqli_num_rows($res);
         <form action="agendarfinal.php?idservico=<?=$id?>" method="POST" class="form-container">
           <input type="hidden" name="operacao" value="agendamento">
           <p>Escolha o seu plano:<br>
-            <input type="radio" id="t1" name="plano" value="Tchutchuquito" checked>
-            <label for="plano tchutchuquito">Tchutchuquito</label><br>
-            <input type="radio" id="t2" name="plano" value="Tchutchuco">
-            <label for="plano tchutchuco">Tchutchuco</label><br>
-            <input type="radio" id="t3" name="plano" value="Tchutchucão">
-            <label for="plano tchutchucão">Tchutchucão</label></p><br>
+          <?php
+          for($i=0; $i < $linhaplano; $i++){
+            $a = ($i + 1);
+            $pacotes = mysqli_fetch_array($res2);
+            $pacote_nome = $pacotes["nome"];
+            echo "<input type='radio' name='pacote' value='$pacote_nome' required>
+            <label for='pacote $a'>$pacote_nome</label><br>";
+          }
+          ?>
           <p><strong>Selecione seu au-migo:</strong><br>
             <?php
                 for($i = 0; $i < $linhas; $i++){

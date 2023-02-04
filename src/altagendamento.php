@@ -1,5 +1,4 @@
-<?php include "auth_admin.php"?>
-<?php
+<?php include "auth_admin.php";
   $idservico=$_GET['idservico'];
   $_SESSION['idservico'] = $idservico;
 ?>
