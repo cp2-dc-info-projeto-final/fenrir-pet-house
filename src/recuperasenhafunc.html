@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Login de funcionário</title>
+    <title>Recuperação de Senha</title>
     <link rel="stylesheet" href="style.css" />
   </head>
 
@@ -35,13 +35,10 @@
     </body>
 
     <div class="fenrir-login">
-        <h2>Login: Funcionário/Administrador</h2>
-        <p><a href = "funcionario.html" style="color:rgb(166, 180, 180);">Ainda não tem conta?</a></p>
-        <p><a href = "recuperasenhafunc.html" style="color:rgb(166, 180, 180);">Esqueceu sua senha?</a></p>
-        <form action="funcionariologin.php" method="POST" class="form-container">
-          <p>E-mail: <input type="text" placeholder="Insira Email" name="email"></p>
-          <p>Senha: <input type="password" placeholder="insira Senha" name="senha"></p>
-          <p><input type="submit" value="Login" class="btn"></p>    
+        <h1>Recuperação de Senha</h1>
+        <form action="recuperasenhafunc.php" method="POST" class="form-container">
+          <p> Digite seu e-mail: <input type="text" placeholder="Insira Email" name="email"></p>
+          <p><input type="submit" value="Recuperar" class="btn"></p>    
         </form>
 
     </div>
