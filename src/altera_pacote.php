@@ -21,6 +21,7 @@
           <div class="line3"></div>
         </div>
         <ul class="nav-list">
+
           <li><a href="admclient.php">Clientes</a></li>
           <li><a href="admfun.php">Funcionários</a></li>
           <li><a href="admpacotes.php">Pacotes</a></li>
@@ -37,64 +38,31 @@
     </body>
 
     <div class="fenrir-login">
-    <?php
-include "conectauser.inc";
-
-  $nome = $_POST["nome"];
-  $valor = $_POST["valor"];
-  $tempo = $_POST["tempo"];
-  $areas = $_POST["areas"];
-  $banho = $_POST["banho"];
-  $tosa = $_POST["tosa"];
-  $festa = $_POST["festa"];
-  $idpacote = $_POST["idpacote"];
-  echo $idpacote;
-
-  $sql = "UPDATE pacotes SET nome='$nome', valor='$valor', tempo='$tempo', areas='$areas', banho='$banho', tosa='$tosa', festa='$festa' WHERE idpacote='$idpacote'";
-  $res = mysqli_query($mysqli,$sql);
-
-  if($res){
-    echo "Pacote atualizado com sucesso!";
-  } else{
-    echo "Erro ao atualizar pacote.";
-  }
-
-
-mysqli_close($mysqli);
-?>
-        <h1>Pacotes</h1>
+        <h1>Alterar Pacotes</h1>
         <?php include "conectauser.inc";
-        $sql = "SELECT * FROM pacotes ;"; 
+        $idpacote = $_GET["idpacote"];
+        $sql = "SELECT * FROM pacotes WHERE idpacote = '$idpacote';"; 
         $res = mysqli_query($mysqli,$sql);
         $linhas = mysqli_num_rows($res);
-        for($i = 0; $i < $linhas; $i++){
+
+  
             $pacotes = mysqli_fetch_array($res);
-            echo "Nome:".$pacotes["nome"]."<br><br>";
-            echo "<form action='altera_pacote.php' method='post' class='form-container>'";
-            echo "<input type='hidden' name='idpacote' value='{$pacotes['idpacote']}'>";
-            echo $pacotes["idpacote"];
-            echo "<p>Editar Nome:: <input type='text' placeholder='Insira o nome dos pacotes.' name='nome' value='{$pacotes["nome"]}'></p><br>";
-            echo "<p>Editar Valor: <input type='text' placeholder='Insira o valor dos pacotes.' name='valor' value='{$pacotes["valor"]}'></p><br>";
-            echo "<p>Editar Tempo: <input type='text' placeholder='Insira o tempo dos pacotes.' name='tempo' value='{$pacotes["tempo"]}'></p><br>";
-            if(($pacotes["areas"]== NULL) == FALSE){
-            echo "<p>Editar Áreas: <input type='text' placeholder='Insira as áreas dos pacotes.' name='areas' value='{$pacotes["areas"]}'></p><br>";
-            }
-            if(($pacotes["banho"]== NULL) == FALSE){
-            echo "<p>Editar Banho: <input type='text' placeholder='Insira o banho dos pacotes.' name='banho' value='{$pacotes["banho"]}'></p><br>";
-            }
-            if(($pacotes["tosa"]== NULL) == FALSE){
-            echo "<p>Editar Tosa: <input type='text' placeholder='Insira a tosa dos pacotes.' name='tosa' value='{$pacotes["tosa"]}'></p><br>";
-            }
-            if(($pacotes["festa"]== NULL) == FALSE){
-            echo "<p>Editar Festa: <input type='text' placeholder='Insira a festa dos pacotes.' name='festa' value='{$pacotes["festa"]}'></p><br>";  
-            }
+            echo "ID: $idpacote<br><br>";
+            echo "<form action='altera_pacote2.php?idpacote=$idpacote' method='post' class='form-container>'";
+            echo "<input name='idpacote' value='$idpacote' readonly />";
+            echo "<p>Editar Nome: <input type='text' placeholder='Insira o nome dos pacotes.' name='nome' value='{$pacotes["nome"]}' required></p><br>";
+            echo "<p>Editar Valor: <input type='text' placeholder='Insira o valor dos pacotes.' name='valor' value='{$pacotes["valor"]}' required></p><br>";
+            echo "<p>Editar Tempo: <input type='text' placeholder='Insira o tempo dos pacotes.' name='tempo' value='{$pacotes["tempo"]}' required></p><br>"; 
+            echo "<p>Editar Áreas: <input type='text' placeholder='Insira as áreas dos pacotes.' name='areas' value='{$pacotes["areas"]}' required></p><br>";           
+            echo "<p>Editar Banho: <input type='text' placeholder='Insira o banho dos pacotes.' name='banho' value='{$pacotes["banho"]}'></p><br>";           
+            echo "<p>Editar Tosa: <input type='text' placeholder='Insira a tosa dos pacotes.' name='tosa' value='{$pacotes["tosa"]}'></p><br>";           
+            echo "<p>Editar Festa: <input type='text' placeholder='Insira a festa dos pacotes.' name='festa' value='{$pacotes["festa"]}'></p><br>";              
             echo "<input type='submit' value='Enviar' class='btn'></input><br>";
             echo "---------------------<br>";
 
 
-            
-  
-     }
+     
+
         mysqli_close($mysqli);
         
         
@@ -102,7 +70,9 @@ mysqli_close($mysqli);
         
         
         
-        ?>
+        
+  ?>
+        
         
     </div>
 
@@ -137,14 +107,3 @@ mysqli_close($mysqli);
 
   </body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
