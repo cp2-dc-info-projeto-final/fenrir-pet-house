@@ -38,30 +38,19 @@
     </body>
 
     <div class="fenrir-login">
-        <h1>Alterar Pacotes</h1>
+        <h1>Criar Pacote</h1>
         <?php include "conectauser.inc";
-        $idpacote = $_GET["idpacote"];
-        $sql = "SELECT * FROM pacotes WHERE idpacote = '$idpacote';"; 
-        $res = mysqli_query($mysqli,$sql);
-        $linhas = mysqli_num_rows($res);
 
-  
-            $pacotes = mysqli_fetch_array($res);
-            echo "ID: $idpacote<br><br>";
-            echo "<form action='altera_pacote2.php?idpacote=$idpacote' method='post' class='form-container>'";
-            echo "<input name='idpacote' value='$idpacote' readonly />";
-            echo "<p>Editar Nome: <input type='text' placeholder='Insira o nome dos pacotes.' name='nome' value='{$pacotes["nome"]}' required></p><br>";
-            echo "<p>Editar Valor: <input type='text' placeholder='Insira o valor dos pacotes.' name='valor' value='{$pacotes["valor"]}' required></p><br>";
-            echo "<p>Editar Tempo: <input type='text' placeholder='Insira o tempo dos pacotes.' name='tempo' value='{$pacotes["tempo"]}' required></p><br>"; 
-            echo "<p>Editar Áreas: <input type='text' placeholder='Insira as áreas dos pacotes.' name='areas' value='{$pacotes["areas"]}' required></p><br>";           
-            echo "<p>Editar Banho: <input type='text' placeholder='Insira o banho dos pacotes.' name='banho' value='{$pacotes["banho"]}' required></p><br>";           
-            echo "<p>Editar Tosa: <input type='text' placeholder='Insira a tosa dos pacotes.' name='tosa' value='{$pacotes["tosa"]}' required></p><br>";           
-            echo "<p>Editar Festa: <input type='text' placeholder='Insira a festa dos pacotes.' name='festa' value='{$pacotes["festa"]}' required></p><br>";              
-            echo "<input type='submit' value='Enviar' class='btn'></input><br>";
-            echo "---------------------<br>";
+        echo "<br><form action='cria_pacote2.php' method='post' class='form-container>'";
+        echo "<p>Nome: <input type='text' placeholder='Insira o nome do pacote.' name='nome' required></p><br>";
+        echo "<p>Valor: <input type='text' placeholder='Insira o valor do pacote.' name='valor' required></p><br>";
+        echo "<p>Tempo: <input type='text' placeholder='Insira o tempo do pacote.' name='tempo' required></p><br>"; 
+        echo "<p>Áreas: <input type='text' placeholder='Insira as áreas do pacote.' name='areas'  required></p><br>";           
+        echo "<p>Banho: <input type='text' placeholder='Insira o banho do pacote.' name='banho' required></p><br>";           
+        echo "<p>Tosa: <input type='text' placeholder='Insira a tosa do pacote.' name='tosa' required></p><br>";           
+        echo "<p>Festa: <input type='text' placeholder='Insira a festa do pacote.' name='festa' required></p><br>";              
+        echo "<input type='submit' value='Enviar' class='btn'></input><br><br>";
 
-
-     
 
         mysqli_close($mysqli);
         

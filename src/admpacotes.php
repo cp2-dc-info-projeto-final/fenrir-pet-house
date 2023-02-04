@@ -44,6 +44,9 @@
         $res = mysqli_query($mysqli,$sql);
         $linhas = mysqli_num_rows($res);
 
+        echo "<a href='cria_pacote.php'>;
+            <strong>Criar novo pacote</strong></a><br><br>";
+
         for($i = 0; $i < $linhas; $i++){
             $pacotes = mysqli_fetch_array($res);
             $idpacote = $pacotes["idpacote"];
