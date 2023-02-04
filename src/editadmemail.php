@@ -62,6 +62,19 @@ include "conectauser.inc";
 				$query = $mysqli->query($sql);
 				$row = $query->fetch_assoc();
 
+        $sql = "SELECT email FROM cliente WHERE email = '$emailnovo'";
+        $result = mysqli_query($mysqli, $sql);
+        $num_rows = mysqli_num_rows($result);
+        if (($num_rows == 0)== FALSE) {
+          echo "E-mail já cadastrado<br>";
+        } else {
+          $sql = "SELECT email FROM func WHERE email = '$emailnovo'";
+          $result = mysqli_query($mysqli, $sql);
+          $num_rows = mysqli_num_rows($result);
+          if (($num_rows == 0)== FALSE) {
+          echo "E-mail já cadastrado";
+        } else {
+
 				//checa senha
 				if(password_verify($senha, $row['senha'])){
 
@@ -82,6 +95,8 @@ include "conectauser.inc";
 					echo "Senha incorreta!<br><br>";
 				}
 			}
+    }
+  }
 
 ?>
 
