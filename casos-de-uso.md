@@ -215,13 +215,13 @@ Cliente consulta os horários reservados
 **Fluxo principal**
 
 1. O usário pressiona o botão "conta".
-2. O programa retornará com um pop-up com os seguintes tópicos:Editar senha, Mostrar dados, Mostrar Reserva, Editar email e Excluir conta.
-3. O usuário deve pressionar o tópico "Mostrar Reservas".
+2. O programa retornará com um pop-up com os seguintes tópicos:Editar senha, Mostrar dados, Exibir Reserva, Editar email e Excluir conta.
+3. O usuário deve pressionar o tópico "Exibir Reservas".
 4. O programa irá imprimir uma mensagem com os dados referentes a reserva feita naquela conta. 
 
 ### CDU 07 
 
-Funcionário e cliente recuperaram a senha.
+Funcionário,cliente e administrador recuperaram a senha.
 
 **Fluxo Principal**
 
@@ -229,7 +229,16 @@ Funcionário e cliente recuperaram a senha.
 2. O sistema requisita um email de recuperaçao.
 3. O usuário digita o email de recuperação e seleciona "Recuperar".
 4. O sistema envia uma senha provisória que deve ser usada para login".
-5. O usuário é redirecionado à página de login.
+5. O usuário é redirecionado para o pop-up de Recuperar Senha agora com os campos em branco.
+
+**Fluxo Alternativo A**
+
+1. O usuário seleciona a opção "Recuperar a senha "
+2. O sistema requisita um email de recuperaçao.
+3. O usuário digita um email que não consta no banco de dados para a recuperação e seleciona "Recuperar".
+4. O sistema indentifica que não consta aquele email e imprime na tela "Email Inválido".
+5. O usuário é redirecionado para o pop-up de Recuperar Senha agora com os campos em branco.
+
 
 ### CDU 08
 
@@ -237,17 +246,9 @@ Usuário visualiza pacotes.
 
 **Fluxo Principal**
 
-1. O usuário pressiona o botão "Reservas".
+1. O usuário pressiona o botão "Pacotes".
 2. Os pacotes da hotelaria são exibidos automaticamente.
-3. O usuário deve preencher o cadastro do cachorro afim de escolher um pacote desejado.
-
-**Fluxo Alternativo A**
-
-1. O usuário pressiona o botão "Reservas".
-2. Os pacotes da hotelaria são exibidos automaticamente.
-3. O usuário não preenche o cadastro do cachorro.
-4. O sistema retorna com a não identificação do cachorro assim impossibilitando a seleção do pacote.
-
+3. Se o usuário desejar reserva-lo ele deve clicar em "Reservas " para assim fazer o cadastrado do cachorro e logo após reservar um horário. 
 
 ### CDU 09
 
@@ -255,10 +256,10 @@ Cliente visualiza seus dados da conta.
 
 **Fluxo Principal**
 
-1. O usário pressiona o botão "conta".
+1. O usuário pressiona o botão "conta".
 2. O programa retornará com um pop-up com os seguintes tópicos:Editar senha, Mostrar dados, Mostrar Reserva, Editar email e Excluir conta.
 3. O usuário deve pressionar o tópico "Mostrar Dados".
-4. O programa irá imprimir uma mensagem com os dados referentes aos dados do usuário. 
+4. O programa irá imprimir uma mensagem com os dados referentes a conta do usuário. 
 
 
 ### CDU 10
@@ -267,15 +268,14 @@ Cliente altera sua senha.
 
 **Fluxo Principal**
 
-1. O usário pressiona o botão "conta".
+1. O usuário pressiona o botão "conta".
 2. O programa retornará com um pop-up com os seguintes tópicos:Editar senha, Mostrar dados, Mostrar Reserva, Editar email e Excluir conta.
 3. O usuário deve pressionar o tópico "Editar senha".
 4. O programa irá imprimir um formulário com campos a serem preenchidos sobre a nova senha.
-5. O programa imprime o campo "email" afim do usuário preencher com seu email já cadastrado.
-6. O programa imprime o campo "Antiga senha" afim do usuário preencher com sua antiga senha já cadastrada.
-7. O programa imprime o campo "Senha " afim do usuário preencher uma nova senha não cadastrada.
-8. O programa imprime o campo "Confirme a senha" afim do usuário preencher com a mesma nova senha que ele preencheu no campo acima.
-9. O usuário deve pressionar o botão "enviar" afim de ter o formulário concluído.
+5. O programa imprime o campo "Antiga senha" afim do usuário preencher com sua antiga senha já cadastrada.
+6. O programa imprime o campo " Nova Senha " afim do usuário preencher uma nova senha não cadastrada.
+7. O programa imprime o campo "Confirme a senha" afim do usuário preencher com a mesma nova senha que ele preencheu no campo acima.
+8. O usuário deve pressionar o botão "enviar" afim de ter o formulário concluído.
 
 **Fluxo Alternativo A**
 
@@ -283,14 +283,12 @@ Cliente altera sua senha.
 2. O programa retornará com um pop-up com os seguintes tópicos:Editar senha, Mostrar dados, Mostrar Reserva, Editar email e Excluir conta.
 3. O usuário deve pressionar o tópico "Editar senha".
 4. O programa irá imprimir um formulário com campos a serem preenchidos sobre a nova senha.
-5. O programa imprime o campo "email".
-6. O usuário preenche com um email  não cadastrado.
-7. O programa imprime o campo "Antiga senha" afim do usuário preencher com sua antiga senha já cadastrada.
-8. O programa imprime o campo "Senha " afim do usuário preencher uma nova senha não cadastrada.
-9. O programa imprime o campo "Confirme a senha" afim do usuário preencher com a mesma nova senha que ele preencheu no campo acima.
-10.O usuário deve pressionar o botão "enviar" afim de ter o formulário concluído. 
-11. O programa não reconhce o email não cadastrado no banco de dados.
-12. O formulário não poderá ser concluído com sucesso.
+5. O programa imprime o campo "Antiga senha" afim do usuário preencher com sua antiga senha já cadastrada.
+6. O programa imprime o campo "Senha " afim do usuário preencher uma nova senha não cadastrada.
+7. O programa imprime o campo "Confirme a senha",o usuário não preenche com a mesma nova senha que ele preencheu no campo acima.
+8.O usuário deve pressionar o botão "enviar" afim de ter o formulário concluído. 
+9. O programa não reconhce a nova senha cadastrada no banco de dados.
+10. O formulário não poderá ser concluído com sucesso.
 
 **Fluxo Alternativo B**
 
@@ -298,33 +296,15 @@ Cliente altera sua senha.
 2. O programa retornará com um pop-up com os seguintes tópicos:Editar senha, Mostrar dados, Mostrar Reserva, Editar email e Excluir conta.
 3. O usuário deve pressionar o tópico "Editar senha".
 4. O programa irá imprimir um formulário com campos a serem preenchidos sobre a nova senha.
-5. O programa imprime o campo "email" afim do usuário preencher com seu email já cadastrado.
 6. O programa imprime o campo "Antiga senha" afim do usuário preencher com sua antiga senha já cadastrada.
 7. O usuário preenche o campo " Antiga senha" com a senha digitada errada.
 8. O programa imprime o campo "Senha " afim do usuário preencher uma nova senha não cadastrada.
 9. O programa imprime o campo "Confirme a senha" afim do usuário preencher com a mesma nova senha que ele preencheu no campo acima.
 10. O usuário deve pressionar o botão "enviar" afim de ter o formulário concluído.
-11.O programa não reconhce a antiga senha e imprime uma mensagem escrito " Antiga senha incorreta".
+11.O programa não reconhce a antiga senha e imprime uma mensagem escrito " Antiga senha inválida".
 12. O formulário não poderá ser concluído com sucesso.
 
-**Fluxo Alternativo C**
-
-1. O usário pressiona o botão "conta".
-2. O programa retornará com um pop-up com os seguintes tópicos:Editar senha, Mostrar dados, Mostrar Reserva, Editar email e Excluir conta.
-3. O usuário deve pressionar o tópico "Editar senha".
-4. O programa irá imprimir um formulário com campos a serem preenchidos sobre a nova senha.
-5. O programa imprime o campo "email" afim do usuário preencher com seu email já cadastrado.
-6. O programa imprime o campo "Antiga senha" afim do usuário preencher com sua antiga senha já cadastrada.
-7. O programa imprime o campo "Senha " afim do usuário preencher uma nova senha não cadastrada.
-8. O programa imprime o campo "Confirme a senha" afim do usuário preencher com a mesma nova senha que ele preencheu no campo acima.
-9. O usuário erra ao digitar a senha novamente no campo "Confirme a senha".
-10. O usuário deve pressionar o botão "enviar" afim de ter o formulário concluído.
-11.O programa não reconhce a nova senha e imprime uma mensagem escrito " Antiga senha incorreta".
-12. O formulário não poderá ser concluídom com sucesso.
-13. O programa não reconhce a nova senha e imprime uma mensagem escrito " Antiga senha incorreta".
-12. O formulário não poderá ser concluído com sucesso.
-
-### CDU 13
+### CDU 11   
 
 Usuário altera seu email
 
@@ -334,37 +314,33 @@ Usuário altera seu email
 2. O programa retornará com um pop-up com os seguintes tópicos:Editar senha, Mostrar dados, Mostrar Reserva, Editar email e Excluir conta.
 3. O usuário deve pressionar o tópico "Editar email".
 4. O programa irá imprimir um formulário com campos a serem preenchidos sobre um novo email.
-5. O programa imprime o campo "email atual" afim do usuário preencher com seu email já cadastrado.
-6. O programa imprime o campo "novo email" afim do usuário preencher com seu novo email.
-7. O programa imprime o campo "Digite sua Senha " afim do usuário preencher com sua senha já cadastrada.
-8. O usuário deve pressionar o botão "enviar" afim de ter o formulário concluído.
+5. O programa imprime o campo "novo email" afim do usuário preencher com seu novo email.
+6. O programa imprime o campo "Digite sua Senha " afim do usuário preencher com sua senha já cadastrada.
+7. O usuário deve pressionar o botão "enviar" afim de ter o formulário concluído.
 
 **Fluxo Alternativo A**
 
 1. O usário pressiona o botão "conta".
 2. O programa retornará com um pop-up com os seguintes tópicos:Editar senha, Mostrar dados, Mostrar Reserva, Editar email e Excluir conta.
 3. O usuário deve pressionar o tópico "Editar email".
-4. O programa irá imprimir um formulário com campos a serem preenchidos sobre um novo email.
-5. O programa imprime o campo "email atual" afim do usuário preencher com seu email já cadastrado.
-6. O usuário o preenche o campo com o email antigo errado.
-7. O programa imprime o campo "novo email" afim do usuário preencher com seu novo email.
-8. O programa imprime o campo "Digite sua Senha " afim do usuário preencher com sua senha já cadastrada.
-9. O usuário deve pressionar o botão "enviar" afim de ter o formulário concluído.
-10.O programa não reconhce o antigo email e imprime uma mensagem escrito " Email antigo incorreto".
-11. O formulário não poderá ser concluído com sucesso. 
+4. O programa irá imprimir um formulário com campos a serem preenchidos sobre um novo email.   
+5. O programa imprime o campo "email atual" afim do usuário preencher com seu novo email.
+6. O programa imprime o campo "Digite sua Senha " afim do usuário preencher com sua senha já cadastrada.
+7. O usuário preenche o campo senha com uma senha que não é a cadastrada de sua conta.
+8. O usuário deve pressionar o botão "enviar" afim de ter o formulário concluído.
+9.O programa não reconhce a senha e imprime uma mensagem escrito " Senha inválida".
+10. O formulário não poderá ser concluído com sucesso. 
 
 **Fluxo Alternativo B**
 
-1. O usário pressiona o botão "conta".
+1. O usuário pressiona o botão "conta".
 2. O programa retornará com um pop-up com os seguintes tópicos:Editar senha, Mostrar dados, Mostrar Reserva, Editar email e Excluir conta.
 3. O usuário deve pressionar o tópico "Editar email".
-4. O programa irá imprimir um formulário com campos a serem preenchidos sobre um novo email.
-5. O programa imprime o campo "email atual" afim do usuário preencher com seu email já cadastrado.
-6. O programa imprime o campo "novo email" afim do usuário preencher com seu novo email.
-7. O programa imprime o campo "Digite sua Senha " afim do usuário preencher com sua senha já cadastrada.
-8. O usuário preenche o campo "Digite a senha" com uma senha não cadastrada no campo de dados.
+6. O programa imprime o campo "email atual" afim do usuário preencher com seu novo email.
+7. o usuário digita um email que jáestá sndo usado no site.
+8. O programa imprime o campo "Digite sua Senha " afim do usuário preencher com sua senha já cadastrada.
 9. O usuário deve pressionar o botão "enviar" afim de ter o formulário concluído.
-10.O programa não reconhce a antiga senha e imprime uma mensagem escrito " Senha antiga incorreta".
+10.O programa reconhce o novo email entretanto ele já não pode mais ser usado pois já está em uso, o sistema imprime uma mensagem escrito "Email inválido."".
 11. O formulário não poderá ser concluído com sucesso.  
 
 ### CDU 12
@@ -377,36 +353,21 @@ Usuário deseja deletar a conta
 2. O programa retornará com um pop-up com os seguintes tópicos:Editar senha, Mostrar dados, Mostrar Reserva, Editar email e Excluir conta.
 3. O usuário deve pressionar o tópico "Excluir conta".
 4. O programa irá imprimir um formulário com campos a serem preenchidos sobre a exclusão da conta.
-5. O programa imprime o campo "Digite seu email" afim do usuário preencher com seu email já cadastrado.
-6. O programa imprime o campo "Digite sua Senha " afim do usuário preencher com sua senha já cadastrada.
+5. O programa imprime o campo "Digite sua Senha " afim do usuário preencher com sua senha já cadastrada.
+6. O usuário deve pressionar o botão "excluir" afim de ter o formulário concluído e a conta excluída.
+7. Já com a conta excluída o usuário retorna para o menu principal.
+
+**Fluxo Alternativo A** 
+
+1. O usário pressiona o botão "conta".
+2. O programa retornará com um pop-up com os seguintes tópicos:Editar senha, Mostrar dados, Mostrar Reserva, Editar email e Excluir conta.
+3. O usuário deve pressionar o tópico "Excluir conta".
+4. O programa irá imprimir um formulário com campos a serem preenchidos sobre a exclusão da conta.
+5. O programa imprime o campo "Digite sua Senha " afim do usuário preencher com sua senha já cadastrada.
+6. O usuário preenche o campo "Digite sua Senha" com a senha errada.
 7. O usuário deve pressionar o botão "excluir" afim de ter o formulário concluído e a conta excluída.
-8. Já com a conta excluída o usuário retorna para o menu principal.
-
-**Fluxo Alternativo A**
-
-1. O usário pressiona o botão "conta".
-2. O programa retornará com um pop-up com os seguintes tópicos:Editar senha, Mostrar dados, Mostrar Reserva, Editar email e Excluir conta.
-3. O usuário deve pressionar o tópico "Excluir conta".
-4. O programa irá imprimir um formulário com campos a serem preenchidos sobre a exclusão da conta.
-5. O programa imprime o campo "Digite seu email" afim do usuário preencher com seu email já cadastrado.
-6. O usuário preenche o campo "Digite seu email" com um email errado.
-7. O programa imprime o campo "Digite sua Senha " afim do usuário preencher com sua senha já cadastrada.
-8. O usuário deve pressionar o botão "excluir" afim de ter o formulário concluído e a conta excluída.
-9.O programa não reconhce o email e imprime uma mensagem escrito " Email incorreto".
-11. O formulário não poderá ser concluído com sucesso e nem a conta excluída.
-
-**Fluxo Alternativo B** 
-
-1. O usário pressiona o botão "conta".
-2. O programa retornará com um pop-up com os seguintes tópicos:Editar senha, Mostrar dados, Mostrar Reserva, Editar email e Excluir conta.
-3. O usuário deve pressionar o tópico "Excluir conta".
-4. O programa irá imprimir um formulário com campos a serem preenchidos sobre a exclusão da conta.
-5. O programa imprime o campo "Digite seu email" afim do usuário preencher com seu email já cadastrado.
-7. O programa imprime o campo "Digite sua Senha " afim do usuário preencher com sua senha já cadastrada.
-8. O usuário preenche o campo "Digite sua Senha" com a senha errada.
-9. O usuário deve pressionar o botão "excluir" afim de ter o formulário concluído e a conta excluída.
-10.O programa não reconhce o email e imprime uma mensagem escrito "Senha incorreta".
-11. O formulário não poderá ser concluído com sucesso e nem a conta excluída.
+8.O programa não reconhce o email e imprime uma mensagem escrito "Senha inválida".
+9. O formulário não poderá ser concluído com sucesso e nem a conta excluída.
 
 ### CDU 13
 
@@ -414,11 +375,7 @@ Administrador pode editar a reserva
 
 **Fluxo Principal**
 
-1. O administrador após logar no site deve pressionar o botão conta.
-2. Um pop-up aparecerá com os seguintes tópicos: Funcionários, clientes e serviços.
-3. O administrador deve pressionar o botão "serviços".
-4. No pop-up "serviços" o administrador poderá alterar a reserva e a descrição dos serviços.
-5. O administrador deve pressionar o botão "Alterar Descrição".
+1. 
 
 
 
