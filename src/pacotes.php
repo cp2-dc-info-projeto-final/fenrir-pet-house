@@ -36,9 +36,20 @@
     </body>
 
     
+    <?php
+    $sql = "SELECT * FROM pacotes ;"; 
+    $res = mysqli_query($mysqli,$sql);
+    $linhas = mysqli_num_rows($res);
+      for($idpacote = 1;$idpacote <= $linhas;$idpacote ++){
+      ?>
     <ul class="nav-list">
+      
+      
+      
+          
+      
         <div class="fenrir-hospedagens">
-        <form action="cadastrocachorro.php" method="POST" class="form-container">
+            <form action="cadastrocachorro.php" method="POST" class="form-container">
                 <input type="hidden" name="operacao" value="inserir">
 
                 <!-- Pacote 1 -->
@@ -47,7 +58,7 @@
 
                 <h1>
                 <?php
-                $idpacote = 1;
+                
                 $sql = "SELECT nome FROM pacotes WHERE idpacote = '$idpacote';"; 
                 $res = mysqli_query($mysqli,$sql);
 
@@ -155,264 +166,19 @@
                 $row = mysqli_fetch_assoc($res);
                   echo $row['festa'];
                   
+                echo "<br>";
+             
                 
-                ?><br>
 
-                </p>
-            </form>
-        </div>
+                echo"</p>";
+            echo"</form>";
+        echo"</div>";
 
-        <div class="fenrir-hospedagens">
-            <form action="cadastrocachorro.php" method="POST" class="form-container">
-                <input type="hidden" name="operacao" value="inserir">
-                
-                <!-- Pacote 2 -->
-
-                <!-- Nome -->
-
-                <h1>
-                <?php
-                $idpacote ++;
-                $sql = "SELECT nome FROM pacotes WHERE idpacote = '$idpacote';"; 
-                $res = mysqli_query($mysqli,$sql);
-
-                if (!$res) {
-                  printf("Error: %s\n", mysqli_error($mysqli));
-                  exit();
-                }
-
-                $row = mysqli_fetch_assoc($res);
-                echo "🎁 ".$row['nome'];
-                ?>
-
-                </h1>
-
-                <!-- Valor -->
-
-                <p style="text-align:left;"><br><?php
-                $sql = "SELECT valor FROM pacotes WHERE idpacote = '$idpacote';"; 
-                $res = mysqli_query($mysqli,$sql);
-
-                if (!$res) {
-                  printf("Error: %s\n", mysqli_error($mysqli));
-                  exit();
-                }
-
-                $row = mysqli_fetch_assoc($res);
-                echo "🎁 ".$row['valor'];
-                
-                ?><br>
-       
-                <!-- Tempo -->
-
-                <?php
-                $sql = "SELECT tempo FROM pacotes WHERE idpacote = '$idpacote';"; 
-                $res = mysqli_query($mysqli,$sql);
-
-                if (!$res) {
-                  printf("Error: %s\n", mysqli_error($mysqli));
-                  exit();
-                }
-
-                $row = mysqli_fetch_assoc($res);
-                echo $row['tempo'];
-                
-                ?><br>
-
-                <!-- Areas -->
-                <?php
-                $sql = "SELECT areas FROM pacotes WHERE idpacote = '$idpacote';"; 
-                $res = mysqli_query($mysqli,$sql);
-
-                if (!$res) {
-                  printf("Error: %s\n", mysqli_error($mysqli));
-                  exit();
-                }
-
-                $row = mysqli_fetch_assoc($res);
-                echo $row['areas'];
-                
-                ?><br>
-
-                <!-- Banho -->
-
-                <?php
-                $sql = "SELECT banho FROM pacotes WHERE idpacote = '$idpacote';"; 
-                $res = mysqli_query($mysqli,$sql);
-
-                if (!$res) {
-                  printf("Error: %s\n", mysqli_error($mysqli));
-                  exit();
-                }
-
-                $row = mysqli_fetch_assoc($res);
-                echo $row['banho'];
-                
-                ?><br>
-
-                <!-- Tosa -->
-
-                <?php
-                $sql = "SELECT tosa FROM pacotes WHERE idpacote = '$idpacote';"; 
-                $res = mysqli_query($mysqli,$sql);
-                
-                if (!$res) {
-                  printf("Error: %s\n", mysqli_error($mysqli));
-                  exit();
-                }
-                
-                $row = mysqli_fetch_assoc($res);
-                echo $row['tosa'];
-
-                
-                ?><br>
-
-                <!-- Festa -->
-
-                <?php                
-                $sql = "SELECT festa FROM pacotes WHERE idpacote = '$idpacote';"; 
-                $res = mysqli_query($mysqli,$sql);
-
-                if (!$res) {
-                  printf("Error: %s\n", mysqli_error($mysqli));
-                  exit();
-                }
-
-                $row = mysqli_fetch_assoc($res);
-                  echo $row['festa'];
-                  
-                
-                ?><br>
-
-                </p>
-            </form>
-        </div>
-
-        <div class="fenrir-hospedagens">
-            <form action="cadastrocachorro.php" method="POST" class="form-container">
-                <input type="hidden" name="operacao" value="inserir">
-                <h1><!-- Pacote 2 -->
-
-                  <!-- Nome -->
-
-                <h1>
-                <?php
-                $idpacote ++;
-                $sql = "SELECT nome FROM pacotes WHERE idpacote = '$idpacote';"; 
-                $res = mysqli_query($mysqli,$sql);
-                              
-                if (!$res) {
-                  printf("Error: %s\n", mysqli_error($mysqli));
-                  exit();
-                }
-                
-                $row = mysqli_fetch_assoc($res);
-                echo "🎁 ".$row['nome'];
-                ?>
-                
-                </h1>
-                
-                <!-- Valor -->
-                
-                <p style="text-align:left;"><br><?php
-                $sql = "SELECT valor FROM pacotes WHERE idpacote = '$idpacote';"; 
-                $res = mysqli_query($mysqli,$sql);
-                
-                if (!$res) {
-                  printf("Error: %s\n", mysqli_error($mysqli));
-                  exit();
-                }
-                
-                $row = mysqli_fetch_assoc($res);
-                echo "🎁 ".$row['valor'];
-                
-                ?><br>
-                
-                <!-- Tempo -->
-                
-                <?php
-                $sql = "SELECT tempo FROM pacotes WHERE idpacote = '$idpacote';"; 
-                $res = mysqli_query($mysqli,$sql);
-                
-                if (!$res) {
-                  printf("Error: %s\n", mysqli_error($mysqli));
-                  exit();
-                }
-                
-                $row = mysqli_fetch_assoc($res);
-                echo $row['tempo'];
-                
-                ?><br>
-                
-                <!-- Areas -->
-                <?php
-                $sql = "SELECT areas FROM pacotes WHERE idpacote = '$idpacote';"; 
-                $res = mysqli_query($mysqli,$sql);
-                
-                if (!$res) {
-                  printf("Error: %s\n", mysqli_error($mysqli));
-                  exit();
-                }
-                
-                $row = mysqli_fetch_assoc($res);
-                echo $row['areas'];
-                
-                ?><br>
-                
-                <!-- Banho -->
-                
-                <?php
-                $sql = "SELECT banho FROM pacotes WHERE idpacote = '$idpacote';"; 
-                $res = mysqli_query($mysqli,$sql);
-                
-                if (!$res) {
-                  printf("Error: %s\n", mysqli_error($mysqli));
-                  exit();
-                }
-                
-                $row = mysqli_fetch_assoc($res);
-                echo $row['banho'];
-                
-                ?><br>
-                
-                <!-- Tosa -->
-                
-                <?php
-                $sql = "SELECT tosa FROM pacotes WHERE idpacote = '$idpacote';"; 
-                $res = mysqli_query($mysqli,$sql);
-                
-                if (!$res) {
-                  printf("Error: %s\n", mysqli_error($mysqli));
-                  exit();
-                }
-                
-                $row = mysqli_fetch_assoc($res);
-                echo $row['tosa'];
-                
-                
-                ?><br>
-                
-                <!-- Festa -->
-                
-                <?php                
-                $sql = "SELECT festa FROM pacotes WHERE idpacote = '$idpacote';"; 
-                $res = mysqli_query($mysqli,$sql);
-                
-                if (!$res) {
-                  printf("Error: %s\n", mysqli_error($mysqli));
-                  exit();
-                }
-                
-                $row = mysqli_fetch_assoc($res);
-                  echo $row['festa'];
-                  
-                
-                ?><br>
-                
-                </p>
-            </form>
-        </div>
-    </ul>
+        
+    echo"</ul>";
+              }
+              
+    ?>
     
 
 
