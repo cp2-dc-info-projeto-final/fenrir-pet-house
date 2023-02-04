@@ -15,6 +15,7 @@
  - [CDU 11](#CDU-11):Usuário edita seu email
  - [CDU 12](#CDU-12):Usuário exclui sua conta 
  - [CDU 13](#CDU-13) Administrador edita a reserva 
+ - [CDU 14](#CDU-14) Login do Administrador e do funcionário
 
 ## Lista dos Atores
 
@@ -31,7 +32,7 @@
 
 ### CDU 01
 
-Cliente, funcionário e administrador fazem login.
+Cliente fazendo login.
 ![Diagrama de CDU-01](Csos_2.png)
 ![Diagrama de CDU-01](CASOS-USO-ALTERNATIVO-1_1.png)
 
@@ -379,7 +380,36 @@ Administrador pode editar a reserva
 
 
 
+###  CDU  14
 
+Administrador e funcionário fazendo login
+
+**Fluxo Principal**
+
+1. O administrador pressiona o botão Login.
+2. Um Pop-up aparece com a mensagem "O que você é para nós?".
+3. Usuário seleciona uma das opções: cliente, funcionário/admin.
+4. Usuário pressiona o botão "Enviar".
+5. Um Pop-up aparece com os campos a serem preenchidos.
+6. Usuário insere o email corretamente.
+7. Usuário insere a senha corretamente.
+8. Usuário insere CPF corretamente.
+9. Usuário insere nome corretamente.
+10.Usuário insere data de nascimento corretamente.
+11.Caso o usuário queira se cadastrar como admin ele deve preencher o campo "código de amin", caso queira se cadastrar como funcionário ele não deve preencher este campo.
+12.Usuário pressiona o botão "Enviar".
+13.Usuário é redirecionado para o pop-up de login novamente.
+
+**Fluxo Alternativo A**
+
+1. O administrador pressiona o botão Login.
+2. Um Pop-up aparece com a mensagem "O que você é para nós?".
+3. Usuário seleciona uma das opções: cliente, funcionário/admin.
+4. Usuário pressiona o botão "Enviar".
+5. Um Pop-up aparece com os campos a serem preenchidos.
+6. O usuário preenche algum dos campos como: CPf, nome,email,data de nascimento ou senha incorretamente.
+12.Usuário pressiona o botão "Enviar".
+13.Usuário é redirecionado para o pop-up de cadastrado novamente com a mensagem de erro referente ao espaço que foi diitado errado.
 
 
 
