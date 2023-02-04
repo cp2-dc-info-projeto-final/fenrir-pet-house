@@ -76,12 +76,6 @@ CREATE TABLE `func` (
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
 --
--- Extraindo dados da tabela `func`
---
-
-INSERT INTO `func` (`cod_func`, `nome`, `email`, `data_nasc`, `senha`, `cpf`, `IsAdmin`) VALUES
-('1', 'Fenrir', 'fenrirpethouse@gmail.com', '01/01/2000', 'audmin', '00000000000', '1');
-
 -- --------------------------------------------------------
 
 --
