@@ -38,8 +38,6 @@ CREATE TABLE `cachorro` (
   `email_dono` varchar(220) NOT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
-INSERT INTO `cachorro` (`cod_cachorro`, `nome`, `idade`, `raca`, `email_dono`) VALUES
-('1', 'Fenrir', '5000 anos', 'Lobo Gigante', 'fenrirpethouse@gmail.com');
 
 -- --------------------------------------------------------
 
