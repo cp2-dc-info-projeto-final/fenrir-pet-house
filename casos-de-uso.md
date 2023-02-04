@@ -40,7 +40,7 @@ Cliente, funcionário e administrador fazem login.
 
 1. Usuário pressiona o botão Login.
 2. Um Pop-up aparece com a mensagem "O que você é para nós?".
-3. Usuário seleciona uma das opções: cliente, funcionário ou administrador.
+3. Usuário seleciona uma das opções: cliente, funcionário.
 4. Usuário pressiona o botão "Enviar".
 5. Um Pop-up aparece com os campos a serem preenchidos.
 6. Usuário insere o email corretamente.
@@ -52,7 +52,7 @@ Cliente, funcionário e administrador fazem login.
 
 1. Usuário pressiona o botão Login.
 2. Um Pop-up aparece com a mensagem "O que você é para nós?".
-3. Usuário seleciona uma das opções: cliente, funcionário ou administrador.
+3. Usuário seleciona uma das opções: cliente, funcionário.
 4. Usuário pressiona o botão "Enviar".
 5. Um Pop-up aparece com os campos a serem preenchidos.
 6. Usuário insere o email incorretamente.
@@ -97,11 +97,12 @@ Usuário se cadastra no site
 3. O usuário preenche o campo "E-mail" com um e-mail não presente no banco de dados do programa.
 4. O programa verifica a presença do e-mail no banco de dados.
 5. Usuário preenche o campo "Senha".
-6. Usuário preenche o campo "Nome" com seu nome completo.
-7. Usuário preenche o campo "Data de Nascimento" com sua data de nascimento na formatação DD/MM/YY
-8. Usuário pressiona botão "Enviar"
-9. As informações inseridas pelo usuário são enviadas ao banco de dados
-10. Usuário é redirecionado à página de login. 
+6. Usuário preenche o campo "Confirme a senha"
+7. Usuário preenche o campo "Nome" com seu nome completo.
+8. Usuário preenche o campo "Data de Nascimento" com sua data de nascimento na formatação DD/MM/YY
+9. Usuário pressiona botão "Enviar"
+10. As informações inseridas pelo usuário são enviadas ao banco de dados
+11. Usuário é redirecionado à página de login. 
 
 **Fluxo Alternativo A**
 
