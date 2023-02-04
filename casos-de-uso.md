@@ -51,7 +51,7 @@ Cliente, administrador e funcionário fazem login.
 8. Usuário pressiona o botão "Enviar".
 9. Usuário é redirecionado ao menu principal.
 
-![Diagrama de CDU-01](![image](https://user-images.githubusercontent.com/111150888/216793952-5c35ea92-6cb8-4d31-85ab-fbd9abc9d38c.png))
+![image](https://user-images.githubusercontent.com/111150888/216793952-5c35ea92-6cb8-4d31-85ab-fbd9abc9d38c.png)
 
 **Fluxo Alternativo A**
 
@@ -66,7 +66,7 @@ Cliente, administrador e funcionário fazem login.
 9. A página atualiza com os campos de e-mail e senha em branco.
 10. Um pop-up aparece com a mensagem "Senha e/ou Email inválido(s)!".
 
-![Diagrama de CDU-01](![image](https://user-images.githubusercontent.com/111150888/216794063-543b536e-dc8b-46a6-93eb-5326952f2601.png))
+![image](https://user-images.githubusercontent.com/111150888/216794063-543b536e-dc8b-46a6-93eb-5326952f2601.png)
 
 **Fluxo Alternativo B**
 
@@ -90,12 +90,12 @@ Cliente, funcionário e administrador fazem logout
 1. Usuário pressiona o botão "Logout".
 2. O programa desconecta a conta.
 
+![image](https://user-images.githubusercontent.com/111150888/216794327-7f018572-acc1-439f-ac43-8dd54f259085.png)
+
+
 ### CDU 03
 
 Cliente se cadastra no site
-
-![Diagrama de CDU-02](Csos_4.png)
-![Diagrama de CDU-02](CASOS-USO-ALTERNATIVO-1_2.png)
 
 **Fluxo Principal**
 
@@ -111,6 +111,9 @@ Cliente se cadastra no site
 10. As informações inseridas pelo usuário são enviadas ao banco de dados
 11. Usuário é redirecionado à página de login. 
 
+![image](https://user-images.githubusercontent.com/111150888/216794404-4c0cbb0a-bccb-4883-9d76-355426be07b6.png)
+
+
 **Fluxo Alternativo A**
 
 1. Usuário pressiona a mensagem "Ainda não tem conta?".
@@ -119,6 +122,9 @@ Cliente se cadastra no site
 4. O programa verifica a presença do e-mail no banco de dados.
 5. O programa exibe uma mensagem de "email já cadastrado".
 6. A página é atualizada com os campos em branco.
+
+![image](https://user-images.githubusercontent.com/111150888/216794447-7f0ca590-30f3-4324-b508-164f90ab2804.png)
+
 
 **Fluxo Alternativo B**
 
@@ -136,9 +142,6 @@ Cliente se cadastra no site
 
 Usuário reserva um horário para levar seu cachorro ao hotel.
 
-![Diagrama de CDU-03](Csos_6.png)
-![Diagrama de CDU-03](CASOS-USO-ALTERNATIVO-1_3.png)
-
 **Fluxo Principal**
 
 1. No menu principal, usuário pressiona o botão "Reservas".
@@ -152,6 +155,7 @@ Usuário reserva um horário para levar seu cachorro ao hotel.
 9. Usuário é redirecionado ao menu principal
 10. Um pop-up aparece com a mensagem "Reserva confirmada com sucesso.".
 
+
 **Fluxo Alternativo A**
 
 1. Usuário pressiona o botão "Reserva".
@@ -161,6 +165,7 @@ Usuário reserva um horário para levar seu cachorro ao hotel.
 6. O programa retorna com os pacotes e cães cadastrados para serem selecionados.
 7. O usuário não seleciona um dos pacotes.
 8. Um pop-up aparece com a mensagem "Selecione uma das opções".
+
 
 **Fluxo Alternativo B**
 
@@ -176,9 +181,6 @@ Usuário reserva um horário para levar seu cachorro ao hotel.
 ### CDU 05
 
 Usuário cadastra seu cachorro para fazer uma futura reserva
-
-![Diagrama de CDU-04](Csos_7.png)
-![Diagrama de CDU-04](CASOS-USO-ALTERNATIVO-1_4.png)
 
 **Fluxo Principal**
 
