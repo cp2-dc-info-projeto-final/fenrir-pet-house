@@ -17,9 +17,9 @@
  - [CDU 13](#CDU-13): Administrador edita uma reserva
  - [CDU 14](#CDU-14): Administrador cadastra reserva
  - [CDU 15](#CDU-15): Administrador exclui uma reserva
- - [CDU 15](#CDU-16): Administrador e funcionário editam um pacote
- - [CDU 16](#CDU-17): Administrador edita funcionário e cliente
- - [CDU 16](#CDU-18): Cadastro do Administrador e do funcionário
+ - [CDU 16](#CDU-16): Administrador e funcionário editam um pacote
+ - [CDU 17](#CDU-17): Administrador edita funcionário e cliente
+ - [CDU 18](#CDU-18): Cadastro do Administrador e do funcionário
 
 ## Lista dos Atores
 
@@ -37,8 +37,6 @@
 ### CDU 01
 
 Cliente, administrador e funcionário fazem login.
-![Diagrama de CDU-01](Csos_2.png)
-![Diagrama de CDU-01](CASOS-USO-ALTERNATIVO-1_1.png)
 
 
 **Fluxo Principal**
@@ -53,6 +51,8 @@ Cliente, administrador e funcionário fazem login.
 8. Usuário pressiona o botão "Enviar".
 9. Usuário é redirecionado ao menu principal.
 
+![Diagrama de CDU-01](![image](https://user-images.githubusercontent.com/111150888/216793952-5c35ea92-6cb8-4d31-85ab-fbd9abc9d38c.png))
+
 **Fluxo Alternativo A**
 
 1. Usuário pressiona o botão Login.
@@ -65,6 +65,8 @@ Cliente, administrador e funcionário fazem login.
 8. Usuário pressiona o botão "Enviar".
 9. A página atualiza com os campos de e-mail e senha em branco.
 10. Um pop-up aparece com a mensagem "Senha e/ou Email inválido(s)!".
+
+![Diagrama de CDU-01](![image](https://user-images.githubusercontent.com/111150888/216794063-543b536e-dc8b-46a6-93eb-5326952f2601.png))
 
 **Fluxo Alternativo B**
 
