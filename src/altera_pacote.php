@@ -21,7 +21,6 @@
           <div class="line3"></div>
         </div>
         <ul class="nav-list">
-
           <li><a href="admclient.php">Clientes</a></li>
           <li><a href="admfun.php">Funcionários</a></li>
           <li><a href="admpacotes.php">Pacotes</a></li>
@@ -38,6 +37,31 @@
     </body>
 
     <div class="fenrir-login">
+    <?php
+include "conectauser.inc";
+
+  $nome = $_POST["nome"];
+  $valor = $_POST["valor"];
+  $tempo = $_POST["tempo"];
+  $areas = $_POST["areas"];
+  $banho = $_POST["banho"];
+  $tosa = $_POST["tosa"];
+  $festa = $_POST["festa"];
+  $idpacote = $_POST["idpacote"];
+  echo $idpacote;
+
+  $sql = "UPDATE pacotes SET nome='$nome', valor='$valor', tempo='$tempo', areas='$areas', banho='$banho', tosa='$tosa', festa='$festa' WHERE idpacote='$idpacote'";
+  $res = mysqli_query($mysqli,$sql);
+
+  if($res){
+    echo "Pacote atualizado com sucesso!";
+  } else{
+    echo "Erro ao atualizar pacote.";
+  }
+
+
+mysqli_close($mysqli);
+?>
         <h1>Pacotes</h1>
         <?php include "conectauser.inc";
         $sql = "SELECT * FROM pacotes ;"; 
@@ -47,8 +71,8 @@
             $pacotes = mysqli_fetch_array($res);
             echo "Nome:".$pacotes["nome"]."<br><br>";
             echo "<form action='altera_pacote.php' method='post' class='form-container>'";
+            echo "<input type='hidden' name='idpacote' value='{$pacotes['idpacote']}'>";
             echo $pacotes["idpacote"];
-            echo "<p><input type='hidden' name='idpacote' value='{$pacotes["idpacote"]}'></p>";
             echo "<p>Editar Nome:: <input type='text' placeholder='Insira o nome dos pacotes.' name='nome' value='{$pacotes["nome"]}'></p><br>";
             echo "<p>Editar Valor: <input type='text' placeholder='Insira o valor dos pacotes.' name='valor' value='{$pacotes["valor"]}'></p><br>";
             echo "<p>Editar Tempo: <input type='text' placeholder='Insira o tempo dos pacotes.' name='tempo' value='{$pacotes["tempo"]}'></p><br>";
@@ -78,9 +102,7 @@
         
         
         
-        
         ?>
-        
         
     </div>
 
@@ -115,3 +137,14 @@
 
   </body>
 </html>
+
+
+
+
+
+
+
+
+
+
+

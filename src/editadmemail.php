@@ -24,6 +24,7 @@
         <ul class="nav-list">
           <li><a href="admclient.php">Clientes</a></li>
           <li><a href="admfun.php">Funcionários</a></li>
+          <li><a href="admpacotes.php">Pacotes</a></li>
           <li><a href="admservico.php">Reservas</a></li>
           <li><a href="admconta.php">Conta</a></li>
           <li><a href="logout.php">Logout</a></li>
