@@ -4,18 +4,20 @@
 
  - [CDU 01](#CDU-01): Fazer Login 
  - [CDU 02](#CDU-02): Fazer Logout  
- - [CDU 03](#CDU-03): Cadastro de usuário 
+ - [CDU 03](#CDU-03): Cadastro de cliente
  - [CDU 04](#CDU-04): Reserva de Horário
  - [CDU 05](#CDU-05): Cadastro de Cachorro 
  - [CDU 06](#CDU-06): Consulta do usuário nos horários reservados 
  - [CDU 07](#CDU-07): Recuperação de senha por cliente
  - [CDU 08](#CDU-08): Visualizar pacotes
  - [CDU 09](#CDU-09): Usuário visualiza seus dados
- - [CDU 10](#CDU-10): Usuário edita sua senha  
- - [CDU 11](#CDU-11):Usuário edita seu email
- - [CDU 12](#CDU-12):Usuário exclui sua conta 
- - [CDU 13](#CDU-13) Administrador edita a reserva 
- - [CDU 14](#CDU-14) Login do Administrador e do funcionário
+ - [CDU 10](#CDU-10): Cliente. administrador e funcionário editam sua senha  
+ - [CDU 11](#CDU-11): Cliente. administrador e funcionário editam seu email
+ - [CDU 12](#CDU-12): Cliente. administrador e funcionário excluem sua conta 
+ - [CDU 13](#CDU-13): Administrador edita a reserva
+ - [CDU 14](#CDU-14): Administrador cadastra reserva
+ - [CDU 13](#CDU-13): Administrador excluir a reserva  
+ - [CDU 15](#CDU-15): Cadastro do Administrador e do funcionário
 
 ## Lista dos Atores
 
@@ -32,7 +34,7 @@
 
 ### CDU 01
 
-Cliente fazendo login.
+Cliente, administrador e funcionário fazem login.
 ![Diagrama de CDU-01](Csos_2.png)
 ![Diagrama de CDU-01](CASOS-USO-ALTERNATIVO-1_1.png)
 
@@ -77,7 +79,7 @@ Cliente fazendo login.
 
 ### CDU 02
 
-Usuário faz logout
+Cliente, funcionário e administrador fazem logout
 
 **Fluxo Principal**
 
@@ -86,7 +88,7 @@ Usuário faz logout
 
 ### CDU 03
 
-Usuário se cadastra no site
+Cliente se cadastra no site
 
 ![Diagrama de CDU-02](Csos_4.png)
 ![Diagrama de CDU-02](CASOS-USO-ALTERNATIVO-1_2.png)
@@ -346,7 +348,7 @@ Usuário altera seu email
 
 ### CDU 12
 
-Usuário deseja deletar a conta
+Usuário deletar a conta
 
 **Fluxo Principal**
 
@@ -372,7 +374,7 @@ Usuário deseja deletar a conta
 
 ### CDU 13
 
-Administrador pode editar a reserva
+Administrador edita uma reserva
 
 **Fluxo Principal**
 
