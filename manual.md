@@ -8,7 +8,7 @@
 
 ## Interface do site
 01.Para início, o usuário se depara com a página principal do site. 
-[interface png](https://user-images.githubusercontent.com/111150888/216731055-c3114858-893c-4345-a14c-da78de0854a1.png)
+![image](https://user-images.githubusercontent.com/111150888/216732707-6a120532-dc93-433e-96e3-47c70505f112.png)
 
 02. A fim de saber mais sobre a Hotelaria Fenrir Pet House o usuário clica no botão “Sobre Nós” localizado no menu principal, no qual será imprimido na tela um pop-up  contando sobre a história da nossa instituição.
 ![Captura de Tela (25)](https://user-images.githubusercontent.com/111150888/216731584-c721d841-2337-4318-914f-75a7629f239a.png)
