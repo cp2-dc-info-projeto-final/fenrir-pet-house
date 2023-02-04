@@ -2,22 +2,24 @@
 
 ## Lista dos Casos de Uso
 
- - [CDU 01](#CDU-01): Fazer Login 
- - [CDU 02](#CDU-02): Fazer Logout  
+ - [CDU 01](#CDU-01): Usuário faz Login 
+ - [CDU 02](#CDU-02): Usuário faz Logout  
  - [CDU 03](#CDU-03): Cadastro de cliente
  - [CDU 04](#CDU-04): Reserva de Horário
  - [CDU 05](#CDU-05): Cadastro de Cachorro 
- - [CDU 06](#CDU-06): Consulta do usuário nos horários reservados 
- - [CDU 07](#CDU-07): Recuperação de senha por cliente
+ - [CDU 06](#CDU-06): Consulta do cliente nos horários reservados 
+ - [CDU 07](#CDU-07): Recuperação de senha
  - [CDU 08](#CDU-08): Visualizar pacotes
  - [CDU 09](#CDU-09): Usuário visualiza seus dados
- - [CDU 10](#CDU-10): Cliente. administrador e funcionário editam sua senha  
- - [CDU 11](#CDU-11): Cliente. administrador e funcionário editam seu email
- - [CDU 12](#CDU-12): Cliente. administrador e funcionário excluem sua conta 
- - [CDU 13](#CDU-13): Administrador edita a reserva
+ - [CDU 10](#CDU-10): Usuário edita sua senha  
+ - [CDU 11](#CDU-11): Usuário edita seu email
+ - [CDU 12](#CDU-12): Usuário exclui sua conta 
+ - [CDU 13](#CDU-13): Administrador edita uma reserva
  - [CDU 14](#CDU-14): Administrador cadastra reserva
- - [CDU 13](#CDU-13): Administrador excluir a reserva  
- - [CDU 15](#CDU-15): Cadastro do Administrador e do funcionário
+ - [CDU 15](#CDU-15): Administrador exclui uma reserva
+ - [CDU 15](#CDU-16): Administrador e funcionário editam um pacote
+ - [CDU 16](#CDU-17): Administrador edita funcionário e cliente
+ - [CDU 16](#CDU-18): Cadastro do Administrador e do funcionário
 
 ## Lista dos Atores
 
@@ -255,7 +257,7 @@ Usuário visualiza pacotes.
 
 ### CDU 09
 
-Cliente visualiza seus dados da conta.
+Usuário visualiza seus dados da conta.
 
 **Fluxo Principal**
 
@@ -267,7 +269,7 @@ Cliente visualiza seus dados da conta.
 
 ### CDU 10
 
-Cliente altera sua senha.
+Usuário altera sua senha.
 
 **Fluxo Principal**
 
@@ -348,7 +350,7 @@ Usuário altera seu email
 
 ### CDU 12
 
-Usuário deletar a conta
+Usuário deleta sua conta
 
 **Fluxo Principal**
 
@@ -378,11 +380,51 @@ Administrador edita uma reserva
 
 **Fluxo Principal**
 
-1. 
+1. Administrador clica em "Editar reserva".
+2. O programa retorna um pop-up com o campo de alteração de horário.
+3. Administrador preenche uma nova data e/ou horário e clica em "alterar".
+4. Nova data e/ou horário é armazenada no banco de dados.
 
+### CDU 14
 
+Administrador cadastra uma reserva
 
-###  CDU  14
+**Fluxo Principal**
+
+1. Administrador clica em "Cadastrar uma reserva".
+2. O programa retorna um pop-up com os campos de cadastro.
+3. Administrador preenche um ID não cadastrado no banco de dados.
+4. Administrador preenche uma nova data e/ou horário e clica em "criar reserva".
+5. Nova reserva é armazenada no banco de dados.
+
+**Fluxo Alternativo A**
+
+1. Administrador clica em "Cadastrar uma reserva".
+2. O programa retorna um pop-up com os campos de cadastro.
+3. Administrador preenche um ID já cadastrado no banco de dados.
+4. O programa retorna uma mensagem de alerta de ID já cadastrado.
+5. Administrador clica em "ok".
+6. Administrador volta para a página de cadastro.
+
+### CDU 15
+
+Administrador exclui uma reserva
+
+**Fluxo Principal**
+
+1. Administrador clica em "excluir reserva".
+2. O programa retorna um pop-up solicitando a senha do administrador.
+3. Administrador insere sua senha e clica em "Excluir".
+4. O programa exclui a reserva do banco de dados e redireciona o adm para "Reservas".
+
+**Fluxo Alternativo**
+
+1. Administrador clica em "excluir reserva".
+2. O programa retorna um pop-up solicitando a senha do administrador.
+3. Administrador insere uma senha incorreta e clica em "Excluir".
+4. O programa retorna uma mensagem de aviso de senha incorreta.
+
+### CDU  14
 
 Administrador e funcionário fazendo login
 
