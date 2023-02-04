@@ -116,7 +116,10 @@
                         echo mysqli_error($mysqli);
                     }
                     envia_email($email, "Confirmação de Cadastro", "$nome, sua conta foi criada na hospedaria canina Fenrir Pet House como administrador. Esperamos que você dê seu melhor e desfrute do seu novo trabalho! Caso você não tenha feito essa conta, ignore essa mensagem.");
-                    echo "Funcionário/Administrador cadastrado com sucesso!";
+                    echo '<script type="text/javascript">';
+                    echo 'alert("Cadastro concluído com sucesso.");';
+                    echo 'window.location.href = "admfun.php";';
+                    echo '</script>';
                   }
                   else{
                     include_once "envia_email.php";
@@ -128,7 +131,10 @@
                         echo mysqli_error($mysqli);
                     }
                     envia_email($email, "Confirmação de Cadastro", "$nome, sua conta foi criada na hospedaria canina Fenrir Pet House. Esperamos que você dê seu melhor e desfrute do seu novo trabalho! Caso você não tenha feito essa conta, ignore essa mensagem.");
-                    echo "Funcionário/Administrador cadastrado com sucesso!<br>";
+                    echo '<script type="text/javascript">';
+                    echo 'alert("Cadastro concluído com sucesso.");';
+                    echo 'window.location.href = "admfun.php";';
+                    echo '</script>';
                   }
                 }
 

@@ -48,10 +48,6 @@
             if($operacao == "inserir"){
                 $idservico = $_POST["idservico"]; 
                 $agenda_tstamp = $_POST["agenda_tstamp"];
-                $plano = !empty($plano) ? "'$plano'" : "NULL";
-                $cachorro = !empty($cachorro) ? "'$cachorro'" : "NULL";
-                $cliente = !empty($cliente) ? "'$cliente'" : "NULL";
-                $agenda_status = !empty($agenda_status) ? "'$agenda_status'" : "NULL";
 
                 $erro = 0;
 
@@ -71,15 +67,20 @@
                     $result = mysqli_query($mysqli, $sql);
                     $num_rows = mysqli_num_rows($result);
                     if ($num_rows > 0) {
-                      echo "ID já cadastrado<br>";
+                      echo '<script type="text/javascript">';
+                      echo 'alert("ID já cadastrado.");';
+                      echo 'window.location.href = "cadastrarreserv.php";';
+                      echo '</script>';
                     } 
                     else {
 
                       $sql = "INSERT INTO servico (idservico,agenda_tstamp, plano, cachorro, cliente, agenda_status)";
-                      $sql .= "VALUES ('$idservico','$agenda_tstamp');";
-                      $sql .= "VALUES (NULL,'$plano','$cachorro','$cliente','$agenda_status');";
+                      $sql .= "VALUES ('$idservico','$agenda_tstamp','.','.','.',0);";
                       mysqli_query($mysqli,$sql);
-                      echo "Reserva criada com sucesso<br><br>";
+                      echo '<script type="text/javascript">';
+                      echo 'alert("Horário para reserva criado.");';
+                      echo 'window.location.href = "admservico.php";';
+                      echo '</script>';
                     }
                 }
             }

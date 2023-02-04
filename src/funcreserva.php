@@ -74,8 +74,6 @@
               echo "<strong>Cachorro: </strong>".$servico["cachorro"]."<br>";
               echo "<strong>Email do dono: </strong>".$servico["cliente"]."<br>";
               echo "<strong>ID do Serviço: </strong>".$servico["idServico"]."<br>";   
-              echo "<a href='altagendamento.php?idservico=".$servico["idServico"]."'><strong>Editar Reserva</strong></a><br>";
-              echo "<a href='deletaagenda.php?idservico=".$servico["idServico"]."'><strong>Excluir Reserva</strong></a><br>";
               echo "---------------------<br>";
               mysqli_error($mysqli);
           }

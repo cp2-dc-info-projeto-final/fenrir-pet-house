@@ -49,7 +49,6 @@
 
             ?>
                     <?php 
-            $_SESSION["email"];
             $senha = $_POST["senha"];
 
 
@@ -60,13 +59,19 @@
 
             //checa senha
             if(password_verify($senha, $row['senha'])){
-                //deleta conta
-                $sql2 ="DELETE FROM servico WHERE idServico = '{$_SESSION["idServico"]}' ";
+                //deleta horário
+                $sql2 ="DELETE FROM servico WHERE idServico = '{$_SESSION["idservico"]}' ";
                     if(mysqli_query($mysqli, $sql2)){
-                        header('location: admservicos.html');
+                      echo '<script type="text/javascript">';
+                      echo 'alert("Horário para reserva excluído.");';
+                      echo 'window.location.href = "admservico.php";';
+                      echo '</script>';
                     }
                 }
-            echo "<br>Senha incorreta!";
+                echo '<script type="text/javascript">';
+                echo 'alert("Senha incorreta.");';
+                echo 'window.location.href = "deletaagenda.php";';
+                echo '</script>';;
             ?>
           <p><Br>Digite sua Senha para poder excluir: <input type="password" placeholder="insira Senha" name="senha"></p>
           <p><input type="submit" value="Excluir" class="btn"></p>    

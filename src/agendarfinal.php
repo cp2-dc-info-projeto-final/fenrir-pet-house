@@ -3,18 +3,18 @@ include "conectauser.inc";
 include "envia_email.php";
 $id = $_GET['idservico'];
 $cachorro = $_POST['cachorro'];
-$plano = $_POST['plano'];
+$pacote = $_POST['pacote'];
 session_start();
 
 if($cachorro == null){
     header ("Location: agendarinc.php");
 }else{
-if($plano == null){
+if($pacote == null){
     header ("Location: agendarinc.php");
 }else{
 
 
-$sql = "UPDATE servico SET plano = '$plano' WHERE idServico='$id' ";
+$sql = "UPDATE servico SET plano = '$pacote' WHERE idServico='$id' ";
 mysqli_query($mysqli,$sql);
 
 $sql = "UPDATE servico SET agenda_status = 1 WHERE idServico='$id'";
