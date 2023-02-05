@@ -125,7 +125,7 @@ Cliente se cadastra no site
 5. O programa exibe uma mensagem de "email já cadastrado".
 6. A página é atualizada com os campos em branco.
 
-![image](https://user-images.githubusercontent.com/111150888/216794447-7f0ca590-30f3-4324-b508-164f90ab2804.png)
+![image](https://user-images.githubusercontent.com/111150888/216799173-839cd6cc-8392-4d40-ab18-818133eb0fdf.png)
 
 
 **Fluxo Alternativo B**
@@ -207,7 +207,7 @@ Usuário cadastra seu cachorro para fazer uma futura reserva
 2. O usuário  não  preenche o campo "Nome" ou qualquer outro campo requisitado. 
 3. O programa retorna com uma mensagem de "Preencha todos os campos" 
 
-![image](https://user-images.githubusercontent.com/111150888/216795369-b55791a7-646b-4748-b913-ec9daf639c7c.png)
+![image](https://user-images.githubusercontent.com/111150888/216799128-ff61c22a-2fab-4e50-b749-9860c690ef44.png)
 
 
 **Fluxo Alternativo B**
@@ -523,7 +523,7 @@ Administrador edita funcionário e cliente
 
 ### CDU  18
 
-Administrador e funcionário fazendo login
+Cadastro de administrador e funcionário
 
 **Fluxo Principal**
 
@@ -540,6 +540,9 @@ Administrador e funcionário fazendo login
 11.Caso o usuário queira se cadastrar como admin ele deve preencher o campo "código de amin", caso queira se cadastrar como funcionário ele não deve preencher este campo.
 12.Usuário pressiona o botão "Enviar".
 13.Usuário é redirecionado para o pop-up de login novamente.
+
+![image](https://user-images.githubusercontent.com/111150888/216799243-a3b1cc8d-059e-4ff0-99d0-78b50a54546f.png)
+
 
 **Fluxo Alternativo A**
 
