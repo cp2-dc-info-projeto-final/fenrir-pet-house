@@ -189,7 +189,7 @@
 
 ![image](https://user-images.githubusercontent.com/111150756/216795232-7099d99d-51ad-4986-acec-c76d11204d63.png)
 
-## Edição e cadastro de clientes p/administrador
+## Edição e cadastro de clientes administrador
 
 -1. O administrador tem o poder de ver os clientes e cadastrá-los no site, ele poderá fazer isso clicando no tópico “clientes” localizado no menu principal.Após isso um pop-up com os tópicos “ cadastrar cliente” e “exibir clientes”aparecerá.
 
