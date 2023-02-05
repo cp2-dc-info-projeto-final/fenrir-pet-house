@@ -124,9 +124,9 @@ ALTER TABLE `pacotes` CHANGE `idpacote` `idpacote` INT(255) NOT NULL AUTO_INCREM
 --
 
 INSERT INTO `pacotes` (`idpacote`, `nome`, `valor`, `tempo`, `areas`, `banho`, `tosa`, `festa`) VALUES
-(1, 'Pacote Tchutchuquito', '- Pacote Tchutchuquito (R$90)', '- Um dia e uma noite.', '- Acesso as areas da praia e o parquinho', '- 1 banho por semana.', NULL, NULL),
-(2, 'Pacote Tchutchuco', '- Pacote tchutchuco (R$130)', '- Dois dias e duas noites.', '- Acesso as areas da praia, parquinho e a Arena de Sabao.', '- 1 banho por semana.', '- 1 tosa a cada dois meses', NULL),
-(3, 'Pacote Tchutchucao', '- Pacote tchutchucao (R$190)', '- Tres dias e tres noites.', '- Acesso a todas as areas da hospedagem.', '- 1 banho por semana', '- 1 tosa todo mes.', '- Festinha no AUniversario do dog.');
+(1, 'Pacote Tchutchuquito', '- Pacote Tchutchuquito (R$90)', '- Um dia e uma noite.', '- Acesso as áreas da praia e o parquinho', '- 1 banho por semana.', NULL, NULL),
+(2, 'Pacote Tchutchuco', '- Pacote tchutchuco (R$130)', '- Dois dias e duas noites.', '- Acesso as áreas da praia, parquinho e a Arena de Sabão.', '- 1 banho por semana.', '- 1 tosa a cada dois meses', NULL),
+(3, 'Pacote Tchutchucão', '- Pacote tchutchucão (R$190)', '- Três dias e três noites.', '- Acesso a todas as áreas da hospedagem.', '- 1 banho por semana', '- 1 tosa todo mês.', '- Festinha no AUniversário do dog.');
 
 --
 -- Indexes for dumped tables
