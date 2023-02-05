@@ -1,4 +1,4 @@
-**Lista de  Funcionalidades(usuário)**
+**Lista de  Funcionalidades (usuário)**
 - [Interface](#Interface-do-site)
 - [Login](#Login)
 - [Recuperação de senha](#Recuperação-de-senha)
@@ -23,9 +23,9 @@
 - [Cadastro do funcionário](#Cadastro-do-funcionário)
 - [Recuperação de senha](#Recuperação-de-senha)
 - [Funcionalidades da conta funcionário](#Funcionalidades-da-conta-funcionário)
-- [Alterar pacote e visualizar reserva](#Alterar-pacote-e-visualizar-reserva)
+- [Alterar pacote e visualizar reservas](#Alterar-pacote-e-visualizar-reservas)
 - [Logout](#Logout)
-- 
+
 
 
 ## Interface do site
