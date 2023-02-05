@@ -144,38 +144,33 @@ Usuário reserva um horário para levar seu cachorro ao hotel.
 
 **Fluxo Principal**
 
-1. No menu principal, usuário pressiona o botão "Reservas".
-2. O programa retorna tres pop-ups com os pacotes disponíveis
-3. O usuário já logado pode visualizar os horários para reserva clicando em "reservas" no menu.
-4. Se o usuário já tiver seu cachorro cadastrado ele deve escolher o pacote desejado.
-5. O usuário é redirecionado a os horários e datas disponíveis onde ele escolhe os dias em que pretende reservar.
-6. O programa verifica os dias e os horários selecionados.
-7. O usuário seleciona um dos cachorros cadastrados por ele para a reserva.
-8. O usuário pressiona o botão "Reserva" 
-9. Usuário é redirecionado ao menu principal
-10. Um pop-up aparece com a mensagem "Reserva confirmada com sucesso.".
+1. Ao clicar em "Reservas" e cadastrar o cachorro, o programa irá exibir as reservas disponíveis.
+2. O cliente seleciona uma reserva.
+3. O programa retorna um pop-up com os pacotes e cachorros cadastrados.
+4. O usuário seleciona o pacote e o cachorro.
+5. O usuário pressiona o botão "Reserva".
+6. Reserva é armazenada no banco de dados.
+7. O cliente é redirecionado as reservas feitas.
 
 
 **Fluxo Alternativo A**
 
-1. Usuário pressiona o botão "Reserva".
-2. Usuário é redirecionado a os horários onde escolhe os dias que pretende reservar.
-3. O programa verifica os dias selecionados.
-5. Usuário seleciona um dos dias com horários disponíveis.
-6. O programa retorna com os pacotes e cães cadastrados para serem selecionados.
-7. O usuário não seleciona um dos pacotes.
-8. Um pop-up aparece com a mensagem "Selecione uma das opções".
+1. Ao clicar em "Reservas" e cadastrar o cachorro, o programa irá exibir as reservas disponíveis.
+2. O cliente seleciona uma reserva.
+3. O programa retorna um pop-up com os pacotes e cachorros cadastrados.
+4. O usuário não seleciona um dos pacotes.
+5. 5. O usuário pressiona o botão "Reserva".
+6. Um pop-up aparece com a mensagem "Selecione uma das opções".
 
 
 **Fluxo Alternativo B**
 
-1. Usuário pressiona o botão "Reserva".
-2. Usuário é redirecionado a os horários onde escolhe os dias que pretende reservar.
-3. O programa verifica os dias selecionados.
-5. Usuário seleciona um dos dias com horários disponíveis.
-6. O programa retorna com os pacotes e caes cadastrados para serem selecionados.
-7. O usuário não seleciona um dos cães cadastrados.
-8. Um pop-up aparece com a mensagem "Selecione uma das opções".
+1. Ao clicar em "Reservas" e cadastrar o cachorro, o programa irá exibir as reservas disponíveis.
+2. O cliente seleciona uma reserva.
+3. O programa retorna um pop-up com os pacotes e cachorros cadastrados.
+4. O usuário não seleciona um dos cachorros.
+5. 5. O usuário pressiona o botão "Reserva".
+6. Um pop-up aparece com a mensagem "Selecione uma das opções"
 
 
 ### CDU 05
