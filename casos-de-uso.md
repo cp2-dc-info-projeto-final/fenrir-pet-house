@@ -2,18 +2,18 @@
 
 ## Lista dos Casos de Uso
 
- - [CDU 01](#CDU-01): Usuário faz Login 
- - [CDU 02](#CDU-02): Usuário faz Logout  
- - [CDU 03](#CDU-03): Cadastro de cliente
- - [CDU 04](#CDU-04): Reserva de Horário
- - [CDU 05](#CDU-05): Cadastro de Cachorro 
+ - [CDU 01](#CDU-01): Usuário faz Login ✔️
+ - [CDU 02](#CDU-02): Usuário faz Logout  ✔️
+ - [CDU 03](#CDU-03): Cadastro de cliente ✔️
+ - [CDU 04](#CDU-04): Reserva de Horário 
+ - [CDU 05](#CDU-05): Cadastro de Cachorro ✔️
  - [CDU 06](#CDU-06): Consulta do cliente nos horários reservados 
  - [CDU 07](#CDU-07): Recuperação de senha
- - [CDU 08](#CDU-08): Visualizar pacotes
- - [CDU 09](#CDU-09): Usuário visualiza seus dados
+ - [CDU 08](#CDU-08): Visualizar pacotes ✔️
+ - [CDU 09](#CDU-09): Usuário visualiza seus dados ✔️
  - [CDU 10](#CDU-10): Usuário edita sua senha  
  - [CDU 11](#CDU-11): Usuário edita seu email
- - [CDU 12](#CDU-12): Usuário exclui sua conta 
+ - [CDU 12](#CDU-12): Usuário exclui sua conta ✔️
  - [CDU 13](#CDU-13): Administrador edita uma reserva
  - [CDU 14](#CDU-14): Administrador cadastra reserva
  - [CDU 15](#CDU-15): Administrador exclui uma reserva
@@ -180,7 +180,7 @@ Usuário cadastra seu cachorro para fazer uma futura reserva
 **Fluxo Principal**
 
 1. No menu principal, usuário pressiona o botão "Reservas".
-2. O programa retorna tres pop-ups com o formulário do cadastro do cachorro.
+2. O programa retorna o forulário de cadastro de cachorro.
 5. O usuário preenche o campo "Nome" com um texto de pelo menos 3 caracteres e sem caracteres especiais.
 6. O programa verifica se o texto possui 3 caracteres ou mais e não possui caracteres especiais.
 7. Usuário preenche o campo "Raça" com um texto com pelo menos 4 caracteres e sem caracteres especiais.
@@ -190,11 +190,17 @@ Usuário cadastra seu cachorro para fazer uma futura reserva
 10. As informações inseridas pelo usuário são enviadas ao banco de dados.
 11. Usuário é redirecionado aos horários disponíveis.
 
+![image](https://user-images.githubusercontent.com/111150888/216795355-7889a134-8c7a-4e6b-9992-d7f9b1e9efb1.png)
+
+
 **Fluxo Alternativo A**
 
 1. No menu principal, usuário pressiona o botão "Reserva". 
 2. O usuário  não  preenche o campo "Nome" ou qualquer outro campo requisitado. 
 3. O programa retorna com uma mensagem de "Preencha todos os campos" 
+
+![image](https://user-images.githubusercontent.com/111150888/216795369-b55791a7-646b-4748-b913-ec9daf639c7c.png)
+
 
 **Fluxo Alternativo B**
 
@@ -212,9 +218,6 @@ Usuário cadastra seu cachorro para fazer uma futura reserva
 ### CDU 06
 
 Cliente consulta os horários reservados
-
-![Diagrama de CDU-06](Csos_7.png)
-![Diagrama de CDU-06](CASOS-USO-ALTERNATIVO-1_6.png)
 
 **Fluxo principal**
 
