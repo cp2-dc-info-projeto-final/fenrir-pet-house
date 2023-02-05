@@ -66,7 +66,9 @@ Cliente, administrador e funcionário fazem login.
 9. A página atualiza com os campos de e-mail e senha em branco.
 10. Um pop-up aparece com a mensagem "Senha e/ou Email inválido(s)!".
 
-![image](https://user-images.githubusercontent.com/111150888/216794063-543b536e-dc8b-46a6-93eb-5326952f2601.png)
+![image](https://user-images.githubusercontent.com/111150888/216799011-28367e96-e0d4-49a2-a5de-37ee102f8227.png)
+
+
 
 **Fluxo Alternativo B**
 
@@ -111,7 +113,7 @@ Cliente se cadastra no site
 10. As informações inseridas pelo usuário são enviadas ao banco de dados
 11. Usuário é redirecionado à página de login. 
 
-![image](https://user-images.githubusercontent.com/111150888/216794404-4c0cbb0a-bccb-4883-9d76-355426be07b6.png)
+![image](https://user-images.githubusercontent.com/111150888/216799067-cdaf7f9c-8122-496a-892c-4cd4b2c5e41b.png)
 
 
 **Fluxo Alternativo A**
