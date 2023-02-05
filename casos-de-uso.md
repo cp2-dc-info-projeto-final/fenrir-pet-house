@@ -426,7 +426,40 @@ Administrador exclui uma reserva
 3. Administrador insere uma senha incorreta e clica em "Excluir".
 4. O programa retorna uma mensagem de aviso de senha incorreta.
 
-### CDU  14
+### CDU 16
+
+Administrador e funcionário editam um pacote
+
+**Fluxo Principal**
+
+1. Usuário clica em "alterar pacote".
+2. Programa retorna Um pop-up com os campos a serem alterados.
+3. Usuário edita o(s) campo(s) desejado(s) e envia.
+4. A alteração é armazenada no banco de dados.
+5. Usuário é redirecionado a página dos pacotes.
+
+### CDU 17
+
+Administrador edita funcionário e cliente
+
+**Fluxo principal**
+
+1. Administrador clica em "Editar usuário".
+2. O programa retorna um pop-up com os campos nome e email a serem editados.
+3. Administrador preenche o campo desejado.
+4. Administrador clica em "Enviar".
+5. O programa armazena a edição no banco de dados.
+6. O programa retorna uma mensagem de confirmação de edição.
+
+**Fluxo Alternativo A**
+
+1. Administrador clica em "Editar usuário".
+2. O programa retorna um pop-up com os campos nome e email a serem editados.
+3. Administrador preenche o campo desejado com dado inválido.
+4. Administrador clica em "Enviar"..
+6. O programa retorna uma mensagem de erro.
+
+### CDU  18
 
 Administrador e funcionário fazendo login
 
@@ -456,17 +489,3 @@ Administrador e funcionário fazendo login
 6. O usuário preenche algum dos campos como: CPf, nome,email,data de nascimento ou senha incorretamente.
 12.Usuário pressiona o botão "Enviar".
 13.Usuário é redirecionado para o pop-up de cadastrado novamente com a mensagem de erro referente ao espaço que foi diitado errado.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
