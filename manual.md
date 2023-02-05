@@ -9,6 +9,12 @@
 
 ------------------------------------------------------
 
+- [Login do administrador](#Login-do-administrador)
+- [Cadastro do administrador](#Cadastro-do-administrador)
+- [Recuperação de senha](#Recuperação-de-senha)
+- [Edição e cadastro de clientes p/administrador](#Funcionalidades-da-conta)
+- [Funcionalidades da conta (administrador)](#Funcionalidades-da-conta-(administrador))
+
 
 
 ## Interface do site
@@ -158,7 +164,7 @@
 ![image](https://user-images.githubusercontent.com/111150756/216795092-d4180772-136f-481b-8803-9ae11d3ca0b6.png)
 
 
-## cadastro do administrador
+## Cadastro do administrador
 
 -1.Caso o administrador ainda não tenha criado uma conta, ele pode se cadastrar apertando o link “Ainda não tem uma conta,funcionário?” e preenchendo os dados solicitados.
 
@@ -183,7 +189,7 @@
 
 ![image](https://user-images.githubusercontent.com/111150756/216795232-7099d99d-51ad-4986-acec-c76d11204d63.png)
 
-## Funcionalidades do administrador
+## Edição e cadastro de clientes p/administrador
 
 -1. O administrador tem o poder de ver os clientes e cadastrá-los no site, ele poderá fazer isso clicando no tópico “clientes” localizado no menu principal.Após isso um pop-up com os tópicos “ cadastrar cliente” e “exibir clientes”aparecerá.
 
@@ -224,6 +230,49 @@
 -1.10 Assim como pode excluir a conta de um funcionário ou cliente, clicando em “excluir usuário” e confirmando sua senha.
 
 ![image](https://user-images.githubusercontent.com/111150756/216795657-c646bfec-2ac0-4644-a033-1af0848ff9c4.png)
+
+
+## Funcionalidades da conta (Administrador)
+
+-1.Já com a conta criada o administrador poderá ter acesso aos seus dados através do botão “conta” localizado no menu principal. O administrador poderá exibir seus dados e editar:email e senha.Ele poderá ter acesso clicando nos respectivos tópicos.
+
+![image](https://user-images.githubusercontent.com/111150888/216787986-eb29844c-9456-4fe4-83ca-200b2d996fec.png)
+
+-1.2 Clicando no tópico “Editar Senha” o administrador poderá mudar sua senha preenchendo os campos solicitados.
+
+![image](https://user-images.githubusercontent.com/111150888/216788163-ce2c58ff-8d93-496c-89b8-d343a4007ab7.png)
+
+-1.3 Caso o administrador erre a digitação de sua antiga senha, o pop-up de “Senha incorreta” aparecerá na tela, sinalizando que o usuário deve digitar sua senha correta.
+
+![image](https://user-images.githubusercontent.com/111150888/216788242-cd0dbcfb-1151-4671-a675-83a123fd16e1.png)
+
+-1.4 Ao finalizar o cadastro de uma nova senha o pop-up de “Senha Alterada com Sucesso!” aparecerá na tela.
+
+![image](https://user-images.githubusercontent.com/111150888/216788296-2f11132d-80be-42d3-a1a1-4f1680f32265.png)
+
+-1.5 Para ter acesso aos dados cadastrados pelo administrador no site, ele deve clicar no tópico “mostrar dados” que automaticamente serão imprimidos na tela:
+
+![image](https://user-images.githubusercontent.com/111150888/216788390-37a5972c-e6eb-4634-8997-4a07e00714d3.png)
+
+-1.6 Clicando no tópico “Editar email” o administrador poderá alterar seu email preenchendo os campos solicitados e após isso ele automaticamente será redirecionado a página principal.
+
+![image](https://user-images.githubusercontent.com/111150888/216788491-9b61aa21-a474-43a1-aa0a-b98ef05ceca9.png)
+
+-1.7 Caso o administrador erre a digitação de sua antiga senha, o pop-up de “Senha incorreta” aparecerá na tela, sinalizando que ele deve digitar sua senha correta.
+
+![image](https://user-images.githubusercontent.com/111150888/216788657-ce88892c-7f9f-43c6-9108-f24ff8577981.png)
+
+-1.8 Para excluir a conta do site o administrador deve clicar no tópico “ excluir conta”, confirmar seu email e sua senha. Após o envio dos dados nos respectivos campos, a conta do administrador será excluída. 
+
+![image](https://user-images.githubusercontent.com/111150888/216788912-c76de417-03a9-41df-a9de-1f80fccb5cda.png)
+
+-1.9 Caso o administrador erre a senha nos campos do pop-up de exclusão da conta, a seguinte mensagem aparecerá na tela:(ao confirmar os dados corretamente o usuário será redirecionado a tela inicial mas já sem conta)
+
+![image](https://user-images.githubusercontent.com/111150888/216789013-2e6d0394-8bfa-4282-acf0-a86c5298afa6.png)
+
+
+
+
 
 
 
