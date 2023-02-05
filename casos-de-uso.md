@@ -387,6 +387,9 @@ Administrador edita uma reserva
 3. Administrador preenche uma nova data e/ou horário e clica em "alterar".
 4. Nova data e/ou horário é armazenada no banco de dados.
 
+![image](https://user-images.githubusercontent.com/111150888/216796607-c82d449d-d3bc-45e2-b947-79a961fd78ca.png)
+
+
 ### CDU 14
 
 Administrador cadastra uma reserva
@@ -399,6 +402,9 @@ Administrador cadastra uma reserva
 4. Administrador preenche uma nova data e/ou horário e clica em "criar reserva".
 5. Nova reserva é armazenada no banco de dados.
 
+![image](https://user-images.githubusercontent.com/111150888/216797101-25ac5703-0daa-4490-ac5e-e319fb2de9f0.png)
+
+
 **Fluxo Alternativo A**
 
 1. Administrador clica em "Cadastrar uma reserva".
@@ -407,6 +413,9 @@ Administrador cadastra uma reserva
 4. O programa retorna uma mensagem de alerta de ID já cadastrado.
 5. Administrador clica em "ok".
 6. Administrador volta para a página de cadastro.
+
+![image](https://user-images.githubusercontent.com/111150888/216797059-31fdb10f-918f-48b5-b9a0-61198cdf2b01.png)
+
 
 ### CDU 15
 
@@ -419,12 +428,18 @@ Administrador exclui uma reserva
 3. Administrador insere sua senha e clica em "Excluir".
 4. O programa exclui a reserva do banco de dados e redireciona o adm para "Reservas".
 
+![image](https://user-images.githubusercontent.com/111150888/216796890-19ada627-3737-460c-b5b0-168f59abb119.png)
+
+
 **Fluxo Alternativo**
 
 1. Administrador clica em "excluir reserva".
 2. O programa retorna um pop-up solicitando a senha do administrador.
 3. Administrador insere uma senha incorreta e clica em "Excluir".
 4. O programa retorna uma mensagem de aviso de senha incorreta.
+
+![image](https://user-images.githubusercontent.com/111150888/216796932-f3fcf298-d4fe-4442-9d00-0b381b5960eb.png)
+
 
 ### CDU 16
 
