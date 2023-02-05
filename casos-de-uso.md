@@ -2,21 +2,21 @@
 
 ## Lista dos Casos de Uso
 
- - [CDU 01](#CDU-01): Usuário faz Login ✔️
- - [CDU 02](#CDU-02): Usuário faz Logout  ✔️
- - [CDU 03](#CDU-03): Cadastro de cliente ✔️
- - [CDU 04](#CDU-04): Reserva de Horário ✔️
- - [CDU 05](#CDU-05): Cadastro de Cachorro ✔️
- - [CDU 06](#CDU-06): Consulta do cliente nos horários reservados ✔️
+ - [CDU 01](#CDU-01): Usuário faz Login
+ - [CDU 02](#CDU-02): Usuário faz Logout
+ - [CDU 03](#CDU-03): Cadastro de cliente
+ - [CDU 04](#CDU-04): Reserva de Horário
+ - [CDU 05](#CDU-05): Cadastro de Cachorro
+ - [CDU 06](#CDU-06): Consulta do cliente nos horários reservados
  - [CDU 07](#CDU-07): Recuperação de senha
- - [CDU 08](#CDU-08): Visualizar pacotes ✔️
- - [CDU 09](#CDU-09): Usuário visualiza seus dados ✔️
- - [CDU 10](#CDU-10): Usuário edita sua senha  ✔️
+ - [CDU 08](#CDU-08): Visualizar pacotes
+ - [CDU 09](#CDU-09): Usuário visualiza seus dados
+ - [CDU 10](#CDU-10): Usuário edita sua senha
  - [CDU 11](#CDU-11): Usuário edita seu email
- - [CDU 12](#CDU-12): Usuário exclui sua conta ✔️
- - [CDU 13](#CDU-13): Administrador edita uma reserva ✔️
- - [CDU 14](#CDU-14): Administrador cadastra reserva ✔️
- - [CDU 15](#CDU-15): Administrador exclui uma reserva ✔️
+ - [CDU 12](#CDU-12): Usuário exclui sua conta
+ - [CDU 13](#CDU-13): Administrador edita uma reserva
+ - [CDU 14](#CDU-14): Administrador cadastra reserva
+ - [CDU 15](#CDU-15): Administrador exclui uma reserva
  - [CDU 16](#CDU-16): Administrador e funcionário editam um pacote
  - [CDU 17](#CDU-17): Administrador edita funcionário e cliente
  - [CDU 20](#CDU-18): Cadastro do Administrador e do funcionário
