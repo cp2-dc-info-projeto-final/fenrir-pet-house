@@ -11,7 +11,7 @@
  - [CDU 07](#CDU-07): Recuperação de senha
  - [CDU 08](#CDU-08): Visualizar pacotes ✔️
  - [CDU 09](#CDU-09): Usuário visualiza seus dados ✔️
- - [CDU 10](#CDU-10): Usuário edita sua senha  
+ - [CDU 10](#CDU-10): Usuário edita sua senha  ✔️
  - [CDU 11](#CDU-11): Usuário edita seu email
  - [CDU 12](#CDU-12): Usuário exclui sua conta ✔️
  - [CDU 13](#CDU-13): Administrador edita uma reserva ✔️
@@ -19,7 +19,7 @@
  - [CDU 15](#CDU-15): Administrador exclui uma reserva ✔️
  - [CDU 16](#CDU-16): Administrador e funcionário editam um pacote
  - [CDU 17](#CDU-17): Administrador edita funcionário e cliente
- - [CDU 18](#CDU-18): Cadastro do Administrador e do funcionário
+ - [CDU 20](#CDU-18): Cadastro do Administrador e do funcionário
 
 ## Lista dos Atores
 
@@ -263,7 +263,10 @@ Usuário visualiza pacotes.
 
 1. O usuário pressiona o botão "Pacotes".
 2. Os pacotes da hotelaria são exibidos automaticamente.
-3. Se o usuário desejar reserva-lo ele deve clicar em "Reservas " para assim fazer o cadastrado do cachorro e logo após reservar um horário. 
+3. Se o usuário desejar reserva-lo ele deve clicar em "Reservas " para assim fazer o cadastrado do cachorro e logo após reservar um horário.
+
+![image](https://user-images.githubusercontent.com/111150888/216797843-ca96313d-a83d-4520-912b-14a267370dbc.png)
+
 
 ### CDU 09
 
@@ -274,7 +277,9 @@ Usuário visualiza seus dados da conta.
 1. O usuário pressiona o botão "conta".
 2. O programa retornará com um pop-up com os seguintes tópicos:Editar senha, Mostrar dados, Mostrar Reserva, Editar email e Excluir conta.
 3. O usuário deve pressionar o tópico "Mostrar Dados".
-4. O programa irá imprimir uma mensagem com os dados referentes a conta do usuário. 
+4. O programa irá imprimir uma mensagem com os dados referentes a conta do usuário.
+
+![image](https://user-images.githubusercontent.com/111150888/216797867-45ce6f85-7c1c-4209-aaec-453da1afb46d.png)
 
 
 ### CDU 10
@@ -292,6 +297,9 @@ Usuário altera sua senha.
 7. O programa imprime o campo "Confirme a senha" afim do usuário preencher com a mesma nova senha que ele preencheu no campo acima.
 8. O usuário deve pressionar o botão "enviar" afim de ter o formulário concluído.
 
+![image](https://user-images.githubusercontent.com/111150888/216797681-8ffab6af-160d-4bd1-8a1a-02788f088b4c.png)
+
+
 **Fluxo Alternativo A**
 
 1. O usário pressiona o botão "conta".
@@ -304,6 +312,9 @@ Usuário altera sua senha.
 8.O usuário deve pressionar o botão "enviar" afim de ter o formulário concluído. 
 9. O programa não reconhce a nova senha cadastrada no banco de dados.
 10. O formulário não poderá ser concluído com sucesso.
+
+![image](https://user-images.githubusercontent.com/111150888/216797728-809e1448-5c5d-4c2e-875e-e33e37156608.png)
+
 
 **Fluxo Alternativo B**
 
@@ -333,6 +344,9 @@ Usuário altera seu email
 6. O programa imprime o campo "Digite sua Senha " afim do usuário preencher com sua senha já cadastrada.
 7. O usuário deve pressionar o botão "enviar" afim de ter o formulário concluído.
 
+![image](https://user-images.githubusercontent.com/111150888/216798316-69da9455-d36e-456b-bd76-582f4b13d95f.png)
+
+
 **Fluxo Alternativo A**
 
 1. O usário pressiona o botão "conta".
@@ -345,6 +359,9 @@ Usuário altera seu email
 8. O usuário deve pressionar o botão "enviar" afim de ter o formulário concluído.
 9.O programa não reconhce a senha e imprime uma mensagem escrito " Senha inválida".
 10. O formulário não poderá ser concluído com sucesso. 
+
+![image](https://user-images.githubusercontent.com/111150888/216798483-24c15510-e554-4bd9-bedd-e98f87c3a636.png)
+
 
 **Fluxo Alternativo B**
 
@@ -372,6 +389,9 @@ Usuário deleta sua conta
 6. O usuário deve pressionar o botão "excluir" afim de ter o formulário concluído e a conta excluída.
 7. Já com a conta excluída o usuário retorna para o menu principal.
 
+![image](https://user-images.githubusercontent.com/111150888/216798516-92b8c87d-5779-4e3d-a7f0-afae1139bb79.png)
+
+
 **Fluxo Alternativo A** 
 
 1. O usário pressiona o botão "conta".
@@ -381,8 +401,11 @@ Usuário deleta sua conta
 5. O programa imprime o campo "Digite sua Senha " afim do usuário preencher com sua senha já cadastrada.
 6. O usuário preenche o campo "Digite sua Senha" com a senha errada.
 7. O usuário deve pressionar o botão "excluir" afim de ter o formulário concluído e a conta excluída.
-8.O programa não reconhce o email e imprime uma mensagem escrito "Senha inválida".
+8. O programa não reconhece a senha e imprime uma mensagem escrito "Senha inválida".
 9. O formulário não poderá ser concluído com sucesso e nem a conta excluída.
+
+![image](https://user-images.githubusercontent.com/111150888/216798590-f551581a-a7de-4fc8-91ec-dec068091305.png)
+
 
 ### CDU 13
 
