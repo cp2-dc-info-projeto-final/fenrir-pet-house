@@ -1,21 +1,22 @@
 **Lista de  Funcionalidades**
 - [Interface](#Interface-do-site)
 - [Login](#Login)
-- [Login](#Login)
-- [Login](#Login)
-- [Login](#Login)
-- [Login](#Login)
+- [Recuperação de senha](#Recuperação-de-senha)
+- [Funcionalidades da conta](#Funcionalidades-da-conta)
+- [Como ver ver e reservar pacotes](#Como-ver-e-reservar-pacotes)
+- [Cadastro de cachorros](#Cadastro-de-cachorro)
+- [Logout](#Logout)
 
 ## Interface do site
 -1.Para início, o usuário se depara com a página principal do site.
 
 ![image](https://user-images.githubusercontent.com/111150888/216732707-6a120532-dc93-433e-96e3-47c70505f112.png)
 
--2. A fim de saber mais sobre a Hotelaria Fenrir Pet House o usuário clica no botão “Sobre Nós” localizado no menu principal, no qual será imprimido na tela um pop-up  contando sobre a história da nossa instituição.
+-1.1 A fim de saber mais sobre a Hotelaria Fenrir Pet House o usuário clica no botão “Sobre Nós” localizado no menu principal, no qual será imprimido na tela um pop-up  contando sobre a história da nossa instituição.
 
 ![Captura de Tela (25)](https://user-images.githubusercontent.com/111150888/216731584-c721d841-2337-4318-914f-75a7629f239a.png)
 
--3.Caso o usuário apresente alguma dúvida sobre o funcionamento da hotelaria ele poderá clicar no botão “Dúvidas” localizado no menu principal, no qual será imprimido um pop-up contendo as dúvidas mais frequentes.
+-1.2Caso o usuário apresente alguma dúvida sobre o funcionamento da hotelaria ele poderá clicar no botão “Dúvidas” localizado no menu principal, no qual será imprimido um pop-up contendo as dúvidas mais frequentes.
 
 ![Captura de Tela (27)](https://user-images.githubusercontent.com/111150888/216731645-78ab432b-4da5-43e1-bec5-7c1e9c5b8f2c.png)
 
