@@ -247,12 +247,17 @@ Funcionário,cliente e administrador recuperaram a senha.
 4. O sistema envia para o email inserido uma senha provisória que deve ser usada para login".
 5. O sistema retorna uma mensagem de cconfirmação de email enviado.
 
+![image](https://user-images.githubusercontent.com/111150888/216798710-df66377f-d6eb-4bbf-abf5-c44a5031978c.png)
+
+
 **Fluxo Alternativo A**
 
 1. O usuário seleciona a opção "Recuperar a senha "
 2. O sistema requisita um email de recuperaçao.
 3. O usuário digita um email que não consta no banco de dados para a recuperação e seleciona "Recuperar".
 4. O sistema indentifica que não consta aquele email e imprime na tela "Email Inválido".
+
+![image](https://user-images.githubusercontent.com/111150888/216798745-ac564a32-e13b-4efc-bf3d-e386aa241a41.png)
 
 
 ### CDU 08
@@ -484,6 +489,9 @@ Administrador e funcionário editam um pacote
 4. A alteração é armazenada no banco de dados.
 5. Usuário é redirecionado a página dos pacotes.
 
+![image](https://user-images.githubusercontent.com/111150888/216798905-4156cb6e-f439-4daf-896b-89692f37d708.png)
+
+
 ### CDU 17
 
 Administrador edita funcionário e cliente
@@ -497,6 +505,9 @@ Administrador edita funcionário e cliente
 5. O programa armazena a edição no banco de dados.
 6. O programa retorna uma mensagem de confirmação de edição.
 
+![image](https://user-images.githubusercontent.com/111150888/216798852-1f80ec13-67cc-4b71-942d-def15a4c4927.png)
+
+
 **Fluxo Alternativo A**
 
 1. Administrador clica em "Editar usuário".
@@ -504,6 +515,9 @@ Administrador edita funcionário e cliente
 3. Administrador preenche o campo desejado com dado inválido.
 4. Administrador clica em "Enviar"..
 6. O programa retorna uma mensagem de erro.
+
+![image](https://user-images.githubusercontent.com/111150888/216798875-8654e26e-5bc3-466f-a37a-ec9720c85c9d.png)
+
 
 ### CDU  18
 
