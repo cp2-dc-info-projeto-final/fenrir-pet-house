@@ -5,18 +5,18 @@
  - [CDU 01](#CDU-01): Usuário faz Login ✔️
  - [CDU 02](#CDU-02): Usuário faz Logout  ✔️
  - [CDU 03](#CDU-03): Cadastro de cliente ✔️
- - [CDU 04](#CDU-04): Reserva de Horário 
+ - [CDU 04](#CDU-04): Reserva de Horário ✔️
  - [CDU 05](#CDU-05): Cadastro de Cachorro ✔️
- - [CDU 06](#CDU-06): Consulta do cliente nos horários reservados 
+ - [CDU 06](#CDU-06): Consulta do cliente nos horários reservados ✔️
  - [CDU 07](#CDU-07): Recuperação de senha
  - [CDU 08](#CDU-08): Visualizar pacotes ✔️
  - [CDU 09](#CDU-09): Usuário visualiza seus dados ✔️
  - [CDU 10](#CDU-10): Usuário edita sua senha  
  - [CDU 11](#CDU-11): Usuário edita seu email
  - [CDU 12](#CDU-12): Usuário exclui sua conta ✔️
- - [CDU 13](#CDU-13): Administrador edita uma reserva
- - [CDU 14](#CDU-14): Administrador cadastra reserva
- - [CDU 15](#CDU-15): Administrador exclui uma reserva
+ - [CDU 13](#CDU-13): Administrador edita uma reserva ✔️
+ - [CDU 14](#CDU-14): Administrador cadastra reserva ✔️
+ - [CDU 15](#CDU-15): Administrador exclui uma reserva ✔️
  - [CDU 16](#CDU-16): Administrador e funcionário editam um pacote
  - [CDU 17](#CDU-17): Administrador edita funcionário e cliente
  - [CDU 18](#CDU-18): Cadastro do Administrador e do funcionário
@@ -152,6 +152,8 @@ Usuário reserva um horário para levar seu cachorro ao hotel.
 6. Reserva é armazenada no banco de dados.
 7. O cliente é redirecionado as reservas feitas.
 
+![image](https://user-images.githubusercontent.com/111150888/216797240-3fd27d1c-2467-4aac-8f01-8ce6759684e8.png)
+
 
 **Fluxo Alternativo A**
 
@@ -162,6 +164,8 @@ Usuário reserva um horário para levar seu cachorro ao hotel.
 5. 5. O usuário pressiona o botão "Reserva".
 6. Um pop-up aparece com a mensagem "Selecione uma das opções".
 
+![image](https://user-images.githubusercontent.com/111150888/216797251-f25ea0be-b3b7-4da9-8079-dda32f735be2.png)
+
 
 **Fluxo Alternativo B**
 
@@ -171,6 +175,8 @@ Usuário reserva um horário para levar seu cachorro ao hotel.
 4. O usuário não seleciona um dos cachorros.
 5. 5. O usuário pressiona o botão "Reserva".
 6. Um pop-up aparece com a mensagem "Selecione uma das opções"
+
+![image](https://user-images.githubusercontent.com/111150888/216797294-9c0c053b-5755-4280-a180-13d965a0dff0.png)
 
 
 ### CDU 05
@@ -224,7 +230,10 @@ Cliente consulta os horários reservados
 1. O usário pressiona o botão "conta".
 2. O programa retornará com um pop-up com os seguintes tópicos:Editar senha, Mostrar dados, Exibir Reserva, Editar email e Excluir conta.
 3. O usuário deve pressionar o tópico "Exibir Reservas".
-4. O programa irá imprimir uma mensagem com os dados referentes a reserva feita naquela conta. 
+4. O programa irá imprimir uma mensagem com os dados referentes a reserva feita naquela conta.
+
+![image](https://user-images.githubusercontent.com/111150888/216797460-03918a37-b34f-4f24-9935-0420b24f7f8e.png)
+
 
 ### CDU 07 
 
@@ -235,8 +244,8 @@ Funcionário,cliente e administrador recuperaram a senha.
 1. O usuário seleciona a opção "Recuperar a senha "
 2. O sistema requisita um email de recuperaçao.
 3. O usuário digita o email de recuperação e seleciona "Recuperar".
-4. O sistema envia uma senha provisória que deve ser usada para login".
-5. O usuário é redirecionado para o pop-up de Recuperar Senha agora com os campos em branco.
+4. O sistema envia para o email inserido uma senha provisória que deve ser usada para login".
+5. O sistema retorna uma mensagem de cconfirmação de email enviado.
 
 **Fluxo Alternativo A**
 
@@ -244,7 +253,6 @@ Funcionário,cliente e administrador recuperaram a senha.
 2. O sistema requisita um email de recuperaçao.
 3. O usuário digita um email que não consta no banco de dados para a recuperação e seleciona "Recuperar".
 4. O sistema indentifica que não consta aquele email e imprime na tela "Email Inválido".
-5. O usuário é redirecionado para o pop-up de Recuperar Senha agora com os campos em branco.
 
 
 ### CDU 08
