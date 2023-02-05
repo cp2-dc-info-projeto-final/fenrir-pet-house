@@ -14,6 +14,7 @@
 - [Recuperação de senha](#Recuperação-de-senha)
 - [Edição e cadastro de clientes administrador](#Edição-e-cadastro-de-clientes-administrador)
 - [Funcionalidades da conta (administrador)](#Funcionalidades-da-conta)
+- [Edição de reserva e pacote por administrador](#Edição-de-reserva-e-pacote-por-administrador)
 
 
 
@@ -269,6 +270,22 @@
 -1.9 Caso o administrador erre a senha nos campos do pop-up de exclusão da conta, a seguinte mensagem aparecerá na tela:(ao confirmar os dados corretamente o usuário será redirecionado a tela inicial mas já sem conta)
 
 ![image](https://user-images.githubusercontent.com/111150888/216789013-2e6d0394-8bfa-4282-acf0-a86c5298afa6.png)
+
+## Edição de reserva e pacote por administrador
+
+-1. O administrador também tem o poder de disponibilizar um novo horário ou dia para uma reserva, e para isso basta ele clicar em "reservas" no menu e selecionar o tópico  "Criar reserva". o pop-up de criação de reserva requere algumas informações que serão colocados pelo administrador como:data, hora e ID.
+
+![image](https://user-images.githubusercontent.com/111150756/216796953-9a47e974-71ed-480c-82df-feb332b44a4a.png)
+
+-1.2 O administrador pode alterar um pacote também, para isso basta clicar em "pacotes' no menu principal, e depois clicar no tópico "Alterar pacote". 
+
+![image](https://user-images.githubusercontent.com/111150756/216797144-78350fc6-11bb-4b6c-901b-26900c66049e.png)
+
+-1.3 O adminstrador pode alterar: nome do pacote, valor, tempo e os serviços oferecidos por ele.Depois de preencher um ou mais campos o formulário poderá ser enviado ao clicar em "enviar" 
+
+![image](https://user-images.githubusercontent.com/111150756/216797153-a637825f-6ff1-41ac-9253-c98dc9867bb4.png)
+
+
 
 
 
