@@ -554,3 +554,6 @@ Cadastro de administrador e funcionário
 6. O usuário preenche algum dos campos como: CPf, nome,email,data de nascimento ou senha incorretamente.
 12.Usuário pressiona o botão "Enviar".
 13.Usuário é redirecionado para o pop-up de cadastrado novamente com a mensagem de erro referente ao espaço que foi diitado errado.
+
+![image](https://user-images.githubusercontent.com/111150888/216799314-e96e66ae-dea7-478c-bfc0-aef3e09097a9.png)
+
