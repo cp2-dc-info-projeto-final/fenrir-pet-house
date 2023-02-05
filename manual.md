@@ -12,8 +12,8 @@
 - [Login do administrador](#Login-do-administrador)
 - [Cadastro do administrador](#Cadastro-do-administrador)
 - [Recuperação de senha](#Recuperação-de-senha)
-- [Edição e cadastro de clientes p/administrador](#Funcionalidades-da-conta)
-- [Funcionalidades da conta](#Funcionalidades-da-conta)
+- [Edição e cadastro de clientes p/administrador](#Edição-e-cadastro-de-clientes-p/administrador)
+- [Funcionalidades da conta (administrador](#Funcionalidades-da-conta)
 
 
 
