@@ -13,9 +13,19 @@
 - [Cadastro do administrador](#Cadastro-do-administrador)
 - [Recuperação de senha](#Recuperação-de-senha)
 - [Edição e cadastro de clientes administrador](#Edição-e-cadastro-de-clientes-administrador)
-- [Funcionalidades da conta (administrador)](#Funcionalidades-da-conta)
+- [Funcionalidades da conta administrador](#Funcionalidades-da-conta-administrador)
 - [Edição de reserva e pacote por administrador](#Edição-de-reserva-e-pacote-por-administrador)
+- [Logout](#Logout)
 
+-----------------------------------------------------------
+**Lista de  Funcionalidades (funcionário)**
+- [Login do funcionário](#Login-do-funcionário)
+- [Cadastro do funcionário](#Cadastro-do-funcionário)
+- [Recuperação de senha](#Recuperação-de-senha)
+- [Funcionalidades da conta funcionário](#Funcionalidades-da-conta-funcionário)
+- [Alterar pacote e visualizar reserva](#Alterar-pacote-e-visualizar-reserva)
+- [Logout](#Logout)
+- 
 
 
 ## Interface do site
@@ -233,7 +243,7 @@
 ![image](https://user-images.githubusercontent.com/111150756/216795657-c646bfec-2ac0-4644-a033-1af0848ff9c4.png)
 
 
-## Funcionalidades da conta
+## Funcionalidades da conta administrador
 
 -1.Já com a conta criada o administrador poderá ter acesso aos seus dados através do botão “conta” localizado no menu principal. O administrador poderá exibir seus dados e editar:email e senha.Ele poderá ter acesso clicando nos respectivos tópicos.
 
@@ -284,6 +294,125 @@
 -1.3 O adminstrador pode alterar: nome do pacote, valor, tempo e os serviços oferecidos por ele.Depois de preencher um ou mais campos o formulário poderá ser enviado ao clicar em "enviar" 
 
 ![image](https://user-images.githubusercontent.com/111150756/216797153-a637825f-6ff1-41ac-9253-c98dc9867bb4.png)
+
+## Logout
+-1.Ao finalizar o uso do site o usuário poderá se desconectar de sua conta, clicando em logout localizado no menu principal.
+
+![image](https://user-images.githubusercontent.com/111150888/216789652-65353fe0-bc42-428c-b321-72a77e032b29.png)
+
+
+-------------------------------------------------------------------------------------------------------------------
+
+## Login do funcionário
+
+-1.O funcionário poderá fazer o login no site através do botão “ login” localizado no menu principal, ele deverá escolher uma das duas opções se ele é funcionário ou cliente.
+
+![image](https://user-images.githubusercontent.com/111150756/216797330-5ec32584-1fbb-4b42-b46f-8c2aebba0396.png)
+
+-1.2 Caso o usuário escolha a opção “funcionário” um pop-up aparecerá com os campos a serem preenchidos com o email e senha já cadastrados.Com os dados corretos o funcionário será automaticamente logado e redirecionado para a página principal.
+
+![image](https://user-images.githubusercontent.com/111150756/216797347-ab789898-9746-404e-9ca3-1ec221263bd2.png)
+
+-1.3 .Quando finalmente logado é imprimido na tela uma mensagem de ‘‘Bem-vindo!’’ para o funcionário, no qual vem com o tópico “ver reservas”.
+
+![image](https://user-images.githubusercontent.com/111150756/216797962-99113ec2-2877-472b-af4a-7ae4c530644c.png)
+
+## Cadastro do funcionário
+
+-1. Caso o funcionário ainda não tenha criado uma conta, ele pode se cadastrar apertando o link “Ainda não tem uma conta,funcionário?” e preenchendo os dados solicitados.
+
+![image](https://user-images.githubusercontent.com/111150756/216797400-59b3f450-65d7-4b8c-9207-37f8783a5ea3.png)
+
+-1.2 Caso o funcionário digite algum dado errado ou alguma incompatibilidade com os campos solicitados, uma mensagem de erro será imprimida no pop-up.
+
+![image](https://user-images.githubusercontent.com/111150756/216797417-1fe91b1e-5959-47ad-9837-091a62abd8aa.png)
+
+## Recuperção de senha
+
+-1. Caso o funcionário tenha esquecido sua senha basta clicar em “Esqueceu sua senha?” para recupera-lá.
+
+![image](https://user-images.githubusercontent.com/111150756/216797470-55ac7dbc-de94-4be7-b668-e9290ea6d189.png)
+
+-1.2 Após o preenchimento do email corretamente o site te redireciona para o pop-up de login novamente.
+
+![image](https://user-images.githubusercontent.com/111150756/216797543-7db15cfb-6340-49e4-9634-023cd1ce6890.png)
+
+## Funcionalidades da conta funcionário 
+
+-1.Já com a conta criada o funcionário poderá ter acesso aos seus dados através do botão “conta” localizado no menu principal. O administrador poderá exibir seus dados e editar:email e senha.Ele poderá ter acesso clicando nos respectivos tópicos.
+
+![image](https://user-images.githubusercontent.com/111150888/216787986-eb29844c-9456-4fe4-83ca-200b2d996fec.png)
+
+-1.2 Clicando no tópico “Editar Senha” o funcionário poderá mudar sua senha preenchendo os campos solicitados.
+
+![image](https://user-images.githubusercontent.com/111150888/216788163-ce2c58ff-8d93-496c-89b8-d343a4007ab7.png)
+
+-1.3 Caso o funcionário erre a digitação de sua antiga senha, o pop-up de “Senha incorreta” aparecerá na tela, sinalizando que o usuário deve digitar sua senha correta.
+
+![image](https://user-images.githubusercontent.com/111150888/216788242-cd0dbcfb-1151-4671-a675-83a123fd16e1.png)
+
+-1.4 Ao finalizar o cadastro de uma nova senha o pop-up de “Senha Alterada com Sucesso!” aparecerá na tela.
+
+![image](https://user-images.githubusercontent.com/111150888/216788296-2f11132d-80be-42d3-a1a1-4f1680f32265.png)
+
+-1.5 Para ter acesso aos dados cadastrados pelo funcionário no site, ele deve clicar no tópico “mostrar dados” que automaticamente serão imprimidos na tela:
+
+![image](https://user-images.githubusercontent.com/111150888/216788390-37a5972c-e6eb-4634-8997-4a07e00714d3.png)
+
+-1.6 Clicando no tópico “Editar email” o funcionário poderá alterar seu email preenchendo os campos solicitados e após isso ele automaticamente será redirecionado a página principal.
+
+![image](https://user-images.githubusercontent.com/111150888/216788491-9b61aa21-a474-43a1-aa0a-b98ef05ceca9.png)
+
+-1.7 Caso o funcionário erre a digitação de sua antiga senha, o pop-up de “Senha incorreta” aparecerá na tela, sinalizando que ele deve digitar sua senha correta.
+
+![image](https://user-images.githubusercontent.com/111150888/216788657-ce88892c-7f9f-43c6-9108-f24ff8577981.png)
+
+-1.8 Para excluir a conta do site o funcionário deve clicar no tópico “ excluir conta”, confirmar seu email e sua senha. Após o envio dos dados nos respectivos campos, a conta do funcionário será excluída. 
+
+![image](https://user-images.githubusercontent.com/111150888/216788912-c76de417-03a9-41df-a9de-1f80fccb5cda.png)
+
+-1.9 Caso o funcionário erre a senha nos campos do pop-up de exclusão da conta, a seguinte mensagem aparecerá na tela:(ao confirmar os dados corretamente o usuário será redirecionado a tela inicial mas já sem conta)
+
+![image](https://user-images.githubusercontent.com/111150888/216789013-2e6d0394-8bfa-4282-acf0-a86c5298afa6.png)
+
+
+## Alterar pacote e visualizar reservas
+
+-1 O funcionário pode alterar um pacote também, para isso basta clicar em "pacotes' no menu principal, e depois clicar no tópico "Alterar pacote". 
+
+![image](https://user-images.githubusercontent.com/111150756/216797144-78350fc6-11bb-4b6c-901b-26900c66049e.png)
+
+-1.2 O funcionário pode alterar: nome do pacote, valor, tempo e os serviços oferecidos por ele.Depois de preencher um ou mais campos o formulário poderá ser enviado ao clicar em "enviar" 
+
+![image](https://user-images.githubusercontent.com/111150756/216797153-a637825f-6ff1-41ac-9253-c98dc9867bb4.png)
+
+-1.3 Para visualizar as reservas, basta o funcionário clicar em "reservas" no topo da página e visualizar as reservas disponíveis e as já agendadas.
+
+![image](https://user-images.githubusercontent.com/111150756/216797883-b04edad9-d6d2-4bdd-a0c1-1dcb531e6002.png)
+
+## Logout
+-1.Ao finalizar o uso do site o usuário poderá se desconectar de sua conta, clicando em logout localizado no menu principal.
+
+![image](https://user-images.githubusercontent.com/111150888/216789652-65353fe0-bc42-428c-b321-72a77e032b29.png)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
