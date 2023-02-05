@@ -7,6 +7,10 @@
 - [Cadastro do cachorros](#Cadastro-do-cachorro)
 - [Logout](#Logout)
 
+------------------------------------------------------
+
+
+
 ## Interface do site
 -1.Para início, o usuário se depara com a página principal do site.
 
@@ -139,6 +143,113 @@
 -1.Ao finalizar o uso do site o usuário poderá se desconectar de sua conta, clicando em logout localizado no menu principal.
 
 ![image](https://user-images.githubusercontent.com/111150888/216789652-65353fe0-bc42-428c-b321-72a77e032b29.png)
+
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+## Login do administrador
+
+-1. administrador poderá fazer o login no site através do botão “ login” localizado no menu principal, ele deverá escolher uma das duas opções se ele é funcionário ou cliente.
+
+![image](https://user-images.githubusercontent.com/111150756/216795050-e73f4ff6-b4c7-4bad-9b30-04298ee6e8a5.png)
+
+-1.2 .Caso o usuário escolha a opção “funcionário/admin” um pop-up aparecerá com os campos a serem preenchidos com o email e senha já cadastrados.Com os dados corretos o funcionário será automaticamente logado e redirecionado para a página principal.
+
+![image](https://user-images.githubusercontent.com/111150756/216795092-d4180772-136f-481b-8803-9ae11d3ca0b6.png)
+
+
+## cadastro do administrador
+
+-1.Caso o administrador ainda não tenha criado uma conta, ele pode se cadastrar apertando o link “Ainda não tem uma conta,funcionário?” e preenchendo os dados solicitados.
+
+![image](https://user-images.githubusercontent.com/111150756/216795150-9101a362-b751-4340-8652-e9b26ad3672f.png)
+
+-1.2 Caso o administrador digite algum dado errado ou alguma incompatibilidade com os campos solicitados, uma mensagem de erro será imprimida no pop-up.
+
+![image](https://user-images.githubusercontent.com/111150756/216795170-f06facea-fceb-4566-a2b7-ff4be780034f.png)
+
+-1.3 É importante que o administrador preencha esse campo para ser vinculado à modalidade de administrador, ao contrário ele será cadastrado como funcionário.
+
+![image](https://user-images.githubusercontent.com/111150756/216795187-05c2cd0d-ff40-49fe-8b01-1ca832d3b0e6.png)
+
+
+## Recuperação de senha
+
+-1.Caso o administrador tenha esquecido sua senha basta clicar em “Esqueceu sua senha?” para recupera-lá.
+
+![image](https://user-images.githubusercontent.com/111150756/216795218-2fc4b3c9-dd2f-4bd6-8458-de41f17a04ac.png)
+
+-1.2Após o preenchimento do email corretamente o site te redireciona para o pop-up de login novamente.
+
+![image](https://user-images.githubusercontent.com/111150756/216795232-7099d99d-51ad-4986-acec-c76d11204d63.png)
+
+## Funcionalidades do administrador
+
+-1. O administrador tem o poder de ver os clientes e cadastrá-los no site, ele poderá fazer isso clicando no tópico “clientes” localizado no menu principal.Após isso um pop-up com os tópicos “ cadastrar cliente” e “exibir clientes”aparecerá.
+
+![image](https://user-images.githubusercontent.com/111150756/216795284-dfe36594-7c10-4600-8f0f-7143715645d7.png)
+
+-1.2 Ao clicar no tópico “cadastrar clientes’’ o administrador pode cadastrar um cliente preenchendo seus dados.
+
+![image](https://user-images.githubusercontent.com/111150756/216795307-6836bf15-3e5b-4172-8cfa-529ec513ac71.png)
+
+-1.3 Caso o administrador preencha os campos com dados imcompatíveis com o campo, uma mensagem de erro será impressa no pop-up.
+
+![image](https://user-images.githubusercontent.com/111150756/216795338-31310df7-89f4-4007-b431-e13c611c4968.png)
+
+-1.4 Ao clicar no tópico “exibir clientes’’ o administrador pode exibir uma lista de clientes cadastrados no site e também pesquisar por nome os clientes cadastrados.
+
+![image](https://user-images.githubusercontent.com/111150756/216795368-6e72e187-4a01-462d-b051-009811ebebb1.png)
+
+-1.5 O administrador também poderá ver os funcionários cadastrá-los, ele poderá fazer isso clicando no tópico "funcionário" localizado no menu principal.Após isso um pop-up com os tópicos “ cadastrar funcionário" e “exibir funcionário"aparecerá.
+
+![image](https://user-images.githubusercontent.com/111150756/216795407-1b38ea01-6dd0-4ecd-b350-28915a6b2f3d.png)
+
+-1.6 .Ao clicar no tópico “cadastrar funcionário" o administrador pode cadastrar um funcionário preenchendo seus dados corretamente.
+
+![image](https://user-images.githubusercontent.com/111150756/216795438-8aac39b7-7e81-4786-983e-00ef142ed6b1.png)
+
+-1.7 Caso o administrador preencha os campos com dados imcompatíveis com o campo, uma mensagem de erro será impressa no pop-up
+
+![image](https://user-images.githubusercontent.com/111150756/216795454-ba7b5564-eaae-4602-bbe1-753bef3c17ec.png)
+
+-1.8 Ao clicar no tópico “exibir funcionário" o administrador pode visualizar uma lista de funcionários já cadastrados.
+
+![image](https://user-images.githubusercontent.com/111150756/216795584-49d745c3-08e7-46f2-9b17-6edd0419ac1f.png)
+
+-1.9 .O administrador pode editar o nome ou o email de um funcionário ou cliente, para isso basta clicar em “editar usuário” e preencher o campo com um novo email ou um novo nome.
+
+![image](https://user-images.githubusercontent.com/111150756/216795620-bcb10a97-5bee-4546-bd1b-f6503a4b6c53.png)
+
+-1.10 Assim como pode excluir a conta de um funcionário ou cliente, clicando em “excluir usuário” e confirmando sua senha.
+
+![image](https://user-images.githubusercontent.com/111150756/216795657-c646bfec-2ac0-4644-a033-1af0848ff9c4.png)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
