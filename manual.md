@@ -1,4 +1,4 @@
-**Lista de  Funcionalidades**
+**Lista de  Funcionalidades(usuário)**
 - [Interface](#Interface-do-site)
 - [Login](#Login)
 - [Recuperação de senha](#Recuperação-de-senha)
@@ -8,7 +8,7 @@
 - [Logout](#Logout)
 
 ------------------------------------------------------
-
+**Lista de  Funcionalidades (administrador)**
 - [Login do administrador](#Login-do-administrador)
 - [Cadastro do administrador](#Cadastro-do-administrador)
 - [Recuperação de senha](#Recuperação-de-senha)
