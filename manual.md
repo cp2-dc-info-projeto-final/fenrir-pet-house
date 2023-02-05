@@ -13,7 +13,7 @@
 - [Cadastro do administrador](#Cadastro-do-administrador)
 - [Recuperação de senha](#Recuperação-de-senha)
 - [Edição e cadastro de clientes p/administrador](#Funcionalidades-da-conta)
-- [Funcionalidades da conta (administrador)](#Funcionalidades-da-conta-(administrador))
+- [Funcionalidades da conta](#Funcionalidades-da-conta)
 
 
 
@@ -232,7 +232,7 @@
 ![image](https://user-images.githubusercontent.com/111150756/216795657-c646bfec-2ac0-4644-a033-1af0848ff9c4.png)
 
 
-## Funcionalidades da conta (Administrador)
+## Funcionalidades da conta
 
 -1.Já com a conta criada o administrador poderá ter acesso aos seus dados através do botão “conta” localizado no menu principal. O administrador poderá exibir seus dados e editar:email e senha.Ele poderá ter acesso clicando nos respectivos tópicos.
 
