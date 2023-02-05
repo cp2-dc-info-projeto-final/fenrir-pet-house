@@ -3,8 +3,8 @@
 - [Login](#Login)
 - [Recuperação de senha](#Recuperação-de-senha)
 - [Funcionalidades da conta](#Funcionalidades-da-conta)
-- [Como ver e reservar pacotes](#Como-ver-e-reservar-pacotes)
-- [Cadastro de cachorros](#Cadastro-de-cachorro)
+- [Como reservar e ver pacotes](#Como-reservar-e-ver-pacotes)
+- [Cadastro do cachorros](#Cadastro-do-cachorro)
 - [Logout](#Logout)
 
 ## Interface do site
